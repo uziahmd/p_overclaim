@@ -1,0 +1,740 @@
+{
+  "pwh-qwen": {
+    "stage": "pointwise_hidden",
+    "judge": "qwen3-32b",
+    "provider": "openrouter",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 0,
+    "n_live": 243,
+    "providers_seen": [
+      "DeepInfra",
+      "SiliconFlow"
+    ]
+  },
+  "pwh-oss": {
+    "stage": "pointwise_hidden",
+    "judge": "gpt-oss-120b",
+    "provider": "openrouter",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 6,
+    "n_live": 243,
+    "providers_seen": [
+      "Cerebras",
+      "Crusoe",
+      "DeepInfra",
+      "DekaLLM",
+      "Mancer 2"
+    ]
+  },
+  "pwh-dsv4": {
+    "stage": "pointwise_hidden",
+    "judge": "deepseek-v4-pro",
+    "provider": "openrouter",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 0,
+    "n_live": 300,
+    "providers_seen": [
+      "Alibaba",
+      "Nebius",
+      "Novita",
+      "SiliconFlow",
+      "StreamLake"
+    ]
+  },
+  "pwh-gemf": {
+    "stage": "pointwise_hidden",
+    "judge": "gemini-3.8-flash",
+    "provider": "gemini",
+    "route": "vertex",
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 0,
+    "n_live": 300,
+    "providers_seen": []
+  },
+  "pwh-gema": {
+    "stage": "pointwise_hidden",
+    "judge": "gemini-4-argon",
+    "provider": "gemini",
+    "route": "vertex",
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 0,
+    "n_live": 300,
+    "providers_seen": []
+  },
+  "pwh-s46": {
+    "stage": "pointwise_hidden",
+    "judge": "claude-sonnet-4-6",
+    "provider": "anthropic",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 0,
+    "n_live": 243,
+    "providers_seen": []
+  },
+  "pwh-s55": {
+    "stage": "pointwise_hidden",
+    "judge": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 0,
+    "n_live": 243,
+    "providers_seen": []
+  },
+  "pwh-s55-full": {
+    "stage": "pointwise_hidden",
+    "judge": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-full",
+    "variants": [
+      "O",
+      "H",
+      "P"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 180,
+    "status": "done",
+    "records": 180,
+    "n_invalid": 0,
+    "n_live": 180,
+    "providers_seen": []
+  },
+  "pwh-o46": {
+    "stage": "pointwise_hidden",
+    "judge": "claude-opus-4-6",
+    "provider": "anthropic",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 0,
+    "n_live": 243,
+    "providers_seen": []
+  },
+  "pwh-o55": {
+    "stage": "pointwise_hidden",
+    "judge": "claude-opus-5-5",
+    "provider": "anthropic",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "hidden",
+    "rubric": "pointwise-neutral",
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "replicate": 0,
+    "n_tasks": 60,
+    "expected_records": 300,
+    "status": "done",
+    "records": 300,
+    "n_invalid": 0,
+    "n_live": 243,
+    "providers_seen": []
+  },
+  "pws-qwen": {
+    "stage": "pointwise_shown",
+    "judge": "qwen3-32b",
+    "provider": "openrouter",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "shown",
+    "replicate": 0,
+    "n_tasks": {
+      "pointwise_calls.jsonl": 34,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "expected_records": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "openrouter_providers": {
+      "rule": {
+        "min_context_tokens": 65536,
+        "quantizations": [
+          "fp8",
+          "bf16"
+        ]
+      },
+      "only": [
+        "siliconflow"
+      ],
+      "endpoints": [
+        {
+          "slug": "siliconflow",
+          "provider_name": "SiliconFlow",
+          "tag": "siliconflow/fp8",
+          "quantization": "fp8",
+          "context_length": 131072
+        }
+      ]
+    },
+    "status": "failed",
+    "reason": "RateLimitError: Error code: 429 - Provider returned error",
+    "records": {
+      "pointwise_calls.jsonl": 16,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    }
+  },
+  "pws-oss": {
+    "stage": "pointwise_shown",
+    "judge": "gpt-oss-120b",
+    "provider": "openrouter",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "shown",
+    "replicate": 0,
+    "n_tasks": {
+      "pointwise_calls.jsonl": 34,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "expected_records": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "status": "done",
+    "records": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_invalid": {
+      "pointwise_calls.jsonl": 1,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_live": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    }
+  },
+  "pws-dsv4": {
+    "stage": "pointwise_shown",
+    "judge": "deepseek-v4-pro",
+    "provider": "openrouter",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "shown",
+    "replicate": 0,
+    "n_tasks": {
+      "pointwise_calls.jsonl": 34,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "expected_records": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "status": "done",
+    "records": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_invalid": {
+      "pointwise_calls.jsonl": 0,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_live": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    }
+  },
+  "pws-gemf": {
+    "stage": "pointwise_shown",
+    "judge": "gemini-3.8-flash",
+    "provider": "gemini",
+    "route": "aistudio",
+    "set": "v4_full_run",
+    "condition": "shown",
+    "replicate": 0,
+    "n_tasks": {
+      "pointwise_calls.jsonl": 34,
+      "e7_calls.jsonl": 30,
+      "e3pw_calls.jsonl": 30
+    },
+    "expected_records": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 90,
+      "e3pw_calls.jsonl": 90
+    },
+    "status": "done",
+    "records": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 90,
+      "e3pw_calls.jsonl": 90
+    },
+    "n_invalid": {
+      "pointwise_calls.jsonl": 0,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_live": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 90,
+      "e3pw_calls.jsonl": 90
+    }
+  },
+  "pws-gema": {
+    "stage": "pointwise_shown",
+    "judge": "gemini-4-argon",
+    "provider": "gemini",
+    "route": "aistudio",
+    "set": "v4_full_run",
+    "condition": "shown",
+    "replicate": 0,
+    "n_tasks": {
+      "pointwise_calls.jsonl": 34,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "expected_records": {
+      "pointwise_calls.jsonl": 102,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "aistudio": {
+      "cap": 11.7,
+      "spent": 11.589403149999985,
+      "remaining": 0.11059685000001451,
+      "units": {
+        "plain": {
+          "usd": 0.03152520909090909,
+          "n_live": 33,
+          "row": "t1-pws-argon-c",
+          "basis": "measured: mean of 33 live aistudio calls"
+        }
+      },
+      "remaining_calls": {
+        "plain": 69
+      },
+      "fit": {
+        "n_tasks": 34,
+        "n_fit": 12,
+        "cost_fit": 0.09457562727272728,
+        "cost_all": 2.1752394272727273,
+        "fits": false
+      },
+      "prefix": {
+        "n_tasks_run": 12,
+        "n_tasks_planned": 34,
+        "cost_fit_usd": 0.09457562727272728
+      }
+    },
+    "status": "partial",
+    "reason": "aistudio cap: google route aistudio: spent $11.5894 + estimated $0.1180 for the next gemini-4-argon call would exceed the $11.70 route cap; stopping before the call",
+    "records": {
+      "pointwise_calls.jsonl": 33,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_invalid": {
+      "pointwise_calls.jsonl": 0,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_live": {
+      "pointwise_calls.jsonl": 33,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    }
+  },
+  "pws-s55": {
+    "stage": "pointwise_shown",
+    "judge": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "shown",
+    "replicate": 0,
+    "n_tasks": {
+      "pointwise_calls.jsonl": 60,
+      "e7_calls.jsonl": 30,
+      "e3pw_calls.jsonl": 34
+    },
+    "expected_records": {
+      "pointwise_calls.jsonl": 180,
+      "e7_calls.jsonl": 90,
+      "e3pw_calls.jsonl": 102
+    },
+    "status": "done",
+    "records": {
+      "pointwise_calls.jsonl": 180,
+      "e7_calls.jsonl": 90,
+      "e3pw_calls.jsonl": 102
+    },
+    "n_invalid": {
+      "pointwise_calls.jsonl": 0,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 4
+    },
+    "n_live": {
+      "pointwise_calls.jsonl": 161,
+      "e7_calls.jsonl": 90,
+      "e3pw_calls.jsonl": 89
+    }
+  },
+  "pws-o55": {
+    "stage": "pointwise_shown",
+    "judge": "claude-opus-5-5",
+    "provider": "anthropic",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "shown",
+    "replicate": 0,
+    "n_tasks": {
+      "pointwise_calls.jsonl": 30,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 30
+    },
+    "expected_records": {
+      "pointwise_calls.jsonl": 90,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 90
+    },
+    "status": "done",
+    "records": {
+      "pointwise_calls.jsonl": 90,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 90
+    },
+    "n_invalid": {
+      "pointwise_calls.jsonl": 0,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_live": {
+      "pointwise_calls.jsonl": 90,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 90
+    }
+  },
+  "ph-qwen": {
+    "judge": "qwen3-32b",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "openrouter",
+    "route": null,
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 360
+  },
+  "ph-oss": {
+    "judge": "gpt-oss-120b",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "openrouter",
+    "route": null,
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 360
+  },
+  "ph-dsv4": {
+    "judge": "deepseek-v4-pro",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "openrouter",
+    "route": null,
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 360
+  },
+  "ph-gemf": {
+    "judge": "gemini-3.8-flash",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "google",
+    "route": "aistudio",
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 360
+  },
+  "ph-gema": {
+    "judge": "gemini-4-argon",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "google",
+    "route": "aistudio",
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 360
+  },
+  "ph-s46": {
+    "judge": "claude-sonnet-4-6",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "anthropic",
+    "route": null,
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 360
+  },
+  "ph-s55": {
+    "judge": "claude-sonnet-5-5",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "anthropic",
+    "route": null,
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 168
+  },
+  "ps-s55": {
+    "judge": "claude-sonnet-5-5",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "shown",
+    "provider": "anthropic",
+    "route": null,
+    "tasks": "shown_eligible",
+    "n_tasks": 34,
+    "expected_records": 204,
+    "n_tasks_frozen": 60,
+    "n_left_out": 26,
+    "left_out_reason": "not in picks.shown_eligible",
+    "in_plan": "A3",
+    "status": "done",
+    "records": 204,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 192
+  },
+  "ph-o46": {
+    "judge": "claude-opus-4-6",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "anthropic",
+    "route": null,
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 360
+  },
+  "ph-o55": {
+    "judge": "claude-opus-5-5",
+    "set": "v4_full_run",
+    "rubric": "neutral",
+    "condition": "hidden",
+    "provider": "anthropic",
+    "route": null,
+    "tasks": "all",
+    "n_tasks": 60,
+    "expected_records": 360,
+    "status": "done",
+    "records": 360,
+    "n_invalid": 0,
+    "n_parse_retries": 0,
+    "n_live": 360
+  },
+  "pws-dsv4-band": {
+    "stage": "pointwise_shown",
+    "judge": "deepseek-v4-pro",
+    "provider": "openrouter",
+    "route": null,
+    "set": "v4_full_run",
+    "condition": "shown",
+    "replicate": 0,
+    "n_tasks": {
+      "pointwise_calls.jsonl": 26,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "expected_records": {
+      "pointwise_calls.jsonl": 78,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "status": "done",
+    "records": {
+      "pointwise_calls.jsonl": 78,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_invalid": {
+      "pointwise_calls.jsonl": 0,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    },
+    "n_live": {
+      "pointwise_calls.jsonl": 78,
+      "e7_calls.jsonl": 0,
+      "e3pw_calls.jsonl": 0
+    }
+  }
+}

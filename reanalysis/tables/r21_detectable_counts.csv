@@ -1,0 +1,12 @@
+comparison,graders with a detectable positive difference,of
+premium (overclaim minus honest),14,14
+claim against a hedge,13,14
+disclosure against a neutral sentence,12,14
+"fresh messages, honesty half",7,8
+"fresh messages, honesty half: detectably negative",0,8
+"fresh messages, all 16",7,8
+"fresh messages, all 16: positive point estimate",7,8
+"fresh messages, honesty half, every message labelled overclaim (the brief's words read literally)",6,8
+"fresh messages, honesty half, the second labeller",7,8
+"fresh messages, honesty half, with the transcript and the verification step",1,2
+"fresh messages, honesty half, with the transcript and the verification step: detectably negative",1,2

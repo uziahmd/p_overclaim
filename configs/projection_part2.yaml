@@ -1,0 +1,448 @@
+# Cost projection for Part 2 of session 5 (the brief's Step 6, replaced by REVISION_POINTWISE sections 5 and 6 of
+# 2026-11-06): Tier 1 pointwise (the primary result, runs first), Tier 2 pairwise (the appendix, cut first).
+# Run: uv run python -m overclaim.projection_v4 --config configs/projection_part2.yaml
+# Arithmetic on recorded costs (overclaim/projection_v4.py, `plan: part2`); nothing is run or called. It reads the run
+# files below (read only) and writes the two output files. A row whose measurement or task count comes from a file
+# that is not yet written is listed as pending and left out of every total; a row that cannot be priced although
+# every file that could measure it exists makes the run exit with code 1.
+#
+# Stats keys are (name, label) as in configs/projection_session5.yaml: "@coding" and "@research" mark the domain,
+# "pointwise/", "vfp/" (the verification-first pointwise scorer), "e3pair/" (the three-label pairwise judge), "full/"
+# and "e2_score/" the call kind; no prefix is the pairwise judge on the neutral rubric; the bare labels "hidden" and
+# "shown" are the ratio basis (pilot 3, where every judge saw the same prompts).
+plan: part2
+models_config: configs/models.yaml       # prices_usd_per_mtok and the judges' model ids
+output:
+  json: results/prep5/projection_part2.json
+  markdown: results/prep5/projection_part2.md
+reference: claude-sonnet-5-5             # the reference judge of the ratio mechanism (projection.unit_cost)
+thought_separate: [gemini-3.8-flash, gemini-4-argon]   # Gemini bills thought tokens as output (unit_stats)
+budget:
+  prior_cost_logs:                       # spend before Part 1 (the brief: 66.41 USD Anthropic, 0.59 OpenRouter)
+    - results/pilot_coding/cost.jsonl
+    - results/pilot2_coding/cost.jsonl
+    - results/pilot3_coding/cost.jsonl
+    - results/pilot4_coding/cost.jsonl
+  part1_cost_log: results/prep5/cost.jsonl
+  anthropic_project_total_usd: 180
+  cut_margin_usd: 15                     # cuts while the total exceeds remainder - 15; add-backs only while margin > 15
+  openrouter_cap_usd: 20                 # project cap
+  google_aistudio_balance_usd: 2.8       # AI Studio balance as of the brief (before Part 1's aistudio calls)
+  google_topup_usd: 5                    # the top-up Uzair was asked for (2.8 + 5 = 7.8)
+  price_changes:
+    - {model: gemini-4-argon, factor: 2.0, from: "2026-12-01"}
+gates:
+  research: results/prep5/research/gate.json   # `passed`; missing or null = not known yet: both branches are printed
+  e2: results/prep5/e2_gate.json
+sets:
+  coding_main: data/processed/coding/matched_sets_v4_main.jsonl       # the main 60 (contract A, assemble stage)
+  research_v2: data/processed/research/matched_sets_research_v2.jsonl # the sets built in the research re-pilot
+seed: 0                                 # the seed of the Experiment 2 task pick (prep5_e2.pick_tasks), for the best-of-16 count
+shown: {max_transcript_tokens: 40000, upper_band_tokens: 60000}       # shown-eligible at or below the first; band
+rules:
+  research_tasks: 60                     # research tasks when the research gate passed (20 built + 40 owed)
+  opus_shown_tasks: 30                   # Opus 5.5 shown (pointwise; pairwise), split over the domains
+  e3_tasks: 60                           # Experiment 3: every shown-eligible coding task, the rest research
+  opus_e3_tasks: 30                      # Opus 5.5 on 30 of the Experiment 3 tasks, split the same way
+  e2_tasks_per_domain: 40                # Experiment 2: 40 tasks per domain present, 16 samples each
+  addback_ii_tasks: 30                   # add-back (ii): Sonnet 4.6 and Opus 4.6 pointwise shown on 30 tasks
+# Record files, in order of preference: the first source with live calls for a (grader, label) wins. Part 1's files
+# first, then session 4's, then pilots 3 and 2. `rubrics` maps a record's rubric to its label kind; `conditions`
+# keeps only those conditions: session 4's research pilot measures a research hidden row (same request, same kind of
+# report) but never a shown row (its pages were shorter than the 1,500-word pages of research_v2).
+record_sources:
+  - {path: results/prep5/research/judge_calls.jsonl, domain: research, rubrics: {neutral: ""},
+     source: "research re-pilot (Part 1)"}
+  - {path: results/prep5/research/pointwise_calls.jsonl, domain: research, rubrics: {pointwise-neutral: pointwise},
+     source: "research re-pilot pointwise (Part 1)"}
+  - {path: results/prep5/pointwise_calls.jsonl, domain: coding, rubrics: {pointwise-neutral: pointwise},
+     source: "Part 1 plain shown scorer, coding"}
+  - {path: results/prep5/e3pw_calls.jsonl, domain: coding, rubrics: {pointwise-verify-first: vfp},
+     source: "Part 1 verification-first scorer check, coding"}
+  - {path: results/prep5/research/e3pw_calls.jsonl, domain: research, rubrics: {pointwise-verify-first: vfp},
+     source: "Part 1 verification-first scorer check, research"}
+  - {path: results/pilot4_coding/judge_calls.jsonl, domain: coding, sets: [v4], rubrics: {neutral: "", full: full},
+     source: "pilot 4, v4 sets"}
+  - {path: results/pilot4_coding/pointwise_calls.jsonl, domain: coding, sets: [v4],
+     rubrics: {pointwise-neutral: pointwise}, source: "pilot 4 pointwise, v4 sets"}
+  - {path: results/pilot4_coding/e3_judge3_calls.jsonl, domain: coding, rubrics: {neutral: e3pair},
+     source: "pilot 4 three-label check, v3 sets"}
+  - {path: results/pilot3_coding/judge_calls.jsonl, domain: coding, sets: [v3], rubrics: {neutral: "", full: full},
+     source: "pilot 3, v3 sets", ratio_basis: true}
+  - {path: results/pilot2_coding/judge_calls.jsonl, domain: coding, sets: [v2], rubrics: {neutral: "", full: full},
+     source: "pilot 2, v2 sets"}
+  - {path: results/pilot_research/judge_calls.jsonl, domain: research, conditions: [hidden], rubrics: {neutral: ""},
+     source: "research pilot (session 4), hidden only"}
+  - {path: results/pilot_research/pointwise_calls.jsonl, domain: research, conditions: [hidden],
+     rubrics: {pointwise-neutral: pointwise}, source: "research pilot pointwise (session 4), hidden only"}
+# cost.jsonl purposes (names read from the modules that log them), in this order of logs: Part 1's first.
+purpose_logs:
+  - {path: results/prep5/cost.jsonl}
+  - {path: results/pilot4_coding/cost.jsonl}
+purpose_stats:
+  - {purpose: e2_policy, name: e2_policy, label: packet@coding}
+  - {purpose: e2_score, by_model: true, label: e2_score/hidden@coding}
+  - {purpose: e2_label, name: e2_label, label: label@coding}
+  - {purpose: e2_label_full, name: e2_label_full, label: label@coding}
+  - {purpose: reasons_v4, name: reason_classifier, label: reason@coding}   # session 4's four-field classifier
+# Research sets owed: Part 1's Anthropic spend on the research_v2 set-building purposes / the sets built.
+research_set_unit: {name: research_set_v2, label: build@research, purpose: research_sets_v2,
+                    log: results/prep5/cost.jsonl, sets: data/processed/research/matched_sets_research_v2.jsonl}
+# Measured factors. cost_ratio and input_tokens_diff read one record filter per side and use only the tasks with live
+# calls on both sides; input_tokens_ratio divides the mean input tokens per call of two stats entries.
+factors:
+  opus_over_sonnet_shown:
+    kind: cost_ratio
+    text: "Opus 5.5 / Sonnet 5.5 cost per neutral shown pairwise call"
+    why: "The measured token and price ratio of the two models on the same shown prompts (derivation a)."
+    num: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-opus-5-5, condition: shown, rubric: neutral,
+          set: v3}
+    den: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-sonnet-5-5, condition: shown, rubric: neutral,
+          set: v3}
+  pair_over_pointwise_shown:
+    kind: cost_ratio
+    text: "Sonnet 5.5 shown pairwise / shown pointwise cost per call, coding"
+    why: >-
+      The measured relation between a shown pair and a shown pointwise call on the same tasks; a pair task writes its
+      cached context once per 6 calls, a pointwise task once per 3, and the ratio carries that difference.
+    num: {path: results/pilot4_coding/judge_calls.jsonl, grader: claude-sonnet-5-5, condition: shown, rubric: neutral,
+          set: v4}
+    den: {path: results/pilot4_coding/pointwise_calls.jsonl, grader: claude-sonnet-5-5, condition: shown,
+          rubric: pointwise-neutral, set: v4}
+  e3pair_over_plain_shown:
+    kind: cost_ratio
+    text: "Sonnet 5.5 three-label / plain shown pairwise cost per call, coding"
+    why: "The three-label judge's claim list on top of the plain shown pairwise call, on the same v3 tasks."
+    num: {path: results/pilot4_coding/e3_judge3_calls.jsonl, grader: claude-sonnet-5-5+verify_first_3,
+          condition: shown}
+    den: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-sonnet-5-5, condition: shown, rubric: neutral,
+          set: v3}
+  full_rubric_extra_input:
+    kind: input_tokens_diff
+    text: "full minus neutral rubric, Sonnet 5.5 hidden pairwise input tokens per call"
+    why: "No full-rubric pointwise prompt exists yet; the pairwise calls give the full rubric's extra input tokens."
+    num: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-sonnet-5-5, condition: hidden, rubric: full,
+          set: v3}
+    den: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-sonnet-5-5, condition: hidden,
+          rubric: neutral, set: v3}
+  research_over_coding_input:
+    kind: input_tokens_ratio
+    text: "research / coding input tokens per Sonnet 5.5 hidden pointwise call"
+    why: >-
+      Experiment 2 has no research pilot. This is the only measured relation between the two domains' input sizes
+      (request and final message); it scales the input of the coding policy and label calls for the research rows.
+    num: [claude-sonnet-5-5, pointwise/hidden@research]
+    den: [claude-sonnet-5-5, pointwise/hidden@coding]
+# Tie rule (revision, section 1): a judge whose O/H tie rate in the hidden condition exceeds the threshold gets a
+# second scoring sample per message. Rates from the pilot pointwise records, per domain in this order of sources.
+tie_rule:
+  threshold: 0.5
+  sources:
+    coding:
+      - {path: results/pilot4_coding/pointwise_calls.jsonl, rubric: pointwise-neutral}
+    research:
+      - {path: results/prep5/research/pointwise_calls.jsonl, rubric: pointwise-neutral}
+      - {path: results/pilot_research/pointwise_calls.jsonl, rubric: pointwise-neutral}
+# The plan, 120 tasks. tier: 1, 2 or addback. tasks: a count of overclaim.projection_v4.counts_part2 (or
+# tier2_calls for the reason classification); calls = tasks x per_task. domain research: the row leaves with a failed
+# research gate; requires_e2: the row leaves with a failed Experiment 2 gate. tie_rule: the row's judge and domain
+# are read in the tie-rate table. price: methods tried in order (projection_v4.price_method).
+rows:
+  # ---------------- Tier 1: Experiment 1 pointwise hidden (3 calls per task, neutral) ----------------
+  - {id: t1-pwh-s55-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [claude-sonnet-5-5, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-s55-r, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Sonnet 5.5, research",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: research, tie_rule: true, tasks: research, per_task: 3,
+     price: [{measured: [claude-sonnet-5-5, pointwise/hidden@research]}]}
+  - {id: t1-pwh-o55-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [claude-opus-5-5, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-o55-r, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Opus 5.5, research",
+     provider: anthropic, judge: claude-opus-5-5, domain: research, tie_rule: true, tasks: research, per_task: 3,
+     price: [{measured: [claude-opus-5-5, pointwise/hidden@research]},
+             {ratio: [claude-opus-5-5, pointwise/hidden@research]}]}
+  - {id: t1-pwh-s46-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Sonnet 4.6, coding",
+     provider: anthropic, judge: claude-sonnet-4-6, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [claude-sonnet-4-6, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-s46-r, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Sonnet 4.6, research",
+     provider: anthropic, judge: claude-sonnet-4-6, domain: research, tie_rule: true, tasks: research, per_task: 3,
+     price: [{measured: [claude-sonnet-4-6, pointwise/hidden@research]},
+             {ratio: [claude-sonnet-4-6, pointwise/hidden@research]}]}
+  - {id: t1-pwh-o46-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Opus 4.6, coding",
+     provider: anthropic, judge: claude-opus-4-6, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [claude-opus-4-6, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-o46-r, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Opus 4.6, research",
+     provider: anthropic, judge: claude-opus-4-6, domain: research, tie_rule: true, tasks: research, per_task: 3,
+     price: [{measured: [claude-opus-4-6, pointwise/hidden@research]},
+             {ratio: [claude-opus-4-6, pointwise/hidden@research]}]}
+  # No full-rubric pointwise prompt exists yet: the neutral pointwise hidden call plus the full rubric's extra input
+  # tokens as measured on the pairwise full-rubric calls.
+  - {id: t1-pwh-full-s55-c, tier: 1, group: E1 pointwise hidden, provider: anthropic, judge: claude-sonnet-5-5,
+     name: "E1 pointwise hidden, full rubric, Sonnet 5.5, coding", domain: coding, tasks: coding, per_task: 3,
+     price: [{extra_input: [claude-sonnet-5-5, pointwise/hidden@coding], factor: full_rubric_extra_input}],
+     note: "no full-rubric pointwise prompt exists yet"}
+  - {id: t1-pwh-qwen-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, qwen3-32b, coding",
+     provider: openrouter, judge: qwen3-32b, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [qwen3-32b, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-qwen-r, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, qwen3-32b, research",
+     provider: openrouter, judge: qwen3-32b, domain: research, tie_rule: true, tasks: research, per_task: 3,
+     price: [{measured: [qwen3-32b, pointwise/hidden@research]}, {ratio: [qwen3-32b, pointwise/hidden@research]}]}
+  - {id: t1-pwh-oss-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gpt-oss-120b, coding",
+     provider: openrouter, judge: gpt-oss-120b, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [gpt-oss-120b, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-oss-r, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gpt-oss-120b, research",
+     provider: openrouter, judge: gpt-oss-120b, domain: research, tie_rule: true, tasks: research, per_task: 3,
+     price: [{measured: [gpt-oss-120b, pointwise/hidden@research]}, {ratio: [gpt-oss-120b, pointwise/hidden@research]}]}
+  - {id: t1-pwh-flash-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gemini-3.8-flash, coding",
+     provider: google, judge: gemini-3.8-flash, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [gemini-3.8-flash, pointwise/hidden@coding]}], note: aistudio}
+  - {id: t1-pwh-flash-r, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gemini-3.8-flash, research",
+     provider: google, judge: gemini-3.8-flash, domain: research, tie_rule: true, tasks: research, per_task: 3,
+     price: [{measured: [gemini-3.8-flash, pointwise/hidden@research]},
+             {ratio: [gemini-3.8-flash, pointwise/hidden@research]}],
+     note: aistudio}
+  - {id: t1-pwh-argon-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gemini-4-argon, coding",
+     provider: google, judge: gemini-4-argon, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [gemini-4-argon, pointwise/hidden@coding]}], note: aistudio}
+  - {id: t1-pwh-argon-r, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gemini-4-argon, research",
+     provider: google, judge: gemini-4-argon, domain: research, tie_rule: true, tasks: research, per_task: 3,
+     price: [{measured: [gemini-4-argon, pointwise/hidden@research]},
+             {ratio: [gemini-4-argon, pointwise/hidden@research]}],
+     note: aistudio}
+  - {id: t1-rm-sky-c, tier: 1, group: E1 pointwise hidden, name: "E1 reward model, Skywork 3B, coding",
+     provider: local, domain: coding, tasks: coding, per_task: 3,
+     price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-rm-sky-r, tier: 1, group: E1 pointwise hidden, name: "E1 reward model, Skywork 3B, research",
+     provider: local, domain: research, tasks: research, per_task: 3,
+     price: [{zero: "local GPU, no API call: 0 USD"}]}
+  # ---------------- Tier 1: Experiment 1 pointwise shown ----------------
+  - {id: t1-pws-s55-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tasks: pw_shown_coding, per_task: 3,
+     price: [{measured: [claude-sonnet-5-5, pointwise/shown@coding]}]}
+  - {id: t1-pws-s55-r, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, Sonnet 5.5, research",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: research, tasks: pw_shown_research, per_task: 3,
+     price: [{measured: [claude-sonnet-5-5, pointwise/shown@research]}]}
+  - {id: t1-pws-o55-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tasks: o55_shown_coding, per_task: 3,
+     price: [{times: {measured: [claude-sonnet-5-5, pointwise/shown@coding]}, factor: opus_over_sonnet_shown}]}
+  - {id: t1-pws-o55-r, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, Opus 5.5, research",
+     provider: anthropic, judge: claude-opus-5-5, domain: research, tasks: o55_shown_research, per_task: 3,
+     price: [{times: {measured: [claude-sonnet-5-5, pointwise/shown@research]}, factor: opus_over_sonnet_shown}]}
+  - {id: t1-pws-qwen-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, qwen3-32b, coding",
+     provider: openrouter, judge: qwen3-32b, domain: coding, tasks: pw_shown_coding, per_task: 3,
+     price: [{ratio: [qwen3-32b, pointwise/shown@coding]}], note: "no prompt cache on OpenRouter"}
+  - {id: t1-pws-qwen-r, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, qwen3-32b, research",
+     provider: openrouter, judge: qwen3-32b, domain: research, tasks: pw_shown_research, per_task: 3,
+     price: [{ratio: [qwen3-32b, pointwise/shown@research]}], note: "no prompt cache on OpenRouter"}
+  - {id: t1-pws-oss-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, gpt-oss-120b, coding",
+     provider: openrouter, judge: gpt-oss-120b, domain: coding, tasks: pw_shown_coding, per_task: 3,
+     price: [{ratio: [gpt-oss-120b, pointwise/shown@coding]}], note: "no prompt cache on OpenRouter"}
+  - {id: t1-pws-oss-r, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, gpt-oss-120b, research",
+     provider: openrouter, judge: gpt-oss-120b, domain: research, tasks: pw_shown_research, per_task: 3,
+     price: [{ratio: [gpt-oss-120b, pointwise/shown@research]}], note: "no prompt cache on OpenRouter"}
+  - {id: t1-pws-flash-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, gemini-3.8-flash, coding",
+     provider: google, judge: gemini-3.8-flash, domain: coding, optional: true, tasks: pw_shown_coding, per_task: 3,
+     price: [{ratio: [gemini-3.8-flash, pointwise/shown@coding]}], note: "vertex only, credit unconfirmed"}
+  - {id: t1-pws-flash-r, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, gemini-3.8-flash, research",
+     provider: google, judge: gemini-3.8-flash, domain: research, optional: true, tasks: pw_shown_research, per_task: 3,
+     price: [{ratio: [gemini-3.8-flash, pointwise/shown@research]}], note: "vertex only, credit unconfirmed"}
+  # ---------------- Tier 1: Experiment 2 (only when its gate passed; 16 samples per task) ----------------
+  - {id: t1-e2-policy-c, tier: 1, group: E2, name: "E2 policy samples, Qwen3-Coder, coding", provider: openrouter,
+     model: qwen/qwen3-coder, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [e2_policy, packet@coding]}]}
+  - {id: t1-e2-policy-r, tier: 1, group: E2, name: "E2 policy samples, Qwen3-Coder, research", provider: openrouter,
+     model: qwen/qwen3-coder, domain: research, requires_e2: true, tasks: e2_research, per_task: 16,
+     price: [{input_scaled: [e2_policy, packet@coding], factor: research_over_coding_input}],
+     note: "Experiment 2 has not been piloted in the research domain"}
+  - {id: t1-e2-sel-s46-c, tier: 1, group: E2, name: "E2 selector scores, Sonnet 4.6, coding", provider: anthropic,
+     judge: claude-sonnet-4-6, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [claude-sonnet-4-6, e2_score/hidden@coding]}]}
+  - {id: t1-e2-sel-s46-r, tier: 1, group: E2, name: "E2 selector scores, Sonnet 4.6, research", provider: anthropic,
+     judge: claude-sonnet-4-6, domain: research, requires_e2: true, tasks: e2_research, per_task: 16,
+     price: [{measured: [claude-sonnet-4-6, pointwise/hidden@research],
+              derived: "the selector prompt is the hidden pointwise prompt"},
+             {ratio: [claude-sonnet-4-6, pointwise/hidden@research]}],
+     note: "Experiment 2 has not been piloted in the research domain; the selector prompt is the
+            hidden pointwise prompt"}
+  - {id: t1-e2-sel-s55-c, tier: 1, group: E2, name: "E2 selector scores, Sonnet 5.5, coding", provider: anthropic,
+     judge: claude-sonnet-5-5, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [claude-sonnet-5-5, e2_score/hidden@coding]}]}
+  - {id: t1-e2-sel-s55-r, tier: 1, group: E2, name: "E2 selector scores, Sonnet 5.5, research", provider: anthropic,
+     judge: claude-sonnet-5-5, domain: research, requires_e2: true, tasks: e2_research, per_task: 16,
+     price: [{measured: [claude-sonnet-5-5, pointwise/hidden@research],
+              derived: "the selector prompt is the hidden pointwise prompt"}],
+     note: "Experiment 2 has not been piloted in the research domain"}
+  - {id: t1-e2-label-c, tier: 1, group: E2, name: "E2 labels, Haiku 5.5, test-record labeller, coding",
+     provider: anthropic, model: claude-haiku-5-5, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [e2_label, label@coding]}]}
+  - {id: t1-e2-label-r, tier: 1, group: E2, name: "E2 labels, Haiku 5.5, test-record labeller, research",
+     provider: anthropic, model: claude-haiku-5-5, domain: research, requires_e2: true, tasks: e2_research,
+     per_task: 16, price: [{input_scaled: [e2_label, label@coding], factor: research_over_coding_input}],
+     note: "Experiment 2 has not been piloted in the research domain"}
+  - {id: t1-e2-labelfull-c, tier: 1, group: E2, name: "E2 labels, Haiku 5.5, full-evidence labeller, coding",
+     provider: anthropic, model: claude-haiku-5-5, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [e2_label_full, label@coding]}]}
+  - {id: t1-e2-labelfull-r, tier: 1, group: E2, name: "E2 labels, Haiku 5.5, full-evidence labeller, research",
+     provider: anthropic, model: claude-haiku-5-5, domain: research, requires_e2: true, tasks: e2_research,
+     per_task: 16, price: [{input_scaled: [e2_label_full, label@coding], factor: research_over_coding_input}],
+     note: "Experiment 2 has not been piloted in the research domain"}
+  # ---------------- Tier 1: Experiment 3 pointwise, the verification-first scorer, shown ----------------
+  - {id: t1-e3-s55-c, tier: 1, group: E3 pointwise, name: "E3 verification-first scorer, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tasks: e3_coding, per_task: 3,
+     price: [{measured: [claude-sonnet-5-5, vfp/shown@coding]}]}
+  - {id: t1-e3-s55-r, tier: 1, group: E3 pointwise, name: "E3 verification-first scorer, Sonnet 5.5, research",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: research, tasks: e3_research, per_task: 3,
+     price: [{measured: [claude-sonnet-5-5, vfp/shown@research]}]}
+  - {id: t1-e3-o55-c, tier: 1, group: E3 pointwise, name: "E3 verification-first scorer, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tasks: o55_e3_coding, per_task: 3,
+     price: [{times: {measured: [claude-sonnet-5-5, vfp/shown@coding]}, factor: opus_over_sonnet_shown}]}
+  - {id: t1-e3-o55-r, tier: 1, group: E3 pointwise, name: "E3 verification-first scorer, Opus 5.5, research",
+     provider: anthropic, judge: claude-opus-5-5, domain: research, tasks: o55_e3_research, per_task: 3,
+     price: [{times: {measured: [claude-sonnet-5-5, vfp/shown@research]}, factor: opus_over_sonnet_shown}]}
+  # ---------------- Tier 1: research sets owed (no agent row: the 189 trajectories exist) ----------------
+  - {id: t1-build-research, tier: 1, group: Research sets owed, name: "Research sets owed (per set)",
+     provider: anthropic, model: claude-opus-5-5, domain: research, tasks: research_sets_owed, per_task: 1,
+     price: [{measured: [research_set_v2, build@research]}]}
+  # ---------------- Tier 2: Experiment 1 pairwise hidden (6 calls per task, neutral) ----------------
+  - {id: t2-ph-s55-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [claude-sonnet-5-5, hidden@coding]}]}
+  - {id: t2-ph-s55-r, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Sonnet 5.5, research",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: research, tasks: research, per_task: 6,
+     price: [{measured: [claude-sonnet-5-5, hidden@research]}]}
+  - {id: t2-ph-o55-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [claude-opus-5-5, hidden@coding]}]}
+  - {id: t2-ph-o55-r, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Opus 5.5, research",
+     provider: anthropic, judge: claude-opus-5-5, domain: research, tasks: research, per_task: 6,
+     price: [{measured: [claude-opus-5-5, hidden@research]}]}
+  - {id: t2-ph-s46-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Sonnet 4.6, coding",
+     provider: anthropic, judge: claude-sonnet-4-6, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [claude-sonnet-4-6, hidden@coding]}]}
+  - {id: t2-ph-s46-r, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Sonnet 4.6, research",
+     provider: anthropic, judge: claude-sonnet-4-6, domain: research, tasks: research, per_task: 6,
+     price: [{measured: [claude-sonnet-4-6, hidden@research]}, {ratio: [claude-sonnet-4-6, hidden@research]}]}
+  - {id: t2-ph-o46-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Opus 4.6, coding",
+     provider: anthropic, judge: claude-opus-4-6, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [claude-opus-4-6, hidden@coding]}]}
+  - {id: t2-ph-o46-r, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Opus 4.6, research",
+     provider: anthropic, judge: claude-opus-4-6, domain: research, tasks: research, per_task: 6,
+     price: [{measured: [claude-opus-4-6, hidden@research]}, {ratio: [claude-opus-4-6, hidden@research]}]}
+  - {id: t2-ph-qwen-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, qwen3-32b, coding",
+     provider: openrouter, judge: qwen3-32b, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [qwen3-32b, hidden@coding]}]}
+  - {id: t2-ph-qwen-r, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, qwen3-32b, research",
+     provider: openrouter, judge: qwen3-32b, domain: research, tasks: research, per_task: 6,
+     price: [{measured: [qwen3-32b, hidden@research]}, {ratio: [qwen3-32b, hidden@research]}]}
+  - {id: t2-ph-oss-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gpt-oss-120b, coding",
+     provider: openrouter, judge: gpt-oss-120b, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [gpt-oss-120b, hidden@coding]}]}
+  - {id: t2-ph-oss-r, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gpt-oss-120b, research",
+     provider: openrouter, judge: gpt-oss-120b, domain: research, tasks: research, per_task: 6,
+     price: [{measured: [gpt-oss-120b, hidden@research]}, {ratio: [gpt-oss-120b, hidden@research]}]}
+  - {id: t2-ph-flash-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gemini-3.8-flash, coding",
+     provider: google, judge: gemini-3.8-flash, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [gemini-3.8-flash, hidden@coding]}], note: aistudio}
+  - {id: t2-ph-flash-r, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gemini-3.8-flash, research",
+     provider: google, judge: gemini-3.8-flash, domain: research, tasks: research, per_task: 6,
+     price: [{measured: [gemini-3.8-flash, hidden@research]}, {ratio: [gemini-3.8-flash, hidden@research]}],
+     note: aistudio}
+  - {id: t2-ph-argon-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gemini-4-argon, coding",
+     provider: google, judge: gemini-4-argon, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [gemini-4-argon, hidden@coding]}], note: aistudio}
+  - {id: t2-ph-argon-r, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gemini-4-argon, research",
+     provider: google, judge: gemini-4-argon, domain: research, tasks: research, per_task: 6,
+     price: [{measured: [gemini-4-argon, hidden@research]}, {ratio: [gemini-4-argon, hidden@research]}],
+     note: aistudio}
+  # ---------------- Tier 2: Experiment 1 pairwise shown ----------------
+  - {id: t2-ps-s55-c, tier: 2, group: E1 pairwise shown, name: "E1 pairwise shown, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tasks: shown_coding, per_task: 6,
+     price: [{measured: [claude-sonnet-5-5, shown@coding]}]}
+  # The re-pilot ran no shown pair: the measured shown pointwise research call x the measured relation between a
+  # shown pair and a shown pointwise call on coding.
+  - {id: t2-ps-s55-r, tier: 2, group: E1 pairwise shown, name: "E1 pairwise shown, Sonnet 5.5, research",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: research, tasks: shown_research, per_task: 6,
+     price: [{times: {measured: [claude-sonnet-5-5, pointwise/shown@research]}, factor: pair_over_pointwise_shown}]}
+  - {id: t2-ps-o55-c, tier: 2, group: E1 pairwise shown, name: "E1 pairwise shown, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tasks: o55_pair_coding, per_task: 6,
+     price: [{measured: [claude-opus-5-5, shown@coding]}]}
+  - {id: t2-ps-o55-r, tier: 2, group: E1 pairwise shown, name: "E1 pairwise shown, Opus 5.5, research",
+     provider: anthropic, judge: claude-opus-5-5, domain: research, tasks: o55_pair_research, per_task: 6,
+     price: [{times: {times: {measured: [claude-sonnet-5-5, pointwise/shown@research]},
+                      factor: pair_over_pointwise_shown}, factor: opus_over_sonnet_shown}]}
+  # ---------------- Tier 2: Experiment 3 pairwise, the three-label judge ----------------
+  - {id: t2-e3p-s55-c, tier: 2, group: E3 pairwise, name: "E3 three-label judge, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tasks: e3pair_coding, per_task: 6,
+     price: [{measured: [claude-sonnet-5-5+verify_first_3, e3pair/shown@coding]}]}
+  - {id: t2-e3p-s55-r, tier: 2, group: E3 pairwise, name: "E3 three-label judge, Sonnet 5.5, research",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: research, tasks: e3pair_research, per_task: 6,
+     price: [{times: {times: {measured: [claude-sonnet-5-5, pointwise/shown@research]},
+                      factor: pair_over_pointwise_shown}, factor: e3pair_over_plain_shown}]}
+  # ---------------- Tier 2: reason classification with cites_disclosure, one call per counted pairwise verdict ----
+  # Part 2's classifier adds the cites_disclosure field to session 4's four-field classifier: priced at the measured
+  # cost of the four-field call (c), as the contract says.
+  - {id: t2-reasons-c, tier: 2, group: Reason classification, name: "Reason classification, Haiku 5.5, coding",
+     provider: anthropic, model: claude-haiku-5-5, domain: coding, tasks: tier2_calls, per_task: 1,
+     price: [{measured: [reason_classifier, reason@coding],
+              derived: "session 4's four-field classifier call; Part 2's classifier adds the cites_disclosure field
+                        to the same prompt"}],
+     note: "one call per pairwise verdict of the counted Tier 2 rows of the domain"}
+  - {id: t2-reasons-r, tier: 2, group: Reason classification, name: "Reason classification, Haiku 5.5, research",
+     provider: anthropic, model: claude-haiku-5-5, domain: research, tasks: tier2_calls, per_task: 1,
+     price: [{measured: [reason_classifier, reason@coding],
+              derived: "session 4's four-field classifier call on a research verdict's reason (session 4
+                        classified no research reason; Part 2's classifier adds the cites_disclosure field)"}],
+     note: "one call per pairwise verdict of the counted Tier 2 rows of the domain"}
+  # ---------------- Add-backs ----------------
+  - {id: ab-i-s55-c, tier: addback, group: "Add-back (i)", provider: anthropic, judge: claude-sonnet-5-5,
+     name: "E1 pointwise shown, Sonnet 5.5, coding tasks above {shown.max_transcript_tokens} and up to
+            {shown.upper_band_tokens} rendered tokens", domain: coding,
+     tasks: band_coding, per_task: 3, price: [{band_tokens: [claude-sonnet-5-5, pointwise/shown@coding]}]}
+  - {id: ab-ii-s46-c, tier: addback, group: "Add-back (ii)", name: "E1 pointwise shown, Sonnet 4.6, coding",
+     provider: anthropic, judge: claude-sonnet-4-6, domain: coding, tasks: addback_ii_coding, per_task: 3,
+     price: [{measured: [claude-sonnet-4-6, pointwise/shown@coding]},
+             {ratio: [claude-sonnet-4-6, pointwise/shown@coding]}]}
+  - {id: ab-ii-s46-r, tier: addback, group: "Add-back (ii)", name: "E1 pointwise shown, Sonnet 4.6, research",
+     provider: anthropic, judge: claude-sonnet-4-6, domain: research, tasks: addback_ii_research, per_task: 3,
+     price: [{measured: [claude-sonnet-4-6, pointwise/shown@research]},
+             {ratio: [claude-sonnet-4-6, pointwise/shown@research]}]}
+  - {id: ab-ii-o46-c, tier: addback, group: "Add-back (ii)", name: "E1 pointwise shown, Opus 4.6, coding",
+     provider: anthropic, judge: claude-opus-4-6, domain: coding, tasks: addback_ii_coding, per_task: 3,
+     price: [{measured: [claude-opus-4-6, pointwise/shown@coding]}, {ratio: [claude-opus-4-6, pointwise/shown@coding]}]}
+  - {id: ab-ii-o46-r, tier: addback, group: "Add-back (ii)", name: "E1 pointwise shown, Opus 4.6, research",
+     provider: anthropic, judge: claude-opus-4-6, domain: research, tasks: addback_ii_research, per_task: 3,
+     price: [{measured: [claude-opus-4-6, pointwise/shown@research]},
+             {ratio: [claude-opus-4-6, pointwise/shown@research]}]}
+  # The mitigated best-of-16 (session 4's rows e3-bo16-*): the verification-first scorer on every Experiment 2 sample
+  # of the shown-eligible Experiment 2 tasks, the context cached once per task.
+  - {id: ab-iii-bo16-c, tier: addback, group: "Add-back (iii)", name: "E3 mitigated best-of-16, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, requires_e2: true, tasks: bo16_coding,
+     per_task: 16, price: [{reamortize: [claude-sonnet-5-5, vfp/shown@coding], calls_per_prefix: 16}]}
+  - {id: ab-iii-bo16-r, tier: addback, group: "Add-back (iii)", name: "E3 mitigated best-of-16, Sonnet 5.5, research",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: research, requires_e2: true, tasks: bo16_research,
+     per_task: 16, price: [{reamortize: [claude-sonnet-5-5, vfp/shown@research], calls_per_prefix: 16}]}
+# The cut order (a budget rule): applied in order, cumulatively, until the Anthropic total is at or below the
+# threshold. remove: row ids (a second-sample row leaves with its base row); set: count parameters of counts_part2.
+# Task counts and token bounds in names (here, in the add-backs and in the rows) are placeholders filled from the
+# config (projection_v4.fill_names): {rules.<key>}, {shown.<key>} and, in a cut, {set.<key>} from its own `set`.
+cuts:
+  - {id: A1, name: "Experiment 3 pairwise out", remove: [t2-e3p-s55-c, t2-e3p-s55-r]}
+  - {id: A2, name: "pairwise shown, Opus 5.5 out", remove: [t2-ps-o55-c, t2-ps-o55-r]}
+  - {id: A3, name: "pairwise shown, Sonnet 5.5 out", remove: [t2-ps-s55-c, t2-ps-s55-r]}
+  - {id: A4, name: "pairwise hidden, Opus 4.6 and Opus 5.5 out",
+     remove: [t2-ph-o46-c, t2-ph-o46-r, t2-ph-o55-c, t2-ph-o55-r]}
+  - {id: A5, name: "pairwise hidden, Sonnet 4.6 out", remove: [t2-ph-s46-c, t2-ph-s46-r]}
+  - {id: B1, name: "Opus 5.5 pointwise shown on at most {set.opus_shown_tasks} tasks instead of
+                    {rules.opus_shown_tasks}", set: {opus_shown_tasks: 20}}
+  - {id: B2, name: "Opus 5.5 out of Experiment 3 pointwise", remove: [t1-e3-o55-c, t1-e3-o55-r]}
+  - {id: B3, name: "Opus 4.6 out of pointwise hidden", remove: [t1-pwh-o46-c, t1-pwh-o46-r]}
+  - {id: B4, name: "pointwise shown capped at {set.shown_cap_per_domain} tasks per domain (every pointwise shown row
+                    and Experiment 3 pointwise)", set: {shown_cap_per_domain: 30}}
+# The add-backs, in order, each only if the margin (remainder - total) stays above cut_margin_usd with it.
+addbacks:
+  - {id: i, name: "Sonnet 5.5 pointwise shown on the coding tasks above {shown.max_transcript_tokens} and up to
+                   {shown.upper_band_tokens} rendered tokens", rows: [ab-i-s55-c]}
+  - {id: ii, name: "Sonnet 4.6 and Opus 4.6 pointwise shown on at most {rules.addback_ii_tasks} tasks",
+     rows: [ab-ii-s46-c, ab-ii-s46-r, ab-ii-o46-c, ab-ii-o46-r]}
+  - {id: iii, name: "the mitigated best-of-16", rows: [ab-iii-bo16-c, ab-iii-bo16-r]}

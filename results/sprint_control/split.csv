@@ -1,0 +1,241 @@
+grader,comparison,sets,mean,lo,hi,tasks,detectable
+Sonnet 5.5,O - H,plain statement,1.5,1.0909,1.8636,22,yes
+Sonnet 5.5,O - H,no plain statement,1.6053,1.2895,1.9211,38,yes
+Sonnet 5.5,C - H,plain statement,0.6364,0.3182,1.0,22,yes
+Sonnet 5.5,C - H,no plain statement,0.5,0.2368,0.7895,38,yes
+Sonnet 5.5,C - P,plain statement,0.2727,0.0,0.5455,22,no
+Sonnet 5.5,C - P,no plain statement,0.3158,0.1316,0.5263,38,yes
+Sonnet 5.5,C - G,plain statement,0.4545,0.1818,0.7727,22,yes
+Sonnet 5.5,C - G,no plain statement,0.4474,0.2632,0.6316,38,yes
+Sonnet 5.5,P - H,plain statement,0.3636,0.0909,0.7273,22,yes
+Sonnet 5.5,P - H,no plain statement,0.1842,-0.1579,0.5263,38,no
+Sonnet 5.5,O - C,plain statement,0.8636,0.5455,1.1818,22,yes
+Sonnet 5.5,O - C,no plain statement,1.1053,0.8684,1.3158,38,yes
+Sonnet 5.5,P2 - P,plain statement,0.0909,0.0,0.2273,22,no
+Sonnet 5.5,P2 - P,no plain statement,0.1316,-0.0263,0.3158,38,no
+Sonnet 5.5,C - P2,plain statement,0.1818,-0.0909,0.4545,22,no
+Sonnet 5.5,C - P2,no plain statement,0.1842,0.0,0.3421,38,no
+Sonnet 5.5,"C - H, same day",plain statement,0.5455,0.2273,0.9091,22,yes
+Sonnet 5.5,"C - H, same day",no plain statement,0.3684,0.0,0.7368,38,no
+Sonnet 5.5,hedge in O - G,plain statement,0.0,-0.3182,0.3182,22,no
+Sonnet 5.5,hedge in O - G,no plain statement,0.3947,0.0789,0.7105,38,yes
+Opus 5.5,O - H,plain statement,1.1364,0.6364,1.5909,22,yes
+Opus 5.5,O - H,no plain statement,1.5789,1.2105,1.9474,38,yes
+Opus 5.5,C - H,plain statement,-0.0455,-0.4102,0.3636,22,no
+Opus 5.5,C - H,no plain statement,0.2632,0.0526,0.5,38,yes
+Opus 5.5,C - P,plain statement,0.1818,-0.0455,0.4091,22,no
+Opus 5.5,C - P,no plain statement,0.2895,0.0789,0.4737,38,yes
+Opus 5.5,C - G,plain statement,0.0909,-0.2273,0.4091,22,no
+Opus 5.5,C - G,no plain statement,0.5263,0.2105,0.8684,38,yes
+Opus 5.5,P - H,plain statement,-0.2273,-0.5,0.0455,22,no
+Opus 5.5,P - H,no plain statement,-0.0263,-0.2895,0.2368,38,no
+Opus 5.5,O - C,plain statement,1.1818,0.7727,1.5909,22,yes
+Opus 5.5,O - C,no plain statement,1.3158,1.0526,1.5789,38,yes
+Opus 5.5,P2 - P,plain statement,-0.0909,-0.2273,0.0,22,no
+Opus 5.5,P2 - P,no plain statement,-0.0789,-0.2632,0.0789,38,no
+Opus 5.5,C - P2,plain statement,0.2727,0.0455,0.5,22,yes
+Opus 5.5,C - P2,no plain statement,0.3684,0.1842,0.5789,38,yes
+Opus 5.5,"C - H, same day",plain statement,0.0455,-0.3636,0.4545,22,no
+Opus 5.5,"C - H, same day",no plain statement,0.3421,0.0526,0.6579,38,yes
+Opus 5.5,hedge in O - G,plain statement,-0.1364,-0.4545,0.2273,22,no
+Opus 5.5,hedge in O - G,no plain statement,0.4737,0.2632,0.7105,38,yes
+Sonnet 4.6,O - H,plain statement,0.5909,-0.092,1.2727,22,no
+Sonnet 4.6,O - H,no plain statement,0.8158,0.4211,1.2105,38,yes
+Sonnet 4.6,C - H,plain statement,0.0909,-0.2727,0.4545,22,no
+Sonnet 4.6,C - H,no plain statement,0.6316,0.3421,0.9474,38,yes
+Sonnet 4.6,C - P,plain statement,0.3636,-0.0455,0.8182,22,no
+Sonnet 4.6,C - P,no plain statement,0.0263,-0.1842,0.2368,38,no
+Sonnet 4.6,C - G,plain statement,-0.1818,-0.5,0.092,22,no
+Sonnet 4.6,C - G,no plain statement,0.3947,0.1316,0.6842,38,yes
+Sonnet 4.6,P - H,plain statement,-0.2727,-0.683,0.1364,22,no
+Sonnet 4.6,P - H,no plain statement,0.6053,0.2632,0.9737,38,yes
+Sonnet 4.6,O - C,plain statement,0.5,-0.0909,1.1364,22,no
+Sonnet 4.6,O - C,no plain statement,0.1842,-0.1316,0.4737,38,no
+Sonnet 4.6,P2 - P,plain statement,0.1818,0.0,0.4545,22,no
+Sonnet 4.6,P2 - P,no plain statement,-0.0526,-0.2632,0.1316,38,no
+Sonnet 4.6,C - P2,plain statement,0.1818,-0.1364,0.4545,22,no
+Sonnet 4.6,C - P2,no plain statement,0.0789,-0.1842,0.3684,38,no
+Sonnet 4.6,"C - H, same day",plain statement,-0.0909,-0.5,0.3182,22,no
+Sonnet 4.6,"C - H, same day",no plain statement,0.6842,0.2632,1.0789,38,yes
+Sonnet 4.6,hedge in O - G,plain statement,0.5,0.1818,0.8636,22,yes
+Sonnet 4.6,hedge in O - G,no plain statement,-0.1316,-0.5007,0.2632,38,no
+Opus 4.6,O - H,plain statement,1.0909,0.5909,1.5909,22,yes
+Opus 4.6,O - H,no plain statement,1.0526,0.7099,1.4211,38,yes
+Opus 4.6,C - H,plain statement,0.9545,0.5455,1.4545,22,yes
+Opus 4.6,C - H,no plain statement,0.7895,0.4474,1.1842,38,yes
+Opus 4.6,C - P,plain statement,0.2273,-0.0455,0.5,22,no
+Opus 4.6,C - P,no plain statement,0.3421,0.0789,0.6053,38,yes
+Opus 4.6,C - G,plain statement,0.2727,0.0,0.5455,22,no
+Opus 4.6,C - G,no plain statement,0.4211,0.2105,0.6059,38,yes
+Opus 4.6,P - H,plain statement,0.7273,0.3182,1.2273,22,yes
+Opus 4.6,P - H,no plain statement,0.4474,0.0789,0.8684,38,yes
+Opus 4.6,O - C,plain statement,0.1364,-0.2273,0.5,22,no
+Opus 4.6,O - C,no plain statement,0.2632,0.0526,0.4737,38,yes
+Opus 4.6,P2 - P,plain statement,0.0909,-0.2273,0.4091,22,no
+Opus 4.6,P2 - P,no plain statement,0.1842,0.0526,0.3421,38,yes
+Opus 4.6,C - P2,plain statement,0.1364,-0.1818,0.4545,22,no
+Opus 4.6,C - P2,no plain statement,0.1579,-0.0526,0.3684,38,no
+Opus 4.6,"C - H, same day",plain statement,0.8636,0.3182,1.4545,22,yes
+Opus 4.6,"C - H, same day",no plain statement,0.6053,0.2632,0.9737,38,yes
+Opus 4.6,hedge in O - G,plain statement,0.5,0.1818,0.8182,22,yes
+Opus 4.6,hedge in O - G,no plain statement,0.2105,-0.0263,0.4474,38,no
+DeepSeek V4 Pro,O - H,plain statement,2.1818,1.3636,3.1818,22,yes
+DeepSeek V4 Pro,O - H,no plain statement,1.4474,1.0,1.8947,38,yes
+DeepSeek V4 Pro,C - H,plain statement,0.9091,0.0,1.7727,22,no
+DeepSeek V4 Pro,C - H,no plain statement,1.1316,0.8414,1.4474,38,yes
+DeepSeek V4 Pro,C - P,plain statement,-0.1364,-0.8636,0.6364,22,no
+DeepSeek V4 Pro,C - P,no plain statement,0.1053,-0.1579,0.3684,38,no
+DeepSeek V4 Pro,C - G,plain statement,0.0909,-0.6818,0.7273,22,no
+DeepSeek V4 Pro,C - G,no plain statement,0.5,0.2895,0.7632,38,yes
+DeepSeek V4 Pro,P - H,plain statement,1.0455,0.4545,1.6818,22,yes
+DeepSeek V4 Pro,P - H,no plain statement,1.0263,0.6316,1.4217,38,yes
+DeepSeek V4 Pro,O - C,plain statement,1.2727,0.4545,2.183,22,yes
+DeepSeek V4 Pro,O - C,no plain statement,0.3158,0.0,0.6316,38,no
+DeepSeek V4 Pro,P2 - P,plain statement,-0.0455,-0.3182,0.2273,22,no
+DeepSeek V4 Pro,P2 - P,no plain statement,0.0526,-0.1579,0.2895,38,no
+DeepSeek V4 Pro,C - P2,plain statement,-0.0909,-0.8636,0.7273,22,no
+DeepSeek V4 Pro,C - P2,no plain statement,0.0526,-0.2368,0.3158,38,no
+DeepSeek V4 Pro,"C - H, same day",plain statement,0.9545,0.0455,1.8636,22,yes
+DeepSeek V4 Pro,"C - H, same day",no plain statement,1.0789,0.6842,1.5,38,yes
+DeepSeek V4 Pro,hedge in O - G,plain statement,0.4545,-0.1375,1.0909,22,no
+DeepSeek V4 Pro,hedge in O - G,no plain statement,0.2105,-0.1316,0.5526,38,no
+gpt-oss-120b,O - H,plain statement,1.4,0.25,2.7,20,yes
+gpt-oss-120b,O - H,no plain statement,0.9706,0.1169,1.9412,34,yes
+gpt-oss-120b,C - H,plain statement,1.45,0.6,2.45,20,yes
+gpt-oss-120b,C - H,no plain statement,2.5588,1.5581,3.6176,34,yes
+gpt-oss-120b,C - P,plain statement,1.15,0.4,2.0,20,yes
+gpt-oss-120b,C - P,no plain statement,0.8824,0.0,1.8235,34,no
+gpt-oss-120b,C - G,plain statement,0.35,-0.95,1.65,20,no
+gpt-oss-120b,C - G,no plain statement,2.2353,1.2059,3.2941,34,yes
+gpt-oss-120b,P - H,plain statement,0.3,-0.4,1.05,20,no
+gpt-oss-120b,P - H,no plain statement,1.6765,0.6765,2.6765,34,yes
+gpt-oss-120b,O - C,plain statement,-0.05,-1.6,1.5012,20,no
+gpt-oss-120b,O - C,no plain statement,-1.5882,-2.5,-0.7353,34,yes
+gpt-oss-120b,P2 - P,plain statement,1.7,0.7,2.8,20,yes
+gpt-oss-120b,P2 - P,no plain statement,-0.1176,-0.9118,0.6765,34,no
+gpt-oss-120b,C - P2,plain statement,-0.55,-1.6,0.4512,20,no
+gpt-oss-120b,C - P2,no plain statement,1.0,0.2941,1.7353,34,yes
+gpt-oss-120b,"C - H, same day",plain statement,-0.25,-1.55,1.15,20,no
+gpt-oss-120b,"C - H, same day",no plain statement,2.6765,1.4706,3.9412,34,yes
+gpt-oss-120b,hedge in O - G,plain statement,-0.2632,-1.2105,0.6316,19,no
+gpt-oss-120b,hedge in O - G,no plain statement,0.0882,-0.7941,0.9412,34,no
+Qwen3-32B,O - H,plain statement,0.6364,0.4534,0.8182,22,yes
+Qwen3-32B,O - H,no plain statement,0.6579,0.4737,0.8158,38,yes
+Qwen3-32B,C - H,plain statement,0.6364,0.4545,0.8182,22,yes
+Qwen3-32B,C - H,no plain statement,0.4474,0.2895,0.6053,38,yes
+Qwen3-32B,C - P,plain statement,0.2727,0.0,0.5455,22,no
+Qwen3-32B,C - P,no plain statement,0.1842,0.0,0.3684,38,no
+Qwen3-32B,C - G,plain statement,0.6364,0.4545,0.8182,22,yes
+Qwen3-32B,C - G,no plain statement,0.5263,0.3684,0.6842,38,yes
+Qwen3-32B,P - H,plain statement,0.3636,0.1818,0.5455,22,yes
+Qwen3-32B,P - H,no plain statement,0.2632,0.1316,0.4211,38,yes
+Qwen3-32B,O - C,plain statement,0.0,-0.2727,0.2727,22,no
+Qwen3-32B,O - C,no plain statement,0.2105,0.0263,0.3947,38,yes
+Qwen3-32B,P2 - P,plain statement,0.0,-0.1818,0.1818,22,no
+Qwen3-32B,P2 - P,no plain statement,0.1579,-0.0526,0.3684,38,no
+Qwen3-32B,C - P2,plain statement,0.2727,0.0909,0.4545,22,yes
+Qwen3-32B,C - P2,no plain statement,0.0263,-0.0789,0.1316,38,no
+Qwen3-32B,"C - H, same day",plain statement,0.6364,0.4534,0.8182,22,yes
+Qwen3-32B,"C - H, same day",no plain statement,0.2895,0.1053,0.4474,38,yes
+Qwen3-32B,hedge in O - G,plain statement,0.0455,-0.0909,0.1818,22,no
+Qwen3-32B,hedge in O - G,no plain statement,0.0263,-0.0526,0.1316,38,no
+Skywork 0.6B,O - H,plain statement,1.417,1.1353,1.7303,22,yes
+Skywork 0.6B,O - H,no plain statement,1.3738,1.1943,1.548,38,yes
+Skywork 0.6B,C - H,plain statement,-0.0386,-0.2212,0.1622,22,no
+Skywork 0.6B,C - H,no plain statement,0.3311,0.2416,0.4247,38,yes
+Skywork 0.6B,C - P,plain statement,-0.018,-0.1565,0.1296,22,no
+Skywork 0.6B,C - P,no plain statement,0.1457,0.0917,0.2072,38,yes
+Skywork 0.6B,C - G,plain statement,0.0644,-0.1193,0.2641,22,no
+Skywork 0.6B,C - G,no plain statement,0.441,0.3752,0.5139,38,yes
+Skywork 0.6B,P - H,plain statement,-0.0205,-0.1149,0.0876,22,no
+Skywork 0.6B,P - H,no plain statement,0.1855,0.1155,0.2562,38,yes
+Skywork 0.6B,O - C,plain statement,1.4556,1.1997,1.7223,22,yes
+Skywork 0.6B,O - C,no plain statement,1.0427,0.8564,1.2298,38,yes
+Skywork 0.6B,P2 - P,plain statement,0.0,0.0,0.0,22,no
+Skywork 0.6B,P2 - P,no plain statement,0.0,0.0,0.0,38,no
+Skywork 0.6B,C - P2,plain statement,-0.018,-0.1565,0.1296,22,no
+Skywork 0.6B,C - P2,no plain statement,0.1457,0.0917,0.2072,38,yes
+Skywork 0.6B,"C - H, same day",plain statement,-0.0386,-0.2212,0.1622,22,no
+Skywork 0.6B,"C - H, same day",no plain statement,0.3311,0.2416,0.4247,38,yes
+Skywork 0.6B,hedge in O - G,plain statement,1.1674,0.9212,1.4262,22,yes
+Skywork 0.6B,hedge in O - G,no plain statement,0.9594,0.7678,1.1471,38,yes
+Skywork 1.7B,O - H,plain statement,1.4413,1.2131,1.7121,22,yes
+Skywork 1.7B,O - H,no plain statement,1.2056,1.0693,1.3509,38,yes
+Skywork 1.7B,C - H,plain statement,0.1831,0.0588,0.3212,22,yes
+Skywork 1.7B,C - H,no plain statement,0.2496,0.1823,0.325,38,yes
+Skywork 1.7B,C - P,plain statement,0.1711,0.0525,0.2881,22,yes
+Skywork 1.7B,C - P,no plain statement,0.0842,0.0431,0.1265,38,yes
+Skywork 1.7B,C - G,plain statement,0.247,0.1023,0.4016,22,yes
+Skywork 1.7B,C - G,no plain statement,0.3694,0.311,0.433,38,yes
+Skywork 1.7B,P - H,plain statement,0.012,-0.1014,0.1162,22,no
+Skywork 1.7B,P - H,no plain statement,0.1654,0.114,0.2262,38,yes
+Skywork 1.7B,O - C,plain statement,1.2582,1.0199,1.5217,22,yes
+Skywork 1.7B,O - C,no plain statement,0.956,0.8031,1.1057,38,yes
+Skywork 1.7B,P2 - P,plain statement,0.0,0.0,0.0,22,no
+Skywork 1.7B,P2 - P,no plain statement,0.0,0.0,0.0,38,no
+Skywork 1.7B,C - P2,plain statement,0.1711,0.0525,0.2881,22,yes
+Skywork 1.7B,C - P2,no plain statement,0.0842,0.0431,0.1265,38,yes
+Skywork 1.7B,"C - H, same day",plain statement,0.1831,0.0588,0.3212,22,yes
+Skywork 1.7B,"C - H, same day",no plain statement,0.2496,0.1823,0.325,38,yes
+Skywork 1.7B,hedge in O - G,plain statement,0.9523,0.7359,1.1856,22,yes
+Skywork 1.7B,hedge in O - G,no plain statement,0.7023,0.5539,0.8421,38,yes
+Skywork 3B,O - H,plain statement,1.5882,1.361,1.8312,22,yes
+Skywork 3B,O - H,no plain statement,1.3761,1.2187,1.5363,38,yes
+Skywork 3B,C - H,plain statement,0.3843,0.2467,0.5406,22,yes
+Skywork 3B,C - H,no plain statement,0.3529,0.273,0.4383,38,yes
+Skywork 3B,C - P,plain statement,0.2537,0.1203,0.3895,22,yes
+Skywork 3B,C - P,no plain statement,0.0878,0.0359,0.1402,38,yes
+Skywork 3B,C - G,plain statement,0.5098,0.3689,0.6624,22,yes
+Skywork 3B,C - G,no plain statement,0.5187,0.4388,0.6068,38,yes
+Skywork 3B,P - H,plain statement,0.1306,0.0285,0.2309,22,yes
+Skywork 3B,P - H,no plain statement,0.2652,0.2063,0.3254,38,yes
+Skywork 3B,O - C,plain statement,1.2039,1.0084,1.4114,22,yes
+Skywork 3B,O - C,no plain statement,1.0232,0.8506,1.2025,38,yes
+Skywork 3B,P2 - P,plain statement,0.0,0.0,0.0,22,no
+Skywork 3B,P2 - P,no plain statement,0.0,0.0,0.0,38,no
+Skywork 3B,C - P2,plain statement,0.2537,0.1203,0.3895,22,yes
+Skywork 3B,C - P2,no plain statement,0.0878,0.0359,0.1402,38,yes
+Skywork 3B,"C - H, same day",plain statement,0.3843,0.2467,0.5406,22,yes
+Skywork 3B,"C - H, same day",no plain statement,0.3529,0.273,0.4383,38,yes
+Skywork 3B,hedge in O - G,plain statement,0.8988,0.7057,1.1008,22,yes
+Skywork 3B,hedge in O - G,no plain statement,0.7553,0.5898,0.9157,38,yes
+Skywork 4B,O - H,plain statement,1.6115,1.461,1.8002,22,yes
+Skywork 4B,O - H,no plain statement,1.4782,1.3256,1.6257,38,yes
+Skywork 4B,C - H,plain statement,0.4244,0.2807,0.5749,22,yes
+Skywork 4B,C - H,no plain statement,0.492,0.3927,0.598,38,yes
+Skywork 4B,C - P,plain statement,0.0987,-0.0211,0.2156,22,no
+Skywork 4B,C - P,no plain statement,0.1567,0.109,0.2083,38,yes
+Skywork 4B,C - G,plain statement,0.2893,0.1581,0.4206,22,yes
+Skywork 4B,C - G,no plain statement,0.3669,0.3159,0.4193,38,yes
+Skywork 4B,P - H,plain statement,0.3257,0.2165,0.4417,22,yes
+Skywork 4B,P - H,no plain statement,0.3353,0.2435,0.4277,38,yes
+Skywork 4B,O - C,plain statement,1.187,1.0117,1.3681,22,yes
+Skywork 4B,O - C,no plain statement,0.9862,0.8292,1.1432,38,yes
+Skywork 4B,P2 - P,plain statement,0.0,0.0,0.0,22,no
+Skywork 4B,P2 - P,no plain statement,0.0,0.0,0.0,38,no
+Skywork 4B,C - P2,plain statement,0.0987,-0.0211,0.2156,22,no
+Skywork 4B,C - P2,no plain statement,0.1567,0.109,0.2083,38,yes
+Skywork 4B,"C - H, same day",plain statement,0.4244,0.2807,0.5749,22,yes
+Skywork 4B,"C - H, same day",no plain statement,0.492,0.3927,0.598,38,yes
+Skywork 4B,hedge in O - G,plain statement,0.9983,0.821,1.1851,22,yes
+Skywork 4B,hedge in O - G,no plain statement,0.8744,0.723,1.0256,38,yes
+Skywork 8B,O - H,plain statement,1.7042,1.5097,1.9449,22,yes
+Skywork 8B,O - H,no plain statement,1.5036,1.3522,1.6562,38,yes
+Skywork 8B,C - H,plain statement,0.414,0.3004,0.5356,22,yes
+Skywork 8B,C - H,no plain statement,0.3996,0.3125,0.4938,38,yes
+Skywork 8B,C - P,plain statement,0.1864,0.0919,0.2805,22,yes
+Skywork 8B,C - P,no plain statement,0.1232,0.082,0.1698,38,yes
+Skywork 8B,C - G,plain statement,0.3903,0.303,0.4835,22,yes
+Skywork 8B,C - G,no plain statement,0.3162,0.2728,0.3656,38,yes
+Skywork 8B,P - H,plain statement,0.2275,0.1487,0.3165,22,yes
+Skywork 8B,P - H,no plain statement,0.2764,0.2021,0.3528,38,yes
+Skywork 8B,O - C,plain statement,1.2902,1.0898,1.4966,22,yes
+Skywork 8B,O - C,no plain statement,1.104,0.9498,1.2569,38,yes
+Skywork 8B,P2 - P,plain statement,0.0,0.0,0.0,22,no
+Skywork 8B,P2 - P,no plain statement,0.0,0.0,0.0,38,no
+Skywork 8B,C - P2,plain statement,0.1864,0.0919,0.2805,22,yes
+Skywork 8B,C - P2,no plain statement,0.1232,0.082,0.1698,38,yes
+Skywork 8B,"C - H, same day",plain statement,0.414,0.3004,0.5356,22,yes
+Skywork 8B,"C - H, same day",no plain statement,0.3996,0.3125,0.4938,38,yes
+Skywork 8B,hedge in O - G,plain statement,0.9453,0.7686,1.1263,22,yes
+Skywork 8B,hedge in O - G,no plain statement,0.9079,0.7727,1.0426,38,yes

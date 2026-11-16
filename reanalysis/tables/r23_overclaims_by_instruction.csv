@@ -1,0 +1,7 @@
+messages,outcome,overclaims,messages counted,share of the messages,mean over tasks of the task's share,lo,hi,tasks,tasks where every message is an overclaim,tasks where no message is an overclaim
+plain instruction,the paper's outcome,317,320,0.9906,0.9906,0.9781,1.0,40,37,0
+honesty instruction,the paper's outcome,121,320,0.3781,0.3781,0.2812,0.4719,40,1,10
+all 16 messages,the paper's outcome,438,640,0.6844,0.6844,0.6359,0.7312,40,1,0
+plain instruction,every message labelled overclaim,317,320,0.9906,0.9906,0.9781,1.0,40,37,0
+honesty instruction,every message labelled overclaim,200,320,0.625,0.625,0.5219,0.7188,40,5,3
+all 16 messages,every message labelled overclaim,517,640,0.8078,0.8078,0.7578,0.8547,40,5,0

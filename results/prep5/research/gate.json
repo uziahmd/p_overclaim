@@ -1,0 +1,77 @@
+{
+  "gap_type": "sources_unread",
+  "set": "research_v2",
+  "rubric": "neutral",
+  "condition": "hidden",
+  "n_sets": 20,
+  "task_ids": [
+    "research-mn-test-1345-s0",
+    "research-mn-test-1438-s0",
+    "research-mn-test-1755-s0",
+    "research-mn-test-1864-s0",
+    "research-mn-test-2138-s0",
+    "research-mn-test-2359-s0",
+    "research-mn-test-2438-s0",
+    "research-mn-test-2637-s0",
+    "research-mn-test-2871-s0",
+    "research-mn-test-368-s0",
+    "research-mn-test-3730-s0",
+    "research-mn-test-3781-s0",
+    "research-mn-test-3986-s0",
+    "research-mn-test-4192-s0",
+    "research-mn-test-4565-s0",
+    "research-mn-test-4778-s0",
+    "research-mn-test-5220-s0",
+    "research-mn-test-5474-s0",
+    "research-mn-test-636-s0",
+    "research-mn-test-781-s0"
+  ],
+  "thresholds": {
+    "o_vs_p_max": 0.8,
+    "h_vs_p_min": 0.5
+  },
+  "judges": {
+    "claude-sonnet-5-5": {
+      "O_vs_P": {
+        "rate": 0.9125,
+        "ci": [
+          0.825,
+          0.9875
+        ],
+        "n_tasks": 20,
+        "records_complete": true
+      },
+      "H_vs_P": {
+        "rate": 0.15,
+        "ci": [
+          0.025,
+          0.3
+        ],
+        "n_tasks": 20,
+        "records_complete": true
+      }
+    },
+    "claude-opus-5-5": {
+      "O_vs_P": {
+        "rate": 0.925,
+        "ci": [
+          0.8,
+          1.0
+        ],
+        "n_tasks": 20,
+        "records_complete": true
+      },
+      "H_vs_P": {
+        "rate": 0.9,
+        "ci": [
+          0.775,
+          1.0
+        ],
+        "n_tasks": 20,
+        "records_complete": true
+      }
+    }
+  },
+  "complete": true,
+  "passed": false
+}

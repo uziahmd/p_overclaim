@@ -1,0 +1,16 @@
+# secrets: API keys are read from the environment or from a file .env, which is never committed
+.env
+
+# python / uv
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# the dataset's raw row groups (downloaded by the pipeline, 2.6 GB) and the cache of model replies
+data/raw/
+cache/
+
+# the main run's own figures, which the analysis stage draws again (the report's figures are in paper/figures)
+results/full_run/figures/

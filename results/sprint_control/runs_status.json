@@ -1,0 +1,294 @@
+{
+  "_started": {
+    "at": "2026-11-13T19:31:57.583769+00:00",
+    "commit": "7ddacd4601134df5336ef553bd53853c2e55b36d"
+  },
+  "sc-dsv4": {
+    "at": "2026-11-13T20:00:19.303768+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T20:00:19.303761+00:00",
+        "records": 180,
+        "status": "done"
+      }
+    ],
+    "judge": "deepseek-v4-pro",
+    "launches": 1,
+    "models_seen": [
+      "deepseek/deepseek-v4-pro"
+    ],
+    "n_invalid": 0,
+    "n_read_from_this_runs_cache": 0,
+    "n_second_attempts": 0,
+    "n_tasks": 60,
+    "provider": "openrouter",
+    "providers_seen": [
+      "Baidu",
+      "GMICloud",
+      "Novita",
+      "SiliconFlow",
+      "StreamLake"
+    ],
+    "records": 180,
+    "route": null,
+    "routes_seen": [],
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  },
+  "sc-gema": {
+    "at": "2026-11-13T20:00:19.311377+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T20:00:19.311372+00:00",
+        "reason": "the check of the vertex route did not answer: error 403",
+        "records": 0,
+        "status": "not run"
+      }
+    ],
+    "judge": "gemini-4-argon",
+    "launches": 0,
+    "n_tasks": 60,
+    "provider": "gemini",
+    "reason": "the check of the vertex route did not answer: error 403",
+    "records": 0,
+    "route": "vertex",
+    "status": "not run",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  },
+  "sc-gemf": {
+    "at": "2026-11-13T20:00:19.307968+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T20:00:19.307963+00:00",
+        "reason": "the check of the vertex route did not answer: error 403",
+        "records": 0,
+        "status": "not run"
+      }
+    ],
+    "judge": "gemini-3.8-flash",
+    "launches": 0,
+    "n_tasks": 60,
+    "provider": "gemini",
+    "reason": "the check of the vertex route did not answer: error 403",
+    "records": 0,
+    "route": "vertex",
+    "status": "not run",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  },
+  "sc-o46": {
+    "at": "2026-11-13T20:04:49.844321+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T20:04:49.844315+00:00",
+        "records": 180,
+        "status": "done"
+      }
+    ],
+    "judge": "claude-opus-4-6",
+    "launches": 1,
+    "models_seen": [
+      "claude-opus-4-6"
+    ],
+    "n_invalid": 0,
+    "n_read_from_this_runs_cache": 0,
+    "n_second_attempts": 0,
+    "n_tasks": 60,
+    "provider": "anthropic",
+    "providers_seen": [],
+    "records": 180,
+    "route": null,
+    "routes_seen": [],
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  },
+  "sc-o55": {
+    "at": "2026-11-13T20:06:13.327144+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T20:06:13.327137+00:00",
+        "records": 180,
+        "status": "done"
+      }
+    ],
+    "judge": "claude-opus-5-5",
+    "launches": 1,
+    "models_seen": [
+      "claude-opus-5-5"
+    ],
+    "n_invalid": 0,
+    "n_read_from_this_runs_cache": 0,
+    "n_second_attempts": 0,
+    "n_tasks": 60,
+    "provider": "anthropic",
+    "providers_seen": [],
+    "records": 180,
+    "route": null,
+    "routes_seen": [],
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  },
+  "sc-oss": {
+    "at": "2026-11-13T19:57:18.968877+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T19:57:18.968869+00:00",
+        "records": 180,
+        "status": "done"
+      }
+    ],
+    "judge": "gpt-oss-120b",
+    "launches": 1,
+    "models_seen": [
+      "openai/gpt-oss-120b"
+    ],
+    "n_invalid": 3,
+    "n_read_from_this_runs_cache": 0,
+    "n_second_attempts": 6,
+    "n_tasks": 60,
+    "provider": "openrouter",
+    "providers_seen": [
+      "Crusoe",
+      "DekaLLM"
+    ],
+    "records": 180,
+    "route": null,
+    "routes_seen": [],
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  },
+  "sc-qwen": {
+    "at": "2026-11-13T19:55:49.624118+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T19:55:49.624111+00:00",
+        "records": 180,
+        "status": "done"
+      }
+    ],
+    "judge": "qwen3-32b",
+    "launches": 1,
+    "models_seen": [
+      "qwen/qwen3-32b"
+    ],
+    "n_invalid": 0,
+    "n_read_from_this_runs_cache": 0,
+    "n_second_attempts": 0,
+    "n_tasks": 60,
+    "provider": "openrouter",
+    "providers_seen": [
+      "DeepInfra",
+      "Tenstorrent"
+    ],
+    "records": 180,
+    "route": null,
+    "routes_seen": [],
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  },
+  "sc-s46": {
+    "at": "2026-11-13T20:02:15.772100+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T20:02:15.772091+00:00",
+        "records": 180,
+        "status": "done"
+      }
+    ],
+    "judge": "claude-sonnet-4-6",
+    "launches": 1,
+    "models_seen": [
+      "claude-sonnet-4-6"
+    ],
+    "n_invalid": 0,
+    "n_read_from_this_runs_cache": 0,
+    "n_second_attempts": 0,
+    "n_tasks": 60,
+    "provider": "anthropic",
+    "providers_seen": [],
+    "records": 180,
+    "route": null,
+    "routes_seen": [],
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  },
+  "sc-s55": {
+    "at": "2026-11-13T20:03:35.415067+00:00",
+    "commit": "3cf890bb70a9726968cf60d0d556b953d0bc6fb3",
+    "expected_records": 180,
+    "history": [
+      {
+        "at": "2026-11-13T20:03:35.415059+00:00",
+        "records": 180,
+        "status": "done"
+      }
+    ],
+    "judge": "claude-sonnet-5-5",
+    "launches": 1,
+    "models_seen": [
+      "claude-sonnet-5-5"
+    ],
+    "n_invalid": 0,
+    "n_read_from_this_runs_cache": 0,
+    "n_second_attempts": 0,
+    "n_tasks": 60,
+    "provider": "anthropic",
+    "providers_seen": [],
+    "records": 180,
+    "route": null,
+    "routes_seen": [],
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ]
+  }
+}

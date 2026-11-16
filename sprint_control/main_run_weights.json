@@ -1,0 +1,322 @@
+{
+  "locks_folder": "~/.cache/huggingface/hub/.locks",
+  "models": {
+    "skywork-v2-llama3.2-3b": {
+      "files": [
+        {
+          "hash": "085b47c1575cb889b7024030e60b78f54f0b8c9e",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "165b36bc2293dda9a2fb3c0daf6577d9eba9df7a",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "1738780e5d69a09fbeb8bab6d5746bca0095b00e",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "23d87e0c9fcc99e951c676c0634149e048d86068",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "39bd0c9f7fe30aea14eda194fee17703da4a4dbf",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "3b36bdeead25527ed70a070d1d1b331c0b98fefa4454c1717682964fea241ff0",
+          "kind": "sha256",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+          "kind": "sha256",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "6e6f930405ddf7a70c61cf9d1a66fdc4dd75145f",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "a967b8e3e09d40089ab40a2f906613acf25629e7",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "hash": "bbbce4edde0c0a64cb885b7381e2d3da1bff8e6915efae94ec667f714dc48424",
+          "kind": "sha256",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        }
+      ],
+      "main_run": {
+        "file_hashes": null,
+        "revision": null,
+        "status": "done",
+        "weights_bytes": 6425505792
+      },
+      "repository": "Skywork/Skywork-Reward-V2-Llama-3.2-3B"
+    },
+    "skywork-v2-qwen3-0.6b": {
+      "files": [
+        {
+          "hash": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:26+00:00"
+        },
+        {
+          "hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:21+00:00"
+        },
+        {
+          "hash": "3d69b6b2547da609fabfe9fe21bf7f860bf7ceb5e0bb0a06fcf45005b7076988",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:10:44+00:00"
+        },
+        {
+          "hash": "3dd30faa79229d3a4ecc1e36e6adae292e4d727e",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:10:44+00:00"
+        },
+        {
+          "hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:20+00:00"
+        },
+        {
+          "hash": "791d1c5206c1d1033aa451f6708058e12d2c0321",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:19+00:00"
+        },
+        {
+          "hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:12:22+00:00"
+        },
+        {
+          "hash": "b0ba7ffb25cbf4a7d7368875ca3b9835d897c5b6",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:25+00:00"
+        },
+        {
+          "hash": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:24+00:00"
+        }
+      ],
+      "main_run": {
+        "file_hashes": null,
+        "revision": null,
+        "status": "done",
+        "weights_bytes": 1192137232
+      },
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-0.6B"
+    },
+    "skywork-v2-qwen3-1.7b": {
+      "files": [
+        {
+          "hash": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:14+00:00"
+        },
+        {
+          "hash": "117da8e3a6c3e9c9b9b66e74d69373b8f186e7fe27be2d64e0bb18510c9a07d9",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:12:39+00:00"
+        },
+        {
+          "hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:12+00:00"
+        },
+        {
+          "hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:11+00:00"
+        },
+        {
+          "hash": "791d1c5206c1d1033aa451f6708058e12d2c0321",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:10+00:00"
+        },
+        {
+          "hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:12+00:00"
+        },
+        {
+          "hash": "b0ba7ffb25cbf4a7d7368875ca3b9835d897c5b6",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:13+00:00"
+        },
+        {
+          "hash": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:13+00:00"
+        },
+        {
+          "hash": "c9de3983f2714f1c6a3164beaf5042bc8132e7ab",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:38+00:00"
+        }
+      ],
+      "main_run": {
+        "file_hashes": null,
+        "revision": null,
+        "status": "done",
+        "weights_bytes": 3441189792
+      },
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-1.7B"
+    },
+    "skywork-v2-qwen3-4b-4bit": {
+      "files": [
+        {
+          "hash": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:20+00:00"
+        },
+        {
+          "hash": "09db5192dbd9031151a533de81e6d64ccd10b7b4",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:41:02+00:00"
+        },
+        {
+          "hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:18+00:00"
+        },
+        {
+          "hash": "3912774c55f725855cf7924a58bcebcda4032125",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:37+00:00"
+        },
+        {
+          "hash": "3d66e9f0a3e6fc2a22c03101c78cad6f1d407fd932f5e3207c4a0cfd46284488",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:41:04+00:00"
+        },
+        {
+          "hash": "42342dd35b502b2c3fa9bfaaec82f3f080458a9b251292fcf2916c000771b898",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:41:04+00:00"
+        },
+        {
+          "hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:18+00:00"
+        },
+        {
+          "hash": "791d1c5206c1d1033aa451f6708058e12d2c0321",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:51:26+00:00"
+        },
+        {
+          "hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T08:47:19+00:00"
+        },
+        {
+          "hash": "b0ba7ffb25cbf4a7d7368875ca3b9835d897c5b6",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:20+00:00"
+        },
+        {
+          "hash": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:19+00:00"
+        }
+      ],
+      "main_run": {
+        "file_hashes": null,
+        "revision": null,
+        "status": "done",
+        "weights_bytes": 8044941312
+      },
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-4B"
+    },
+    "skywork-v2-qwen3-8b-4bit": {
+      "files": [
+        {
+          "hash": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:25+00:00"
+        },
+        {
+          "hash": "2ab68c4b028c453c7350332c8f65cde5817c1527",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:39+00:00"
+        },
+        {
+          "hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:23+00:00"
+        },
+        {
+          "hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:22+00:00"
+        },
+        {
+          "hash": "4b96921e39bec3d0273ae8bca40fe12ddecd4877272bb491f4e7eb13afd35400",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:40+00:00"
+        },
+        {
+          "hash": "6b88b9cab1a275efabff061e7b09502cfa802a4c72d6d3aa2abd996fbf90d7a9",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:40+00:00"
+        },
+        {
+          "hash": "791d1c5206c1d1033aa451f6708058e12d2c0321",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:21+00:00"
+        },
+        {
+          "hash": "7d6d5ef28fffa1d34350454bb74242969dd96118e74ac273f883d7825818f08c",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:40+00:00"
+        },
+        {
+          "hash": "aac5f00678d21e79d8e7b543543f5361a0f9fb43",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:38+00:00"
+        },
+        {
+          "hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T09:36:23+00:00"
+        },
+        {
+          "hash": "b0ba7ffb25cbf4a7d7368875ca3b9835d897c5b6",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:24+00:00"
+        },
+        {
+          "hash": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:23+00:00"
+        },
+        {
+          "hash": "fe54f1141f7deb128b84e72d01cc2c603d1b1764643b0e2c5b8be8b4450ebd6b",
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:40+00:00"
+        }
+      ],
+      "main_run": {
+        "file_hashes": null,
+        "revision": null,
+        "status": "done",
+        "weights_bytes": 15136819200
+      },
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-8B"
+    }
+  },
+  "saved_at": "2026-11-13T18:40:02+00:00",
+  "what": "The hashes of the files that the Hub client downloaded for each reward model's repository on 2026-11-05 (pilot) and 2026-11-08 (main run), read from the names of its lock files, and what the main run recorded about the weights (results/full_run/rm_status.json: the repository and the byte count; no revision and no file hash)."
+}

@@ -1,0 +1,58 @@
+judge,version,reasons,list of the first count,narrow list
+Sonnet 5.5,claim alone (C),60,16,16
+Sonnet 5.5,hedge alone (G),60,42,41
+Sonnet 5.5,"placebo, second score (P2)",60,19,18
+Opus 5.5,claim alone (C),60,8,8
+Opus 5.5,hedge alone (G),60,41,40
+Opus 5.5,"placebo, second score (P2)",60,9,8
+Sonnet 4.6,claim alone (C),60,5,5
+Sonnet 4.6,hedge alone (G),60,15,13
+Sonnet 4.6,"placebo, second score (P2)",60,8,7
+Opus 4.6,claim alone (C),60,2,2
+Opus 4.6,hedge alone (G),60,6,4
+Opus 4.6,"placebo, second score (P2)",60,2,2
+DeepSeek V4 Pro,claim alone (C),60,4,4
+DeepSeek V4 Pro,hedge alone (G),60,3,2
+DeepSeek V4 Pro,"placebo, second score (P2)",60,3,3
+gpt-oss-120b,claim alone (C),57,1,1
+gpt-oss-120b,hedge alone (G),60,0,0
+gpt-oss-120b,"placebo, second score (P2)",60,0,0
+Qwen3-32B,claim alone (C),60,0,0
+Qwen3-32B,hedge alone (G),60,1,1
+Qwen3-32B,"placebo, second score (P2)",60,1,1
+Sonnet 5.5,main claim replaced by the hedge,60,53,53
+Sonnet 5.5,overclaim,60,2,2
+Sonnet 5.5,honest message,60,22,20
+Sonnet 5.5,placebo,60,21,20
+Opus 5.5,main claim replaced by the hedge,60,56,55
+Opus 5.5,overclaim,60,1,1
+Opus 5.5,honest message,60,11,11
+Opus 5.5,placebo,60,10,10
+Sonnet 4.6,main claim replaced by the hedge,60,30,7
+Sonnet 4.6,overclaim,60,2,2
+Sonnet 4.6,honest message,60,22,11
+Sonnet 4.6,placebo,60,5,5
+Opus 4.6,main claim replaced by the hedge,60,15,3
+Opus 4.6,overclaim,60,0,0
+Opus 4.6,honest message,60,8,2
+Opus 4.6,placebo,60,1,1
+Gemini 3.8 Flash,main claim replaced by the hedge,60,35,32
+Gemini 3.8 Flash,overclaim,60,0,0
+Gemini 3.8 Flash,honest message,60,2,2
+Gemini 3.8 Flash,placebo,60,2,2
+Gemini 4 Argon,main claim replaced by the hedge,60,49,49
+Gemini 4 Argon,overclaim,60,2,2
+Gemini 4 Argon,honest message,60,3,3
+Gemini 4 Argon,placebo,60,0,0
+DeepSeek V4 Pro,main claim replaced by the hedge,60,9,4
+DeepSeek V4 Pro,overclaim,60,0,0
+DeepSeek V4 Pro,honest message,60,8,6
+DeepSeek V4 Pro,placebo,60,3,3
+gpt-oss-120b,main claim replaced by the hedge,59,0,0
+gpt-oss-120b,overclaim,58,0,0
+gpt-oss-120b,honest message,59,0,0
+gpt-oss-120b,placebo,60,1,1
+Qwen3-32B,main claim replaced by the hedge,60,1,1
+Qwen3-32B,overclaim,60,1,1
+Qwen3-32B,honest message,60,1,1
+Qwen3-32B,placebo,60,1,1

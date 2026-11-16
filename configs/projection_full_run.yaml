@@ -1,0 +1,472 @@
+# Cost projection for Part 2 of session 5 (the full run) under the addendum of 2026-11-07 (sections 0, 1, 2, 3, 3b and
+# 5), priced before the first call. configs/projection_part2.yaml stays as Part 1's record of the plan before it.
+# Run: uv run --no-sync python -m overclaim.projection_v4 --config configs/projection_full_run.yaml
+# Arithmetic on recorded costs (overclaim/projection_v4.py, `plan: part2`); nothing is run or called. It reads the run
+# files below (read only) and writes the two output files. Both Part 1 gates are known (research failed, Experiment 2
+# passed), so every row without a USD figure is unpriced and the run exits with code 1: run it after the freeze stage
+# (overclaim.experiments.full_run --stage freeze) has written the full-run sets file, which gives every task count.
+#
+# Part 2 is coding only, 60 tasks (addendum section 0): no research row. Stats keys are (name, label) as in
+# configs/projection_part2.yaml: "@coding" marks the domain, "pointwise/", "vfp/" (the verification-first pointwise
+# scorer), "full/" and "e2_score/" the call kind; no prefix is the pairwise judge on the neutral rubric; the bare labels
+# "hidden" and "shown" are the ratio basis (pilot 3, where every judge saw the same prompts).
+plan: part2
+models_config: configs/models.yaml       # prices_usd_per_mtok and the judges' model ids (deepseek-v4-pro added)
+output:
+  json: results/full_run/projection.json
+  markdown: results/full_run/projection.md
+reference: claude-sonnet-5-5             # the reference judge of the ratio mechanism (projection.unit_cost)
+thought_separate: [gemini-3.8-flash, gemini-4-argon]   # Gemini bills thought tokens as output (unit_stats)
+# The decisions of 2026-11-07 this plan applies, printed at the top of the projection.
+decisions:
+  - "Part 2 is coding only, 60 tasks (addendum section 0): the research gate failed, so the plan has no research row."
+  - "A1, Experiment 3 pairwise (the three-label judge), is removed by decision, not cut (addendum section 1): no
+     Experiment 3 pairwise row is in the plan."
+  - "Add-back (i), Sonnet 5.5 pointwise shown on the band tasks, is a Tier 1 row, as Part 1's projection added it
+     (addendum section 0)."
+  - "Add-back (iii), the mitigated best-of-16 (H4's second condition), is a Tier 1 row by decision (addendum section
+     1)."
+  - "Add-back (ii), Sonnet 4.6 and Opus 4.6 pointwise shown, stays skipped by decision (addendum sections 0 and 5)."
+  - "A4 and A5 leave the cut order: hidden pairwise is kept for every judge as the secondary finding (addendum
+     section 5). The cut order is A2, A3, C1 (O- for the Claude judges), C2 (E7 on 20 tasks), then B1 to B4; it is a
+     budget rule, not pre-registered."
+  - "Google through vertex (addendum section 3b): every Gemini row draws on the GCP trial credit, zero cash; Flash and
+     Argon pointwise shown, the E6 variants, hidden pairwise and the E7 rows on Flash are added."
+  - "The new judge deepseek-v4-pro (deepseek/deepseek-v4-pro on OpenRouter, addendum section 3): hidden pointwise, the
+     E6 variants, hidden pairwise, shown pointwise and a third Experiment 2 selector; the mitigated open-weight
+     selector only if it fits under the OpenRouter stop line. No call of it is measured: its rows are priced from
+     another judge's token profile at its list prices (b)."
+  - "Exploratory additions (addendum section 2): E5, the reward-model size scan and the reward models as selectors
+     (local GPU, 0 USD); E6, O+ and O- on every hidden judge; E7, the instruction-only scorer. E4 makes no call."
+  - "Decision (4) of addendum section 0: a judge above the tie line gets the second sample in every condition it
+     scores, so the tie rule covers every pointwise row of a judge: hidden (the full rubric too), shown, E6, the
+     Experiment 3 verification-first scorer and the E7 scorers. Decision (5): the full-rubric pointwise row is
+     preceded by a 9-call parse smoke test."
+budget:
+  prior_cost_logs:                       # spend before Part 1 (66.41 USD Anthropic, 0.59 OpenRouter)
+    - results/pilot_coding/cost.jsonl
+    - results/pilot2_coding/cost.jsonl
+    - results/pilot3_coding/cost.jsonl
+    - results/pilot4_coding/cost.jsonl
+  part1_cost_log: results/prep5/cost.jsonl
+  anthropic_project_total_usd: 180       # remainder 180 - 66.41 - 11.41 = 102.18 USD (addendum section 5)
+  cut_margin_usd: 15                     # cuts while the total exceeds remainder - 15 = 87.18 USD
+  openrouter_remaining_usd: 19.0         # addendum section 3: the 20 USD cap, 1.00 spent
+  openrouter_stop_launching_usd: 17.0    # addendum section 3: stop launching at 17
+  google_route: vertex                   # addendum section 3b: every Gemini row through vertex, zero cash
+  google_vertex_credit_usd: 280          # addendum section 3b: the GCP trial credit, about 280 USD
+  price_changes:
+    - {model: gemini-4-argon, factor: 2.0, from: "2026-12-01"}
+gates:
+  research: results/prep5/research/gate.json   # failed: the research domain leaves Part 2
+  e2: results/prep5/e2_gate.json               # passed
+sets:
+  coding_main: data/processed/coding/matched_sets_v4_full_run.jsonl   # the frozen main 60 (freeze stage, contract 6A)
+  research_v2: data/processed/research/matched_sets_research_v2.jsonl # read by base_part2; no research row uses it
+seed: 0                                 # the seed of the Experiment 2 and E7 task picks (prep5_e2.pick_tasks)
+shown: {max_transcript_tokens: 40000, upper_band_tokens: 60000}       # shown-eligible at or below the first; band
+rules:
+  research_tasks: 60                     # the research gate failed: 0 research tasks in the plan
+  opus_shown_tasks: 30                   # Opus 5.5 shown (pointwise; pairwise)
+  e3_tasks: 60                           # Experiment 3 pointwise: every shown-eligible coding task
+  opus_e3_tasks: 30                      # Opus 5.5 on 30 of the Experiment 3 tasks
+  e2_tasks_per_domain: 40                # Experiment 2: 40 coding tasks, 16 samples each
+  e7_tasks: 30                           # E7: 30 shown-eligible tasks (addendum section 2), cut C2 sets 20
+  e7_per_gap: 10                         # the per-gap-type target, for the report only (a short type gives its turns)
+# Record files, in order of preference: the first source with live calls for a (grader, label) wins.
+record_sources:
+  - {path: results/prep5/pointwise_calls.jsonl, domain: coding, rubrics: {pointwise-neutral: pointwise},
+     source: "Part 1 plain shown scorer, coding"}
+  - {path: results/prep5/e3pw_calls.jsonl, domain: coding, rubrics: {pointwise-verify-first: vfp},
+     source: "Part 1 verification-first scorer check, coding"}
+  - {path: results/pilot4_coding/judge_calls.jsonl, domain: coding, sets: [v4], rubrics: {neutral: "", full: full},
+     source: "pilot 4, v4 sets"}
+  - {path: results/pilot4_coding/pointwise_calls.jsonl, domain: coding, sets: [v4],
+     rubrics: {pointwise-neutral: pointwise}, source: "pilot 4 pointwise, v4 sets"}
+  # Part 2's own pointwise records (added 2026-11-08 after the hidden stage, README amendment 3 item 9: the open-weight
+  # mitigated selector re-priced from the judge's measured hidden calls). Listed after the pilots, so a (judge, label)
+  # the pilots measured live keeps its pilot profile and every other row's figure is unchanged; deepseek-v4-pro's
+  # hidden pointwise profile (300 live calls) comes from here.
+  - {path: results/full_run/pointwise_calls.jsonl, domain: coding, sets: [v4_full_run],
+     rubrics: {pointwise-neutral: pointwise, pointwise-full: full-pointwise, pointwise-instruction-only: e7},
+     source: "Part 2 pointwise, frozen sets"}
+  - {path: results/pilot3_coding/judge_calls.jsonl, domain: coding, sets: [v3], rubrics: {neutral: "", full: full},
+     source: "pilot 3, v3 sets", ratio_basis: true}
+  - {path: results/pilot2_coding/judge_calls.jsonl, domain: coding, sets: [v2], rubrics: {neutral: "", full: full},
+     source: "pilot 2, v2 sets"}
+# cost.jsonl purposes (names read from the modules that log them), in this order of logs: Part 1's first.
+purpose_logs:
+  - {path: results/prep5/cost.jsonl}
+  - {path: results/pilot4_coding/cost.jsonl}
+purpose_stats:
+  - {purpose: e2_policy, name: e2_policy, label: packet@coding}
+  - {purpose: e2_score, by_model: true, label: e2_score/hidden@coding}
+  - {purpose: e2_label, name: e2_label, label: label@coding}
+  - {purpose: e2_label_full, name: e2_label_full, label: label@coding}
+  - {purpose: reasons_v4, name: reason_classifier, label: reason@coding}   # session 4's four-field classifier
+# Read by stats_part2; no row of this plan uses it (no research set is owed).
+research_set_unit: {name: research_set_v2, label: build@research, purpose: research_sets_v2,
+                    log: results/prep5/cost.jsonl, sets: data/processed/research/matched_sets_research_v2.jsonl}
+factors:
+  opus_over_sonnet_shown:
+    kind: cost_ratio
+    text: "Opus 5.5 / Sonnet 5.5 cost per neutral shown pairwise call"
+    why: "The measured token and price ratio of the two models on the same shown prompts (derivation a)."
+    num: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-opus-5-5, condition: shown, rubric: neutral,
+          set: v3}
+    den: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-sonnet-5-5, condition: shown, rubric: neutral,
+          set: v3}
+  full_rubric_extra_input:
+    kind: input_tokens_diff
+    text: "full minus neutral rubric, Sonnet 5.5 hidden pairwise input tokens per call"
+    why: >-
+      The full-rubric pointwise prompt is the pairwise full rubric transposed into the pointwise template (decision
+      (5)); no call of it is measured yet, so the pairwise calls give the full rubric's extra input tokens.
+    num: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-sonnet-5-5, condition: hidden, rubric: full,
+          set: v3}
+    den: {path: results/pilot3_coding/judge_calls.jsonl, grader: claude-sonnet-5-5, condition: hidden,
+          rubric: neutral, set: v3}
+  e7_extra_input:
+    kind: constant
+    value: 32
+    text: "one added instruction of 32 o200k tokens, counted by the lead"
+    why: "The instruction-only scorer is the plain shown scorer with one added sentence (addendum section 2, E7)."
+# Tie rule: a judge whose O/H tie rate in the hidden condition exceeds the threshold gets a second scoring sample per
+# message in every condition it scores (decision (4)): the rate is read for (judge, coding) from the hidden records,
+# for every row with tie_rule (every pointwise row of a judge: hidden with the full rubric, shown, E6, Experiment 3
+# and E7; not the 9-call parse smoke test). A judge without a record (deepseek-v4-pro) is not measured.
+tie_rule:
+  threshold: 0.5
+  contingency_rows: >-
+    every pointwise row of the final plan with a tie rate read for its judge (hidden with the full rubric, shown, E6,
+    Experiment 3 and E7)
+  sources:
+    coding:
+      - {path: results/pilot4_coding/pointwise_calls.jsonl, rubric: pointwise-neutral}
+# The plan, 60 coding tasks. tier: 1 or 2. tasks: a count of overclaim.projection_v4.counts_part2 (or tier2_calls
+# for the reason classification), or a number; calls = tasks x per_task. requires_e2: the row leaves with a failed
+# Experiment 2 gate. tie_rule: the row's judge is read in the tie-rate table. optional_openrouter: counted in the
+# OpenRouter total only when it fits under the stop line. price: methods tried in order (projection_v4.price_method).
+rows:
+  # ---------------- Tier 1: Experiment 1 pointwise hidden (3 calls per task, neutral) ----------------
+  - {id: t1-pwh-s55-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [claude-sonnet-5-5, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-o55-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [claude-opus-5-5, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-s46-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Sonnet 4.6, coding",
+     provider: anthropic, judge: claude-sonnet-4-6, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [claude-sonnet-4-6, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-o46-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, Opus 4.6, coding",
+     provider: anthropic, judge: claude-opus-4-6, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [claude-opus-4-6, pointwise/hidden@coding]}]}
+  # The full-rubric pointwise prompt (decision (5)) has no measured call: the neutral pointwise hidden call plus the
+  # full rubric's extra input tokens as measured on the pairwise full-rubric calls. The smoke test runs first.
+  - {id: t1-pwh-full-smoke-s55-c, tier: 1, group: E1 pointwise hidden, provider: anthropic, judge: claude-sonnet-5-5,
+     name: "full-rubric pointwise parse smoke test (9 calls)", domain: coding, tasks: 3, per_task: 3,
+     price: [{extra_input: [claude-sonnet-5-5, pointwise/hidden@coding], factor: full_rubric_extra_input}],
+     note: "decision (5): 3 tasks x 3 calls before the full-rubric row; the row is dropped, not iterated, if it fails
+            to parse"}
+  - {id: t1-pwh-full-s55-c, tier: 1, group: E1 pointwise hidden, provider: anthropic, judge: claude-sonnet-5-5,
+     name: "E1 pointwise hidden, full rubric, Sonnet 5.5, coding", domain: coding, tie_rule: true, tasks: coding,
+     per_task: 3,
+     price: [{extra_input: [claude-sonnet-5-5, pointwise/hidden@coding], factor: full_rubric_extra_input}],
+     note: "the pairwise full rubric transposed into the pointwise template (decision (5)); no call of it measured yet"}
+  - {id: t1-pwh-qwen-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, qwen3-32b, coding",
+     provider: openrouter, judge: qwen3-32b, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [qwen3-32b, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-oss-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gpt-oss-120b, coding",
+     provider: openrouter, judge: gpt-oss-120b, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [gpt-oss-120b, pointwise/hidden@coding]}]}
+  - {id: t1-pwh-deepseek-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, deepseek-v4-pro, coding",
+     provider: openrouter, judge: deepseek-v4-pro, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{profile_of: [qwen3-32b, pointwise/hidden@coding], no_cache: true}],
+     note: "no measured call of this judge; profile of qwen3-32b"}
+  - {id: t1-pwh-flash-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gemini-3.8-flash, coding",
+     provider: google, judge: gemini-3.8-flash, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [gemini-3.8-flash, pointwise/hidden@coding]}], note: vertex}
+  - {id: t1-pwh-argon-c, tier: 1, group: E1 pointwise hidden, name: "E1 pointwise hidden, gemini-4-argon, coding",
+     provider: google, judge: gemini-4-argon, domain: coding, tie_rule: true, tasks: coding, per_task: 3,
+     price: [{measured: [gemini-4-argon, pointwise/hidden@coding]}], note: vertex}
+  # Reward models on the local GPU: Skywork-Reward-V2 3B (the headline reward model) and the E5 size scan.
+  - {id: t1-rm-sky-c, tier: 1, group: E1 pointwise hidden, name: "E1 reward model, Skywork 3B, coding",
+     provider: local, domain: coding, tasks: coding, per_task: 3, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-rm-sky06-c, tier: 1, group: E1 pointwise hidden, name: "E1 reward model, Skywork 0.6B (E5 scan), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 3, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-rm-sky17-c, tier: 1, group: E1 pointwise hidden, name: "E1 reward model, Skywork 1.7B (E5 scan), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 3, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-rm-sky4-c, tier: 1, group: E1 pointwise hidden, name: "E1 reward model, Skywork 4B (E5 scan, 4-bit), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 3, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-rm-sky8q-c, tier: 1, group: E1 pointwise hidden,
+     name: "E1 reward model, Skywork 8B 4-bit (E5 scan), coding", provider: local, domain: coding, tasks: coding,
+     per_task: 3, price: [{zero: "local GPU, no API call: 0 USD"}], note: "only if it fits in 10 GB (addendum E5)"}
+  # ---------------- Tier 1: E6 dose-response, hidden pointwise (one call per message per judge) ----------------
+  - {id: t1-e6-s55-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Sonnet 5.5, coding", provider: anthropic,
+     judge: claude-sonnet-5-5, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [claude-sonnet-5-5, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-s55-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Sonnet 5.5, coding", provider: anthropic,
+     judge: claude-sonnet-5-5, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [claude-sonnet-5-5, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-o55-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Opus 5.5, coding", provider: anthropic,
+     judge: claude-opus-5-5, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [claude-opus-5-5, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-o55-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Opus 5.5, coding", provider: anthropic,
+     judge: claude-opus-5-5, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [claude-opus-5-5, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-s46-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Sonnet 4.6, coding", provider: anthropic,
+     judge: claude-sonnet-4-6, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [claude-sonnet-4-6, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-s46-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Sonnet 4.6, coding", provider: anthropic,
+     judge: claude-sonnet-4-6, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [claude-sonnet-4-6, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-o46-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Opus 4.6, coding", provider: anthropic,
+     judge: claude-opus-4-6, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [claude-opus-4-6, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-o46-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Opus 4.6, coding", provider: anthropic,
+     judge: claude-opus-4-6, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [claude-opus-4-6, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-qwen-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, qwen3-32b, coding", provider: openrouter,
+     judge: qwen3-32b, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [qwen3-32b, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-qwen-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, qwen3-32b, coding", provider: openrouter,
+     judge: qwen3-32b, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [qwen3-32b, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-oss-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, gpt-oss-120b, coding",
+     provider: openrouter, judge: gpt-oss-120b, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [gpt-oss-120b, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-oss-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, gpt-oss-120b, coding",
+     provider: openrouter, judge: gpt-oss-120b, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [gpt-oss-120b, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}]}
+  - {id: t1-e6-deepseek-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, deepseek-v4-pro, coding",
+     provider: openrouter, judge: deepseek-v4-pro, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{profile_of: [qwen3-32b, pointwise/hidden@coding], no_cache: true}],
+     note: "no measured call of this judge; profile of qwen3-32b"}
+  - {id: t1-e6-deepseek-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, deepseek-v4-pro, coding",
+     provider: openrouter, judge: deepseek-v4-pro, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{profile_of: [qwen3-32b, pointwise/hidden@coding], no_cache: true}],
+     note: "no measured call of this judge; profile of qwen3-32b"}
+  - {id: t1-e6-flash-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, gemini-3.8-flash, coding",
+     provider: google, judge: gemini-3.8-flash, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [gemini-3.8-flash, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}], note: vertex}
+  - {id: t1-e6-flash-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, gemini-3.8-flash, coding",
+     provider: google, judge: gemini-3.8-flash, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [gemini-3.8-flash, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}], note: vertex}
+  - {id: t1-e6-argon-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, gemini-4-argon, coding",
+     provider: google, judge: gemini-4-argon, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [gemini-4-argon, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}], note: vertex}
+  - {id: t1-e6-argon-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, gemini-4-argon, coding",
+     provider: google, judge: gemini-4-argon, domain: coding, tie_rule: true, tasks: coding, per_task: 1,
+     price: [{measured: [gemini-4-argon, pointwise/hidden@coding], derived: "an E6 message is one hidden pointwise
+              call"}], note: vertex}
+  - {id: t1-e6-sky-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Skywork 3B, coding", provider: local,
+     domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Skywork 3B, coding", provider: local,
+     domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky06-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Skywork 0.6B (E5 scan), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky06-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Skywork 0.6B (E5 scan), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky17-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Skywork 1.7B (E5 scan), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky17-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Skywork 1.7B (E5 scan), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky4-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Skywork 4B (E5 scan, 4-bit), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky4-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Skywork 4B (E5 scan, 4-bit), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky8q-plus-c, tier: 1, group: E6 dose-response, name: "E6 O+, Skywork 8B 4-bit (E5 scan), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e6-sky8q-minus-c, tier: 1, group: E6 dose-response, name: "E6 O-, Skywork 8B 4-bit (E5 scan), coding",
+     provider: local, domain: coding, tasks: coding, per_task: 1, price: [{zero: "local GPU, no API call: 0 USD"}]}
+  # ---------------- Tier 1: Experiment 1 pointwise shown ----------------
+  - {id: t1-pws-s55-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tie_rule: true, tasks: pw_shown_coding,
+     per_task: 3, price: [{measured: [claude-sonnet-5-5, pointwise/shown@coding]}]}
+  # Add-back (i), in by Part 1's decision (addendum section 0): Sonnet 5.5 on the band tasks.
+  - {id: ab-i-s55-c, tier: 1, group: E1 pointwise shown, provider: anthropic, judge: claude-sonnet-5-5,
+     name: "E1 pointwise shown, Sonnet 5.5, coding tasks above {shown.max_transcript_tokens} and up to
+            {shown.upper_band_tokens} rendered tokens (add-back (i))", domain: coding, tie_rule: true,
+     tasks: band_coding, per_task: 3, price: [{band_tokens: [claude-sonnet-5-5, pointwise/shown@coding]}]}
+  - {id: t1-pws-o55-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tie_rule: true, tasks: o55_shown_coding, per_task: 3,
+     price: [{times: {measured: [claude-sonnet-5-5, pointwise/shown@coding]}, factor: opus_over_sonnet_shown}]}
+  - {id: t1-pws-qwen-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, qwen3-32b, coding",
+     provider: openrouter, judge: qwen3-32b, domain: coding, tie_rule: true, tasks: pw_shown_coding, per_task: 3,
+     price: [{ratio: [qwen3-32b, pointwise/shown@coding]}], note: "no prompt cache on OpenRouter"}
+  - {id: t1-pws-oss-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, gpt-oss-120b, coding",
+     provider: openrouter, judge: gpt-oss-120b, domain: coding, tie_rule: true, tasks: pw_shown_coding, per_task: 3,
+     price: [{ratio: [gpt-oss-120b, pointwise/shown@coding]}], note: "no prompt cache on OpenRouter"}
+  - {id: t1-pws-deepseek-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, deepseek-v4-pro, coding",
+     provider: openrouter, judge: deepseek-v4-pro, domain: coding, tie_rule: true, tasks: pw_shown_coding,
+     per_task: 3, price: [{profile_of: [qwen3-32b, pointwise/shown@coding], no_cache: true}],
+     note: "no measured call of this judge; profile of qwen3-32b (its shown profile estimated from the Sonnet 5.5
+            shown profile)"}
+  - {id: t1-pws-flash-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, gemini-3.8-flash, coding",
+     provider: google, judge: gemini-3.8-flash, domain: coding, tie_rule: true, tasks: pw_shown_coding, per_task: 3,
+     price: [{ratio: [gemini-3.8-flash, pointwise/shown@coding]}], note: vertex}
+  - {id: t1-pws-argon-c, tier: 1, group: E1 pointwise shown, name: "E1 pointwise shown, gemini-4-argon, coding",
+     provider: google, judge: gemini-4-argon, domain: coding, tie_rule: true, tasks: pw_shown_coding, per_task: 3,
+     price: [{ratio: [gemini-4-argon, pointwise/shown@coding]}], note: vertex}
+  # ---------------- Tier 1: Experiment 2 (40 tasks x 16 mixed-pool samples) ----------------
+  - {id: t1-e2-policy-c, tier: 1, group: E2, name: "E2 policy samples, Qwen3-Coder, coding", provider: openrouter,
+     model: qwen/qwen3-coder, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [e2_policy, packet@coding]}]}
+  - {id: t1-e2-sel-s46-c, tier: 1, group: E2, name: "E2 selector scores, Sonnet 4.6, coding", provider: anthropic,
+     judge: claude-sonnet-4-6, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [claude-sonnet-4-6, e2_score/hidden@coding]}]}
+  - {id: t1-e2-sel-s55-c, tier: 1, group: E2, name: "E2 selector scores, Sonnet 5.5, coding", provider: anthropic,
+     judge: claude-sonnet-5-5, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [claude-sonnet-5-5, e2_score/hidden@coding]}]}
+  - {id: t1-e2-sel-deepseek-c, tier: 1, group: E2, name: "E2 selector scores, deepseek-v4-pro, coding",
+     provider: openrouter, judge: deepseek-v4-pro, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{profile_of: [claude-sonnet-5-5, e2_score/hidden@coding], no_cache: true}],
+     note: "no measured call of this judge; profile of claude-sonnet-5-5"}
+  - {id: t1-e2-sel-sky-c, tier: 1, group: E2, name: "E2 selector scores, Skywork 3B, coding", provider: local,
+     domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e2-sel-sky06-c, tier: 1, group: E2, name: "E2 selector scores, Skywork 0.6B (E5 scan), coding",
+     provider: local, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e2-sel-sky17-c, tier: 1, group: E2, name: "E2 selector scores, Skywork 1.7B (E5 scan), coding",
+     provider: local, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e2-sel-sky4-c, tier: 1, group: E2, name: "E2 selector scores, Skywork 4B (E5 scan, 4-bit), coding",
+     provider: local, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e2-sel-sky8q-c, tier: 1, group: E2, name: "E2 selector scores, Skywork 8B 4-bit (E5 scan), coding",
+     provider: local, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{zero: "local GPU, no API call: 0 USD"}]}
+  - {id: t1-e2-label-c, tier: 1, group: E2, name: "E2 labels, Haiku 5.5, test-record labeller, coding",
+     provider: anthropic, model: claude-haiku-5-5, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [e2_label, label@coding]}]}
+  - {id: t1-e2-labelfull-c, tier: 1, group: E2, name: "E2 labels, Haiku 5.5, full-evidence labeller, coding",
+     provider: anthropic, model: claude-haiku-5-5, domain: coding, requires_e2: true, tasks: e2_coding, per_task: 16,
+     price: [{measured: [e2_label_full, label@coding]}]}
+  # ---------------- Tier 1: Experiment 3 pointwise, the verification-first scorer, shown ----------------
+  - {id: t1-e3-s55-c, tier: 1, group: E3 pointwise, name: "E3 verification-first scorer, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tie_rule: true, tasks: e3_coding, per_task: 3,
+     price: [{measured: [claude-sonnet-5-5, vfp/shown@coding]}]}
+  - {id: t1-e3-o55-c, tier: 1, group: E3 pointwise, name: "E3 verification-first scorer, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tie_rule: true, tasks: o55_e3_coding, per_task: 3,
+     price: [{times: {measured: [claude-sonnet-5-5, vfp/shown@coding]}, factor: opus_over_sonnet_shown}]}
+  # Add-back (iii), in by decision (addendum section 1, H4's second condition): the verification-first scorer as the
+  # selector over every Experiment 2 sample of the shown-eligible Experiment 2 tasks, the context cached once per task.
+  - {id: ab-iii-bo16-c, tier: 1, group: E3 mitigated best-of-16,
+     name: "E3 mitigated best-of-16, Sonnet 5.5, coding (add-back (iii))", provider: anthropic,
+     judge: claude-sonnet-5-5, domain: coding, requires_e2: true, tasks: bo16_coding, per_task: 16,
+     price: [{reamortize: [claude-sonnet-5-5, vfp/shown@coding], calls_per_prefix: 16}]}
+  # The mitigated open-weight selector (addendum section 3, "if the money remains"): the same calls on deepseek-v4-pro,
+  # no prompt cache, so the Sonnet 5.5 verification-first profile with its cache buckets as uncached input.
+  - {id: t1-bo16-deepseek-c, tier: 1, group: E3 mitigated best-of-16,
+     name: "E3 mitigated best-of-16, deepseek-v4-pro, coding", provider: openrouter, judge: deepseek-v4-pro,
+     domain: coding, requires_e2: true, optional_openrouter: true, tasks: bo16_coding, per_task: 16,
+     price: [{profile_of: [deepseek-v4-pro, vfp/shown@coding], no_cache: true, ratio_label: pointwise/hidden@coding},
+             {profile_of: [claude-sonnet-5-5, vfp/shown@coding], no_cache: true}],
+     note: "re-priced on 2026-11-08 from the judge's own measured hidden pointwise calls (amendment 3, item 9): Sonnet
+            5.5's verification-first profile x the tokenizer ratio of deepseek-v4-pro's to Sonnet 5.5's mean input
+            tokens per hidden pointwise call, deepseek-v4-pro's own output tokens per such call, the cache buckets as
+            plain input; before the hidden stage the row was priced on Sonnet 5.5's profile at DeepSeek's list prices
+            (the second method, 14.54 USD), which did not fit under the 17.00 stop line"}
+  # ---------------- Tier 1: E7 mitigation ablation (shown, the E7 tasks, 3 calls per task) ----------------
+  - {id: t1-e7-instr-s55-c, tier: 1, group: E7 mitigation ablation,
+     name: "E7 instruction-only scorer, Sonnet 5.5, coding", provider: anthropic, judge: claude-sonnet-5-5,
+     domain: coding, tie_rule: true, tasks: e7_coding, per_task: 3,
+     price: [{extra_input: [claude-sonnet-5-5, pointwise/shown@coding], factor: e7_extra_input}],
+     note: "the plain shown scorer and the verification-first scorer on these tasks are the E1 pointwise shown and E3
+            rows of Sonnet 5.5, already in the plan"}
+  - {id: t1-e7-instr-flash-c, tier: 1, group: E7 mitigation ablation,
+     name: "E7 instruction-only scorer, gemini-3.8-flash, coding", provider: google, judge: gemini-3.8-flash,
+     domain: coding, tie_rule: true, tasks: e7_coding, per_task: 3,
+     price: [{ratio: [gemini-3.8-flash, pointwise/shown@coding]}],
+     note: "vertex; the plain shown scorer's estimate: the added instruction's 32 tokens (under 0.0001 USD per call at
+            Flash list prices) are not in it. The plain Flash scorer on these tasks is the E1 pointwise shown Flash
+            row, already in the plan"}
+  - {id: t1-e7-vfp-flash-c, tier: 1, group: E7 mitigation ablation,
+     name: "E7 verification-first scorer, gemini-3.8-flash, coding", provider: google, judge: gemini-3.8-flash,
+     domain: coding, tie_rule: true, tasks: e7_coding, per_task: 3,
+     price: [{ratio: [gemini-3.8-flash, vfp/shown@coding]}],
+     note: "vertex; Flash's own output tokens from its hidden calls, so the claim list's extra output is not in this
+            estimate"}
+  # ---------------- Tier 2: Experiment 1 pairwise hidden (6 calls per task, neutral) ----------------
+  - {id: t2-ph-s55-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [claude-sonnet-5-5, hidden@coding]}]}
+  - {id: t2-ph-o55-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [claude-opus-5-5, hidden@coding]}]}
+  - {id: t2-ph-s46-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Sonnet 4.6, coding",
+     provider: anthropic, judge: claude-sonnet-4-6, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [claude-sonnet-4-6, hidden@coding]}]}
+  - {id: t2-ph-o46-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, Opus 4.6, coding",
+     provider: anthropic, judge: claude-opus-4-6, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [claude-opus-4-6, hidden@coding]}]}
+  - {id: t2-ph-qwen-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, qwen3-32b, coding",
+     provider: openrouter, judge: qwen3-32b, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [qwen3-32b, hidden@coding]}]}
+  - {id: t2-ph-oss-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gpt-oss-120b, coding",
+     provider: openrouter, judge: gpt-oss-120b, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [gpt-oss-120b, hidden@coding]}]}
+  - {id: t2-ph-deepseek-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, deepseek-v4-pro, coding",
+     provider: openrouter, judge: deepseek-v4-pro, domain: coding, tasks: coding, per_task: 6,
+     price: [{profile_of: [qwen3-32b, hidden@coding]}], note: "no measured call of this judge; profile of qwen3-32b"}
+  - {id: t2-ph-flash-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gemini-3.8-flash, coding",
+     provider: google, judge: gemini-3.8-flash, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [gemini-3.8-flash, hidden@coding]}], note: vertex}
+  - {id: t2-ph-argon-c, tier: 2, group: E1 pairwise hidden, name: "E1 pairwise hidden, gemini-4-argon, coding",
+     provider: google, judge: gemini-4-argon, domain: coding, tasks: coding, per_task: 6,
+     price: [{measured: [gemini-4-argon, hidden@coding]}], note: vertex}
+  # ---------------- Tier 2: Experiment 1 pairwise shown ----------------
+  - {id: t2-ps-s55-c, tier: 2, group: E1 pairwise shown, name: "E1 pairwise shown, Sonnet 5.5, coding",
+     provider: anthropic, judge: claude-sonnet-5-5, domain: coding, tasks: shown_coding, per_task: 6,
+     price: [{measured: [claude-sonnet-5-5, shown@coding]}]}
+  - {id: t2-ps-o55-c, tier: 2, group: E1 pairwise shown, name: "E1 pairwise shown, Opus 5.5, coding",
+     provider: anthropic, judge: claude-opus-5-5, domain: coding, tasks: o55_pair_coding, per_task: 6,
+     price: [{measured: [claude-opus-5-5, shown@coding]}]}
+  # ---------------- Tier 2: reason classification with cites_disclosure, one call per counted pairwise verdict ----
+  - {id: t2-reasons-c, tier: 2, group: Reason classification, name: "Reason classification, Haiku 5.5, coding",
+     provider: anthropic, model: claude-haiku-5-5, domain: coding, tasks: tier2_calls, per_task: 1,
+     price: [{measured: [reason_classifier, reason@coding],
+              derived: "session 4's four-field classifier call; Part 2's classifier adds the cites_disclosure field
+                        to the same prompt"}],
+     note: "one call per pairwise verdict of the counted Tier 2 rows"}
+# The cut order (addendum section 5, a budget rule): applied in order, cumulatively, until the Anthropic total is at or
+# below the threshold. remove: row ids (a second-sample row leaves with its base row); set: count parameters of
+# counts_part2. Names take their numbers from the config ({rules.<key>}, {set.<key>}; projection_v4.fill_names).
+cuts:
+  - {id: A2, name: "pairwise shown, Opus 5.5 out", remove: [t2-ps-o55-c]}
+  - {id: A3, name: "pairwise shown, Sonnet 5.5 out", remove: [t2-ps-s55-c]}
+  - {id: C1, name: "E6 O- out for the Claude judges",
+     remove: [t1-e6-s55-minus-c, t1-e6-o55-minus-c, t1-e6-s46-minus-c, t1-e6-o46-minus-c]}
+  - {id: C2, name: "E7 on at most {set.e7_tasks} tasks instead of {rules.e7_tasks}", set: {e7_tasks: 20}}
+  - {id: B1, name: "Opus 5.5 pointwise shown on at most {set.opus_shown_tasks} tasks instead of
+                    {rules.opus_shown_tasks}", set: {opus_shown_tasks: 20}}
+  - {id: B2, name: "Opus 5.5 out of Experiment 3 pointwise", remove: [t1-e3-o55-c]}
+  # Part 1's B3 removed Opus 4.6 pointwise hidden (coding and research; no research row is left). Here it takes the
+  # judge's E6 rows with it, as a second-sample row leaves with its base row: E6 reports each level's premium over the
+  # judge's own H and the paired differences O+ minus O and O minus O- (addendum section 2), and only the pointwise
+  # hidden row scores that judge's O and H.
+  - {id: B3, name: "Opus 4.6 out of pointwise hidden (its E6 rows too)",
+     remove: [t1-pwh-o46-c, t1-e6-o46-plus-c, t1-e6-o46-minus-c]}
+  - {id: B4, name: "pointwise shown capped at {set.shown_cap_per_domain} tasks (every pointwise shown row and
+                    Experiment 3 pointwise)", set: {shown_cap_per_domain: 30}}
+# No add-back is left to the add-back rule (addendum sections 0, 1 and 5).
+addbacks: []
+addbacks_note: >-
+  None left to the add-back rule: add-back (i) and add-back (iii) are in the plan by decision (addendum sections 0 and
+  1) and add-back (ii) stays skipped by decision (addendum sections 0 and 5).

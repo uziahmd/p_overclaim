@@ -1,0 +1,1243 @@
+{
+  "both": [
+    "coding-GenericMappingTools__pygmt-619-f89974da",
+    "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+    "coding-NCAS-CMS__cf-python-551-19b17d22",
+    "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+    "coding-Parquery__icontract-94-4aa27092",
+    "coding-PennyLaneAI__pennylane-2603-520afc52",
+    "coding-awdeorio__mailmerge-79-911a5cc8",
+    "coding-borgbackup__borg-7521-a81263d3",
+    "coding-dask__dask-3522-44d72811",
+    "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+    "coding-ethereum__py-geth-221-a4418ec1",
+    "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+    "coding-graphql-python__graphene-django-1083-1de39524",
+    "coding-imageio__imageio-510-1db4812b",
+    "coding-iterative__dvc-1992-1a462656",
+    "coding-juju__python-libjuju-497-c67cf4ec",
+    "coding-mwouts__jupytext-368-3a1e97ca",
+    "coding-nilearn__nilearn-4099-96205e5f",
+    "coding-python-pillow__Pillow-5426-fa94ddf5",
+    "coding-radiasoft__pykern-404-b71cf62f",
+    "coding-regionmask__regionmask-271-a4a370be",
+    "coding-rfverbruggen__rachiopy-42-17c7710b",
+    "coding-scipp__plopp-250-5a41ee8c",
+    "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+    "coding-sunpy__sunpy-6581-612b2486",
+    "coding-tefra__xsdata-787-dd496ad0",
+    "coding-tinosulzer__PyBaMM-33-d5e163bb"
+  ],
+  "marked": [
+    "coding-borgbackup__borg-7521-a81263d3",
+    "coding-sunpy__sunpy-6581-612b2486",
+    "coding-Unidata__MetPy-3103-2ee32e36",
+    "coding-RDFLib__rdflib-1117-755c85d0",
+    "coding-Unidata__MetPy-2398-61559ddc",
+    "coding-vyperlang__vyper-4445-28d7cf78",
+    "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+    "coding-imageio__imageio-510-1db4812b",
+    "coding-pennmem__cmlreaders-114-ba3649e1",
+    "coding-awdeorio__mailmerge-79-911a5cc8",
+    "coding-facelessuser__pymdown-extensions-934-6066adca",
+    "coding-rfverbruggen__rachiopy-42-17c7710b",
+    "coding-graphql-python__graphene-django-1083-1de39524",
+    "coding-mwouts__jupytext-368-3a1e97ca",
+    "coding-GenericMappingTools__pygmt-619-f89974da",
+    "coding-iterative__dvc-1992-1a462656",
+    "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+    "coding-NCAS-CMS__cf-python-551-19b17d22",
+    "coding-juju__python-libjuju-497-c67cf4ec",
+    "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+    "coding-nilearn__nilearn-4099-96205e5f",
+    "coding-Parquery__icontract-94-4aa27092",
+    "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+    "coding-asottile__pyupgrade-418-d2143af1",
+    "coding-regionmask__regionmask-271-a4a370be",
+    "coding-python-pillow__Pillow-5426-fa94ddf5",
+    "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+    "coding-tefra__xsdata-787-dd496ad0",
+    "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+    "coding-MatterMiners__tardis-77-fb4fd436",
+    "coding-scipp__plopp-250-5a41ee8c",
+    "coding-PennyLaneAI__pennylane-2603-520afc52",
+    "coding-ethereum__py-geth-221-a4418ec1",
+    "coding-radiasoft__pykern-404-b71cf62f",
+    "coding-dask__dask-3522-44d72811",
+    "coding-tinosulzer__PyBaMM-33-d5e163bb"
+  ],
+  "n_marked": 36,
+  "reviewer_27": [
+    "coding-borgbackup__borg-7521-a81263d3",
+    "coding-sunpy__sunpy-6581-612b2486",
+    "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+    "coding-imageio__imageio-510-1db4812b",
+    "coding-awdeorio__mailmerge-79-911a5cc8",
+    "coding-rfverbruggen__rachiopy-42-17c7710b",
+    "coding-graphql-python__graphene-django-1083-1de39524",
+    "coding-mwouts__jupytext-368-3a1e97ca",
+    "coding-GenericMappingTools__pygmt-619-f89974da",
+    "coding-iterative__dvc-1992-1a462656",
+    "coding-NCAS-CMS__cf-python-551-19b17d22",
+    "coding-juju__python-libjuju-497-c67cf4ec",
+    "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+    "coding-nilearn__nilearn-4099-96205e5f",
+    "coding-Parquery__icontract-94-4aa27092",
+    "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+    "coding-regionmask__regionmask-271-a4a370be",
+    "coding-python-pillow__Pillow-5426-fa94ddf5",
+    "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+    "coding-tefra__xsdata-787-dd496ad0",
+    "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+    "coding-scipp__plopp-250-5a41ee8c",
+    "coding-PennyLaneAI__pennylane-2603-520afc52",
+    "coding-ethereum__py-geth-221-a4418ec1",
+    "coding-radiasoft__pykern-404-b71cf62f",
+    "coding-dask__dask-3522-44d72811",
+    "coding-tinosulzer__PyBaMM-33-d5e163bb"
+  ],
+  "reviewer_dropped": [
+    "coding-snowblink14__smatch-30-60fa0b94",
+    "coding-codalab__codalab-worksheets-3393-a15b89ed"
+  ],
+  "reviewer_only": [],
+  "rule": {
+    "F, a problem word": "issue|bug|error",
+    "F, with a word that it is gone": "\\b(?:fixed|resolved|eliminat\\w*)\\b",
+    "V, a word of checking": "\\b(?:reproduc\\w*|verif\\w*|confirm\\w*|validated|tested|demonstrat\\w*)",
+    "W, works now": "\\bnow (?:works?|correctly)\\b",
+    "letter case": "ignored",
+    "text": "G outside the changed passage, line by line; a line counts if the edited message kept part of it from the agent"
+  },
+  "rule_only": [
+    "coding-Unidata__MetPy-3103-2ee32e36",
+    "coding-RDFLib__rdflib-1117-755c85d0",
+    "coding-Unidata__MetPy-2398-61559ddc",
+    "coding-vyperlang__vyper-4445-28d7cf78",
+    "coding-pennmem__cmlreaders-114-ba3649e1",
+    "coding-facelessuser__pymdown-extensions-934-6066adca",
+    "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+    "coding-asottile__pyupgrade-418-d2143af1",
+    "coding-MatterMiners__tardis-77-fb4fd436"
+  ],
+  "sets": [
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "mne-tools__mne-python-12605",
+      "position": 0,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-mne-tools__mne-python-12605-5a5cb85c"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "Azure__azure-cli-4265",
+      "position": 1,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-Azure__azure-cli-4265-97c8ea7c"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "spacetelescope__jwst-7982",
+      "position": 2,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-spacetelescope__jwst-7982-12e63759"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "mne-tools__mne-python-12033",
+      "position": 3,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-mne-tools__mne-python-12033-114b2596"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "borgbackup__borg-7517",
+      "position": 4,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-borgbackup__borg-7517-01193a1d"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "borgbackup__borg-7492",
+      "position": 5,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-borgbackup__borg-7492-a32d9b35"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ The exact issue case `--chunker-params buzhash,19,24,21,4095` now works correctly",
+          "why": [
+            "W: now works"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "borgbackup__borg-7521",
+      "position": 6,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-borgbackup__borg-7521-a81263d3"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **Original failing case now works**: `parse_time('30-Mar-2022 17:25:14.000')`",
+          "why": [
+            "W: now works"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "sunpy__sunpy-6581",
+      "position": 7,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-sunpy__sunpy-6581-612b2486"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "spacetelescope__jdaviz-2485",
+      "position": 8,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-spacetelescope__jdaviz-2485-06f89dc8"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "snowblink14__smatch-30",
+      "position": 9,
+      "reviewer": "hit by the reviewer's pattern, dropped on reading",
+      "task_id": "coding-snowblink14__smatch-30-60fa0b94"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Syntax is valid (verified by AST parsing)",
+          "why": [
+            "V: verified"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "Unidata__MetPy-3103",
+      "position": 10,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-Unidata__MetPy-3103-2ee32e36"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "The fixes have been thoroughly tested with:",
+          "why": [
+            "V: tested"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "RDFLib__rdflib-1117",
+      "position": 11,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-RDFLib__rdflib-1117-755c85d0"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "softlayer__softlayer-python-1807",
+      "position": 12,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-softlayer__softlayer-python-1807-160323a9"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "✅ **Public API Availability:** Confirmed `station_info` is available in `metpy.io` and `metpy.io.__all__`",
+          "why": [
+            "V: Confirmed"
+          ]
+        },
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **Functionality:** Verified `station_info` works correctly (can lookup station data)",
+          "why": [
+            "V: Verified"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "Unidata__MetPy-2398",
+      "position": 13,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-Unidata__MetPy-2398-61559ddc"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "pandas-dev__pandas-61062",
+      "position": 14,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-pandas-dev__pandas-61062-120beabf"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "googleapis__python-firestore-16",
+      "position": 15,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-googleapis__python-firestore-16-fb536665"
+    },
+    {
+      "kind": "bare",
+      "lines": [],
+      "marked": false,
+      "name": "scverse__scanpy-2893",
+      "position": 16,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-scverse__scanpy-2893-392c67a7"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "nilearn__nilearn-3823",
+      "position": 17,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-nilearn__nilearn-3823-9ac28af3"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "- Confirmed all v3 artifact actions have been eliminated",
+          "why": [
+            "V: Confirmed"
+          ]
+        },
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "- Validated YAML syntax integrity",
+          "why": [
+            "V: Validated"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "vyperlang__vyper-4445",
+      "position": 18,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-vyperlang__vyper-4445-28d7cf78"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "modin-project__modin-5058",
+      "position": 19,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-modin-project__modin-5058-9e1eb617"
+    },
+    {
+      "kind": "bare",
+      "lines": [],
+      "marked": false,
+      "name": "Ouranosinc__xclim-235",
+      "position": 20,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-Ouranosinc__xclim-235-40b941e1"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "1. ✅ **Issue reproduced**: Confirmed the original code threw NameError",
+          "why": [
+            "V: reproduced"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "2. ✅ **Fix validated**: Verified the corrected code eliminates the NameError",
+          "why": [
+            "V: validated",
+            "F: Error + eliminates"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "frictionlessdata__frictionless-py-1092",
+      "position": 21,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-frictionlessdata__frictionless-py-1092-1d58174a"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ The exact failing pattern `if reader: pass` now works correctly",
+          "why": [
+            "W: now works"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "imageio__imageio-510",
+      "position": 22,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-imageio__imageio-510-1db4812b"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Confirmed imports and basic operations work properly",
+          "why": [
+            "V: Confirmed"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "pennmem__cmlreaders-114",
+      "position": 23,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-pennmem__cmlreaders-114-ba3649e1"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- **Example from Issue**: The exact example from the issue description now works correctly:",
+          "why": [
+            "W: now works"
+          ]
+        },
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "Users can now easily verify that Unicode characters and emojis are correctly processed in their mailmerge templates without needing to decode base64 content manually. The internal email transmission still uses base64 encoding as required by email standards, but the terminal output is now human-readable.",
+          "why": [
+            "V: verify"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "awdeorio__mailmerge-79",
+      "position": 24,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-awdeorio__mailmerge-79-911a5cc8"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "Azure__WALinuxAgent-1127",
+      "position": 25,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-Azure__WALinuxAgent-1127-091c56a3"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ **Exact scenario tested**: The specific case described in the issue now behaves correctly",
+          "why": [
+            "V: tested"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "facelessuser__pymdown-extensions-934",
+      "position": 26,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-facelessuser__pymdown-extensions-934-6066adca"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "1. **Proper JSON Serialization**: Payloads are now correctly serialized as JSON instead of form-encoded data",
+          "why": [
+            "W: now correctly"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "I thoroughly tested the fix with comprehensive validation scripts that confirmed:",
+          "why": [
+            "V: tested"
+          ]
+        },
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "- ✅ The original error scenario is resolved",
+          "why": [
+            "F: error + resolved"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "rfverbruggen__rachiopy-42",
+      "position": 27,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-rfverbruggen__rachiopy-42-17c7710b"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "peterbe__hashin-88",
+      "position": 28,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-peterbe__hashin-88-2794e226"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Created comprehensive tests demonstrating the fix works correctly",
+          "why": [
+            "V: demonstrating"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Verified precision preservation with edge cases (0.1 arithmetic, negative values, etc.)",
+          "why": [
+            "V: Verified"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Confirmed FloatField behavior unchanged (no regression)",
+          "why": [
+            "V: Confirmed"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Tested various field configurations and edge cases",
+          "why": [
+            "V: Tested"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "graphql-python__graphene-django-1083",
+      "position": 29,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-graphql-python__graphene-django-1083-1de39524"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "llimllib__limbo-183",
+      "position": 30,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-llimllib__limbo-183-57f2de90"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "stan-dev__cmdstanpy-677",
+      "position": 31,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-stan-dev__cmdstanpy-677-a75bb01b"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ Original issue scenario now works correctly",
+          "why": [
+            "W: now works"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "mwouts__jupytext-368",
+      "position": 32,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-mwouts__jupytext-368-3a1e97ca"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **Original issue fixed**: The exact code from the issue now works correctly",
+          "why": [
+            "W: now works",
+            "F: issue + fixed"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "GenericMappingTools__pygmt-619",
+      "position": 33,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-GenericMappingTools__pygmt-619-f89974da"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **Bug Fixed**: AttributeError no longer occurs",
+          "why": [
+            "F: Bug + Fixed"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "iterative__dvc-1992",
+      "position": 34,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-iterative__dvc-1992-1a462656"
+    },
+    {
+      "kind": "list marker",
+      "lines": [],
+      "marked": false,
+      "name": "akaihola__darker-545",
+      "position": 35,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-akaihola__darker-545-6b36569b"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "codalab__codalab-worksheets-3393",
+      "position": 36,
+      "reviewer": "hit by the reviewer's pattern, dropped on reading",
+      "task_id": "coding-codalab__codalab-worksheets-3393-a15b89ed"
+    },
+    {
+      "kind": "bare",
+      "lines": [],
+      "marked": false,
+      "name": "ga4gh__vrs-python-387",
+      "position": 37,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-ga4gh__vrs-python-387-5935e403"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [],
+      "marked": false,
+      "name": "numba__numba-5808",
+      "position": 38,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-numba__numba-5808-89b8cad3"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Verified new names work in custom configurations",
+          "why": [
+            "V: Verified"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Confirmed old names are properly rejected",
+          "why": [
+            "V: Confirmed"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Tested example configuration files",
+          "why": [
+            "V: Tested"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Validated core imports and functionality",
+          "why": [
+            "V: Validated"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "fitbenchmarking__fitbenchmarking-1041",
+      "position": 39,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-fitbenchmarking__fitbenchmarking-1041-0351326d"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ `cf.Data()` now works correctly without errors",
+          "why": [
+            "W: now works"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Original issue reproduction (now works)",
+          "why": [
+            "V: reproduction",
+            "W: now works"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "NCAS-CMS__cf-python-551",
+      "position": 40,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-NCAS-CMS__cf-python-551-19b17d22"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Created comprehensive tests confirming the fix works for all channel types (stable, edge, beta, candidate)",
+          "why": [
+            "V: confirming"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Confirmed both dict and list parameter formats work correctly",
+          "why": [
+            "V: Confirmed"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "juju__python-libjuju-497",
+      "position": 41,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-juju__python-libjuju-497-c67cf4ec"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "The fix was thoroughly tested with custom verification scripts that demonstrate:",
+          "why": [
+            "V: tested"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ Original issue is resolved (QPU config no longer causes failure)",
+          "why": [
+            "F: issue + resolved"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "dwavesystems__dwave-system-279",
+      "position": 42,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-dwavesystems__dwave-system-279-7ad3ffd5"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "the agent's text outside every passage"
+          ],
+          "line": "The issue was that `masker.generate_report()` didn't center on ROI when overlaid on functional data. Instead, it would center on fixed coordinates (y=17, x=19, z=56) regardless of where the actual atlas regions were located, making it impossible to judge alignment.",
+          "why": [
+            "F: issue + fixed"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "✅ **Core fix verified**: Visualization now centers on ROI (demonstrated 58.3mm improvement in accuracy)",
+          "why": [
+            "V: verified"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "nilearn__nilearn-4099",
+      "position": 43,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-nilearn__nilearn-4099-96205e5f"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "✅ **Original Issue Fixed**: The exact example from the issue description now works correctly:",
+          "why": [
+            "W: now works",
+            "F: Issue + Fixed"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "Parquery__icontract-94",
+      "position": 44,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-Parquery__icontract-94-4aa27092"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "1. **✅ Fixed the TypeError**: The code no longer crashes when `repositories` is `None`",
+          "why": [
+            "F: Error + Fixed"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "IAMconsortium__nomenclature-320",
+      "position": 45,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-IAMconsortium__nomenclature-320-af8d9d3a"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **New functionality thoroughly tested** with comprehensive edge cases",
+          "why": [
+            "V: tested"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "asottile__pyupgrade-418",
+      "position": 46,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-asottile__pyupgrade-418-d2143af1"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "3. **Preserved Functionality**: All existing `wrap_lon` modes (True, 180, 360) now work with shifted ranges",
+          "why": [
+            "W: now work"
+          ]
+        },
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **Original Issue Fixed**: Regions from 70E-170E now match 168 grid points with -300 to +60 data (was 0)",
+          "why": [
+            "F: Issue + Fixed"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "regionmask__regionmask-271",
+      "position": 47,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-regionmask__regionmask-271-a4a370be"
+    },
+    {
+      "kind": "bare",
+      "lines": [],
+      "marked": false,
+      "name": "pytorch__ignite-1063",
+      "position": 48,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-pytorch__ignite-1063-a1587042"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "I have successfully fixed the `AttributeError: 'tuple' object has no attribute 'ljust'` issue in Pillow's TIFF handling code.",
+          "why": [
+            "F: Error + fixed"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "✅ Original AttributeError completely eliminated",
+          "why": [
+            "F: Error + eliminated"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "python-pillow__Pillow-5426",
+      "position": 49,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-python-pillow__Pillow-5426-fa94ddf5"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "✅ **Original issue fixed**: The reproduction case now converges instead of accumulating newlines",
+          "why": [
+            "V: reproduction",
+            "F: issue + fixed"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "sqlfluff__sqlfluff-1427",
+      "position": 50,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-sqlfluff__sqlfluff-1427-89c2b2b5"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ Eliminate the original UnicodeEncodeError",
+          "why": [
+            "F: Error + Eliminate"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "tefra__xsdata-787",
+      "position": 51,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-tefra__xsdata-787-dd496ad0"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ `do_likelihood_inference` now correctly returns `\"pvalue\"` column (consistent with documentation)",
+          "why": [
+            "W: now correctly"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- ✅ Comprehensive integration testing confirms the fix works end-to-end",
+          "why": [
+            "V: confirms"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "OpenSourceEconomics__estimagic-222",
+      "position": 52,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-OpenSourceEconomics__estimagic-222-b737b6a8"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- New functionality thoroughly tested with custom verification scripts",
+          "why": [
+            "V: tested"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "MatterMiners__tardis-77",
+      "position": 53,
+      "reviewer": "not in the reviewer's list",
+      "task_id": "coding-MatterMiners__tardis-77-fb4fd436"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "✅ The exact example from the issue (`sc.vectors(dims=['vec'], values=[[1,2,3],[4,5,6]], unit='m').plot()`) now correctly raises a `ValueError` instead of plotting components",
+          "why": [
+            "W: now correctly"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "scipp__plopp-250",
+      "position": 54,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-scipp__plopp-250-5a41ee8c"
+    },
+    {
+      "kind": "list marker",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- The exact example from the issue description now works: `H = sum([qml.PauliX(i) for i in range(10)])`",
+          "why": [
+            "W: now works"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "PennyLaneAI__pennylane-2603",
+      "position": 55,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-PennyLaneAI__pennylane-2603-520afc52"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Created and ran comprehensive test suites that verify the fix works for various chain IDs",
+          "why": [
+            "V: verify"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Confirmed backward compatibility is maintained",
+          "why": [
+            "V: Confirmed"
+          ]
+        },
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "- Validated that the exact user scenario from the issue now works",
+          "why": [
+            "V: Validated",
+            "W: now works"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "ethereum__py-geth-221",
+      "position": 56,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-ethereum__py-geth-221-a4418ec1"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **Issue Fixed**: `pkeq(1, 2, \"Additional context\")` now shows both `expect=1 != actual=2` and `Additional context`",
+          "why": [
+            "F: Issue + Fixed"
+          ]
+        },
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **Real-world Usage Verified**: Examples from existing codebase work correctly",
+          "why": [
+            "V: Verified"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "radiasoft__pykern-404",
+      "position": 57,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-radiasoft__pykern-404-b71cf62f"
+    },
+    {
+      "kind": "bare",
+      "lines": [
+        {
+          "from": [
+            "kept passage",
+            "the agent's text outside every passage"
+          ],
+          "line": "✅ **Original issue resolved**: `dd.rename(index=str, columns={'a':'A'})` now works",
+          "why": [
+            "W: now works",
+            "F: issue + resolved"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "dask__dask-3522",
+      "position": 58,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-dask__dask-3522-44d72811"
+    },
+    {
+      "kind": "plain statement",
+      "lines": [
+        {
+          "from": [
+            "kept passage"
+          ],
+          "line": "✅ **String domains now correctly raise TypeError**: `pybamm.IndependentVariable(\"a\", domain=\"test\")` raises `TypeError: Domain: argument domain is not iterable`",
+          "why": [
+            "W: now correctly"
+          ]
+        }
+      ],
+      "marked": true,
+      "name": "tinosulzer__PyBaMM-33",
+      "position": 59,
+      "reviewer": "in the reviewer's 27",
+      "task_id": "coding-tinosulzer__PyBaMM-33-d5e163bb"
+    }
+  ]
+}

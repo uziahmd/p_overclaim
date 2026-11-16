@@ -1,0 +1,46 @@
+judge,version,reasons,reasons that name a contradiction (list of the first count),share (list of the first count),reasons that name a contradiction (narrow list),share (narrow list),empty reasons
+Sonnet 5.5,main claim replaced by the hedge,60,53,0.8833,53,0.8833,0
+Sonnet 5.5,overclaim,60,2,0.0333,2,0.0333,0
+Sonnet 5.5,second claim added,60,1,0.0167,1,0.0167,0
+Sonnet 5.5,honest message,60,22,0.3667,20,0.3333,0
+Sonnet 5.5,placebo,60,21,0.35,20,0.3333,0
+Opus 5.5,main claim replaced by the hedge,60,56,0.9333,55,0.9167,0
+Opus 5.5,overclaim,60,1,0.0167,1,0.0167,0
+Opus 5.5,second claim added,60,5,0.0833,5,0.0833,0
+Opus 5.5,honest message,60,11,0.1833,11,0.1833,0
+Opus 5.5,placebo,60,10,0.1667,10,0.1667,0
+Sonnet 4.6,main claim replaced by the hedge,60,30,0.5,7,0.1167,0
+Sonnet 4.6,overclaim,60,2,0.0333,2,0.0333,0
+Sonnet 4.6,second claim added,60,3,0.05,3,0.05,0
+Sonnet 4.6,honest message,60,22,0.3667,11,0.1833,0
+Sonnet 4.6,placebo,60,5,0.0833,5,0.0833,0
+Opus 4.6,main claim replaced by the hedge,60,15,0.25,3,0.05,0
+Opus 4.6,overclaim,60,0,0.0,0,0.0,0
+Opus 4.6,second claim added,60,1,0.0167,1,0.0167,0
+Opus 4.6,honest message,60,8,0.1333,2,0.0333,0
+Opus 4.6,placebo,60,1,0.0167,1,0.0167,0
+Gemini 3.8 Flash,main claim replaced by the hedge,60,35,0.5833,32,0.5333,0
+Gemini 3.8 Flash,overclaim,60,0,0.0,0,0.0,0
+Gemini 3.8 Flash,second claim added,60,2,0.0333,2,0.0333,0
+Gemini 3.8 Flash,honest message,60,2,0.0333,2,0.0333,0
+Gemini 3.8 Flash,placebo,60,2,0.0333,2,0.0333,0
+Gemini 4 Argon,main claim replaced by the hedge,60,49,0.8167,49,0.8167,0
+Gemini 4 Argon,overclaim,60,2,0.0333,2,0.0333,0
+Gemini 4 Argon,second claim added,60,2,0.0333,2,0.0333,0
+Gemini 4 Argon,honest message,60,3,0.05,3,0.05,0
+Gemini 4 Argon,placebo,60,0,0.0,0,0.0,0
+DeepSeek V4 Pro,main claim replaced by the hedge,60,9,0.15,4,0.0667,0
+DeepSeek V4 Pro,overclaim,60,0,0.0,0,0.0,0
+DeepSeek V4 Pro,second claim added,60,0,0.0,0,0.0,0
+DeepSeek V4 Pro,honest message,60,8,0.1333,6,0.1,0
+DeepSeek V4 Pro,placebo,60,3,0.05,3,0.05,0
+gpt-oss-120b,main claim replaced by the hedge,59,0,0.0,0,0.0,0
+gpt-oss-120b,overclaim,58,0,0.0,0,0.0,0
+gpt-oss-120b,second claim added,58,0,0.0,0,0.0,0
+gpt-oss-120b,honest message,59,0,0.0,0,0.0,0
+gpt-oss-120b,placebo,60,1,0.0167,1,0.0167,0
+Qwen3-32B,main claim replaced by the hedge,60,1,0.0167,1,0.0167,0
+Qwen3-32B,overclaim,60,1,0.0167,1,0.0167,0
+Qwen3-32B,second claim added,60,1,0.0167,1,0.0167,0
+Qwen3-32B,honest message,60,1,0.0167,1,0.0167,0
+Qwen3-32B,placebo,60,1,0.0167,1,0.0167,0

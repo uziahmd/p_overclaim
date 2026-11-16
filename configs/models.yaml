@@ -1,0 +1,157 @@
+# Model registry for session 2 (pilot 2). Keys under `judges` are the grader names used in every record and table.
+# Credentials come from the environment only: ANTHROPIC_API_KEY, OPENROUTER_API_KEY, GEMINI_API_KEY (route aistudio),
+# GOOGLE_CLOUD_PROJECT + application default credentials or VERTEX_API_KEY (route vertex).
+judges:
+  # Claude judges: thinking adaptive, effort low, structured output (output_config.format), no sampling parameters,
+  # no fallbacks. max_tokens covers thinking + the JSON verdict.
+  claude-sonnet-5-5: {provider: anthropic, model: claude-sonnet-5-5, thinking: adaptive, effort: low, max_tokens: 2000, structured_output: true}
+  claude-opus-5-5:   {provider: anthropic, model: claude-opus-5-5,   thinking: adaptive, effort: low, max_tokens: 2000, structured_output: true}
+  claude-sonnet-4-6: {provider: anthropic, model: claude-sonnet-4-6, thinking: adaptive, effort: low, max_tokens: 2000, structured_output: true}
+  claude-opus-4-6:   {provider: anthropic, model: claude-opus-4-6,   thinking: adaptive, effort: low, max_tokens: 2000, structured_output: true}
+  # Open judges on OpenRouter (openai SDK, base_url https://openrouter.ai/api/v1). Output capped at 300 tokens.
+  # JSON by prompt + strict parse (no response_format); the serving provider and the full usage object are recorded.
+  qwen3-32b:
+    provider: openrouter
+    model: qwen/qwen3-32b
+    temperature: 0.0
+    max_tokens: 300
+    # Probe 2026-11-06 (DeepInfra fp8): with reasoning.enabled=false alone the model still spent 205 reasoning tokens;
+    # with the Qwen soft switch " /no_think" appended to the prompt it spent 1. Both are sent. Without the switch the
+    # 300-token cap would be consumed by reasoning. The reply then arrives in a ```json fence, which the parser unwraps.
+    prompt_suffix: " /no_think"
+    extra_body:
+      provider: {quantizations: [fp8, bf16, fp16], require_parameters: true, allow_fallbacks: true}
+      reasoning: {enabled: false}
+  gpt-oss-120b:
+    provider: openrouter
+    model: openai/gpt-oss-120b
+    temperature: 0.0
+    max_tokens: 300
+    # Probe 2026-11-06: routed to Crusoe (bf16), not DeepInfra; about 19 reasoning tokens per call at effort low.
+    # The serving provider is recorded per call and OpenRouter's usage.cost is the booked cost.
+    extra_body:
+      provider: {quantizations: [fp8, bf16, fp16], require_parameters: true, allow_fallbacks: true}
+      reasoning: {effort: low}
+  # Gemini judges (google-genai Interactions API). These models cannot turn thinking off: thinking_level low.
+  gemini-3.8-flash: {provider: gemini, model: gemini-3.8-flash, route: aistudio, thinking_level: low, max_output_tokens: 1500, structured_output: true}
+  gemini-4-argon:   {provider: gemini, model: gemini-4-argon,   route: aistudio, thinking_level: low, max_output_tokens: 1500, structured_output: true}
+  # Part 2 (addendum section 3): the strongest open-weight chat model on OpenRouter within the budget. Endpoints API,
+  # 2026-11-08: deepseek/deepseek-v4-pro ("DeepSeek: DeepSeek V4 Pro 0423"), fp8 endpoints from 0.637 / 1.274 USD per
+  # million tokens (StreamLake, Baidu, ...), context 1,024,000 to 1,048,576, max output 384k; supports `reasoning`,
+  # `response_format`, `temperature`. Reasoning is turned off so the 300-token cap holds the JSON verdict (as for
+  # qwen3-32b); fp8 or bf16 providers only, no `:free` variant; the serving provider is recorded per call.
+  deepseek-v4-pro:
+    provider: openrouter
+    model: deepseek/deepseek-v4-pro
+    temperature: 0.0
+    max_tokens: 300
+    extra_body:
+      provider: {quantizations: [fp8, bf16], require_parameters: true, allow_fallbacks: true}
+      reasoning: {enabled: false}
+# Opus 5.5 edits for the in-place (v2) sets: span detection and replacements, structured output.
+editor: {provider: anthropic, model: claude-opus-5-5, thinking: adaptive, effort: low, max_tokens: 8000, structured_output: true}
+# Haiku 5.5 classifier for the judges' reason strings (Step 6), structured output.
+classifier: {provider: anthropic, model: claude-haiku-5-5, effort: low, max_tokens: 1000, structured_output: true}
+# Session 3 (pilot 3, design v3). The session-2 entries above are unchanged.
+# Span typing + discloses_gap for the v3 sets (one call per task), and the v3 verifier (a pre-check and a post-check
+# per task, see verify_variants.py; a set that fails the post-check gets a third call, the second look of
+# verifier_appeal below): Sonnet 5.5, structured output.
+annotator: {provider: anthropic, model: claude-sonnet-5-5, thinking: adaptive, effort: low, max_tokens: 4000, structured_output: true}
+verifier:  {provider: anthropic, model: claude-sonnet-5-5, thinking: adaptive, effort: low, max_tokens: 3000, structured_output: true}
+# Second look at a set that fails the post-check (pilot3.verify_with_appeal): the same model at effort high, so that it
+# can think before it answers (14 of the 30 calls of pilot 3 still recorded no thinking tokens). Added after the second build pass, when every post-check drop had been read: the effort-low
+# verifier spent no thinking tokens, misread check c in two systematic ways and over-quoted in check d.
+verifier_appeal: {provider: anthropic, model: claude-sonnet-5-5, thinking: adaptive, effort: high, max_tokens: 8000, structured_output: true}
+# Experiment 2: the policy that writes final messages (16 samples per task, at most 400 output tokens; the API has no
+# temperature parameter, so samples differ by default sampling) and the overclaim labeller. Both Haiku 5.5.
+# Probe 2026-11-06 (one pilot task, 3 samples per setting): with no thinking key Haiku 5.5 spent 234 to 302 thinking
+# tokens of the 400-token cap and every sample was cut off; "between_tools" is rejected for this model; with thinking
+# "disabled" there are no thinking tokens. A 200-word message still needs more than 400 Haiku tokens (cut at about 172
+# words), so the policy prompt asks for at most 150 words (8 of 8 probe samples then ended normally, 291 to 363 tokens).
+e2_policy:   {provider: anthropic, model: claude-haiku-5-5, effort: low, max_tokens: 400, thinking: disabled}
+e2_labeller: {provider: anthropic, model: claude-haiku-5-5, effort: low, max_tokens: 1000, structured_output: true}
+# Experiment 3: the verification-first judge is a `judges` entry with a larger max_tokens (it lists claims before the verdict).
+e3_max_tokens: 3000
+# Session 4 (pilot 4, design v4). Every entry above is unchanged, so pilots 2 and 3 rerun from the cache.
+# v4 pre-check (one call per task before any paid rewrite: supported_by per claim span against the whole evidence
+# record) and v4 post-check (checks c, d and f in one call, no second look): Sonnet 5.5 at effort high from the start.
+# Thought tokens are recorded per call and not relied on: 14 of the 30 high-effort calls of pilot 3 recorded none.
+precheck_v4: {provider: anthropic, model: claude-sonnet-5-5, thinking: adaptive, effort: high, max_tokens: 12000, structured_output: true}
+verifier_v4: {provider: anthropic, model: claude-sonnet-5-5, thinking: adaptive, effort: high, max_tokens: 8000, structured_output: true}
+# Experiment 2 policy (session-4 brief, decision 4): the model that wrote the O messages, through OpenRouter.
+# Models endpoint, 2026-11-06: id qwen/qwen3-coder, name "Qwen: Qwen3 Coder 480B A35B", Hugging Face id
+# Qwen/Qwen3-Coder-480B-A35B-Instruct, canonical slug qwen/qwen3-coder-480b-a35b-07-25, context 262,144, list price
+# 0.30 USD per million input tokens and 1.00 per million output tokens. Temperature 1 as in Plan.md (on-policy samples).
+e2_policy_qwen:
+  provider: openrouter
+  model: qwen/qwen3-coder
+  temperature: 1.0
+  max_tokens: 400
+  extra_body:
+    provider: {quantizations: [fp8, bf16, fp16], require_parameters: true, allow_fallbacks: true}
+# Research-report domain: the agent that reads sources and writes the report (tool calling through OpenRouter). Not one
+# of the judges. Models endpoint, 2026-11-06: deepseek/deepseek-v4.1-flash, "DeepSeek: DeepSeek V4.1 Flash" (canonical
+# slug deepseek/deepseek-v4.1-flash-20260910), 0.049 / 0.54 USD per million tokens; the fallback is
+# meta-llama/llama-4-maverick (0.35 / 1.00). deepseek/deepseek-chat on OpenRouter is DeepSeek V3 (2024), not current.
+research_agent:
+  provider: openrouter
+  model: deepseek/deepseek-v4.1-flash
+  temperature: 0.7
+  max_tokens: 1200
+  extra_body:
+    provider: {require_parameters: true}     # never route to an upstream that ignores `tools`
+    reasoning: {enabled: false}
+research_agent_fallback:
+  provider: openrouter
+  model: meta-llama/llama-4-maverick
+  temperature: 0.7
+  max_tokens: 1200
+  extra_body:
+    provider: {require_parameters: true}
+reward_models:
+  - {name: skywork-v2-llama3.2-3b, model: Skywork/Skywork-Reward-V2-Llama-3.2-3B, dtype: bfloat16, batch_size: 1}
+# USD per million tokens. Anthropic rows are from https://platform.claude.com/docs/en/about-claude/pricing (read 2026-11-06):
+# cache_write is the 5-minute write (1.25x input); cache_read is 0.05x input on the 5.5 models and 0.1x on 4.6 and Haiku 5.5.
+# NOTE: the session brief says cache reads cost 0.20 on the 5.5 models; the pricing page says 0.10 for Sonnet 5.5 and 0.20 for Opus 5.5.
+# Carried over on purpose (session-3 brief, answers and Step 1, 2026-11-06): the Sonnet 5.5 cache-read price stays 0.10 USD
+# per million tokens, and qwen3-32b keeps the " /no_think" prompt suffix (see its entry above).
+# Thinking tokens are billed as output. Haiku 5.5 prices are for prompts up to 100k tokens.
+# OpenRouter rows are list prices used only when a response carries no usage.cost. Gemini: thought tokens are billed as output.
+prices_usd_per_mtok:
+  claude-sonnet-5-5: {input: 2.0, output: 10.0, cache_read: 0.10, cache_write: 2.50}
+  claude-opus-5-5:   {input: 4.0, output: 20.0, cache_read: 0.20, cache_write: 5.00}
+  claude-sonnet-4-6: {input: 3.0, output: 15.0, cache_read: 0.30, cache_write: 3.75}
+  claude-opus-4-6:   {input: 5.0, output: 25.0, cache_read: 0.50, cache_write: 6.25}
+  claude-haiku-5-5:  {input: 0.10, output: 0.50, cache_read: 0.01, cache_write: 0.125}
+  qwen/qwen3-32b:      {input: 0.08, output: 0.28}
+  qwen/qwen3-coder:    {input: 0.30, output: 1.00}
+  deepseek/deepseek-v4.1-flash: {input: 0.049, output: 0.54}
+  meta-llama/llama-4-maverick:  {input: 0.35, output: 1.00}
+  openai/gpt-oss-120b: {input: 0.04, output: 0.17}
+  # Gemini implicit_cache_read = the "Context caching price" of the AI Studio pricing page
+  # (aistudio.google.com/docs/pricing, read 2026-11-08; paid tier, standard): implicit-cache hits (usage
+  # total_cached_tokens) are charged at it, the rest of the input at the input price (graders/gemini.py; Uzair's memo of
+  # 2026-11-08, section 1.3). Its own key, not cache_read: the projections (overclaim.projection, projection_v4) price
+  # a cache-read token at the model's cache_read price when the table has one, and the Gemini projection rows are
+  # priced "as uncached input" on purpose (the upper bound the cap rule starts from); the committed pilot summaries
+  # reproduce byte for byte. The page says Argon's prices double from 2026-12-01 and Flash's from 2027-01-01; the
+  # table holds the prices in force on the run day.
+  gemini-3.8-flash:  {input: 0.75, output: 3.75, implicit_cache_read: 0.075}
+  gemini-4-argon:    {input: 2.0, output: 10.0, implicit_cache_read: 0.10}
+  # Part 2's OpenRouter judge (addendum section 3): list price of the cheapest fp8 endpoint, OpenRouter endpoints API
+  # read on 2026-11-08; a response's usage.cost is the booked cost when present.
+  deepseek/deepseek-v4-pro: {input: 0.637, output: 1.274}
+# Part 2, E5 (addendum section 2): the Skywork-Reward-V2 family on the local GPU (RTX 3080, 10 GiB). Repository names
+# verified on the Hub on 2026-11-08 (huggingface.co/api/models?author=Skywork&search=Reward-V2). The 8B runs in 4-bit
+# (bitsandbytes nf4, bfloat16 compute) only if it fits; without the bitsandbytes or the accelerate package
+# (transformers' 4-bit quantizer needs both) it is skipped with that reason. The 4B was planned in bfloat16 and did
+# not fit on 2026-11-08 (7.49 GiB of weights x 1.10 + 1 GiB margin against 8.41 GiB free next to the desktop; skipped
+# with that reason, results/full_run/rm_status.json), so it runs in nf4 like the 8B (README amendment 3, item 12).
+reward_models_part2:
+  - {name: skywork-v2-llama3.2-3b, model: Skywork/Skywork-Reward-V2-Llama-3.2-3B, dtype: bfloat16, batch_size: 1}
+  - {name: skywork-v2-qwen3-0.6b, model: Skywork/Skywork-Reward-V2-Qwen3-0.6B, dtype: bfloat16, batch_size: 1}
+  - {name: skywork-v2-qwen3-1.7b, model: Skywork/Skywork-Reward-V2-Qwen3-1.7B, dtype: bfloat16, batch_size: 1}
+  - {name: skywork-v2-qwen3-4b-4bit, model: Skywork/Skywork-Reward-V2-Qwen3-4B, dtype: bfloat16, batch_size: 1,
+     quantization: nf4}
+  - {name: skywork-v2-qwen3-8b-4bit, model: Skywork/Skywork-Reward-V2-Qwen3-8B, dtype: bfloat16, batch_size: 1,
+     quantization: nf4}

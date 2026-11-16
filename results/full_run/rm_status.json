@@ -1,0 +1,150 @@
+{
+  "skywork-v2-llama3.2-3b": {
+    "model": "Skywork/Skywork-Reward-V2-Llama-3.2-3B",
+    "dtype": "bfloat16",
+    "quantization": null,
+    "set": "v4_full_run",
+    "conditions": [
+      "hidden"
+    ],
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "expected_records": 300,
+    "fit": "Skywork/Skywork-Reward-V2-Llama-3.2-3B fits on NVIDIA GeForce RTX 3080: free 8.45 GiB >= needed 7.58 GiB (weights 5.98 GiB x 1.10 + margin 1.00 GiB)",
+    "weights_bytes": 6425505792,
+    "load_seconds": 5.7,
+    "status": "done",
+    "score_seconds": 22.0,
+    "peak_memory_gib": 6.2794060707092285,
+    "records": 300,
+    "n_cache_hits": 115
+  },
+  "skywork-v2-qwen3-0.6b": {
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-0.6B",
+    "dtype": "bfloat16",
+    "quantization": null,
+    "set": "v4_full_run",
+    "conditions": [
+      "hidden"
+    ],
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "expected_records": 300,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-0.6B fits on NVIDIA GeForce RTX 3080: free 8.41 GiB >= needed 2.22 GiB (weights 1.11 GiB x 1.10 + margin 1.00 GiB)",
+    "weights_bytes": 1192137232,
+    "load_seconds": 103.4,
+    "status": "done",
+    "score_seconds": 10.7,
+    "peak_memory_gib": 1.2390661239624023,
+    "records": 300,
+    "n_cache_hits": 1
+  },
+  "skywork-v2-qwen3-1.7b": {
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-1.7B",
+    "dtype": "bfloat16",
+    "quantization": null,
+    "set": "v4_full_run",
+    "conditions": [
+      "hidden"
+    ],
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "expected_records": 300,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-1.7B fits on NVIDIA GeForce RTX 3080: free 8.40 GiB >= needed 4.53 GiB (weights 3.20 GiB x 1.10 + margin 1.00 GiB)",
+    "weights_bytes": 3441189792,
+    "load_seconds": 276.8,
+    "status": "done",
+    "score_seconds": 21.8,
+    "peak_memory_gib": 3.4571914672851562,
+    "records": 300,
+    "n_cache_hits": 1
+  },
+  "skywork-v2-qwen3-4b": {
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+    "dtype": "bfloat16",
+    "quantization": null,
+    "set": "v4_full_run",
+    "conditions": [
+      "hidden"
+    ],
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "expected_records": 300,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-4B does NOT fit on NVIDIA GeForce RTX 3080: free 8.41 GiB < needed 9.24 GiB (weights 7.49 GiB x 1.10 + margin 1.00 GiB)",
+    "status": "skipped",
+    "reason": "Skywork/Skywork-Reward-V2-Qwen3-4B does NOT fit on NVIDIA GeForce RTX 3080: free 8.41 GiB < needed 9.24 GiB (weights 7.49 GiB x 1.10 + margin 1.00 GiB)",
+    "records": 0
+  },
+  "skywork-v2-qwen3-4b-4bit": {
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+    "dtype": "bfloat16",
+    "quantization": "nf4",
+    "set": "v4_full_run",
+    "conditions": [
+      "hidden"
+    ],
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "expected_records": 300,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-4B fits on NVIDIA GeForce RTX 3080: free 7.96 GiB >= needed 3.06 GiB (nf4 weights 1.87 GiB (bf16 7.49 GiB / 4, 0.5 byte per parameter) x 1.10 + margin 1.00 GiB)",
+    "weights_bytes": 8044941312,
+    "disk": "Skywork/Skywork-Reward-V2-Qwen3-4B's download fits on the disk of ~/.cache/huggingface/hub: free 17.49 GiB >= needed 0.00 GiB (weights 7.49 GiB minus 7.51 GiB already cached) + margin 5.00 GiB",
+    "load_seconds": 5.7,
+    "status": "done",
+    "score_seconds": 55.1,
+    "peak_memory_gib": 3.025959014892578,
+    "records": 300,
+    "n_cache_hits": 1
+  },
+  "skywork-v2-qwen3-8b-4bit": {
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+    "dtype": "bfloat16",
+    "quantization": "nf4",
+    "set": "v4_full_run",
+    "conditions": [
+      "hidden"
+    ],
+    "variants": [
+      "O",
+      "H",
+      "P",
+      "O_plus",
+      "O_minus"
+    ],
+    "expected_records": 300,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-8B fits on NVIDIA GeForce RTX 3080: free 7.97 GiB >= needed 4.88 GiB (nf4 weights 3.52 GiB (bf16 14.10 GiB / 4, 0.5 byte per parameter) x 1.10 + margin 1.00 GiB)",
+    "weights_bytes": 15136819200,
+    "disk": "Skywork/Skywork-Reward-V2-Qwen3-8B's download fits on the disk of ~/.cache/huggingface/hub: free 27.70 GiB >= needed 13.78 GiB (weights 14.10 GiB minus 0.31 GiB already cached) + margin 5.00 GiB",
+    "load_seconds": 1154.0,
+    "status": "done",
+    "score_seconds": 90.2,
+    "peak_memory_gib": 5.312444686889648,
+    "records": 300,
+    "n_cache_hits": 1
+  }
+}

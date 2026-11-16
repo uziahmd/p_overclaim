@@ -1,0 +1,203 @@
+judge,condition,version,keyword,reasons that contain it,reasons
+Sonnet 5.5,without the transcript,overclaim,does not address,1,60
+Sonnet 5.5,without the transcript,overclaim,doesn't address,2,60
+Sonnet 5.5,without the transcript,overclaim,padding,2,60
+Sonnet 5.5,without the transcript,overclaim,unrelated,1,60
+Sonnet 5.5,without the transcript,honest message,boilerplate,5,60
+Sonnet 5.5,without the transcript,honest message,does not address,1,60
+Sonnet 5.5,without the transcript,honest message,filler,30,60
+Sonnet 5.5,without the transcript,honest message,generic,1,60
+Sonnet 5.5,without the transcript,honest message,irrelevant,15,60
+Sonnet 5.5,without the transcript,honest message,nothing to do with,1,60
+Sonnet 5.5,without the transcript,honest message,padded,17,60
+Sonnet 5.5,without the transcript,honest message,padding,1,60
+Sonnet 5.5,without the transcript,honest message,unrelated,8,60
+Sonnet 5.5,without the transcript,placebo,boilerplate,7,60
+Sonnet 5.5,without the transcript,placebo,doesn't address,1,60
+Sonnet 5.5,without the transcript,placebo,filler,42,60
+Sonnet 5.5,without the transcript,placebo,generic,3,60
+Sonnet 5.5,without the transcript,placebo,irrelevant,8,60
+Sonnet 5.5,without the transcript,placebo,nothing to do with,1,60
+Sonnet 5.5,without the transcript,placebo,off-topic,1,60
+Sonnet 5.5,without the transcript,placebo,padded,31,60
+Sonnet 5.5,without the transcript,placebo,padding,1,60
+Sonnet 5.5,without the transcript,placebo,unrelated,4,60
+Sonnet 5.5,without the transcript,main claim replaced by the hedge,padding,1,60
+Sonnet 5.5,without the transcript,main claim replaced by the hedge,unrelated,1,60
+Sonnet 5.5,without the transcript,second claim added,boilerplate,1,60
+Sonnet 5.5,without the transcript,second claim added,does not address,4,60
+Sonnet 5.5,without the transcript,second claim added,doesn't address,2,60
+Sonnet 5.5,without the transcript,second claim added,padded,1,60
+Sonnet 5.5,without the transcript,second claim added,padding,1,60
+Sonnet 5.5,without the transcript,second claim added,tangential,1,60
+Sonnet 5.5,without the transcript,second claim added,unrelated,1,60
+Opus 5.5,without the transcript,overclaim,boilerplate,2,60
+Opus 5.5,without the transcript,overclaim,doesn't address,1,60
+Opus 5.5,without the transcript,overclaim,filler,1,60
+Opus 5.5,without the transcript,overclaim,padded,6,60
+Opus 5.5,without the transcript,overclaim,padding,2,60
+Opus 5.5,without the transcript,overclaim,unrelated,1,60
+Opus 5.5,without the transcript,honest message,boilerplate,3,60
+Opus 5.5,without the transcript,honest message,does not address,1,60
+Opus 5.5,without the transcript,honest message,filler,28,60
+Opus 5.5,without the transcript,honest message,generic,2,60
+Opus 5.5,without the transcript,honest message,irrelevant,22,60
+Opus 5.5,without the transcript,honest message,nothing to do with,1,60
+Opus 5.5,without the transcript,honest message,padded,11,60
+Opus 5.5,without the transcript,honest message,padding,1,60
+Opus 5.5,without the transcript,honest message,unrelated,1,60
+Opus 5.5,without the transcript,placebo,boilerplate,12,60
+Opus 5.5,without the transcript,placebo,doesn't address,1,60
+Opus 5.5,without the transcript,placebo,filler,28,60
+Opus 5.5,without the transcript,placebo,generic,5,60
+Opus 5.5,without the transcript,placebo,irrelevant,22,60
+Opus 5.5,without the transcript,placebo,non-sequitur,1,60
+Opus 5.5,without the transcript,placebo,padded,28,60
+Opus 5.5,without the transcript,placebo,unrelated,3,60
+Opus 5.5,without the transcript,main claim replaced by the hedge,does not address,1,60
+Opus 5.5,without the transcript,main claim replaced by the hedge,doesn't address,2,60
+Opus 5.5,without the transcript,main claim replaced by the hedge,filler,1,60
+Opus 5.5,without the transcript,main claim replaced by the hedge,padded,1,60
+Opus 5.5,without the transcript,main claim replaced by the hedge,padding,3,60
+Opus 5.5,without the transcript,second claim added,doesn't address,2,60
+Opus 5.5,without the transcript,second claim added,filler,2,60
+Opus 5.5,without the transcript,second claim added,padded,4,60
+Opus 5.5,without the transcript,second claim added,padding,2,60
+Opus 5.5,without the transcript,second claim added,unrelated,1,60
+Sonnet 4.6,without the transcript,overclaim,boilerplate,2,60
+Sonnet 4.6,without the transcript,overclaim,padded,5,60
+Sonnet 4.6,without the transcript,overclaim,padding,1,60
+Sonnet 4.6,without the transcript,honest message,boilerplate,1,60
+Sonnet 4.6,without the transcript,honest message,filler,2,60
+Sonnet 4.6,without the transcript,honest message,generic,1,60
+Sonnet 4.6,without the transcript,honest message,irrelevant,8,60
+Sonnet 4.6,without the transcript,honest message,padded,2,60
+Sonnet 4.6,without the transcript,honest message,padding,1,60
+Sonnet 4.6,without the transcript,honest message,unrelated,3,60
+Sonnet 4.6,without the transcript,placebo,boilerplate,2,60
+Sonnet 4.6,without the transcript,placebo,filler,6,60
+Sonnet 4.6,without the transcript,placebo,generic,1,60
+Sonnet 4.6,without the transcript,placebo,irrelevant,5,60
+Sonnet 4.6,without the transcript,placebo,padded,11,60
+Sonnet 4.6,without the transcript,placebo,padding,10,60
+Sonnet 4.6,without the transcript,main claim replaced by the hedge,padded,1,60
+Sonnet 4.6,without the transcript,main claim replaced by the hedge,padding,1,60
+Sonnet 4.6,without the transcript,second claim added,padded,6,60
+Opus 4.6,without the transcript,overclaim,generic,1,60
+Opus 4.6,without the transcript,honest message,boilerplate,1,60
+Opus 4.6,without the transcript,honest message,filler,4,60
+Opus 4.6,without the transcript,honest message,irrelevant,5,60
+Opus 4.6,without the transcript,honest message,padded,2,60
+Opus 4.6,without the transcript,honest message,padding,1,60
+Opus 4.6,without the transcript,placebo,filler,14,60
+Opus 4.6,without the transcript,placebo,irrelevant,1,60
+Opus 4.6,without the transcript,placebo,padded,5,60
+Opus 4.6,without the transcript,placebo,padding,1,60
+Opus 4.6,without the transcript,main claim replaced by the hedge,doesn't address,1,60
+Opus 4.6,without the transcript,second claim added,filler,1,60
+Opus 4.6,without the transcript,second claim added,generic,1,60
+Opus 4.6,without the transcript,second claim added,padded,1,60
+Opus 4.6,without the transcript,second claim added,tangential,1,60
+Gemini 3.8 Flash,without the transcript,overclaim,padding,1,60
+Gemini 3.8 Flash,without the transcript,honest message,boilerplate,4,60
+Gemini 3.8 Flash,without the transcript,honest message,filler,4,60
+Gemini 3.8 Flash,without the transcript,honest message,generic,1,60
+Gemini 3.8 Flash,without the transcript,honest message,irrelevant,2,60
+Gemini 3.8 Flash,without the transcript,honest message,padding,1,60
+Gemini 3.8 Flash,without the transcript,honest message,unrelated,10,60
+Gemini 3.8 Flash,without the transcript,placebo,boilerplate,11,60
+Gemini 3.8 Flash,without the transcript,placebo,filler,11,60
+Gemini 3.8 Flash,without the transcript,placebo,generic,4,60
+Gemini 3.8 Flash,without the transcript,placebo,irrelevant,6,60
+Gemini 3.8 Flash,without the transcript,placebo,padding,1,60
+Gemini 3.8 Flash,without the transcript,placebo,stylistic commentary,1,60
+Gemini 3.8 Flash,without the transcript,placebo,superfluous,1,60
+Gemini 3.8 Flash,without the transcript,placebo,unrelated,1,60
+Gemini 3.8 Flash,without the transcript,second claim added,padding,1,60
+Gemini 4 Argon,without the transcript,overclaim,filler,1,60
+Gemini 4 Argon,without the transcript,honest message,boilerplate,10,60
+Gemini 4 Argon,without the transcript,honest message,filler,15,60
+Gemini 4 Argon,without the transcript,honest message,generic,3,60
+Gemini 4 Argon,without the transcript,honest message,irrelevant,5,60
+Gemini 4 Argon,without the transcript,honest message,padded,1,60
+Gemini 4 Argon,without the transcript,honest message,padding,2,60
+Gemini 4 Argon,without the transcript,honest message,unrelated,4,60
+Gemini 4 Argon,without the transcript,placebo,boilerplate,12,60
+Gemini 4 Argon,without the transcript,placebo,filler,28,60
+Gemini 4 Argon,without the transcript,placebo,generic,11,60
+Gemini 4 Argon,without the transcript,placebo,irrelevant,5,60
+Gemini 4 Argon,without the transcript,placebo,padded,2,60
+Gemini 4 Argon,without the transcript,placebo,unrelated,1,60
+Gemini 4 Argon,without the transcript,second claim added,padding,1,60
+DeepSeek V4 Pro,without the transcript,overclaim,filler,1,60
+DeepSeek V4 Pro,without the transcript,honest message,extraneous,4,60
+DeepSeek V4 Pro,without the transcript,honest message,irrelevant,3,60
+DeepSeek V4 Pro,without the transcript,honest message,unrelated,2,60
+DeepSeek V4 Pro,without the transcript,placebo,irrelevant,1,60
+gpt-oss-120b,without the transcript,overclaim,does not address,3,58
+gpt-oss-120b,without the transcript,overclaim,generic,2,58
+gpt-oss-120b,without the transcript,overclaim,unrelated,1,58
+gpt-oss-120b,without the transcript,honest message,does not address,2,59
+gpt-oss-120b,without the transcript,honest message,generic,3,59
+gpt-oss-120b,without the transcript,honest message,irrelevant,2,59
+gpt-oss-120b,without the transcript,honest message,unrelated,6,59
+gpt-oss-120b,without the transcript,placebo,does not address,4,60
+gpt-oss-120b,without the transcript,placebo,generic,4,60
+gpt-oss-120b,without the transcript,placebo,irrelevant,1,60
+gpt-oss-120b,without the transcript,placebo,unrelated,1,60
+gpt-oss-120b,without the transcript,main claim replaced by the hedge,generic,6,59
+gpt-oss-120b,without the transcript,second claim added,does not address,2,58
+gpt-oss-120b,without the transcript,second claim added,generic,4,58
+gpt-oss-120b,without the transcript,second claim added,unrelated,1,58
+Sonnet 5.5,with the transcript,overclaim,padding,1,60
+Sonnet 5.5,with the transcript,overclaim,unrelated,13,60
+Sonnet 5.5,with the transcript,honest message,boilerplate,2,60
+Sonnet 5.5,with the transcript,honest message,does not address,2,60
+Sonnet 5.5,with the transcript,honest message,doesn't address,1,60
+Sonnet 5.5,with the transcript,honest message,extraneous,1,60
+Sonnet 5.5,with the transcript,honest message,filler,35,60
+Sonnet 5.5,with the transcript,honest message,irrelevant,13,60
+Sonnet 5.5,with the transcript,honest message,nothing to do with,1,60
+Sonnet 5.5,with the transcript,honest message,padded,12,60
+Sonnet 5.5,with the transcript,honest message,padding,1,60
+Sonnet 5.5,with the transcript,honest message,unrelated,15,60
+Sonnet 5.5,with the transcript,placebo,boilerplate,3,60
+Sonnet 5.5,with the transcript,placebo,doesn't address,1,60
+Sonnet 5.5,with the transcript,placebo,filler,44,60
+Sonnet 5.5,with the transcript,placebo,irrelevant,12,60
+Sonnet 5.5,with the transcript,placebo,padded,18,60
+Sonnet 5.5,with the transcript,placebo,padding,2,60
+Sonnet 5.5,with the transcript,placebo,unrelated,9,60
+Opus 5.5,with the transcript,overclaim,padding,1,30
+Opus 5.5,with the transcript,overclaim,unrelated,3,30
+Opus 5.5,with the transcript,honest message,boilerplate,2,30
+Opus 5.5,with the transcript,honest message,filler,17,30
+Opus 5.5,with the transcript,honest message,irrelevant,10,30
+Opus 5.5,with the transcript,honest message,non-sequitur,2,30
+Opus 5.5,with the transcript,honest message,padded,3,30
+Opus 5.5,with the transcript,honest message,padding,2,30
+Opus 5.5,with the transcript,honest message,unrelated,6,30
+Opus 5.5,with the transcript,placebo,boilerplate,8,30
+Opus 5.5,with the transcript,placebo,filler,16,30
+Opus 5.5,with the transcript,placebo,irrelevant,12,30
+Opus 5.5,with the transcript,placebo,padded,4,30
+Opus 5.5,with the transcript,placebo,padding,1,30
+Opus 5.5,with the transcript,placebo,unrelated,4,30
+Gemini 3.8 Flash,with the transcript,honest message,boilerplate,2,34
+Gemini 3.8 Flash,with the transcript,honest message,tangential,1,34
+Gemini 3.8 Flash,with the transcript,honest message,unrelated,1,34
+Gemini 3.8 Flash,with the transcript,placebo,boilerplate,3,34
+Gemini 3.8 Flash,with the transcript,placebo,extraneous,2,34
+Gemini 3.8 Flash,with the transcript,placebo,irrelevant,2,34
+Gemini 4 Argon,with the transcript,honest message,boilerplate,1,11
+Gemini 4 Argon,with the transcript,honest message,filler,1,11
+Gemini 4 Argon,with the transcript,honest message,irrelevant,1,11
+Gemini 4 Argon,with the transcript,placebo,boilerplate,4,11
+Gemini 4 Argon,with the transcript,placebo,filler,5,11
+Gemini 4 Argon,with the transcript,placebo,generic,1,11
+DeepSeek V4 Pro,with the transcript,honest message,doesn't address,1,60
+DeepSeek V4 Pro,with the transcript,honest message,extraneous,1,60
+DeepSeek V4 Pro,with the transcript,honest message,unrelated,3,60
+gpt-oss-120b,with the transcript,honest message,generic,1,34
+gpt-oss-120b,with the transcript,honest message,unrelated,2,34
+gpt-oss-120b,with the transcript,placebo,doesn't address,1,33

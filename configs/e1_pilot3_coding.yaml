@@ -1,0 +1,154 @@
+# Pilot 3 (session 3), design v3: Experiment 1 on the v3 matched sets, plus dry runs of Experiments 2 and 3 and the
+# cost projection for the re-scoped full run.
+# Run: uv run python -m overclaim.experiments.e1_preference --config configs/e1_pilot3_coding.yaml [--stage S] [--runs id,id] [--dry-run]
+# Stages, in order: carryover, sets, judge, rm, e2, e3, judge_late, reasons, analysis (overclaim/experiments/pilot3.py).
+# Writes results/pilot3_coding/ and the new v3 files in data/processed/coding/. Reads results/pilot2_coding/ (session 2)
+# and never writes there.
+run_name: pilot3_coding
+schema_version: 3                         # selects the pilot-3 stages of e1_preference
+seed: 0
+domain: coding
+models_config: configs/models.yaml       # judges, editor, classifier, annotator, verifier, e2_policy, e2_labeller, e3_max_tokens, prices
+rubrics_config: configs/rubrics.yaml
+variants_config: configs/variants_v3.yaml
+data:
+  processed_dir: data/processed/coding
+  tasks_file: tasks_pilot2.jsonl          # the pool built in session 2 (gitignored, about 730 MB). READ ONLY: pilot 3 never rebuilds it.
+session2_dir: results/pilot2_coding       # READ ONLY
+pilot:
+  task_files: [pilot_tasks.jsonl, pilot_tasks_narrowed.jsonl]   # session 2's 30 pilot tasks, tried first
+  added_tasks_file: pilot_tasks_v3_added.jsonl                  # tasks added by the top-up (committed)
+  excluded_file: excluded_disclosing.jsonl                      # messages excluded from the population (committed)
+  n_per_gap: 10
+  max_new_per_gap: 24                     # budget guard: at most this many replacement candidates per gap type (raised in steps, see NOTES.md)
+  prefer_resolved: 0                      # same filter as sessions 1 and 2
+  # The six tasks the v3 prompts were checked on with live calls before the build (the last two tasks with disclosure
+  # facts in each gap type's candidate order). They are removed from the candidate order (counted in funnel.json).
+  held_out_task_ids:
+    - coding-Azure__azure-cli-2467-457fec0d
+    - coding-codesankalp__dsalgo-9-010f4801
+    - coding-iterative__dvc-3493-fc0b84bd
+    - coding-ESMValGroup__ESMValCore-2105-d93d4014
+    - coding-miurahr__aqtinstall-563-d6713efb
+    - coding-pytorch__ignite-617-380c9714
+sets:
+  v3: {file: matched_sets_v3.jsonl, human_check: human_check_v3.csv}
+shown: {max_transcript_tokens: 40000}
+pairs: [[O, H], [O, P], [H, P]]
+max_workers: {anthropic: 6, openrouter: 8, google: 4}
+vertex_credit_confirmed: false            # Step 4: set to true only after Uzair confirms the credit in Cloud Billing
+runs:                                      # priority order
+  - {id: s55-v3-neutral, judge: claude-sonnet-5-5, set: v3, rubric: neutral, condition: hidden}
+  - {id: s55-v3-full,    judge: claude-sonnet-5-5, set: v3, rubric: full,    condition: hidden}
+  - {id: o55-v3-neutral, judge: claude-opus-5-5,   set: v3, rubric: neutral, condition: hidden}
+  - {id: s46-v3-neutral, judge: claude-sonnet-4-6, set: v3, rubric: neutral, condition: hidden}
+  - {id: qwen-v3-neutral, judge: qwen3-32b, set: v3, rubric: neutral, condition: hidden}
+  - {id: qwen-v3-full,    judge: qwen3-32b, set: v3, rubric: full,    condition: hidden}
+  - {id: oss-v3-neutral,  judge: gpt-oss-120b, set: v3, rubric: neutral, condition: hidden}
+  - {id: oss-v3-full,     judge: gpt-oss-120b, set: v3, rubric: full,    condition: hidden}
+  - {id: gemf-v3-neutral, judge: gemini-3.8-flash, set: v3, rubric: neutral, condition: hidden}   # route aistudio
+  - {id: gema-v3-neutral, judge: gemini-4-argon,   set: v3, rubric: neutral, condition: hidden}
+  - {id: s55-v3-neutral-shown, judge: claude-sonnet-5-5, set: v3, rubric: neutral, condition: shown}
+  - {id: o55-v3-neutral-shown, judge: claude-opus-5-5,   set: v3, rubric: neutral, condition: shown, task_sample: 8}
+  - {id: gemf-v3-neutral-shown-vertex, judge: gemini-3.8-flash, route: vertex, set: v3, rubric: neutral, condition: shown,
+     grader_label: gemini-3.8-flash@vertex, requires: vertex_credit_confirmed}
+  # the first cut of the full-run cut order (drop Opus 4.6 hidden) is also the last priority here: stage judge_late
+  - {id: o46-v3-neutral, judge: claude-opus-4-6, set: v3, rubric: neutral, condition: hidden, late: true}
+rm: {sets: [v3], conditions: [hidden]}
+reasons: {enabled: true}
+e2: {n_tasks: 10, n_samples: 16, ns: [1, 4, 16], selectors: [claude-sonnet-4-6, claude-sonnet-5-5], stop_below: 0.9}
+e3: {n_tasks: 10, judge: claude-sonnet-5-5, rubric: neutral, set: v3}
+analysis:
+  n_bootstrap: 2000
+  seed: 0
+  gap_breakdowns:
+    - {grader: claude-sonnet-5-5, set: v3, rubric: neutral, condition: hidden}
+    - {grader: claude-sonnet-4-6, set: v3, rubric: neutral, condition: hidden}
+budget:
+  anthropic_usd_cap: 25.0                 # hard cap for this session
+  anthropic_stop_launching_usd: 23.0      # no new run or stage is launched once the Anthropic total has reached this
+  openrouter_usd_cap: 2.0
+  google_usd_cap: 3.0                     # aistudio route; the vertex run needs vertex_credit_confirmed and its own 5 USD
+# Cost projection for the re-scoped full run (overclaim/projection.py: project_rescoped). Arithmetic only, nothing is run.
+# Source of every number below: the session-3 brief's figures as restated in the pilot-3 contract (CONTRACT_F.md,
+# "Config values for the projection", a working file of session 3 that is not in the repository), unless a comment
+# says otherwise. 150 tasks = 90 coding + 60 research reports; the
+# research-report domain is not built, so its per-call cost is ASSUMED equal to coding.
+# The cut order is a budget rule of the session-3 brief of 2026-11-05, not part of the pre-registration; the session-4
+# brief of 2026-11-06 revised it for the full run (cuts 4 to 8 of its Step 10). This file keeps the session-3 cuts.
+# Cuts 1 to 3 of the cut order (session-3 brief) are already applied in the items: the 4.6 pair runs hidden only, the
+# mitigated best-of-16 is optional (listed, never added to a total), and the shown runs use 120 tasks.
+# Unit costs: pilot 3's measurement of (stat, condition) on the v3 sets, else session 2's on the v2 sets, else an estimate
+# from the reference judge's token profile (unit_cost); the basis column says which.
+projection:
+  reference: claude-sonnet-5-5
+  thought_separate: [gemini-3.8-flash, gemini-4-argon, gemini-3.8-flash@vertex]   # Gemini bills thought tokens as output
+  anthropic_project_total_usd: 180        # the project's Anthropic budget
+  anthropic_spent_before_usd: 17.68       # session 1: 2.16, session 2: 15.52
+  # Session-3 brief, Step 7: the mitigated best-of-16 runs only if the projection leaves 15 USD of margin
+  # (cut 2 of the session-3 brief's cut order, a budget rule, not pre-registered).
+  margin_for_mitigated_bo16_usd: 15.0
+  targets_usd: {openrouter: 20}           # no Google target: the credit amount is not known to the code ("not known")
+  price_changes:
+    - {model: gemini-4-argon, factor: 2.0, from: "2026-12-01"}   # Argon's price doubles on 2026-12-01
+  items:
+    # Experiment 1, hidden: four Claude judges x 150 tasks x 6 calls = 900 calls each
+    - {id: e1-hidden-s55, group: E1, provider: anthropic, name: "E1 hidden, Sonnet 5.5 (150 tasks x 6)", calls: 900,
+       stat: claude-sonnet-5-5, condition: hidden, model: claude-sonnet-5-5}
+    - {id: e1-hidden-o55, group: E1, provider: anthropic, name: "E1 hidden, Opus 5.5 (150 tasks x 6)", calls: 900,
+       stat: claude-opus-5-5, condition: hidden, model: claude-opus-5-5}
+    - {id: e1-hidden-s46, group: E1, provider: anthropic, name: "E1 hidden, Sonnet 4.6 (150 tasks x 6)", calls: 900,
+       stat: claude-sonnet-4-6, condition: hidden, model: claude-sonnet-4-6}
+    - {id: e1-hidden-o46, group: E1, provider: anthropic, name: "E1 hidden, Opus 4.6 (150 tasks x 6)", calls: 900,
+       stat: claude-opus-4-6, condition: hidden, model: claude-opus-4-6, like: claude-sonnet-4-6}
+    # Experiment 1, shown: Sonnet 5.5 on 120 tasks x 6 = 720; Opus 5.5 on 60 tasks x 6 = 360
+    - {id: e1-shown-s55, group: E1, provider: anthropic, name: "E1 shown, Sonnet 5.5 (120 tasks x 6)", calls: 720,
+       stat: claude-sonnet-5-5, condition: shown, model: claude-sonnet-5-5}
+    - {id: e1-shown-o55, group: E1, provider: anthropic, name: "E1 shown, Opus 5.5 (60 tasks x 6)", calls: 360,
+       stat: claude-opus-5-5, condition: shown, model: claude-opus-5-5}
+    # Experiment 2: 40 tasks per domain x 2 domains x 16 samples = 1,280 messages; Haiku 5.5 policy and labeller,
+    # one hidden pointwise score per message and selector. `like` gives an estimate when the e2 stage has not run.
+    - {id: e2-policy, group: E2, provider: anthropic, name: "E2 policy samples, Haiku 5.5 (80 tasks x 16)", calls: 1280,
+       stat: e2_policy, condition: shown, model: claude-haiku-5-5}
+    - {id: e2-select-s46, group: E2, provider: anthropic, name: "E2 selector scores, Sonnet 4.6 (1,280 messages)",
+       calls: 1280, stat: "e2_selector:claude-sonnet-4-6", condition: hidden, model: claude-sonnet-4-6,
+       like: claude-sonnet-4-6}
+    - {id: e2-select-s55, group: E2, provider: anthropic, name: "E2 selector scores, Sonnet 5.5 (1,280 messages)",
+       calls: 1280, stat: "e2_selector:claude-sonnet-5-5", condition: hidden, model: claude-sonnet-5-5,
+       like: claude-sonnet-5-5}
+    - {id: e2-label, group: E2, provider: anthropic, name: "E2 overclaim labels, Haiku 5.5 (1,280 messages)", calls: 1280,
+       stat: e2_label, condition: hidden, model: claude-haiku-5-5}
+    # Experiment 3: verification-first judge, shown. Sonnet 5.5 on 60 tasks x 6 = 360 (measured in pilot 3); Opus 5.5 on
+    # 30 tasks x 6 = 180, estimated from its plain shown profile + the measured extra output tokens of the
+    # verification-first judge (e3_minus_plain).
+    - {id: e3-vf-s55, group: E3, provider: anthropic, name: "E3 verification-first, Sonnet 5.5 (60 tasks x 6)", calls: 360,
+       stat: "claude-sonnet-5-5+verify_first", condition: shown, model: claude-sonnet-5-5, like: claude-sonnet-5-5}
+    - {id: e3-vf-o55, group: E3, provider: anthropic, name: "E3 verification-first, Opus 5.5 (30 tasks x 6)", calls: 180,
+       stat: claude-opus-5-5, condition: shown, model: claude-opus-5-5, extra_output_tokens: e3_minus_plain}
+    # Optional: mitigated best-of-16 = 1,280 shown pointwise verification-first scores by Sonnet 5.5, one cached
+    # transcript per 16 messages; the pairwise shown profile is an upper bound for a pointwise prompt.
+    - {id: e3-bo16-mitigated, group: E3, provider: anthropic, optional: true,
+       name: "E3 mitigated best-of-16, Sonnet 5.5 (1,280 messages)", calls: 1280, stat: claude-sonnet-5-5,
+       condition: shown, model: claude-sonnet-5-5, calls_per_prefix: 16, extra_output_tokens: e3_minus_plain}
+    # OpenRouter: hidden 150 x 6 = 900 and shown 120 x 6 = 720 per judge, no prompt cache
+    - {id: or-hidden-qwen, group: E1, provider: openrouter, name: "E1 hidden, qwen3-32b (150 tasks x 6)", calls: 900,
+       stat: qwen3-32b, condition: hidden, model: qwen/qwen3-32b}
+    - {id: or-hidden-oss, group: E1, provider: openrouter, name: "E1 hidden, gpt-oss-120b (150 tasks x 6)", calls: 900,
+       stat: gpt-oss-120b, condition: hidden, model: openai/gpt-oss-120b}
+    - {id: or-shown-qwen, group: E1, provider: openrouter, name: "E1 shown, qwen3-32b, no prompt cache (120 tasks x 6)",
+       calls: 720, stat: qwen3-32b, condition: shown, model: qwen/qwen3-32b}
+    - {id: or-shown-oss, group: E1, provider: openrouter, name: "E1 shown, gpt-oss-120b, no prompt cache (120 tasks x 6)",
+       calls: 720, stat: gpt-oss-120b, condition: shown, model: openai/gpt-oss-120b}
+    # Google: hidden 900 each (aistudio); gemini-3.8-flash shown 720 on the vertex route
+    - {id: g-hidden-flash, group: E1, provider: google, name: "E1 hidden, gemini-3.8-flash (150 tasks x 6)", calls: 900,
+       stat: gemini-3.8-flash, condition: hidden, model: gemini-3.8-flash}
+    - {id: g-hidden-argon, group: E1, provider: google, name: "E1 hidden, gemini-4-argon (150 tasks x 6)", calls: 900,
+       stat: gemini-4-argon, condition: hidden, model: gemini-4-argon}
+    - {id: g-shown-flash-vertex, group: E1, provider: google, name: "E1 shown, gemini-3.8-flash on vertex (120 tasks x 6)",
+       calls: 720, stat: gemini-3.8-flash@vertex, condition: shown, model: gemini-3.8-flash, like: gemini-3.8-flash}
+  # The cut order after cuts 1 to 3 (already applied above), applied cumulatively.
+  cuts:
+    - {id: 4, name: "drop Opus 4.6 from the hidden condition", remove: [e1-hidden-o46]}
+    - {id: 5, name: "Opus 5.5 shown on 30 tasks instead of 60", set_calls: {e1-shown-o55: 180}}
+    - {id: 6, name: "drop Opus 5.5 from Experiment 3", remove: [e3-vf-o55]}
+    - {id: 7, name: "Experiment 1 shown on 90 tasks", set_calls: {e1-shown-s55: 540}}

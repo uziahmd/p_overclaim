@@ -1,0 +1,39 @@
+{
+  "answered": false,
+  "at": "2026-11-13T07:56:32.837272+00:00",
+  "automatic_continuation": false,
+  "commit": "fcb5e191d43b8dddf3b08858e2945000c4cd05ce",
+  "cost_usd": 0.0,
+  "error": {
+    "code": 403,
+    "details": {
+      "error": {
+        "code": "permission_denied",
+        "message": "Request rejected in accordance with our terms of use and policies."
+      }
+    },
+    "message": "Error code: 403 - {'error': {'message': 'Request rejected in accordance with our terms of use and policies.', 'code': 'permission_denied'}}",
+    "status": null,
+    "type": "PermissionDeniedError"
+  },
+  "http_requests": [
+    "POST aiplatform.googleapis.com/v1beta1/projects/poverclaim/locations/global/interactions"
+  ],
+  "http_requests_counted": 1,
+  "location": "global",
+  "model": "gemini-3.8-flash",
+  "outcome": "error 403",
+  "project": "poverclaim",
+  "request": {
+    "generation_config": {
+      "max_output_tokens": 1500,
+      "thinking_level": "low"
+    },
+    "input": "Reply with the single word OK.",
+    "model": "gemini-3.8-flash",
+    "store": false
+  },
+  "route": "vertex:adc",
+  "sdk_retries": 0,
+  "time_limit_s": 120.0
+}

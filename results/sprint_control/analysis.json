@@ -1,0 +1,4701 @@
+{
+  "draft9_reasons": [
+    {
+      "first": 53,
+      "judge": "Sonnet 5.5",
+      "narrow": 53,
+      "reasons": 60,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 2,
+      "judge": "Sonnet 5.5",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "overclaim"
+    },
+    {
+      "first": 22,
+      "judge": "Sonnet 5.5",
+      "narrow": 20,
+      "reasons": 60,
+      "version": "honest message"
+    },
+    {
+      "first": 21,
+      "judge": "Sonnet 5.5",
+      "narrow": 20,
+      "reasons": 60,
+      "version": "placebo"
+    },
+    {
+      "first": 56,
+      "judge": "Opus 5.5",
+      "narrow": 55,
+      "reasons": 60,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 1,
+      "judge": "Opus 5.5",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "overclaim"
+    },
+    {
+      "first": 11,
+      "judge": "Opus 5.5",
+      "narrow": 11,
+      "reasons": 60,
+      "version": "honest message"
+    },
+    {
+      "first": 10,
+      "judge": "Opus 5.5",
+      "narrow": 10,
+      "reasons": 60,
+      "version": "placebo"
+    },
+    {
+      "first": 30,
+      "judge": "Sonnet 4.6",
+      "narrow": 7,
+      "reasons": 60,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 2,
+      "judge": "Sonnet 4.6",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "overclaim"
+    },
+    {
+      "first": 22,
+      "judge": "Sonnet 4.6",
+      "narrow": 11,
+      "reasons": 60,
+      "version": "honest message"
+    },
+    {
+      "first": 5,
+      "judge": "Sonnet 4.6",
+      "narrow": 5,
+      "reasons": 60,
+      "version": "placebo"
+    },
+    {
+      "first": 15,
+      "judge": "Opus 4.6",
+      "narrow": 3,
+      "reasons": 60,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 0,
+      "judge": "Opus 4.6",
+      "narrow": 0,
+      "reasons": 60,
+      "version": "overclaim"
+    },
+    {
+      "first": 8,
+      "judge": "Opus 4.6",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "honest message"
+    },
+    {
+      "first": 1,
+      "judge": "Opus 4.6",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "placebo"
+    },
+    {
+      "first": 35,
+      "judge": "Gemini 3.8 Flash",
+      "narrow": 32,
+      "reasons": 60,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 0,
+      "judge": "Gemini 3.8 Flash",
+      "narrow": 0,
+      "reasons": 60,
+      "version": "overclaim"
+    },
+    {
+      "first": 2,
+      "judge": "Gemini 3.8 Flash",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "honest message"
+    },
+    {
+      "first": 2,
+      "judge": "Gemini 3.8 Flash",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "placebo"
+    },
+    {
+      "first": 49,
+      "judge": "Gemini 4 Argon",
+      "narrow": 49,
+      "reasons": 60,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 2,
+      "judge": "Gemini 4 Argon",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "overclaim"
+    },
+    {
+      "first": 3,
+      "judge": "Gemini 4 Argon",
+      "narrow": 3,
+      "reasons": 60,
+      "version": "honest message"
+    },
+    {
+      "first": 0,
+      "judge": "Gemini 4 Argon",
+      "narrow": 0,
+      "reasons": 60,
+      "version": "placebo"
+    },
+    {
+      "first": 9,
+      "judge": "DeepSeek V4 Pro",
+      "narrow": 4,
+      "reasons": 60,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 0,
+      "judge": "DeepSeek V4 Pro",
+      "narrow": 0,
+      "reasons": 60,
+      "version": "overclaim"
+    },
+    {
+      "first": 8,
+      "judge": "DeepSeek V4 Pro",
+      "narrow": 6,
+      "reasons": 60,
+      "version": "honest message"
+    },
+    {
+      "first": 3,
+      "judge": "DeepSeek V4 Pro",
+      "narrow": 3,
+      "reasons": 60,
+      "version": "placebo"
+    },
+    {
+      "first": 0,
+      "judge": "gpt-oss-120b",
+      "narrow": 0,
+      "reasons": 59,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 0,
+      "judge": "gpt-oss-120b",
+      "narrow": 0,
+      "reasons": 58,
+      "version": "overclaim"
+    },
+    {
+      "first": 0,
+      "judge": "gpt-oss-120b",
+      "narrow": 0,
+      "reasons": 59,
+      "version": "honest message"
+    },
+    {
+      "first": 1,
+      "judge": "gpt-oss-120b",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "placebo"
+    },
+    {
+      "first": 1,
+      "judge": "Qwen3-32B",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "main claim replaced by the hedge"
+    },
+    {
+      "first": 1,
+      "judge": "Qwen3-32B",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "overclaim"
+    },
+    {
+      "first": 1,
+      "judge": "Qwen3-32B",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "honest message"
+    },
+    {
+      "first": 1,
+      "judge": "Qwen3-32B",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "placebo"
+    }
+  ],
+  "graders_without_scores": [
+    "gemini-3.8-flash",
+    "gemini-4-argon"
+  ],
+  "missing": [
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Sonnet 5.5",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Opus 5.5",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Sonnet 4.6",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Opus 4.6",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "DeepSeek V4 Pro",
+      "records": 180
+    },
+    {
+      "C": 3,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "gpt-oss-120b",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Qwen3-32B",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Skywork 0.6B",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Skywork 1.7B",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Skywork 3B",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Skywork 4B",
+      "records": 180
+    },
+    {
+      "C": 0,
+      "G": 0,
+      "P2": 0,
+      "expected": 180,
+      "grader": "Skywork 8B",
+      "records": 180
+    }
+  ],
+  "models": [
+    {
+      "judge": "Sonnet 5.5",
+      "main run models": [
+        "claude-sonnet-5-5"
+      ],
+      "main run providers": [],
+      "same": true,
+      "same providers": true,
+      "this run models": [
+        "claude-sonnet-5-5"
+      ],
+      "this run providers": []
+    },
+    {
+      "judge": "Opus 5.5",
+      "main run models": [
+        "claude-opus-5-5"
+      ],
+      "main run providers": [],
+      "same": true,
+      "same providers": true,
+      "this run models": [
+        "claude-opus-5-5"
+      ],
+      "this run providers": []
+    },
+    {
+      "judge": "Sonnet 4.6",
+      "main run models": [
+        "claude-sonnet-4-6"
+      ],
+      "main run providers": [],
+      "same": true,
+      "same providers": true,
+      "this run models": [
+        "claude-sonnet-4-6"
+      ],
+      "this run providers": []
+    },
+    {
+      "judge": "Opus 4.6",
+      "main run models": [
+        "claude-opus-4-6"
+      ],
+      "main run providers": [],
+      "same": true,
+      "same providers": true,
+      "this run models": [
+        "claude-opus-4-6"
+      ],
+      "this run providers": []
+    },
+    {
+      "judge": "DeepSeek V4 Pro",
+      "main run models": [
+        "deepseek/deepseek-v4-pro"
+      ],
+      "main run providers": [
+        "Alibaba",
+        "Nebius",
+        "Novita",
+        "SiliconFlow",
+        "StreamLake"
+      ],
+      "same": true,
+      "same providers": false,
+      "this run models": [
+        "deepseek/deepseek-v4-pro"
+      ],
+      "this run providers": [
+        "Baidu",
+        "GMICloud",
+        "Novita",
+        "SiliconFlow",
+        "StreamLake"
+      ]
+    },
+    {
+      "judge": "gpt-oss-120b",
+      "main run models": [
+        "openai/gpt-oss-120b"
+      ],
+      "main run providers": [
+        "Cerebras",
+        "Crusoe",
+        "DeepInfra",
+        "DekaLLM",
+        "Mancer 2"
+      ],
+      "same": true,
+      "same providers": false,
+      "this run models": [
+        "openai/gpt-oss-120b"
+      ],
+      "this run providers": [
+        "Crusoe",
+        "DekaLLM"
+      ]
+    },
+    {
+      "judge": "Qwen3-32B",
+      "main run models": [
+        "qwen/qwen3-32b"
+      ],
+      "main run providers": [
+        "DeepInfra",
+        "SiliconFlow"
+      ],
+      "same": true,
+      "same providers": false,
+      "this run models": [
+        "qwen/qwen3-32b"
+      ],
+      "this run providers": [
+        "DeepInfra",
+        "Tenstorrent"
+      ]
+    }
+  ],
+  "n_marked": 36,
+  "reasons": [
+    {
+      "first": 16,
+      "judge": "Sonnet 5.5",
+      "narrow": 16,
+      "reasons": 60,
+      "version": "claim alone (C)"
+    },
+    {
+      "first": 42,
+      "judge": "Sonnet 5.5",
+      "narrow": 41,
+      "reasons": 60,
+      "version": "hedge alone (G)"
+    },
+    {
+      "first": 19,
+      "judge": "Sonnet 5.5",
+      "narrow": 18,
+      "reasons": 60,
+      "version": "placebo, second score (P2)"
+    },
+    {
+      "first": 8,
+      "judge": "Opus 5.5",
+      "narrow": 8,
+      "reasons": 60,
+      "version": "claim alone (C)"
+    },
+    {
+      "first": 41,
+      "judge": "Opus 5.5",
+      "narrow": 40,
+      "reasons": 60,
+      "version": "hedge alone (G)"
+    },
+    {
+      "first": 9,
+      "judge": "Opus 5.5",
+      "narrow": 8,
+      "reasons": 60,
+      "version": "placebo, second score (P2)"
+    },
+    {
+      "first": 5,
+      "judge": "Sonnet 4.6",
+      "narrow": 5,
+      "reasons": 60,
+      "version": "claim alone (C)"
+    },
+    {
+      "first": 15,
+      "judge": "Sonnet 4.6",
+      "narrow": 13,
+      "reasons": 60,
+      "version": "hedge alone (G)"
+    },
+    {
+      "first": 8,
+      "judge": "Sonnet 4.6",
+      "narrow": 7,
+      "reasons": 60,
+      "version": "placebo, second score (P2)"
+    },
+    {
+      "first": 2,
+      "judge": "Opus 4.6",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "claim alone (C)"
+    },
+    {
+      "first": 6,
+      "judge": "Opus 4.6",
+      "narrow": 4,
+      "reasons": 60,
+      "version": "hedge alone (G)"
+    },
+    {
+      "first": 2,
+      "judge": "Opus 4.6",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "placebo, second score (P2)"
+    },
+    {
+      "first": 4,
+      "judge": "DeepSeek V4 Pro",
+      "narrow": 4,
+      "reasons": 60,
+      "version": "claim alone (C)"
+    },
+    {
+      "first": 3,
+      "judge": "DeepSeek V4 Pro",
+      "narrow": 2,
+      "reasons": 60,
+      "version": "hedge alone (G)"
+    },
+    {
+      "first": 3,
+      "judge": "DeepSeek V4 Pro",
+      "narrow": 3,
+      "reasons": 60,
+      "version": "placebo, second score (P2)"
+    },
+    {
+      "first": 1,
+      "judge": "gpt-oss-120b",
+      "narrow": 1,
+      "reasons": 57,
+      "version": "claim alone (C)"
+    },
+    {
+      "first": 0,
+      "judge": "gpt-oss-120b",
+      "narrow": 0,
+      "reasons": 60,
+      "version": "hedge alone (G)"
+    },
+    {
+      "first": 0,
+      "judge": "gpt-oss-120b",
+      "narrow": 0,
+      "reasons": 60,
+      "version": "placebo, second score (P2)"
+    },
+    {
+      "first": 0,
+      "judge": "Qwen3-32B",
+      "narrow": 0,
+      "reasons": 60,
+      "version": "claim alone (C)"
+    },
+    {
+      "first": 1,
+      "judge": "Qwen3-32B",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "hedge alone (G)"
+    },
+    {
+      "first": 1,
+      "judge": "Qwen3-32B",
+      "narrow": 1,
+      "reasons": 60,
+      "version": "placebo, second score (P2)"
+    }
+  ],
+  "reward_model_checks": [
+    {
+      "files": 9,
+      "files in the trace": 9,
+      "grader": "Skywork 0.6B",
+      "placebo check passed": true,
+      "placebo largest absolute difference": 0.0,
+      "placebo limit": 0.05,
+      "placebo tasks compared": 60,
+      "placebo tasks that differ": 0,
+      "placebo tasks with another token count": 0,
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-0.6B",
+      "revision": "8c14a4e9e6321deaf572544339b16b8d6bbe8886",
+      "status": "done",
+      "weights bytes": 1192137232,
+      "weights bytes, main run": 1192137232,
+      "weights confirmed": true
+    },
+    {
+      "files": 9,
+      "files in the trace": 9,
+      "grader": "Skywork 1.7B",
+      "placebo check passed": true,
+      "placebo largest absolute difference": 0.0,
+      "placebo limit": 0.05,
+      "placebo tasks compared": 60,
+      "placebo tasks that differ": 0,
+      "placebo tasks with another token count": 0,
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-1.7B",
+      "revision": "e51ea3e08fb81326c3b812a7ff0cb9cee83e59cc",
+      "status": "done",
+      "weights bytes": 3441189792,
+      "weights bytes, main run": 3441189792,
+      "weights confirmed": true
+    },
+    {
+      "files": 8,
+      "files in the trace": 8,
+      "grader": "Skywork 3B",
+      "placebo check passed": true,
+      "placebo largest absolute difference": 0.0,
+      "placebo limit": 0.05,
+      "placebo tasks compared": 60,
+      "placebo tasks that differ": 0,
+      "placebo tasks with another token count": 0,
+      "repository": "Skywork/Skywork-Reward-V2-Llama-3.2-3B",
+      "revision": "beafe5f2e6a275ce8c556f68f2d82de7fefbc3d8",
+      "status": "done",
+      "weights bytes": 6425505792,
+      "weights bytes, main run": 6425505792,
+      "weights confirmed": true
+    },
+    {
+      "files": 11,
+      "files in the trace": 11,
+      "grader": "Skywork 4B",
+      "placebo check passed": true,
+      "placebo largest absolute difference": 0.0,
+      "placebo limit": 0.05,
+      "placebo tasks compared": 60,
+      "placebo tasks that differ": 0,
+      "placebo tasks with another token count": 0,
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+      "revision": "fd958fef475f323f4e6b195930e3dd918485c668",
+      "status": "done",
+      "weights bytes": 8044941312,
+      "weights bytes, main run": 8044941312,
+      "weights confirmed": true
+    },
+    {
+      "files": 13,
+      "files in the trace": 13,
+      "grader": "Skywork 8B",
+      "placebo check passed": true,
+      "placebo largest absolute difference": 0.0,
+      "placebo limit": 0.05,
+      "placebo tasks compared": 60,
+      "placebo tasks that differ": 0,
+      "placebo tasks with another token count": 0,
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+      "revision": "6f19fdefb933293d4898bdb59a96f7223d998659",
+      "status": "done",
+      "weights bytes": 15136819200,
+      "weights bytes, main run": 15136819200,
+      "weights confirmed": true
+    }
+  ],
+  "rows": [
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.8888888888888888,
+          "lo": 0.4722222222222222,
+          "mean": 0.6666666666666666,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": false,
+          "hi": 0.375,
+          "lo": -0.08333333333333333,
+          "mean": 0.125,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.6333333333333333,
+          "lo": 0.2833333333333333,
+          "mean": 0.45,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 0.7666666666666667,
+          "lo": 0.3333333333333333,
+          "mean": 0.55,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 0.7,
+          "lo": 0.16666666666666666,
+          "mean": 0.43333333333333335,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.4666666666666667,
+          "lo": 0.13333333333333333,
+          "mean": 0.3,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": true,
+          "hi": 0.3333333333333333,
+          "lo": 0.03333333333333333,
+          "mean": 0.18333333333333332,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 1.2166666666666666,
+          "lo": 0.8166666666666667,
+          "mean": 1.0166666666666666,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.8166666666666667,
+          "lo": 1.3166666666666667,
+          "mean": 1.5666666666666667,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 0.48374999999999774,
+          "lo": 0.016666666666666666,
+          "mean": 0.25,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.23333333333333334,
+          "lo": 0.0,
+          "mean": 0.11666666666666667,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": true,
+          "hi": 0.5,
+          "lo": 0.016666666666666666,
+          "mean": 0.25,
+          "n": 60
+        }
+      },
+      "divisor": 1.0,
+      "grader": "claude-sonnet-5-5",
+      "kind": "judge",
+      "n_tasks": 60,
+      "name": "Sonnet 5.5",
+      "one_passage_share": 0.35106382978723405,
+      "paper": null,
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.631578947368421,
+            "lo": 0.2631578947368421,
+            "mean": 0.4473684210526316,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.7727272727272727,
+            "lo": 0.18181818181818182,
+            "mean": 0.45454545454545453,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.7894736842105263,
+            "lo": 0.23684210526315788,
+            "mean": 0.5,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.0,
+            "lo": 0.3181818181818182,
+            "mean": 0.6363636363636364,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.7368421052631579,
+            "lo": 0.0,
+            "mean": 0.3684210526315789,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.9090909090909091,
+            "lo": 0.22727272727272727,
+            "mean": 0.5454545454545454,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.5263157894736842,
+            "lo": 0.13157894736842105,
+            "mean": 0.3157894736842105,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.5454545454545454,
+            "lo": 0.0,
+            "mean": 0.2727272727272727,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.34210526315789475,
+            "lo": 0.0,
+            "mean": 0.18421052631578946,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.45454545454545453,
+            "lo": -0.09090909090909091,
+            "mean": 0.18181818181818182,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.3157894736842106,
+            "lo": 0.868421052631579,
+            "mean": 1.105263157894737,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.1818181818181819,
+            "lo": 0.5454545454545454,
+            "mean": 0.8636363636363636,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.9210526315789473,
+            "lo": 1.2894736842105263,
+            "mean": 1.605263157894737,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.8636363636363635,
+            "lo": 1.0909090909090908,
+            "mean": 1.5,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.5263157894736842,
+            "lo": -0.15789473684210525,
+            "mean": 0.18421052631578946,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.7272727272727273,
+            "lo": 0.09090909090909091,
+            "mean": 0.36363636363636365,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.3157894736842105,
+            "lo": -0.02631578947368421,
+            "mean": 0.13157894736842105,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.22727272727272727,
+            "lo": 0.0,
+            "mean": 0.09090909090909091,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.7105263157894737,
+            "lo": 0.07894736842105263,
+            "mean": 0.39473684210526316,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.3181818181818182,
+            "lo": -0.3181818181818182,
+            "mean": 0.0,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "points"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 1.0277777777777777,
+          "lo": 0.3611111111111111,
+          "mean": 0.6944444444444444,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": false,
+          "hi": 0.125,
+          "lo": -0.4166666666666667,
+          "mean": -0.125,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.6166666666666667,
+          "lo": 0.11666666666666667,
+          "mean": 0.36666666666666664,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": false,
+          "hi": 0.36666666666666664,
+          "lo": -0.06666666666666667,
+          "mean": 0.15,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": false,
+          "hi": 0.48333333333333334,
+          "lo": -0.016666666666666666,
+          "mean": 0.23333333333333334,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.4,
+          "lo": 0.08333333333333333,
+          "mean": 0.25,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": true,
+          "hi": 0.48333333333333334,
+          "lo": 0.18333333333333332,
+          "mean": 0.3333333333333333,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 1.4833333333333334,
+          "lo": 1.05,
+          "mean": 1.2666666666666666,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.7,
+          "lo": 1.1166666666666667,
+          "mean": 1.4166666666666667,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": false,
+          "hi": 0.1,
+          "lo": -0.3,
+          "mean": -0.1,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.03333333333333333,
+          "lo": -0.21666666666666667,
+          "mean": -0.08333333333333333,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": true,
+          "hi": 0.45,
+          "lo": 0.05,
+          "mean": 0.25,
+          "n": 60
+        }
+      },
+      "divisor": 1.0,
+      "grader": "claude-opus-5-5",
+      "kind": "judge",
+      "n_tasks": 60,
+      "name": "Opus 5.5",
+      "one_passage_share": 0.10588235294117646,
+      "paper": null,
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.868421052631579,
+            "lo": 0.21052631578947367,
+            "mean": 0.5263157894736842,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.4090909090909091,
+            "lo": -0.22727272727272727,
+            "mean": 0.09090909090909091,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.5,
+            "lo": 0.05263157894736842,
+            "mean": 0.2631578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.36363636363636365,
+            "lo": -0.41022727272727266,
+            "mean": -0.045454545454545456,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.6578947368421053,
+            "lo": 0.05263157894736842,
+            "mean": 0.34210526315789475,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.45454545454545453,
+            "lo": -0.36363636363636365,
+            "mean": 0.045454545454545456,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.47368421052631576,
+            "lo": 0.07894736842105263,
+            "mean": 0.2894736842105263,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.4090909090909091,
+            "lo": -0.045454545454545456,
+            "mean": 0.18181818181818182,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.5789473684210527,
+            "lo": 0.18421052631578946,
+            "mean": 0.3684210526315789,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.5,
+            "lo": 0.045454545454545456,
+            "mean": 0.2727272727272727,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.5789473684210527,
+            "lo": 1.0526315789473684,
+            "mean": 1.3157894736842106,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.5909090909090908,
+            "lo": 0.7727272727272727,
+            "mean": 1.1818181818181819,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.9473684210526316,
+            "lo": 1.2105263157894737,
+            "mean": 1.5789473684210527,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.5909090909090908,
+            "lo": 0.6363636363636364,
+            "mean": 1.1363636363636365,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.23684210526315788,
+            "lo": -0.2894736842105263,
+            "mean": -0.02631578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.045454545454545456,
+            "lo": -0.5,
+            "mean": -0.22727272727272727,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.07894736842105263,
+            "lo": -0.2631578947368421,
+            "mean": -0.07894736842105263,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": -0.22727272727272727,
+            "mean": -0.09090909090909091,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.7105263157894737,
+            "lo": 0.2631578947368421,
+            "mean": 0.47368421052631576,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.22727272727272727,
+            "lo": -0.45454545454545453,
+            "mean": -0.13636363636363635,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "points"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.6111111111111112,
+          "lo": 0.027777777777777776,
+          "mean": 0.3333333333333333,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": false,
+          "hi": 0.20833333333333334,
+          "lo": -0.2916666666666667,
+          "mean": -0.041666666666666664,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": false,
+          "hi": 0.4,
+          "lo": -0.03333333333333333,
+          "mean": 0.18333333333333332,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 0.6833333333333333,
+          "lo": 0.18333333333333332,
+          "mean": 0.43333333333333335,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 0.7333333333333333,
+          "lo": 0.08333333333333333,
+          "mean": 0.4,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": false,
+          "hi": 0.35,
+          "lo": -0.05,
+          "mean": 0.15,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": false,
+          "hi": 0.31666666666666665,
+          "lo": -0.08333333333333333,
+          "mean": 0.11666666666666667,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": false,
+          "hi": 0.6,
+          "lo": 0.0,
+          "mean": 0.3,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.1,
+          "lo": 0.36666666666666664,
+          "mean": 0.7333333333333333,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": false,
+          "hi": 0.6,
+          "lo": -0.016666666666666666,
+          "mean": 0.2833333333333333,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.18333333333333332,
+          "lo": -0.11666666666666667,
+          "mean": 0.03333333333333333,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": false,
+          "hi": 0.36708333333333104,
+          "lo": -0.16666666666666666,
+          "mean": 0.1,
+          "n": 60
+        }
+      },
+      "divisor": 1.0,
+      "grader": "claude-sonnet-4-6",
+      "kind": "judge",
+      "n_tasks": 60,
+      "name": "Sonnet 4.6",
+      "one_passage_share": 0.5909090909090909,
+      "paper": null,
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.6842105263157895,
+            "lo": 0.13157894736842105,
+            "mean": 0.39473684210526316,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.09204545454544835,
+            "lo": -0.5,
+            "mean": -0.18181818181818182,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.9473684210526315,
+            "lo": 0.34210526315789475,
+            "mean": 0.631578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.45454545454545453,
+            "lo": -0.2727272727272727,
+            "mean": 0.09090909090909091,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.0789473684210527,
+            "lo": 0.2631578947368421,
+            "mean": 0.6842105263157895,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.3181818181818182,
+            "lo": -0.5,
+            "mean": -0.09090909090909091,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.23684210526315788,
+            "lo": -0.18421052631578946,
+            "mean": 0.02631578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.8181818181818182,
+            "lo": -0.045454545454545456,
+            "mean": 0.36363636363636365,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.3684210526315789,
+            "lo": -0.18421052631578946,
+            "mean": 0.07894736842105263,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.45454545454545453,
+            "lo": -0.13636363636363635,
+            "mean": 0.18181818181818182,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.47368421052631576,
+            "lo": -0.13157894736842105,
+            "mean": 0.18421052631578946,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 1.1363636363636365,
+            "lo": -0.09090909090909091,
+            "mean": 0.5,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.2105263157894737,
+            "lo": 0.42105263157894735,
+            "mean": 0.8157894736842105,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 1.2727272727272727,
+            "lo": -0.09204545454545449,
+            "mean": 0.5909090909090909,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.9736842105263158,
+            "lo": 0.2631578947368421,
+            "mean": 0.6052631578947368,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.13636363636363635,
+            "lo": -0.6829545454545454,
+            "mean": -0.2727272727272727,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.13157894736842105,
+            "lo": -0.2631578947368421,
+            "mean": -0.05263157894736842,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.45454545454545453,
+            "lo": 0.0,
+            "mean": 0.18181818181818182,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.2631578947368421,
+            "lo": -0.5006578947368421,
+            "mean": -0.13157894736842105,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.8636363636363636,
+            "lo": 0.18181818181818182,
+            "mean": 0.5,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "points"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.6666666666666666,
+          "lo": 0.2222222222222222,
+          "mean": 0.4444444444444444,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": false,
+          "hi": 0.5,
+          "lo": 0.0,
+          "mean": 0.25,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.5333333333333333,
+          "lo": 0.2,
+          "mean": 0.36666666666666664,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 1.15,
+          "lo": 0.5833333333333334,
+          "mean": 0.85,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 1.0333333333333334,
+          "lo": 0.3995833333333334,
+          "mean": 0.7,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.5,
+          "lo": 0.11666666666666667,
+          "mean": 0.3,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": false,
+          "hi": 0.3333333333333333,
+          "lo": -0.016666666666666666,
+          "mean": 0.15,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 0.4,
+          "lo": 0.03333333333333333,
+          "mean": 0.21666666666666667,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.35,
+          "lo": 0.7833333333333333,
+          "mean": 1.0666666666666667,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 0.8666666666666667,
+          "lo": 0.25,
+          "mean": 0.55,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": true,
+          "hi": 0.3,
+          "lo": 0.016666666666666666,
+          "mean": 0.15,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": true,
+          "hi": 0.5166666666666667,
+          "lo": 0.11666666666666667,
+          "mean": 0.31666666666666665,
+          "n": 60
+        }
+      },
+      "divisor": 1.0,
+      "grader": "claude-opus-4-6",
+      "kind": "judge",
+      "n_tasks": 60,
+      "name": "Opus 4.6",
+      "one_passage_share": 0.796875,
+      "paper": null,
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.6059210526315754,
+            "lo": 0.21052631578947367,
+            "mean": 0.42105263157894735,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.5454545454545454,
+            "lo": 0.0,
+            "mean": 0.2727272727272727,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.1842105263157894,
+            "lo": 0.4473684210526316,
+            "mean": 0.7894736842105263,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.4545454545454546,
+            "lo": 0.5454545454545454,
+            "mean": 0.9545454545454546,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.9736842105263158,
+            "lo": 0.2631578947368421,
+            "mean": 0.6052631578947368,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.4545454545454546,
+            "lo": 0.3181818181818182,
+            "mean": 0.8636363636363636,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.6052631578947368,
+            "lo": 0.07894736842105263,
+            "mean": 0.34210526315789475,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.5,
+            "lo": -0.045454545454545456,
+            "mean": 0.22727272727272727,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.3684210526315789,
+            "lo": -0.05263157894736842,
+            "mean": 0.15789473684210525,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.45454545454545453,
+            "lo": -0.18181818181818182,
+            "mean": 0.13636363636363635,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.47368421052631576,
+            "lo": 0.05263157894736842,
+            "mean": 0.2631578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.5,
+            "lo": -0.22727272727272727,
+            "mean": 0.13636363636363635,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.4210526315789473,
+            "lo": 0.7098684210526316,
+            "mean": 1.0526315789473684,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.5909090909090908,
+            "lo": 0.5909090909090909,
+            "mean": 1.0909090909090908,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.868421052631579,
+            "lo": 0.07894736842105263,
+            "mean": 0.4473684210526316,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.2272727272727273,
+            "lo": 0.3181818181818182,
+            "mean": 0.7272727272727273,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.34210526315789475,
+            "lo": 0.05263157894736842,
+            "mean": 0.18421052631578946,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.4090909090909091,
+            "lo": -0.22727272727272727,
+            "mean": 0.09090909090909091,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.4473684210526316,
+            "lo": -0.02631578947368421,
+            "mean": 0.21052631578947367,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.8181818181818182,
+            "lo": 0.18181818181818182,
+            "mean": 0.5,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "points"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": false,
+          "hi": 0.6944444444444444,
+          "lo": -0.19444444444444445,
+          "mean": 0.2777777777777778,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": true,
+          "hi": 0.75,
+          "lo": 0.16666666666666666,
+          "mean": 0.4583333333333333,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.65,
+          "lo": 0.03291666666666669,
+          "mean": 0.35,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 1.4337499999999976,
+          "lo": 0.6666666666666666,
+          "mean": 1.05,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 1.4666666666666666,
+          "lo": 0.6,
+          "mean": 1.0333333333333334,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": false,
+          "hi": 0.35,
+          "lo": -0.31666666666666665,
+          "mean": 0.016666666666666666,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": false,
+          "hi": 0.3337499999999977,
+          "lo": -0.3333333333333333,
+          "mean": 0.0,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 1.0837499999999975,
+          "lo": 0.3,
+          "mean": 0.6666666666666666,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 2.2,
+          "lo": 1.2833333333333334,
+          "mean": 1.7166666666666666,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 1.3833333333333333,
+          "lo": 0.7166666666666667,
+          "mean": 1.0333333333333334,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.2,
+          "lo": -0.16666666666666666,
+          "mean": 0.016666666666666666,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": false,
+          "hi": 0.6170833333333311,
+          "lo": -0.016666666666666666,
+          "mean": 0.3,
+          "n": 60
+        }
+      },
+      "divisor": 1.0,
+      "grader": "deepseek-v4-pro",
+      "kind": "judge",
+      "n_tasks": 60,
+      "name": "DeepSeek V4 Pro",
+      "one_passage_share": 0.6116504854368933,
+      "paper": null,
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.7631578947368421,
+            "lo": 0.2894736842105263,
+            "mean": 0.5,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.7272727272727273,
+            "lo": -0.6818181818181818,
+            "mean": 0.09090909090909091,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.4473684210526316,
+            "lo": 0.8414473684210526,
+            "mean": 1.131578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 1.7727272727272727,
+            "lo": 0.0,
+            "mean": 0.9090909090909091,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.5,
+            "lo": 0.6842105263157895,
+            "mean": 1.0789473684210527,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.8636363636363635,
+            "lo": 0.045454545454545456,
+            "mean": 0.9545454545454546,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.3684210526315789,
+            "lo": -0.15789473684210525,
+            "mean": 0.10526315789473684,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.6363636363636364,
+            "lo": -0.8636363636363636,
+            "mean": -0.13636363636363635,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.3157894736842105,
+            "lo": -0.23684210526315788,
+            "mean": 0.05263157894736842,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.7272727272727273,
+            "lo": -0.8636363636363636,
+            "mean": -0.09090909090909091,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.631578947368421,
+            "lo": 0.0,
+            "mean": 0.3157894736842105,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 2.182954545454539,
+            "lo": 0.45454545454545453,
+            "mean": 1.2727272727272727,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.894736842105263,
+            "lo": 1.0,
+            "mean": 1.4473684210526316,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 3.1818181818181817,
+            "lo": 1.3636363636363635,
+            "mean": 2.1818181818181817,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.4217105263157859,
+            "lo": 0.631578947368421,
+            "mean": 1.0263157894736843,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.6818181818181819,
+            "lo": 0.45454545454545453,
+            "mean": 1.0454545454545454,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.2894736842105263,
+            "lo": -0.15789473684210525,
+            "mean": 0.05263157894736842,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.22727272727272727,
+            "lo": -0.3181818181818182,
+            "mean": -0.045454545454545456,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.5526315789473685,
+            "lo": -0.13157894736842105,
+            "mean": 0.21052631578947367,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 1.0909090909090908,
+            "lo": -0.13749999999999993,
+            "mean": 0.45454545454545453,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "points"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 2.838709677419355,
+          "lo": 0.8701612903225807,
+          "mean": 1.8064516129032258,
+          "n": 31
+        },
+        "not marked": {
+          "detectable": false,
+          "hi": 2.739130434782609,
+          "lo": -0.30434782608695654,
+          "mean": 1.173913043478261,
+          "n": 23
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 2.388888888888889,
+          "lo": 0.6847222222222223,
+          "mean": 1.537037037037037,
+          "n": 54
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 2.889351851851849,
+          "lo": 1.462962962962963,
+          "mean": 2.1481481481481484,
+          "n": 54
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 2.611111111111111,
+          "lo": 0.6662037037037037,
+          "mean": 1.5925925925925926,
+          "n": 54
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 1.6111111111111112,
+          "lo": 0.37037037037037035,
+          "mean": 0.9814814814814815,
+          "n": 54
+        },
+        "C - P2": {
+          "detectable": false,
+          "hi": 1.0745370370370346,
+          "lo": -0.16666666666666666,
+          "mean": 0.42592592592592593,
+          "n": 54
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": -0.22175925925926177,
+          "lo": -1.8703703703703705,
+          "mean": -1.0185185185185186,
+          "n": 54
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.870833333333331,
+          "lo": 0.3888888888888889,
+          "mean": 1.1296296296296295,
+          "n": 54
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 1.8703703703703705,
+          "lo": 0.5,
+          "mean": 1.1666666666666667,
+          "n": 54
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 1.2407407407407407,
+          "lo": -0.12962962962962962,
+          "mean": 0.5555555555555556,
+          "n": 54
+        },
+        "hedge in O - G": {
+          "detectable": false,
+          "hi": 0.6226415094339622,
+          "lo": -0.6981132075471698,
+          "mean": -0.03773584905660377,
+          "n": 53
+        }
+      },
+      "divisor": 1.0,
+      "grader": "gpt-oss-120b",
+      "kind": "judge",
+      "n_tasks": 54,
+      "name": "gpt-oss-120b",
+      "one_passage_share": 1.9016393442622954,
+      "paper": {
+        "O - H": [
+          1.0877,
+          0.4211,
+          1.8246
+        ],
+        "P - H": [
+          1.2105,
+          0.5439,
+          1.8947
+        ],
+        "tasks": 57
+      },
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 3.2941176470588234,
+            "lo": 1.2058823529411764,
+            "mean": 2.235294117647059,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 1.65,
+            "lo": -0.95,
+            "mean": 0.35,
+            "n": 20
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 3.6176470588235294,
+            "lo": 1.5580882352941177,
+            "mean": 2.5588235294117645,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 2.45,
+            "lo": 0.6,
+            "mean": 1.45,
+            "n": 20
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 3.9411764705882355,
+            "lo": 1.4705882352941178,
+            "mean": 2.676470588235294,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 1.15,
+            "lo": -1.55,
+            "mean": -0.25,
+            "n": 20
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 1.8235294117647058,
+            "lo": 0.0,
+            "mean": 0.8823529411764706,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 2.0,
+            "lo": 0.4,
+            "mean": 1.15,
+            "n": 20
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.7352941176470589,
+            "lo": 0.29411764705882354,
+            "mean": 1.0,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.4512499999999932,
+            "lo": -1.6,
+            "mean": -0.55,
+            "n": 20
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": -0.7352941176470589,
+            "lo": -2.5,
+            "mean": -1.588235294117647,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 1.501249999999993,
+            "lo": -1.6,
+            "mean": -0.05,
+            "n": 20
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.9411764705882353,
+            "lo": 0.1169117647058824,
+            "mean": 0.9705882352941176,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 2.7,
+            "lo": 0.25,
+            "mean": 1.4,
+            "n": 20
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 2.676470588235294,
+            "lo": 0.6764705882352942,
+            "mean": 1.6764705882352942,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 1.05,
+            "lo": -0.4,
+            "mean": 0.3,
+            "n": 20
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.6764705882352942,
+            "lo": -0.9117647058823529,
+            "mean": -0.11764705882352941,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 2.8,
+            "lo": 0.7,
+            "mean": 1.7,
+            "n": 20
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.9411764705882353,
+            "lo": -0.7941176470588235,
+            "mean": 0.08823529411764706,
+            "n": 34
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.631578947368421,
+            "lo": -1.2105263157894737,
+            "mean": -0.2631578947368421,
+            "n": 19
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "points"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.6944444444444444,
+          "lo": 0.3611111111111111,
+          "mean": 0.5277777777777778,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": true,
+          "hi": 0.8333333333333334,
+          "lo": 0.4166666666666667,
+          "mean": 0.625,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.7,
+          "lo": 0.43333333333333335,
+          "mean": 0.5666666666666667,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 0.65,
+          "lo": 0.38333333333333336,
+          "mean": 0.5166666666666667,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 0.55,
+          "lo": 0.2833333333333333,
+          "mean": 0.4166666666666667,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.36666666666666664,
+          "lo": 0.06666666666666667,
+          "mean": 0.21666666666666667,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": true,
+          "hi": 0.21666666666666667,
+          "lo": 0.016666666666666666,
+          "mean": 0.11666666666666667,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": false,
+          "hi": 0.2833333333333333,
+          "lo": -0.016666666666666666,
+          "mean": 0.13333333333333333,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 0.7833333333333333,
+          "lo": 0.5166666666666667,
+          "mean": 0.65,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 0.4166666666666667,
+          "lo": 0.2,
+          "mean": 0.3,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.25,
+          "lo": -0.03333333333333333,
+          "mean": 0.1,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": false,
+          "hi": 0.11666666666666667,
+          "lo": -0.05,
+          "mean": 0.03333333333333333,
+          "n": 60
+        }
+      },
+      "divisor": 1.0,
+      "grader": "qwen3-32b",
+      "kind": "judge",
+      "n_tasks": 60,
+      "name": "Qwen3-32B",
+      "one_passage_share": 0.7948717948717949,
+      "paper": null,
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.6842105263157895,
+            "lo": 0.3684210526315789,
+            "mean": 0.5263157894736842,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.8181818181818182,
+            "lo": 0.45454545454545453,
+            "mean": 0.6363636363636364,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.6052631578947368,
+            "lo": 0.2894736842105263,
+            "mean": 0.4473684210526316,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.8181818181818182,
+            "lo": 0.45454545454545453,
+            "mean": 0.6363636363636364,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.4473684210526316,
+            "lo": 0.10526315789473684,
+            "mean": 0.2894736842105263,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.8181818181818182,
+            "lo": 0.453409090909091,
+            "mean": 0.6363636363636364,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.3684210526315789,
+            "lo": 0.0,
+            "mean": 0.18421052631578946,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.5454545454545454,
+            "lo": 0.0,
+            "mean": 0.2727272727272727,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.13157894736842105,
+            "lo": -0.07894736842105263,
+            "mean": 0.02631578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.45454545454545453,
+            "lo": 0.09090909090909091,
+            "mean": 0.2727272727272727,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.39473684210526316,
+            "lo": 0.02631578947368421,
+            "mean": 0.21052631578947367,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.2727272727272727,
+            "lo": -0.2727272727272727,
+            "mean": 0.0,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.8157894736842105,
+            "lo": 0.47368421052631576,
+            "mean": 0.6578947368421053,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.8181818181818182,
+            "lo": 0.453409090909091,
+            "mean": 0.6363636363636364,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.42105263157894735,
+            "lo": 0.13157894736842105,
+            "mean": 0.2631578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.5454545454545454,
+            "lo": 0.18181818181818182,
+            "mean": 0.36363636363636365,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.3684210526315789,
+            "lo": -0.05263157894736842,
+            "mean": 0.15789473684210525,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.18181818181818182,
+            "lo": -0.18181818181818182,
+            "mean": 0.0,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.13157894736842105,
+            "lo": -0.05263157894736842,
+            "mean": 0.02631578947368421,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.18181818181818182,
+            "lo": -0.09090909090909091,
+            "mean": 0.045454545454545456,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "points"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.4529730671017434,
+          "lo": 0.23242157037378994,
+          "mean": 0.34875279026670586,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": true,
+          "hi": 0.398061370748683,
+          "lo": 0.07121173575169182,
+          "mean": 0.23419471749135154,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.39700227084597595,
+          "lo": 0.21078286360012732,
+          "mean": 0.3029295611565643,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 0.295459707342156,
+          "lo": 0.09256176198604278,
+          "mean": 0.19557435441359552,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 0.295459707342156,
+          "lo": 0.09256176198604278,
+          "mean": 0.19557435441359552,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.15048185925468452,
+          "lo": 0.019742875868220742,
+          "mean": 0.08563342904256258,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": true,
+          "hi": 0.15048185925468452,
+          "lo": 0.019742875868220742,
+          "mean": 0.08563342904256258,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 1.3553100778800988,
+          "lo": 1.0375165523676617,
+          "mean": 1.1940970510127813,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.5568072079929276,
+          "lo": 1.2357819695015761,
+          "mean": 1.3896714054263766,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 0.1751759074588655,
+          "lo": 0.0482449824155511,
+          "mean": 0.10994092537103298,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": true,
+          "hi": 1.192136649692665,
+          "lo": 0.8908762700309351,
+          "mean": 1.0356717248347096,
+          "n": 60
+        }
+      },
+      "divisor": 1.8694935800569523,
+      "grader": "skywork-v2-qwen3-0.6b",
+      "kind": "reward model",
+      "n_tasks": 60,
+      "name": "Skywork 0.6B",
+      "one_passage_share": 0.14073424382909408,
+      "paper": null,
+      "placebo_rescored": {
+        "largest difference (model's own units)": 0.0,
+        "tasks that differ": 0
+      },
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.5138727434355848,
+            "lo": 0.37519622703610667,
+            "mean": 0.4410292968856407,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.2640567205023304,
+            "lo": -0.11929446768706134,
+            "mean": 0.0643936539881594,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.42471493820522177,
+            "lo": 0.24159492231914517,
+            "mean": 0.3311259453100182,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.16222831914037608,
+            "lo": -0.22115136181626713,
+            "mean": -0.03856021168022523,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.42471493820522177,
+            "lo": 0.24159492231914517,
+            "mean": 0.3311259453100182,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.16222831914037608,
+            "lo": -0.22115136181626713,
+            "mean": -0.03856021168022523,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.2072478911438042,
+            "lo": 0.09165760816770209,
+            "mean": 0.14565802542780437,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.12959460304844145,
+            "lo": -0.15654876086826416,
+            "mean": -0.0180454192592187,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.2072478911438042,
+            "lo": 0.09165760816770209,
+            "mean": 0.14565802542780437,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.12959460304844145,
+            "lo": -0.15654876086826416,
+            "mean": -0.0180454192592187,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.229820566107793,
+            "lo": 0.8564323488673069,
+            "mean": 1.042700315661553,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.7223023020452521,
+            "lo": 1.19973545306553,
+            "mean": 1.4556005029830836,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.547978053396993,
+            "lo": 1.1942652166580938,
+            "mean": 1.3738262609715712,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.7303230160265204,
+            "lo": 1.135327552693745,
+            "mean": 1.4170402913028584,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.25623495601871216,
+            "lo": 0.11545969112619997,
+            "mean": 0.18546791988221373,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.08758676653079722,
+            "lo": -0.11492082791397175,
+            "mean": -0.020514792421006525,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.1471294630869318,
+            "lo": 0.7677920997578723,
+            "mean": 0.959382715423924,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.4261674744123893,
+            "lo": 0.9211996580049473,
+            "mean": 1.1674436501806122,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "standard deviations"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.4589120884009422,
+          "lo": 0.27985933832220533,
+          "mean": 0.3672030379611057,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": true,
+          "hi": 0.36372497222317485,
+          "lo": 0.16589479406688143,
+          "mean": 0.26054541229957573,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.3937647302399956,
+          "lo": 0.2585975120682336,
+          "mean": 0.3245399876964937,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 0.29186726284154535,
+          "lo": 0.15884466081431892,
+          "mean": 0.2252190860701507,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 0.29186726284154535,
+          "lo": 0.15884466081431892,
+          "mean": 0.2252190860701507,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.1724703329834176,
+          "lo": 0.06238783283321204,
+          "mean": 0.11604863242656922,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": true,
+          "hi": 0.1724703329834176,
+          "lo": 0.06238783283321204,
+          "mean": 0.11604863242656922,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 1.2141925198390169,
+          "lo": 0.9310935593100245,
+          "mean": 1.066778016526267,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.4348541246475601,
+          "lo": 1.1643160942120596,
+          "mean": 1.291997102596418,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 0.16388499022649228,
+          "lo": 0.050397791578707794,
+          "mean": 0.10917045364358148,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": true,
+          "hi": 0.9263572454000591,
+          "lo": 0.6679248096226172,
+          "mean": 0.7939619332778414,
+          "n": 60
+        }
+      },
+      "divisor": 2.3663301260681506,
+      "grader": "skywork-v2-qwen3-1.7b",
+      "kind": "reward model",
+      "n_tasks": 60,
+      "name": "Skywork 1.7B",
+      "one_passage_share": 0.17431856899488923,
+      "paper": null,
+      "placebo_rescored": {
+        "largest difference (model's own units)": 0.0,
+        "tasks that differ": 0
+      },
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.4330211754241379,
+            "lo": 0.3110384847548985,
+            "mean": 0.3694233623401755,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.40160060162516725,
+            "lo": 0.1023322933553311,
+            "mean": 0.24701415876649804,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.325033044512411,
+            "lo": 0.1822681176550789,
+            "mean": 0.24961272812872157,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.32119344107407977,
+            "lo": 0.05881218032842684,
+            "mean": 0.18308461342352833,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.325033044512411,
+            "lo": 0.1822681176550789,
+            "mean": 0.24961272812872157,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.32119344107407977,
+            "lo": 0.05881218032842684,
+            "mean": 0.18308461342352833,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.12650925632726462,
+            "lo": 0.04308708395309301,
+            "mean": 0.08418890830376999,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.2881406655769226,
+            "lo": 0.05251677087505223,
+            "mean": 0.17107906500231335,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.12650925632726462,
+            "lo": 0.04308708395309301,
+            "mean": 0.08418890830376999,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.2881406655769226,
+            "lo": 0.05251677087505223,
+            "mean": 0.17107906500231335,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.1056657913276413,
+            "lo": 0.8031374237743469,
+            "mean": 0.9559654882005997,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.5217182693245241,
+            "lo": 1.019856331446685,
+            "mean": 1.2581814745433288,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.3508627286776844,
+            "lo": 1.0693294588453457,
+            "mean": 1.205578216329321,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.7120512326073607,
+            "lo": 1.2131456610282463,
+            "mean": 1.4412660879668575,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.22624140064294843,
+            "lo": 0.11398952290458847,
+            "mean": 0.16542381982495155,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.11616118444301804,
+            "lo": -0.10144688415926645,
+            "mean": 0.012005548421214974,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.842067191667238,
+            "lo": 0.5539352143161468,
+            "mean": 0.7022692939312412,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.185570416998268,
+            "lo": 0.7359326147527145,
+            "mean": 0.9523401285128774,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "standard deviations"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.6322220271385597,
+          "lo": 0.43553627228000025,
+          "mean": 0.5301771733443287,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": true,
+          "hi": 0.6216968700817104,
+          "lo": 0.38608869962091036,
+          "mean": 0.49340682099948,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.5912886438169936,
+          "lo": 0.44483147530298883,
+          "mean": 0.5154690324063892,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 0.4385163810688793,
+          "lo": 0.2943338436534161,
+          "mean": 0.3644540504505691,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 0.4385163810688793,
+          "lo": 0.2943338436534161,
+          "mean": 0.3644540504505691,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.21413599494035487,
+          "lo": 0.0848240721127269,
+          "mean": 0.1486206334310392,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": true,
+          "hi": 0.21413599494035487,
+          "lo": 0.0848240721127269,
+          "mean": 0.1486206334310392,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 1.234474791908612,
+          "lo": 0.9544813856696874,
+          "mean": 1.089428578775282,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.5968893704907519,
+          "lo": 1.3225355101521596,
+          "mean": 1.453882629225851,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 0.2739818811927789,
+          "lo": 0.159395201792553,
+          "mean": 0.2158334170195299,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": true,
+          "hi": 0.940666849806175,
+          "lo": 0.6823850539401733,
+          "mean": 0.8079216022189061,
+          "n": 60
+        }
+      },
+      "divisor": 3.045365614571125,
+      "grader": "skywork-v2-llama3.2-3b",
+      "kind": "reward model",
+      "n_tasks": 60,
+      "name": "Skywork 3B",
+      "one_passage_share": 0.25067639101282196,
+      "paper": null,
+      "placebo_rescored": {
+        "largest difference (model's own units)": 0.0,
+        "tasks that differ": 0
+      },
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.6067918254821936,
+            "lo": 0.43880712338974553,
+            "mean": 0.5187455093350367,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.6623677561028862,
+            "lo": 0.3689123584991465,
+            "mean": 0.5098096631659981,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.4382872977231812,
+            "lo": 0.27300973968647696,
+            "mean": 0.3529413746490853,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.5405941441988946,
+            "lo": 0.2467306190057035,
+            "mean": 0.38433958138040486,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.4382872977231812,
+            "lo": 0.27300973968647696,
+            "mean": 0.3529413746490853,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.5405941441988946,
+            "lo": 0.2467306190057035,
+            "mean": 0.38433958138040486,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.14015715147455354,
+            "lo": 0.035915227871712585,
+            "mean": 0.08776277487448562,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.3895169713723008,
+            "lo": 0.12030435258196713,
+            "mean": 0.2537387527559954,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.14015715147455354,
+            "lo": 0.035915227871712585,
+            "mean": 0.08776277487448562,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.3895169713723008,
+            "lo": 0.12030435258196713,
+            "mean": 0.2537387527559954,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.202512039364837,
+            "lo": 0.8506170670315627,
+            "mean": 1.0231789353828498,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.4114451337817644,
+            "lo": 1.0084249695927616,
+            "mean": 1.2038597809985738,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.5362806231951884,
+            "lo": 1.2186671409244252,
+            "mean": 1.3761203100319352,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.8312218507148104,
+            "lo": 1.3610472068786665,
+            "mean": 1.5881993623789783,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.3253973653038622,
+            "lo": 0.20630327979918517,
+            "mean": 0.2651785997745997,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.23089526853499373,
+            "lo": 0.028452323378889196,
+            "mean": 0.13060082862440942,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.9157302950057483,
+            "lo": 0.5897523451911783,
+            "mean": 0.7552999425351888,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.1007900734797207,
+            "lo": 0.7056526021612621,
+            "mean": 0.8988135598544176,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "standard deviations"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.42391331244194663,
+          "lo": 0.28161111043028975,
+          "mean": 0.3527548928698761,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": true,
+          "hi": 0.42157137124447025,
+          "lo": 0.21075275207414573,
+          "mean": 0.31704028960836167,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.39574268726280293,
+          "lo": 0.2812041981472282,
+          "mean": 0.3384690515652703,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 0.5532836079037889,
+          "lo": 0.38430376822637946,
+          "mean": 0.467217268896533,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 0.5532836079037889,
+          "lo": 0.38430376822637946,
+          "mean": 0.467217268896533,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.1874314088870264,
+          "lo": 0.07921176986489249,
+          "mean": 0.13542274974407026,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": true,
+          "hi": 0.1874314088870264,
+          "lo": 0.07921176986489249,
+          "mean": 0.13542274974407026,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 1.1873817516794936,
+          "lo": 0.9358309202320615,
+          "mean": 1.059845488917925,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.656697985374265,
+          "lo": 1.410767812800776,
+          "mean": 1.527062757814458,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 0.4050519035227716,
+          "lo": 0.26171192881798283,
+          "mean": 0.3317945191524628,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": true,
+          "hi": 1.0445731048838822,
+          "lo": 0.8023314896964184,
+          "mean": 0.9198559538387756,
+          "n": 60
+        }
+      },
+      "divisor": 2.9652514127714578,
+      "grader": "skywork-v2-qwen3-4b-4bit",
+      "kind": "reward model",
+      "n_tasks": 60,
+      "name": "Skywork 4B",
+      "one_passage_share": 0.30595813204508854,
+      "paper": null,
+      "placebo_rescored": {
+        "largest difference (model's own units)": 0.0,
+        "tasks that differ": 0
+      },
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.41933073441129276,
+            "lo": 0.31588472651750166,
+            "mean": 0.3669143926098812,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.4205913486922309,
+            "lo": 0.15808103082965402,
+            "mean": 0.28933618976094255,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.5979761660058921,
+            "lo": 0.39269269404078716,
+            "mean": 0.49199254156457234,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.5748640637791708,
+            "lo": 0.2806656847366494,
+            "mean": 0.42442361610628326,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.5979761660058921,
+            "lo": 0.39269269404078716,
+            "mean": 0.49199254156457234,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.5748640637791708,
+            "lo": 0.2806656847366494,
+            "mean": 0.42442361610628326,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.2082856248751595,
+            "lo": 0.10899271072991938,
+            "mean": 0.156694355120622,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.2155889937117751,
+            "lo": -0.021077470777287197,
+            "mean": 0.09868088591184465,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.2082856248751595,
+            "lo": 0.10899271072991938,
+            "mean": 0.156694355120622,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.2155889937117751,
+            "lo": -0.021077470777287197,
+            "mean": 0.09868088591184465,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.1431754545260242,
+            "lo": 0.8291766069728063,
+            "mean": 0.9862037642635961,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.368119466816642,
+            "lo": 1.0116706939671103,
+            "mean": 1.1870448315026747,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.625738601269179,
+            "lo": 1.325620377563372,
+            "mean": 1.4781963058281684,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.8002315694223678,
+            "lo": 1.4610279999360705,
+            "mean": 1.611468447608958,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.4276646554225754,
+            "lo": 0.24350025450602852,
+            "mean": 0.3352981864439504,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.4416688194695182,
+            "lo": 0.2164991572226125,
+            "mean": 0.32574273019443856,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.0255922877786514,
+            "lo": 0.7229919145536771,
+            "mean": 0.8744377021156126,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.1851286977956486,
+            "lo": 0.8210153901180122,
+            "mean": 0.9983056613606031,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "standard deviations"
+    },
+    {
+      "by_mark": {
+        "marked by the keyword rule": {
+          "detectable": true,
+          "hi": 0.4060611734819759,
+          "lo": 0.2997196134025095,
+          "mean": 0.35245400659434795,
+          "n": 36
+        },
+        "not marked": {
+          "detectable": true,
+          "hi": 0.4117213943723452,
+          "lo": 0.2524706663604004,
+          "mean": 0.3297655319076614,
+          "n": 24
+        }
+      },
+      "comparisons": {
+        "C - G": {
+          "detectable": true,
+          "hi": 0.38796928332475616,
+          "lo": 0.29738669239874227,
+          "mean": 0.34337861671967324,
+          "n": 60
+        },
+        "C - H": {
+          "detectable": true,
+          "hi": 0.4774414509080064,
+          "lo": 0.33664341548393334,
+          "mean": 0.40486098953451355,
+          "n": 60
+        },
+        "C - H, same day": {
+          "detectable": true,
+          "hi": 0.4774414509080064,
+          "lo": 0.33664341548393334,
+          "mean": 0.40486098953451355,
+          "n": 60
+        },
+        "C - P": {
+          "detectable": true,
+          "hi": 0.19281087685841328,
+          "lo": 0.10180296996368468,
+          "mean": 0.14639414484805371,
+          "n": 60
+        },
+        "C - P2": {
+          "detectable": true,
+          "hi": 0.19281087685841328,
+          "lo": 0.10180296996368468,
+          "mean": 0.14639414484805371,
+          "n": 60
+        },
+        "O - C": {
+          "detectable": true,
+          "hi": 1.3007866500297378,
+          "lo": 1.0459213965030119,
+          "mean": 1.1722989871932958,
+          "n": 60
+        },
+        "O - H": {
+          "detectable": true,
+          "hi": 1.714008666925263,
+          "lo": 1.4548640356037281,
+          "mean": 1.5771599767278097,
+          "n": 60
+        },
+        "P - H": {
+          "detectable": true,
+          "hi": 0.3198444057607221,
+          "lo": 0.20273855753226766,
+          "mean": 0.25846684468645986,
+          "n": 60
+        },
+        "P2 - P": {
+          "detectable": false,
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "n": 60
+        },
+        "hedge in O - G": {
+          "detectable": true,
+          "hi": 1.0305834848987814,
+          "lo": 0.8134953079374465,
+          "mean": 0.9216335467874365,
+          "n": 60
+        }
+      },
+      "divisor": 3.352287134452686,
+      "grader": "skywork-v2-qwen3-8b-4bit",
+      "kind": "reward model",
+      "n_tasks": 60,
+      "name": "Skywork 8B",
+      "one_passage_share": 0.2567025511099344,
+      "paper": null,
+      "placebo_rescored": {
+        "largest difference (model's own units)": 0.0,
+        "tasks that differ": 0
+      },
+      "split": {
+        "C - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.3655895431196443,
+            "lo": 0.272841837353612,
+            "mean": 0.3162410705602012,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.4834724984344898,
+            "lo": 0.3029647996324804,
+            "mean": 0.3902525600860342,
+            "n": 22
+          }
+        },
+        "C - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.4937829853169952,
+            "lo": 0.3124795962181042,
+            "mean": 0.3995808261954397,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.5355909185111263,
+            "lo": 0.3004012513278979,
+            "mean": 0.41398127166564114,
+            "n": 22
+          }
+        },
+        "C - H, same day": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.4937829853169952,
+            "lo": 0.3124795962181042,
+            "mean": 0.3995808261954397,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.5355909185111263,
+            "lo": 0.3004012513278979,
+            "mean": 0.41398127166564114,
+            "n": 22
+          }
+        },
+        "C - P": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.16977987916246487,
+            "lo": 0.08198908228920491,
+            "mean": 0.12320977377766261,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.2805072690303525,
+            "lo": 0.09194875737097657,
+            "mean": 0.18643987669691106,
+            "n": 22
+          }
+        },
+        "C - P2": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.16977987916246487,
+            "lo": 0.08198908228920491,
+            "mean": 0.12320977377766261,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.2805072690303525,
+            "lo": 0.09194875737097657,
+            "mean": 0.18643987669691106,
+            "n": 22
+          }
+        },
+        "O - C": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.256856217455094,
+            "lo": 0.9497777813984539,
+            "mean": 1.1040123159077118,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.4966249238348286,
+            "lo": 1.089783451992694,
+            "mean": 1.290248692141123,
+            "n": 22
+          }
+        },
+        "O - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.6562210509068682,
+            "lo": 1.3521960277979415,
+            "mean": 1.5035931421031516,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.9449492682420255,
+            "lo": 1.5096969015532373,
+            "mean": 1.7042299638067642,
+            "n": 22
+          }
+        },
+        "P - H": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 0.3527736462552568,
+            "lo": 0.20213394394912798,
+            "mean": 0.2763710524177771,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 0.31652406339225575,
+            "lo": 0.1487175811902235,
+            "mean": 0.22754139496873005,
+            "n": 22
+          }
+        },
+        "P2 - P": {
+          "no plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": false,
+            "hi": 0.0,
+            "lo": 0.0,
+            "mean": 0.0,
+            "n": 22
+          }
+        },
+        "hedge in O - G": {
+          "no plain statement": {
+            "detectable": true,
+            "hi": 1.0426130725095217,
+            "lo": 0.7726876283057752,
+            "mean": 0.9079116989922569,
+            "n": 38
+          },
+          "plain statement": {
+            "detectable": true,
+            "hi": 1.1262769392211522,
+            "lo": 0.7686301712074525,
+            "mean": 0.9453349202518374,
+            "n": 22
+          }
+        }
+      },
+      "tasks": [
+        "coding-Azure__WALinuxAgent-1127-091c56a3",
+        "coding-Azure__azure-cli-4265-97c8ea7c",
+        "coding-GenericMappingTools__pygmt-619-f89974da",
+        "coding-IAMconsortium__nomenclature-320-af8d9d3a",
+        "coding-MatterMiners__tardis-77-fb4fd436",
+        "coding-NCAS-CMS__cf-python-551-19b17d22",
+        "coding-OpenSourceEconomics__estimagic-222-b737b6a8",
+        "coding-Ouranosinc__xclim-235-40b941e1",
+        "coding-Parquery__icontract-94-4aa27092",
+        "coding-PennyLaneAI__pennylane-2603-520afc52",
+        "coding-RDFLib__rdflib-1117-755c85d0",
+        "coding-Unidata__MetPy-2398-61559ddc",
+        "coding-Unidata__MetPy-3103-2ee32e36",
+        "coding-akaihola__darker-545-6b36569b",
+        "coding-asottile__pyupgrade-418-d2143af1",
+        "coding-awdeorio__mailmerge-79-911a5cc8",
+        "coding-borgbackup__borg-7492-a32d9b35",
+        "coding-borgbackup__borg-7517-01193a1d",
+        "coding-borgbackup__borg-7521-a81263d3",
+        "coding-codalab__codalab-worksheets-3393-a15b89ed",
+        "coding-dask__dask-3522-44d72811",
+        "coding-dwavesystems__dwave-system-279-7ad3ffd5",
+        "coding-ethereum__py-geth-221-a4418ec1",
+        "coding-facelessuser__pymdown-extensions-934-6066adca",
+        "coding-fitbenchmarking__fitbenchmarking-1041-0351326d",
+        "coding-frictionlessdata__frictionless-py-1092-1d58174a",
+        "coding-ga4gh__vrs-python-387-5935e403",
+        "coding-googleapis__python-firestore-16-fb536665",
+        "coding-graphql-python__graphene-django-1083-1de39524",
+        "coding-imageio__imageio-510-1db4812b",
+        "coding-iterative__dvc-1992-1a462656",
+        "coding-juju__python-libjuju-497-c67cf4ec",
+        "coding-llimllib__limbo-183-57f2de90",
+        "coding-mne-tools__mne-python-12033-114b2596",
+        "coding-mne-tools__mne-python-12605-5a5cb85c",
+        "coding-modin-project__modin-5058-9e1eb617",
+        "coding-mwouts__jupytext-368-3a1e97ca",
+        "coding-nilearn__nilearn-3823-9ac28af3",
+        "coding-nilearn__nilearn-4099-96205e5f",
+        "coding-numba__numba-5808-89b8cad3",
+        "coding-pandas-dev__pandas-61062-120beabf",
+        "coding-pennmem__cmlreaders-114-ba3649e1",
+        "coding-peterbe__hashin-88-2794e226",
+        "coding-python-pillow__Pillow-5426-fa94ddf5",
+        "coding-pytorch__ignite-1063-a1587042",
+        "coding-radiasoft__pykern-404-b71cf62f",
+        "coding-regionmask__regionmask-271-a4a370be",
+        "coding-rfverbruggen__rachiopy-42-17c7710b",
+        "coding-scipp__plopp-250-5a41ee8c",
+        "coding-scverse__scanpy-2893-392c67a7",
+        "coding-snowblink14__smatch-30-60fa0b94",
+        "coding-softlayer__softlayer-python-1807-160323a9",
+        "coding-spacetelescope__jdaviz-2485-06f89dc8",
+        "coding-spacetelescope__jwst-7982-12e63759",
+        "coding-sqlfluff__sqlfluff-1427-89c2b2b5",
+        "coding-stan-dev__cmdstanpy-677-a75bb01b",
+        "coding-sunpy__sunpy-6581-612b2486",
+        "coding-tefra__xsdata-787-dd496ad0",
+        "coding-tinosulzer__PyBaMM-33-d5e163bb",
+        "coding-vyperlang__vyper-4445-28d7cf78"
+      ],
+      "unit": "standard deviations"
+    }
+  ],
+  "tests": [
+    {
+      "direction_ok": true,
+      "drift": false,
+      "drift_estimate": [
+        0.11666666666666667,
+        0.0,
+        0.23333333333333334
+      ],
+      "estimate": 0.55,
+      "hi": 0.7666666666666667,
+      "judge": "claude-sonnet-5-5",
+      "lo": 0.3333333333333333,
+      "n_tasks": 60,
+      "name": "Sonnet 5.5",
+      "p": 0.0,
+      "p_holm": 0.004,
+      "p_holm_is_bound": true,
+      "p_is_floor": true,
+      "q": 0.001,
+      "status": "computed",
+      "verdict": "supported (Holm)",
+      "verdict_unadjusted": "supported"
+    },
+    {
+      "direction_ok": true,
+      "drift": false,
+      "drift_estimate": [
+        -0.08333333333333333,
+        -0.21666666666666667,
+        0.03333333333333333
+      ],
+      "estimate": 0.15,
+      "hi": 0.36666666666666664,
+      "judge": "claude-opus-5-5",
+      "lo": -0.06666666666666667,
+      "n_tasks": 60,
+      "name": "Opus 5.5",
+      "p": 0.185,
+      "p_holm": 0.185,
+      "p_holm_is_bound": false,
+      "p_is_floor": false,
+      "q": 0.185,
+      "status": "computed",
+      "verdict": "not supported (Holm)",
+      "verdict_unadjusted": "not supported"
+    },
+    {
+      "direction_ok": true,
+      "drift": false,
+      "drift_estimate": [
+        0.03333333333333333,
+        -0.11666666666666667,
+        0.18333333333333332
+      ],
+      "estimate": 0.43333333333333335,
+      "hi": 0.6833333333333333,
+      "judge": "claude-sonnet-4-6",
+      "lo": 0.18333333333333332,
+      "n_tasks": 60,
+      "name": "Sonnet 4.6",
+      "p": 0.001,
+      "p_holm": 0.004,
+      "p_holm_is_bound": true,
+      "p_is_floor": false,
+      "q": 0.001,
+      "status": "computed",
+      "verdict": "supported (Holm)",
+      "verdict_unadjusted": "supported"
+    },
+    {
+      "direction_ok": true,
+      "drift": true,
+      "drift_estimate": [
+        0.15,
+        0.016666666666666666,
+        0.3
+      ],
+      "estimate": 0.85,
+      "hi": 1.15,
+      "judge": "claude-opus-4-6",
+      "lo": 0.5833333333333334,
+      "n_tasks": 60,
+      "name": "Opus 4.6",
+      "p": 0.0,
+      "p_holm": 0.004,
+      "p_holm_is_bound": true,
+      "p_is_floor": true,
+      "q": 0.001,
+      "status": "computed",
+      "verdict": "supported (Holm)",
+      "verdict_unadjusted": "supported"
+    }
+  ]
+}

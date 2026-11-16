@@ -1,0 +1,10 @@
+,the eight planned tests,judge,estimate [95% CI],tasks,adjusted p,supported?
+RQ1,premium without the transcript (points),Sonnet 5.5,"1.57 [1.32, 1.82]",60,< 0.01,yes
+,,Opus 5.5,"1.42 [1.12, 1.70]",60,< 0.01,yes
+,,Sonnet 4.6,"0.73 [0.37, 1.10]",60,< 0.01,yes
+,,Opus 4.6,"1.07 [0.78, 1.35]",60,< 0.01,yes
+RQ2,change in the premium with the transcript (points),Sonnet 5.5,"-1.50 [-1.80, -1.20]",60,< 0.01,yes
+RQ3,share of overclaims: best of 16 minus one at random (percentage points),Sonnet 5.5,"-10 [-20, -1]",40,0.058,no (the share falls)
+,,Sonnet 4.6,"12 [3, 20]",40,0.027,yes
+RQ4,verification step: change in the premium with the transcript (points),Sonnet 5.5,"-0.84 [-1.23, -0.48]",31,0.058,no
+,verification step: change in the share of overclaims selected (pct. points),,"-20 [-38, -2]",26,,

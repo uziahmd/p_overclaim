@@ -1,0 +1,260 @@
+# Cost projection for the full run of session 5 (session-4 brief, Step 10).
+# Run: uv run python -m overclaim.projection_v4 --config configs/projection_session5.yaml
+# Arithmetic on recorded costs (overclaim/projection_v4.py on overclaim/projection.py); nothing is run. It reads the
+# run files below (read only) and writes the two output files. Rows whose measurement does not exist yet are listed
+# as missing and left out of every total; rerun at the end of the session for the full table.
+#
+# Stats keys are (name, condition label): "@coding" and "@research" mark the domain, "full/", "pointwise/" and
+# "e2_score/" mark the call kind, no prefix is the pairwise judge on the neutral rubric. The bare labels "hidden" and
+# "shown" are the ratio basis (see record_sources). See the module docstring for why the domain sits in the label.
+models_config: configs/models.yaml       # prices_usd_per_mtok and the judges' model ids
+output:
+  json: results/pilot4_coding/projection_session5.json
+  markdown: results/pilot4_coding/projection_session5.md
+cost_log: results/pilot4_coding/cost.jsonl          # this session's calls (the research pilot logs here too)
+prior_spend: results/pilot4_coding/prior_spend.json # spend of sessions 1 to 3 per provider
+spent_before_fallback_usd: {anthropic: 41.88}       # the brief's figure, used only when prior_spend.json is missing
+e2_summary: results/pilot4_coding/e2_summary.json   # Step 5 verdict
+sets:
+  coding: data/processed/coding/matched_sets_v4.jsonl
+  research: data/processed/research/matched_sets_research.jsonl
+research_funnel: results/pilot_research/funnel.json
+research_funnel_batch: main
+research_trajectories: results/pilot_research/trajectories.jsonl
+thought_separate: [gemini-3.8-flash, gemini-4-argon]   # Gemini bills thought tokens as output (unit_stats)
+# Judge and pointwise record files, in order of preference: the first source with live calls for a (grader, label)
+# wins. `rubrics` maps a record's rubric to its label kind; rubrics not listed (pilot 2's helpful) are not read.
+record_sources:
+  - {path: results/pilot4_coding/judge_calls.jsonl, domain: coding, sets: [v4], rubrics: {neutral: "", full: full},
+     source: "pilot 4, v4 sets"}
+  # ratio_basis: its neutral calls also give the bare labels hidden and shown (every judge ran hidden on the same v3
+  # prompts here, and the Experiment 3 check ran on these sets), which unit_cost's tokenizer ratio and own output
+  # tokens and project_rescoped's e3_minus_plain read.
+  - {path: results/pilot3_coding/judge_calls.jsonl, domain: coding, sets: [v3], rubrics: {neutral: "", full: full},
+     source: "pilot 3, v3 sets", ratio_basis: true}
+  - {path: results/pilot2_coding/judge_calls.jsonl, domain: coding, sets: [v2], rubrics: {neutral: "", full: full},
+     source: "pilot 2, v2 sets"}
+  - {path: results/pilot_research/judge_calls.jsonl, domain: research, rubrics: {neutral: ""},
+     source: "research pilot"}
+  - {path: results/pilot4_coding/pointwise_calls.jsonl, domain: coding, sets: [v4],
+     rubrics: {pointwise-neutral: pointwise}, source: "pilot 4 pointwise, v4 sets"}
+  - {path: results/pilot_research/pointwise_calls.jsonl, domain: research, rubrics: {pointwise-neutral: pointwise},
+     source: "research pilot pointwise"}
+# Decision 9: 120 tasks. The 150-task figure is the second scenario (90 coding + 60 research).
+scenarios:
+  "120 tasks": {coding: 60, research: 60}
+  "150 tasks": {coding: 90, research: 60}
+e2_tasks_per_domain: 40
+projection:
+  reference: claude-sonnet-5-5
+  anthropic_project_total_usd: 180
+  anthropic_spent_before_usd: null        # filled from prior_spend.json at run time
+  cut_margin_usd: 15                      # cuts apply while the total exceeds remaining - 15 USD (Step 10)
+  margin_for_mitigated_bo16_usd: 15       # the mitigated best-of-16 only if 15 USD of margin is left (Step 10)
+  targets_usd: {openrouter: 20}           # no Google target: the AI Studio balance and the credit are not known
+  price_changes:
+    - {model: gemini-4-argon, factor: 2.0, from: "2026-12-01"}
+  # tasks: a count name (coding, research, shown_coding, shown_research, e2_tasks, coding_sets_owed,
+  # research_sets_owed, research_trajectories), an integer, or {min: [...]}; calls = tasks x per_task.
+  # Cuts 1 to 3 are already applied: the 4.6 pair runs hidden only, the mitigated best-of-16 is optional, and shown
+  # runs only on shown-eligible tasks.
+  items:
+    # Experiment 1, hidden: four Claude judges x all tasks x 6, neutral rubric; Sonnet 5.5 also on the full rubric
+    - {id: e1-hid-s55-c, group: E1, provider: anthropic, name: "E1 hidden, Sonnet 5.5, coding",
+       stat: claude-sonnet-5-5, condition: hidden@coding, tasks: coding, per_task: 6}
+    - {id: e1-hid-s55-r, group: E1, provider: anthropic, name: "E1 hidden, Sonnet 5.5, research",
+       stat: claude-sonnet-5-5, condition: hidden@research, tasks: research, per_task: 6}
+    - {id: e1-hid-o55-c, group: E1, provider: anthropic, name: "E1 hidden, Opus 5.5, coding",
+       stat: claude-opus-5-5, condition: hidden@coding, tasks: coding, per_task: 6}
+    - {id: e1-hid-o55-r, group: E1, provider: anthropic, name: "E1 hidden, Opus 5.5, research",
+       stat: claude-opus-5-5, condition: hidden@research, tasks: research, per_task: 6}
+    - {id: e1-hid-s46-c, group: E1, provider: anthropic, name: "E1 hidden, Sonnet 4.6, coding",
+       stat: claude-sonnet-4-6, condition: hidden@coding, tasks: coding, per_task: 6}
+    - {id: e1-hid-s46-r, group: E1, provider: anthropic, name: "E1 hidden, Sonnet 4.6, research",
+       stat: claude-sonnet-4-6, condition: hidden@research, tasks: research, per_task: 6}
+    - {id: e1-hid-o46-c, group: E1, provider: anthropic, name: "E1 hidden, Opus 4.6, coding",
+       stat: claude-opus-4-6, condition: hidden@coding, tasks: coding, per_task: 6}
+    - {id: e1-hid-o46-r, group: E1, provider: anthropic, name: "E1 hidden, Opus 4.6, research",
+       stat: claude-opus-4-6, condition: hidden@research, tasks: research, per_task: 6}
+    - {id: e1-full-s55-c, group: E1, provider: anthropic, name: "E1 hidden, full rubric, Sonnet 5.5, coding",
+       stat: claude-sonnet-5-5, condition: full/hidden@coding, tasks: coding, per_task: 6}
+    # Experiment 1, shown: Sonnet 5.5 on every shown-eligible task; Opus 5.5 on 30 of them, 15 per domain
+    - {id: e1-shown-s55-c, group: E1, provider: anthropic, name: "E1 shown, Sonnet 5.5, coding",
+       stat: claude-sonnet-5-5, condition: shown@coding, tasks: shown_coding, per_task: 6}
+    - {id: e1-shown-s55-r, group: E1, provider: anthropic, name: "E1 shown, Sonnet 5.5, research",
+       stat: claude-sonnet-5-5, condition: shown@research, tasks: shown_research, per_task: 6}
+    - {id: e1-shown-o55-c, group: E1, provider: anthropic, name: "E1 shown, Opus 5.5, coding",
+       stat: claude-opus-5-5, condition: shown@coding, tasks: {min: [15, shown_coding]}, per_task: 6}
+    - {id: e1-shown-o55-r, group: E1, provider: anthropic, name: "E1 shown, Opus 5.5, research",
+       stat: claude-opus-5-5, condition: shown@research, tasks: {min: [15, shown_research]}, per_task: 6}
+    # Open judges on OpenRouter (no prompt cache): hidden on all tasks, shown on the eligible ones
+    - {id: or-hid-qwen-c, group: E1, provider: openrouter, name: "E1 hidden, qwen3-32b, coding",
+       stat: qwen3-32b, condition: hidden@coding, tasks: coding, per_task: 6}
+    - {id: or-hid-qwen-r, group: E1, provider: openrouter, name: "E1 hidden, qwen3-32b, research",
+       stat: qwen3-32b, condition: hidden@research, tasks: research, per_task: 6}
+    - {id: or-hid-oss-c, group: E1, provider: openrouter, name: "E1 hidden, gpt-oss-120b, coding",
+       stat: gpt-oss-120b, condition: hidden@coding, tasks: coding, per_task: 6}
+    - {id: or-hid-oss-r, group: E1, provider: openrouter, name: "E1 hidden, gpt-oss-120b, research",
+       stat: gpt-oss-120b, condition: hidden@research, tasks: research, per_task: 6}
+    - {id: or-shown-qwen-c, group: E1, provider: openrouter, name: "E1 shown, qwen3-32b, coding",
+       stat: qwen3-32b, condition: shown@coding, tasks: shown_coding, per_task: 6}
+    - {id: or-shown-qwen-r, group: E1, provider: openrouter, name: "E1 shown, qwen3-32b, research",
+       stat: qwen3-32b, condition: shown@research, tasks: shown_research, per_task: 6}
+    - {id: or-shown-oss-c, group: E1, provider: openrouter, name: "E1 shown, gpt-oss-120b, coding",
+       stat: gpt-oss-120b, condition: shown@coding, tasks: shown_coding, per_task: 6}
+    - {id: or-shown-oss-r, group: E1, provider: openrouter, name: "E1 shown, gpt-oss-120b, research",
+       stat: gpt-oss-120b, condition: shown@research, tasks: shown_research, per_task: 6}
+    # Gemini: hidden on all tasks through aistudio; 3.8 Flash shown through vertex, optional (credit not confirmed)
+    - {id: g-hid-flash-c, group: E1, provider: google, name: "E1 hidden, gemini-3.8-flash, coding",
+       stat: gemini-3.8-flash, condition: hidden@coding, tasks: coding, per_task: 6}
+    - {id: g-hid-flash-r, group: E1, provider: google, name: "E1 hidden, gemini-3.8-flash, research",
+       stat: gemini-3.8-flash, condition: hidden@research, tasks: research, per_task: 6}
+    - {id: g-hid-argon-c, group: E1, provider: google, name: "E1 hidden, gemini-4-argon, coding",
+       stat: gemini-4-argon, condition: hidden@coding, tasks: coding, per_task: 6}
+    - {id: g-hid-argon-r, group: E1, provider: google, name: "E1 hidden, gemini-4-argon, research",
+       stat: gemini-4-argon, condition: hidden@research, tasks: research, per_task: 6}
+    - {id: g-shown-flash-c, group: E1, provider: google, optional: true, model: gemini-3.8-flash,
+       name: "E1 shown, gemini-3.8-flash on vertex, coding", stat: gemini-3.8-flash, condition: shown@coding,
+       options: [{stat: gemini-3.8-flash@vertex, condition: shown@coding}, {stat: gemini-3.8-flash, condition: shown@coding}],
+       tasks: shown_coding, per_task: 6}
+    - {id: g-shown-flash-r, group: E1, provider: google, optional: true, model: gemini-3.8-flash,
+       name: "E1 shown, gemini-3.8-flash on vertex, research", stat: gemini-3.8-flash, condition: shown@research,
+       options: [{stat: gemini-3.8-flash@vertex, condition: shown@research},
+                 {stat: gemini-3.8-flash, condition: shown@research}],
+       tasks: shown_research, per_task: 6}
+    # Experiment 1b, pointwise (3 calls per task): four Claude judges hidden; Sonnet 5.5 shown on the eligible tasks
+    - {id: pw-hid-s55-c, group: E1b, provider: anthropic, name: "E1b pointwise hidden, Sonnet 5.5, coding",
+       stat: claude-sonnet-5-5, condition: pointwise/hidden@coding, tasks: coding, per_task: 3}
+    - {id: pw-hid-s55-r, group: E1b, provider: anthropic, name: "E1b pointwise hidden, Sonnet 5.5, research",
+       stat: claude-sonnet-5-5, condition: pointwise/hidden@research, tasks: research, per_task: 3}
+    - {id: pw-hid-o55-c, group: E1b, provider: anthropic, name: "E1b pointwise hidden, Opus 5.5, coding",
+       stat: claude-opus-5-5, condition: pointwise/hidden@coding, tasks: coding, per_task: 3}
+    - {id: pw-hid-o55-r, group: E1b, provider: anthropic, name: "E1b pointwise hidden, Opus 5.5, research",
+       stat: claude-opus-5-5, condition: pointwise/hidden@research, tasks: research, per_task: 3}
+    - {id: pw-hid-s46-c, group: E1b, provider: anthropic, name: "E1b pointwise hidden, Sonnet 4.6, coding",
+       stat: claude-sonnet-4-6, condition: pointwise/hidden@coding, tasks: coding, per_task: 3}
+    - {id: pw-hid-s46-r, group: E1b, provider: anthropic, name: "E1b pointwise hidden, Sonnet 4.6, research",
+       stat: claude-sonnet-4-6, condition: pointwise/hidden@research, tasks: research, per_task: 3}
+    - {id: pw-hid-o46-c, group: E1b, provider: anthropic, name: "E1b pointwise hidden, Opus 4.6, coding",
+       stat: claude-opus-4-6, condition: pointwise/hidden@coding, tasks: coding, per_task: 3}
+    - {id: pw-hid-o46-r, group: E1b, provider: anthropic, name: "E1b pointwise hidden, Opus 4.6, research",
+       stat: claude-opus-4-6, condition: pointwise/hidden@research, tasks: research, per_task: 3}
+    # Sonnet 5.5 shown pointwise. Measured on two coding tasks by the pilot-4 hook; the pairwise shown cost is not a
+    # bound for it (on those tasks the first pointwise call wrote its own cache entry), so research stays missing.
+    - {id: pw-shown-s55-c, group: E1b, provider: anthropic, name: "E1b pointwise shown, Sonnet 5.5, coding",
+       stat: claude-sonnet-5-5, condition: pointwise/shown@coding, tasks: shown_coding, per_task: 3,
+       missing_note: "no shown pointwise call measured yet"}
+    - {id: pw-shown-s55-r, group: E1b, provider: anthropic, name: "E1b pointwise shown, Sonnet 5.5, research",
+       stat: claude-sonnet-5-5, condition: pointwise/shown@research, tasks: shown_research, per_task: 3,
+       missing_note: "no shown pointwise call measured in the research domain"}
+    # Open and Gemini judges, pointwise hidden
+    - {id: pw-hid-qwen-c, group: E1b, provider: openrouter, name: "E1b pointwise hidden, qwen3-32b, coding",
+       stat: qwen3-32b, condition: pointwise/hidden@coding, tasks: coding, per_task: 3}
+    - {id: pw-hid-qwen-r, group: E1b, provider: openrouter, name: "E1b pointwise hidden, qwen3-32b, research",
+       stat: qwen3-32b, condition: pointwise/hidden@research, tasks: research, per_task: 3}
+    - {id: pw-hid-oss-c, group: E1b, provider: openrouter, name: "E1b pointwise hidden, gpt-oss-120b, coding",
+       stat: gpt-oss-120b, condition: pointwise/hidden@coding, tasks: coding, per_task: 3}
+    - {id: pw-hid-oss-r, group: E1b, provider: openrouter, name: "E1b pointwise hidden, gpt-oss-120b, research",
+       stat: gpt-oss-120b, condition: pointwise/hidden@research, tasks: research, per_task: 3}
+    - {id: pw-hid-flash-c, group: E1b, provider: google, name: "E1b pointwise hidden, gemini-3.8-flash, coding",
+       stat: gemini-3.8-flash, condition: pointwise/hidden@coding, tasks: coding, per_task: 3}
+    - {id: pw-hid-flash-r, group: E1b, provider: google, name: "E1b pointwise hidden, gemini-3.8-flash, research",
+       stat: gemini-3.8-flash, condition: pointwise/hidden@research, tasks: research, per_task: 3}
+    - {id: pw-hid-argon-c, group: E1b, provider: google, name: "E1b pointwise hidden, gemini-4-argon, coding",
+       stat: gemini-4-argon, condition: pointwise/hidden@coding, tasks: coding, per_task: 3}
+    - {id: pw-hid-argon-r, group: E1b, provider: google, name: "E1b pointwise hidden, gemini-4-argon, research",
+       stat: gemini-4-argon, condition: pointwise/hidden@research, tasks: research, per_task: 3}
+    # Experiment 2 (only if the Step 5 rule passed): 40 tasks per domain x 16 Qwen3-Coder samples; two selectors with
+    # the pointwise hidden prompt; both Haiku labellers. Only coding packets were piloted: the research policy and
+    # label rows stay missing (no research measurement).
+    - {id: e2-policy-c, group: E2, provider: openrouter, requires_e2: true, model: qwen/qwen3-coder,
+       name: "E2 policy samples, Qwen3-Coder, coding", stat: e2_policy, condition: packet@coding, tasks: e2_tasks,
+       per_task: 16, missing_note: "no live Experiment 2 policy call in the cost log yet"}
+    - {id: e2-policy-r, group: E2, provider: openrouter, requires_e2: true, model: qwen/qwen3-coder,
+       name: "E2 policy samples, Qwen3-Coder, research", stat: e2_policy, condition: packet@research,
+       tasks: e2_tasks, per_task: 16, missing_note: "no research measurement: the policy pilot ran on coding packets only"}
+    - {id: e2-sel-s46-c, group: E2, provider: anthropic, requires_e2: true,
+       name: "E2 selector scores, Sonnet 4.6, coding", stat: claude-sonnet-4-6, condition: e2_score/hidden@coding,
+       tasks: e2_tasks, per_task: 16,
+       options: [{stat: claude-sonnet-4-6, condition: e2_score/hidden@coding},
+                 {stat: claude-sonnet-4-6, condition: pointwise/hidden@coding, note: "selector calls not measured: the Experiment 1b hidden pointwise prompt, which the selectors use (Step 4)"}]}
+    - {id: e2-sel-s46-r, group: E2, provider: anthropic, requires_e2: true,
+       name: "E2 selector scores, Sonnet 4.6, research", stat: claude-sonnet-4-6, condition: e2_score/hidden@research,
+       tasks: e2_tasks, per_task: 16,
+       options: [{stat: claude-sonnet-4-6, condition: e2_score/hidden@research},
+                 {stat: claude-sonnet-4-6, condition: pointwise/hidden@research, note: "selector calls not measured: the Experiment 1b hidden pointwise prompt, which the selectors use (Step 4)"}]}
+    - {id: e2-sel-s55-c, group: E2, provider: anthropic, requires_e2: true,
+       name: "E2 selector scores, Sonnet 5.5, coding", stat: claude-sonnet-5-5, condition: e2_score/hidden@coding,
+       tasks: e2_tasks, per_task: 16,
+       options: [{stat: claude-sonnet-5-5, condition: e2_score/hidden@coding},
+                 {stat: claude-sonnet-5-5, condition: pointwise/hidden@coding, note: "selector calls not measured: the Experiment 1b hidden pointwise prompt, which the selectors use (Step 4)"}]}
+    - {id: e2-sel-s55-r, group: E2, provider: anthropic, requires_e2: true,
+       name: "E2 selector scores, Sonnet 5.5, research", stat: claude-sonnet-5-5, condition: e2_score/hidden@research,
+       tasks: e2_tasks, per_task: 16,
+       options: [{stat: claude-sonnet-5-5, condition: e2_score/hidden@research},
+                 {stat: claude-sonnet-5-5, condition: pointwise/hidden@research, note: "selector calls not measured: the Experiment 1b hidden pointwise prompt, which the selectors use (Step 4)"}]}
+    - {id: e2-label-c, group: E2, provider: anthropic, requires_e2: true, model: claude-haiku-5-5,
+       name: "E2 labels, Haiku 5.5, test-record labeller, coding", stat: e2_label, condition: label@coding,
+       tasks: e2_tasks, per_task: 16, missing_note: "no live Experiment 2 label call in the cost log yet"}
+    - {id: e2-label-r, group: E2, provider: anthropic, requires_e2: true, model: claude-haiku-5-5,
+       name: "E2 labels, Haiku 5.5, test-record labeller, research", stat: e2_label, condition: label@research,
+       tasks: e2_tasks, per_task: 16, missing_note: "no research measurement: the labeller ran on coding only"}
+    - {id: e2-labelfull-c, group: E2, provider: anthropic, requires_e2: true, model: claude-haiku-5-5,
+       name: "E2 labels, Haiku 5.5, full-evidence labeller, coding", stat: e2_label_full, condition: label@coding,
+       tasks: e2_tasks, per_task: 16, missing_note: "no live full-evidence label call in the cost log yet"}
+    - {id: e2-labelfull-r, group: E2, provider: anthropic, requires_e2: true, model: claude-haiku-5-5,
+       name: "E2 labels, Haiku 5.5, full-evidence labeller, research", stat: e2_label_full, condition: label@research,
+       tasks: e2_tasks, per_task: 16, missing_note: "no research measurement: the labeller ran on coding only"}
+    # Experiment 3, three-label verification-first judge, shown: Sonnet 5.5 on 30 tasks per domain, Opus 5.5 on 15 per
+    # domain (at most the shown-eligible count). The non-measured rows add the measured extra output tokens of the
+    # three-label judge over the plain shown judge (e3_minus_plain) and stay missing until the Step 6 check has run.
+    - {id: e3-s55-c, group: E3, provider: anthropic, model: claude-sonnet-5-5,
+       name: "E3 three-label, Sonnet 5.5, coding", stat: claude-sonnet-5-5+verify_first, condition: shown@coding,
+       requires: [[claude-sonnet-5-5+verify_first, shown@coding]], tasks: {min: [30, shown_coding]}, per_task: 6}
+    - {id: e3-s55-r, group: E3, provider: anthropic, name: "E3 three-label, Sonnet 5.5, research",
+       stat: claude-sonnet-5-5, condition: shown@research, extra_output_tokens: e3_minus_plain,
+       requires: [[claude-sonnet-5-5+verify_first, shown], [claude-sonnet-5-5, shown]],
+       tasks: {min: [30, shown_research]}, per_task: 6}
+    - {id: e3-o55-c, group: E3, provider: anthropic, name: "E3 three-label, Opus 5.5, coding",
+       stat: claude-opus-5-5, condition: shown@coding, extra_output_tokens: e3_minus_plain,
+       requires: [[claude-sonnet-5-5+verify_first, shown], [claude-sonnet-5-5, shown]],
+       tasks: {min: [15, shown_coding]}, per_task: 6}
+    - {id: e3-o55-r, group: E3, provider: anthropic, name: "E3 three-label, Opus 5.5, research",
+       stat: claude-opus-5-5, condition: shown@research, extra_output_tokens: e3_minus_plain,
+       requires: [[claude-sonnet-5-5+verify_first, shown], [claude-sonnet-5-5, shown]],
+       tasks: {min: [15, shown_research]}, per_task: 6}
+    # Optional: the mitigated best-of-16, Sonnet 5.5 verification-first scores of every Experiment 2 sample, shown:
+    # the pairwise shown profile re-amortised to one cache write per 16 messages, plus e3_minus_plain output tokens
+    # (as in pilot 3's projection). At most the shown-eligible tasks of a domain.
+    - {id: e3-bo16-c, group: E3, provider: anthropic, optional: true, requires_e2: true,
+       name: "E3 mitigated best-of-16, Sonnet 5.5, coding", stat: claude-sonnet-5-5, condition: shown@coding,
+       calls_per_prefix: 16, extra_output_tokens: e3_minus_plain,
+       requires: [[claude-sonnet-5-5+verify_first, shown], [claude-sonnet-5-5, shown]],
+       tasks: {min: [e2_tasks, shown_coding]}, per_task: 16}
+    - {id: e3-bo16-r, group: E3, provider: anthropic, optional: true, requires_e2: true,
+       name: "E3 mitigated best-of-16, Sonnet 5.5, research", stat: claude-sonnet-5-5, condition: shown@research,
+       calls_per_prefix: 16, extra_output_tokens: e3_minus_plain,
+       requires: [[claude-sonnet-5-5+verify_first, shown], [claude-sonnet-5-5, shown]],
+       tasks: {min: [e2_tasks, shown_research]}, per_task: 16}
+    # Set building still owed (calls = sets or trajectories): research sets at the measured cost per built set, the
+    # agent trajectories they need, and coding sets (none at 60 coding tasks, 30 at 90).
+    - {id: build-research-sets, group: Build, provider: anthropic, model: claude-sonnet-5-5,
+       name: "Research sets owed (per set)", stat: research_set, condition: build@research,
+       tasks: research_sets_owed, per_task: 1, missing_note: "no research set-building cost or no built set"}
+    - {id: build-research-agent, group: Build, provider: openrouter, model: deepseek/deepseek-v4.1-flash,
+       name: "Research agent trajectories (per trajectory)", stat: research_trajectory, condition: agent@research,
+       tasks: research_trajectories, per_task: 1, missing_note: "no research agent cost or no trajectory"}
+    - {id: build-coding-sets, group: Build, provider: anthropic, model: claude-sonnet-5-5,
+       name: "Coding sets owed (per set)", stat: coding_set, condition: build@coding,
+       tasks: coding_sets_owed, per_task: 1, missing_note: "no coding set-building cost or no built set"}
+  # Step 10's cut order after cuts 1 to 3, applied cumulatively and only while needed. cap_tasks: at most this many
+  # tasks for the item (the eligible count stays when it is smaller).
+  cuts:
+    - {id: "4a", name: "pointwise drops Opus 4.6", remove: [pw-hid-o46-c, pw-hid-o46-r]}
+    - {id: "4b", name: "pointwise drops Opus 5.5", remove: [pw-hid-o55-c, pw-hid-o55-r]}
+    - {id: "5", name: "drop Opus 5.5 from Experiment 3", remove: [e3-o55-c, e3-o55-r]}
+    - {id: "6", name: "Opus 5.5 shown on 20 tasks, 10 per domain",
+       cap_tasks: {e1-shown-o55-c: 10, e1-shown-o55-r: 10}}
+    - {id: "7", name: "drop Opus 4.6 from the hidden condition", remove: [e1-hid-o46-c, e1-hid-o46-r]}
+    - {id: "8", name: "Experiment 1 shown on 60 tasks, 30 per domain (Sonnet 5.5 pairwise and pointwise shown)",
+       cap_tasks: {e1-shown-s55-c: 30, e1-shown-s55-r: 30, pw-shown-s55-c: 30, pw-shown-s55-r: 30}}

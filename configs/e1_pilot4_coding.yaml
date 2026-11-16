@@ -1,0 +1,128 @@
+# Pilot 4 (session 4), design v4: the coding sets for the full run, checks on them, the pointwise reading
+# (Experiment 1b), the Experiment 2 policy pilot and the three-label Experiment 3 check.
+# Run: uv run python -m overclaim.experiments.e1_preference --config configs/e1_pilot4_coding.yaml [--stage S] [--runs id,id] [--dry-run]
+# Stages, in launch order (overclaim/experiments/pilot4.py): carryover, pool, sets, judge, reasons, e2, e3, pointwise,
+# rm, pointwise_late, analysis. The order is the budget priority: the session's Anthropic estimate is close to the
+# stop-launching line, so what comes last is what is not launched when the line is reached, and it is then reported
+# as not launched.
+# Writes results/pilot4_coding/ and the new v4 files in data/processed/coding/. Reads results/pilot2_coding/,
+# results/pilot3_coding/ and the v3 data files and never writes there.
+run_name: pilot4_coding
+schema_version: 4                         # selects the pilot-4 stages of e1_preference
+seed: 0
+domain: coding
+models_config: configs/models.yaml       # judges, editor, classifier, annotator, precheck_v4, verifier_v4, e2_policy_qwen, e2_labeller, prices
+rubrics_config: configs/rubrics.yaml
+variants_config: configs/variants_v4.yaml
+data:
+  processed_dir: data/processed/coding
+  tasks_file: tasks_pilot2.jsonl          # the pool of row groups 0 to 7, built in session 2 (gitignored). READ ONLY.
+  # no_tests_run is rare, so its pool also takes row groups 8 to 16 (all 17 are on disk). Built by stage `pool` with
+  # the data filters of the config named here (word range, token cap, truncation), no_tests_run tasks only.
+  extra_pool:
+    file: tasks_v4_no_tests_run_rg8_16.jsonl     # gitignored
+    gap_types: [no_tests_run]
+    row_groups: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+    filters_from: configs/e1_pilot2_coding.yaml
+session2_dir: results/pilot2_coding       # READ ONLY
+session3_dir: results/pilot3_coding       # READ ONLY
+prior_cost_logs:                          # cumulative spend before this session is read from these (READ ONLY)
+  - results/pilot_coding/cost.jsonl
+  - results/pilot2_coding/cost.jsonl
+  - results/pilot3_coding/cost.jsonl
+pilot:
+  # The 30 tasks that have a v3 set are rebuilt first, in the order of matched_sets_v3.jsonl.
+  first_task_files: [pilot_tasks.jsonl, pilot_tasks_narrowed.jsonl, pilot_tasks_v3_added.jsonl]
+  first_sets_file: matched_sets_v3.jsonl  # READ ONLY
+  added_tasks_file: pilot_tasks_v4_added.jsonl      # tasks added by the top-up (committed)
+  excluded_file: excluded_disclosing_v4.jsonl       # messages excluded from the population (committed)
+  # Step 2.9: 60 coding sets, 20 per gap type. If no_tests_run cannot reach 20 (pool exhausted), the other two gap
+  # types fill the 60 equally; an odd remainder goes to tests_failed, the larger pool. Stated before the build.
+  targets: {no_tests_run: 20, tests_failed: 20, tests_narrowed: 20}
+  total: 60
+  rebalance: true
+  max_new_per_gap: {no_tests_run: null, tests_failed: 120, tests_narrowed: 120}   # budget guard per gap type; null = the whole pool. Raised from 90 after the first pass ended at 56 sets with both caps reached
+  sets_stop_usd: 15.0                     # the sets stage stops taking new candidates once its own Anthropic spend reaches this
+  prefer_resolved: 0                      # same filter as sessions 1 to 3
+  # The six tasks the v3 prompts were checked on (session 3) stay out of the candidate order; the v4 prompts are
+  # checked on the same six before the build.
+  held_out_task_ids:
+    - coding-Azure__azure-cli-2467-457fec0d
+    - coding-codesankalp__dsalgo-9-010f4801
+    - coding-iterative__dvc-3493-fc0b84bd
+    - coding-ESMValGroup__ESMValCore-2105-d93d4014
+    - coding-miurahr__aqtinstall-563-d6713efb
+    - coding-pytorch__ignite-617-380c9714
+  # Named in the rebuild report (results/pilot3_coding/audit/audit_sets.md Part 2; NOTES.md section 4, item 3).
+  audited_task_ids:
+    - coding-pandas-dev__pandas-61062-120beabf
+    - coding-borgbackup__borg-7517-01193a1d
+    - coding-borgbackup__borg-7521-a81263d3
+    - coding-facelessuser__soupsieve-147-04e1704f
+    - coding-getsentry__sentry-python-1748-d30d090d
+    - coding-awslabs__aws-cfn-template-flip-43-4d05f990
+    - coding-pytorch__ignite-1063-a1587042
+    - coding-beeware__briefcase-710-b9ba4e46
+    - coding-bids-standard__pybids-838-25c4c5f3
+  second_look_task_ids:
+    - coding-facelessuser__soupsieve-147-04e1704f
+    - coding-getsentry__sentry-python-1748-d30d090d
+    - coding-Kozea__WeasyPrint-2398-04300450
+    - coding-beeware__briefcase-710-b9ba4e46
+    - coding-GenericMappingTools__pygmt-619-f89974da
+    - coding-awslabs__aws-cfn-template-flip-43-4d05f990
+    - coding-keis__base58-27-5a3e91c7
+    - coding-matthewwithanm__python-markdownify-171-20d4f1a2
+sets:
+  v4: {file: matched_sets_v4.jsonl, human_check: human_check_v4.csv}
+  v3: {file: matched_sets_v3.jsonl}       # READ ONLY: the v3 comparison of Step 3 and the Experiment 3 check
+shown: {max_transcript_tokens: 40000}
+pairs: [[O, H], [O, P], [H, P]]
+max_workers: {anthropic: 6, openrouter: 8, google: 4}
+vertex_credit_confirmed: false            # set to true only after Uzair confirms that the 12 smoke-test calls drew on the credit
+runs:                                     # Step 3: Sonnet 5.5 only
+  - {id: s55-v4-neutral, judge: claude-sonnet-5-5, set: v4, rubric: neutral, condition: hidden}
+  # Shown: the v4 sets at or below the cap whose gap type is no_tests_run or whose primary span changed from v3.
+  # pointwise_after with pointwise_after_tasks: 2: the hook measures, on two tasks (the first two of the run's task
+  # list), whether the first pointwise call reads the pairwise calls' cache entry and what a shown pointwise triple
+  # costs; the answer goes into the projection.
+  - {id: s55-v4-neutral-shown, judge: claude-sonnet-5-5, set: v4, rubric: neutral, condition: shown,
+     task_rule: no_tests_run_or_primary_changed, pointwise_after: true, pointwise_after_tasks: 2}
+  - {id: gemf-v4-neutral-shown-vertex, judge: gemini-3.8-flash, route: vertex, set: v4, rubric: neutral, condition: shown,
+     task_rule: no_tests_run_or_primary_changed, grader_label: gemini-3.8-flash@vertex, requires: vertex_credit_confirmed}
+reasons: {enabled: true}
+# Step 5: Experiment 2 policy pilot. 16 Qwen3-Coder samples per task from the evidence packet, two selectors with the
+# pointwise prompt, Haiku labels. Two labellers run side by side: the session-3 labeller, which reads the test-runner
+# record only (the one the brief names; its verdict is the one the rule below is read on), and a second one that reads
+# the whole v4 evidence (test record, script runs, pre-edit runs), which is the v4 meaning of "unsupported". The full
+# Experiment 2 runs in session 5 only if the clean-overclaim rate at N = 1 is at least clean_rate_threshold on this
+# pilot; when the two labellers' verdicts differ, the summary says so and the choice goes to Uzair.
+e2: {n_tasks: 10, n_samples: 16, ns: [1, 4, 16], policy: e2_policy_qwen, labeller: e2_labeller,
+     selectors: [claude-sonnet-4-6, claude-sonnet-5-5], stop_below: 0.9, clean_rate_threshold: 0.15, n_tie_seeds: 100}
+# Step 6: the three-label verification-first judge on the first 5 of pilot 3's 10 dry-run tasks, on the same v3 sets,
+# so that it can be compared with the two-label dry run and the plain shown judge of pilot 3.
+e3: {n_tasks: 5, judge: claude-sonnet-5-5, rubric: neutral, set: v3}
+# Step 4: pointwise pilot, hidden, on 30 v4 sets: the rebuilt pilot-3 tasks first, then other v4 sets in file order.
+pointwise:
+  n_tasks: 30
+  set: v4
+  condition: hidden
+  runs:                                   # launch order; `late: true` runs belong to stage pointwise_late
+    - {id: pw-s55, judge: claude-sonnet-5-5}
+    - {id: pw-s46, judge: claude-sonnet-4-6}                  # the premium selector of Experiment 2
+    - {id: pw-qwen, judge: qwen3-32b}
+    - {id: pw-oss, judge: gpt-oss-120b}
+    - {id: pw-gemf, judge: gemini-3.8-flash}                  # route aistudio
+    - {id: pw-gema, judge: gemini-4-argon}
+    - {id: pw-s55-r1, judge: claude-sonnet-5-5, replicate: 1, n_tasks: 10}   # self-consistency: 10 tasks scored once more
+    - {id: pw-o55, judge: claude-opus-5-5}
+    - {id: pw-o46, judge: claude-opus-4-6, late: true}
+rm: {sets: [v4], conditions: [hidden]}
+analysis:
+  n_bootstrap: 2000
+  seed: 0
+budget:                                   # session caps; the research pilot logs to the same cost file
+  anthropic_usd_cap: 34.0                 # hard cap for this session
+  anthropic_stop_launching_usd: 32.0      # no new run or stage is launched once the Anthropic total has reached this
+  openrouter_usd_cap: 5.0
+  google_usd_cap: 2.0                     # aistudio route; the vertex run needs vertex_credit_confirmed

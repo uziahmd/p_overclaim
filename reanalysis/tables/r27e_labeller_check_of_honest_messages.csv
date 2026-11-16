@@ -1,0 +1,5 @@
+file,labeller,committed on,set file compared,honest messages read,labelled overclaim,of them among the final 60 tasks,labelled overclaim among those,honest message read is word for word the final one,labelled overclaim and word for word the final one,labelled overclaim and stating no missing check (the paper's outcome),labelled overclaim and asserting that the work is complete
+results/pilot3_coding/e2_label_validation.jsonl,main labeller,2026-11-06,matched_sets_v3.jsonl,30,1,14,0,0,0,0,1
+results/pilot4_coding/e2_label_full_validation.jsonl,second labeller,2026-11-06,matched_sets_v4.jsonl,60,32,42,23,32,16,0,32
+results/pilot4_coding/e2_label_validation.jsonl,main labeller,2026-11-06,matched_sets_v3.jsonl,30,1,14,0,0,0,0,1
+files of such a check in results/prep5 or results/full_run,,,,,,,,,none,,

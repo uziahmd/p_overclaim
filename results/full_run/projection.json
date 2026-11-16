@@ -1,0 +1,4435 @@
+{
+ "inputs": {
+  "spend": {
+   "logs": [
+    {
+     "path": "results/pilot_coding/cost.jsonl",
+     "usd": {
+      "anthropic": 2.161914,
+      "openrouter": 0.0,
+      "google": 0.0
+     }
+    },
+    {
+     "path": "results/pilot2_coding/cost.jsonl",
+     "usd": {
+      "anthropic": 15.519773099999997,
+      "openrouter": 0.15437492600000016,
+      "google": 1.172887999999999
+     }
+    },
+    {
+     "path": "results/pilot3_coding/cost.jsonl",
+     "usd": {
+      "anthropic": 24.19972832499999,
+      "openrouter": 0.09113035999999994,
+      "google": 1.1399867500000005
+     }
+    },
+    {
+     "path": "results/pilot4_coding/cost.jsonl",
+     "usd": {
+      "anthropic": 24.530656999999948,
+      "openrouter": 0.3485114213999998,
+      "google": 0.9044034999999994
+     }
+    }
+   ],
+   "earlier": {
+    "anthropic": 66.41207242499993,
+    "openrouter": 0.5940167073999999,
+    "google": 3.217278249999999
+   },
+   "part1": {
+    "anthropic": 11.408371199999973,
+    "openrouter": 0.4039774430519999,
+    "google": 0.0
+   },
+   "part1_log": "results/prep5/cost.jsonl",
+   "part1_written": true,
+   "so_far": {
+    "anthropic": 77.82044362499991,
+    "openrouter": 0.9979941504519998,
+    "google": 3.217278249999999
+   },
+   "project_total_usd": 180.0,
+   "remainder_usd": 102.17955637500009
+  },
+  "gates": {
+   "research": {
+    "path": "results/prep5/research/gate.json",
+    "passed": false,
+    "known": true,
+    "text": "failed"
+   },
+   "e2": {
+    "path": "results/prep5/e2_gate.json",
+    "passed": true,
+    "known": true,
+    "text": "passed"
+   }
+  },
+  "base": {
+   "files": {
+    "coding": "data/processed/coding/matched_sets_v4_full_run.jsonl",
+    "research": "data/processed/research/matched_sets_research_v2.jsonl"
+   },
+   "pending_files": [],
+   "coding": 60,
+   "shown_coding": 34,
+   "band": 26,
+   "coding_without_tokens": 0,
+   "research_built": 20,
+   "research_eligible": 20,
+   "e2_shown_coding": 26,
+   "e7_available": 30,
+   "e7_per_gap": {
+    "no_tests_run": 11,
+    "tests_failed": 8,
+    "tests_narrowed": 11
+   },
+   "e7_eligible_per_gap": {
+    "no_tests_run": 15,
+    "tests_failed": 8,
+    "tests_narrowed": 11
+   }
+  },
+  "rules": {
+   "research_tasks": 60,
+   "opus_shown_tasks": 30,
+   "e3_tasks": 60,
+   "opus_e3_tasks": 30,
+   "e2_tasks_per_domain": 40,
+   "e7_tasks": 30,
+   "e7_per_gap": 10
+  },
+  "not_written": []
+ },
+ "factors": {
+  "opus_over_sonnet_shown": {
+   "value": 2.004498059080544,
+   "missing": [],
+   "pending": [],
+   "text": "Opus 5.5 / Sonnet 5.5 cost per neutral shown pairwise call = 2.004 (results/pilot3_coding/judge_calls.jsonl; 8 tasks, 48 and 48 live calls)"
+  },
+  "full_rubric_extra_input": {
+   "value": 18.0,
+   "missing": [],
+   "pending": [],
+   "text": "full minus neutral rubric, Sonnet 5.5 hidden pairwise input tokens per call = +18.0 tokens (results/pilot3_coding/judge_calls.jsonl; 30 tasks, 180 and 180 live calls)"
+  },
+  "e7_extra_input": {
+   "value": 32.0,
+   "missing": [],
+   "pending": [],
+   "text": "one added instruction of 32 o200k tokens, counted by the lead: 32 (a constant)"
+  }
+ },
+ "tie_rates": [
+  {
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "source": "results/pilot4_coding/pointwise_calls.jsonl",
+   "tasks": 30,
+   "excluded": 0,
+   "ties": 3,
+   "rate": 0.1
+  },
+  {
+   "judge": "claude-opus-5-5",
+   "domain": "coding",
+   "source": "results/pilot4_coding/pointwise_calls.jsonl",
+   "tasks": 30,
+   "excluded": 0,
+   "ties": 6,
+   "rate": 0.2
+  },
+  {
+   "judge": "claude-sonnet-4-6",
+   "domain": "coding",
+   "source": "results/pilot4_coding/pointwise_calls.jsonl",
+   "tasks": 30,
+   "excluded": 0,
+   "ties": 11,
+   "rate": 0.36666666666666664
+  },
+  {
+   "judge": "claude-opus-4-6",
+   "domain": "coding",
+   "source": "results/pilot4_coding/pointwise_calls.jsonl",
+   "tasks": 30,
+   "excluded": 0,
+   "ties": 5,
+   "rate": 0.16666666666666666
+  },
+  {
+   "judge": "qwen3-32b",
+   "domain": "coding",
+   "source": "results/pilot4_coding/pointwise_calls.jsonl",
+   "tasks": 30,
+   "excluded": 0,
+   "ties": 10,
+   "rate": 0.3333333333333333
+  },
+  {
+   "judge": "gpt-oss-120b",
+   "domain": "coding",
+   "source": "results/pilot4_coding/pointwise_calls.jsonl",
+   "tasks": 30,
+   "excluded": 3,
+   "ties": 13,
+   "rate": 0.48148148148148145
+  },
+  {
+   "judge": "deepseek-v4-pro",
+   "domain": "coding",
+   "source": null,
+   "tasks": 0,
+   "excluded": 0,
+   "ties": 0,
+   "rate": null
+  },
+  {
+   "judge": "gemini-3.8-flash",
+   "domain": "coding",
+   "source": "results/pilot4_coding/pointwise_calls.jsonl",
+   "tasks": 30,
+   "excluded": 0,
+   "ties": 1,
+   "rate": 0.03333333333333333
+  },
+  {
+   "judge": "gemini-4-argon",
+   "domain": "coding",
+   "source": "results/pilot4_coding/pointwise_calls.jsonl",
+   "tasks": 30,
+   "excluded": 0,
+   "ties": 4,
+   "rate": 0.13333333333333333
+  }
+ ],
+ "rows": [
+  {
+   "id": "t1-pwh-s55-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-5-5",
+      "pointwise/hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.00456165,
+    "basis": "measured",
+    "text": "measured in pilot 4 pointwise, v4 sets (120 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-o55-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, Opus 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-5-5",
+      "pointwise/hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.008447777777777778,
+    "basis": "measured",
+    "text": "measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-s46-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, Sonnet 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-4-6",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-4-6",
+      "pointwise/hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.004229033333333333,
+    "basis": "measured",
+    "text": "measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-o46-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, Opus 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-4-6",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-4-6",
+      "pointwise/hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.006765055555555556,
+    "basis": "measured",
+    "text": "measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-full-smoke-s55-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "name": "full-rubric pointwise parse smoke test (9 calls)",
+   "domain": "coding",
+   "tasks": 3,
+   "per_task": 3,
+   "price": [
+    {
+     "extra_input": [
+      "claude-sonnet-5-5",
+      "pointwise/hidden@coding"
+     ],
+     "factor": "full_rubric_extra_input"
+    }
+   ],
+   "note": "decision (5): 3 tasks x 3 calls before the full-rubric row; the row is dropped, not iterated, if it fails to parse",
+   "unit": {
+    "usd": 0.004597650000000001,
+    "basis": "derived",
+    "text": "(b) claude-sonnet-5-5 pointwise/hidden@coding (measured in pilot 4 pointwise, v4 sets (120 live calls), 0.004562 USD per call) x 1.008, the claude-sonnet-5-5 list-price cost of its token profile plus +18 uncached input tokens per call over that of the profile as measured (full minus neutral rubric, Sonnet 5.5 hidden pairwise input tokens per call = +18.0 tokens (results/pilot3_coding/judge_calls.jsonl; 30 tasks, 180 and 180 live calls))",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-full-s55-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "name": "E1 pointwise hidden, full rubric, Sonnet 5.5, coding",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "extra_input": [
+      "claude-sonnet-5-5",
+      "pointwise/hidden@coding"
+     ],
+     "factor": "full_rubric_extra_input"
+    }
+   ],
+   "note": "the pairwise full rubric transposed into the pointwise template (decision (5)); no call of it measured yet",
+   "unit": {
+    "usd": 0.004597650000000001,
+    "basis": "derived",
+    "text": "(b) claude-sonnet-5-5 pointwise/hidden@coding (measured in pilot 4 pointwise, v4 sets (120 live calls), 0.004562 USD per call) x 1.008, the claude-sonnet-5-5 list-price cost of its token profile plus +18 uncached input tokens per call over that of the profile as measured (full minus neutral rubric, Sonnet 5.5 hidden pairwise input tokens per call = +18.0 tokens (results/pilot3_coding/judge_calls.jsonl; 30 tasks, 180 and 180 live calls))",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-qwen-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, qwen3-32b, coding",
+   "provider": "openrouter",
+   "judge": "qwen3-32b",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "qwen3-32b",
+      "pointwise/hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 8.353644444444444e-05,
+    "basis": "measured",
+    "text": "measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-oss-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, gpt-oss-120b, coding",
+   "provider": "openrouter",
+   "judge": "gpt-oss-120b",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "gpt-oss-120b",
+      "pointwise/hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 6.583623333333334e-05,
+    "basis": "measured",
+    "text": "measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-deepseek-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, deepseek-v4-pro, coding",
+   "provider": "openrouter",
+   "judge": "deepseek-v4-pro",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "profile_of": [
+      "qwen3-32b",
+      "pointwise/hidden@coding"
+     ],
+     "no_cache": true
+    }
+   ],
+   "note": "no measured call of this judge; profile of qwen3-32b",
+   "unit": {
+    "usd": 0.0006207281888888889,
+    "basis": "derived",
+    "text": "(b) qwen3-32b pointwise/hidden@coding token profile (measured in pilot 4 pointwise, v4 sets (90 live calls)), no cache tokens to move (no prompt cache): 881 input and 46 output tokens per call at deepseek/deepseek-v4-pro list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-flash-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, gemini-3.8-flash, coding",
+   "provider": "google",
+   "judge": "gemini-3.8-flash",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "gemini-3.8-flash",
+      "pointwise/hidden@coding"
+     ]
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.0008944666666666668,
+    "basis": "measured",
+    "text": "measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pwh-argon-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 pointwise hidden, gemini-4-argon, coding",
+   "provider": "google",
+   "judge": "gemini-4-argon",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "gemini-4-argon",
+      "pointwise/hidden@coding"
+     ]
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.002909888888888889,
+    "basis": "measured",
+    "text": "measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-rm-sky-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 reward model, Skywork 3B, coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-rm-sky06-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 reward model, Skywork 0.6B (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-rm-sky17-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 reward model, Skywork 1.7B (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-rm-sky4-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 reward model, Skywork 4B (E5 scan, 4-bit), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-rm-sky8q-c",
+   "tier": 1,
+   "group": "E1 pointwise hidden",
+   "name": "E1 reward model, Skywork 8B 4-bit (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 3,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "note": "only if it fits in 10 GB (addendum E5)",
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-s55-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-5-5",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 0.00456165,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: claude-sonnet-5-5 pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (120 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-s55-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-5-5",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 0.00456165,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: claude-sonnet-5-5 pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (120 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-o55-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Opus 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-5-5",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 0.008447777777777778,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: claude-opus-5-5 pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-o55-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Opus 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-5-5",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 0.008447777777777778,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: claude-opus-5-5 pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-s46-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Sonnet 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-4-6",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-4-6",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 0.004229033333333333,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: claude-sonnet-4-6 pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-s46-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Sonnet 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-4-6",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-4-6",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 0.004229033333333333,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: claude-sonnet-4-6 pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-o46-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Opus 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-4-6",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-4-6",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 0.006765055555555556,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: claude-opus-4-6 pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-o46-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Opus 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-4-6",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-4-6",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 0.006765055555555556,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: claude-opus-4-6 pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-qwen-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, qwen3-32b, coding",
+   "provider": "openrouter",
+   "judge": "qwen3-32b",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "qwen3-32b",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 8.353644444444444e-05,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: qwen3-32b pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-qwen-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, qwen3-32b, coding",
+   "provider": "openrouter",
+   "judge": "qwen3-32b",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "qwen3-32b",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 8.353644444444444e-05,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: qwen3-32b pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-oss-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, gpt-oss-120b, coding",
+   "provider": "openrouter",
+   "judge": "gpt-oss-120b",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "gpt-oss-120b",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 6.583623333333334e-05,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: gpt-oss-120b pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-oss-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, gpt-oss-120b, coding",
+   "provider": "openrouter",
+   "judge": "gpt-oss-120b",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "gpt-oss-120b",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "unit": {
+    "usd": 6.583623333333334e-05,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: gpt-oss-120b pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-deepseek-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, deepseek-v4-pro, coding",
+   "provider": "openrouter",
+   "judge": "deepseek-v4-pro",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "profile_of": [
+      "qwen3-32b",
+      "pointwise/hidden@coding"
+     ],
+     "no_cache": true
+    }
+   ],
+   "note": "no measured call of this judge; profile of qwen3-32b",
+   "unit": {
+    "usd": 0.0006207281888888889,
+    "basis": "derived",
+    "text": "(b) qwen3-32b pointwise/hidden@coding token profile (measured in pilot 4 pointwise, v4 sets (90 live calls)), no cache tokens to move (no prompt cache): 881 input and 46 output tokens per call at deepseek/deepseek-v4-pro list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-deepseek-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, deepseek-v4-pro, coding",
+   "provider": "openrouter",
+   "judge": "deepseek-v4-pro",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "profile_of": [
+      "qwen3-32b",
+      "pointwise/hidden@coding"
+     ],
+     "no_cache": true
+    }
+   ],
+   "note": "no measured call of this judge; profile of qwen3-32b",
+   "unit": {
+    "usd": 0.0006207281888888889,
+    "basis": "derived",
+    "text": "(b) qwen3-32b pointwise/hidden@coding token profile (measured in pilot 4 pointwise, v4 sets (90 live calls)), no cache tokens to move (no prompt cache): 881 input and 46 output tokens per call at deepseek/deepseek-v4-pro list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-flash-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, gemini-3.8-flash, coding",
+   "provider": "google",
+   "judge": "gemini-3.8-flash",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "gemini-3.8-flash",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.0008944666666666668,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: gemini-3.8-flash pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-flash-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, gemini-3.8-flash, coding",
+   "provider": "google",
+   "judge": "gemini-3.8-flash",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "gemini-3.8-flash",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.0008944666666666668,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: gemini-3.8-flash pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-argon-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, gemini-4-argon, coding",
+   "provider": "google",
+   "judge": "gemini-4-argon",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "gemini-4-argon",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.002909888888888889,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: gemini-4-argon pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-argon-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, gemini-4-argon, coding",
+   "provider": "google",
+   "judge": "gemini-4-argon",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "gemini-4-argon",
+      "pointwise/hidden@coding"
+     ],
+     "derived": "an E6 message is one hidden pointwise call"
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.002909888888888889,
+    "basis": "derived",
+    "text": "(c) an E6 message is one hidden pointwise call: gemini-4-argon pointwise/hidden@coding measured in pilot 4 pointwise, v4 sets (90 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Skywork 3B, coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Skywork 3B, coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky06-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Skywork 0.6B (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky06-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Skywork 0.6B (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky17-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Skywork 1.7B (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky17-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Skywork 1.7B (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky4-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Skywork 4B (E5 scan, 4-bit), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky4-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Skywork 4B (E5 scan, 4-bit), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky8q-plus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O+, Skywork 8B 4-bit (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e6-sky8q-minus-c",
+   "tier": 1,
+   "group": "E6 dose-response",
+   "name": "E6 O-, Skywork 8B 4-bit (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 1,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pws-s55-c",
+   "tier": 1,
+   "group": "E1 pointwise shown",
+   "name": "E1 pointwise shown, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "pw_shown_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-5-5",
+      "pointwise/shown@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.050353393333333336,
+    "basis": "measured",
+    "text": "measured in Part 1 plain shown scorer, coding (15 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "ab-i-s55-c",
+   "tier": 1,
+   "group": "E1 pointwise shown",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "name": "E1 pointwise shown, Sonnet 5.5, coding tasks above 40,000 and up to 60,000 rendered tokens (add-back (i))",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "band_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "band_tokens": [
+      "claude-sonnet-5-5",
+      "pointwise/shown@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.07450200184855922,
+    "basis": "derived",
+    "text": "(b) claude-sonnet-5-5 pointwise/shown@coding (measured in Part 1 plain shown scorer, coding (15 live calls); 15 of them on tasks with known rendered tokens): 1.48 USD of cache write and read per million rendered transcript tokens, applied to the band's mean of 48,285 rendered tokens, plus 0.0032 USD per call of uncached input and output; claude-sonnet-5-5 list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pws-o55-c",
+   "tier": 1,
+   "group": "E1 pointwise shown",
+   "name": "E1 pointwise shown, Opus 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "o55_shown_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "times": {
+      "measured": [
+       "claude-sonnet-5-5",
+       "pointwise/shown@coding"
+      ]
+     },
+     "factor": "opus_over_sonnet_shown"
+    }
+   ],
+   "unit": {
+    "usd": 0.10093327920478587,
+    "basis": "derived",
+    "text": "measured in Part 1 plain shown scorer, coding (15 live calls); x Opus 5.5 / Sonnet 5.5 cost per neutral shown pairwise call = 2.004 (results/pilot3_coding/judge_calls.jsonl; 8 tasks, 48 and 48 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pws-qwen-c",
+   "tier": 1,
+   "group": "E1 pointwise shown",
+   "name": "E1 pointwise shown, qwen3-32b, coding",
+   "provider": "openrouter",
+   "judge": "qwen3-32b",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "pw_shown_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "ratio": [
+      "qwen3-32b",
+      "pointwise/shown@coding"
+     ]
+    }
+   ],
+   "note": "no prompt cache on OpenRouter",
+   "unit": {
+    "usd": 0.002624593949461941,
+    "basis": "derived",
+    "text": "(a) claude-sonnet-5-5 pointwise/shown@coding token profile x tokenizer ratio 0.61 (hidden input tokens, qwen3-32b), qwen3-32b output tokens, qwen/qwen3-32b prices; data: claude-sonnet-5-5 pointwise/shown@coding (measured in Part 1 plain shown scorer, coding (15 live calls)), claude-sonnet-5-5 and qwen3-32b hidden (pilot 3, v3 sets, ratio basis)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pws-oss-c",
+   "tier": 1,
+   "group": "E1 pointwise shown",
+   "name": "E1 pointwise shown, gpt-oss-120b, coding",
+   "provider": "openrouter",
+   "judge": "gpt-oss-120b",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "pw_shown_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "ratio": [
+      "gpt-oss-120b",
+      "pointwise/shown@coding"
+     ]
+    }
+   ],
+   "note": "no prompt cache on OpenRouter",
+   "unit": {
+    "usd": 0.0013115315871234246,
+    "basis": "derived",
+    "text": "(a) claude-sonnet-5-5 pointwise/shown@coding token profile x tokenizer ratio 0.61 (hidden input tokens, gpt-oss-120b), gpt-oss-120b output tokens, openai/gpt-oss-120b prices; data: claude-sonnet-5-5 pointwise/shown@coding (measured in Part 1 plain shown scorer, coding (15 live calls)), claude-sonnet-5-5 and gpt-oss-120b hidden (pilot 3, v3 sets, ratio basis)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pws-deepseek-c",
+   "tier": 1,
+   "group": "E1 pointwise shown",
+   "name": "E1 pointwise shown, deepseek-v4-pro, coding",
+   "provider": "openrouter",
+   "judge": "deepseek-v4-pro",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "pw_shown_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "profile_of": [
+      "qwen3-32b",
+      "pointwise/shown@coding"
+     ],
+     "no_cache": true
+    }
+   ],
+   "note": "no measured call of this judge; profile of qwen3-32b (its shown profile estimated from the Sonnet 5.5 shown profile)",
+   "unit": {
+    "usd": 0.020853319964257374,
+    "basis": "derived",
+    "text": "(b) qwen3-32b pointwise/shown@coding token profile as projection.unit_cost estimates it: claude-sonnet-5-5 pointwise/shown@coding (measured in Part 1 plain shown scorer, coding (15 live calls)) x tokenizer ratio 0.61 (hidden input tokens, claude-sonnet-5-5 hidden (pilot 3, v3 sets, ratio basis) and qwen3-32b hidden (pilot 3, v3 sets, ratio basis, 180 live calls)), qwen3-32b output tokens per hidden call, its 32,142 cache-write and cache-read tokens per call counted as uncached input (no prompt cache): 32,643 input and 47 output tokens per call at deepseek/deepseek-v4-pro list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pws-flash-c",
+   "tier": 1,
+   "group": "E1 pointwise shown",
+   "name": "E1 pointwise shown, gemini-3.8-flash, coding",
+   "provider": "google",
+   "judge": "gemini-3.8-flash",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "pw_shown_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "ratio": [
+      "gemini-3.8-flash",
+      "pointwise/shown@coding"
+     ]
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.02721599301819402,
+    "basis": "derived",
+    "text": "(a) claude-sonnet-5-5 pointwise/shown@coding token profile x tokenizer ratio 0.68 (hidden input tokens, gemini-3.8-flash), gemini-3.8-flash output tokens, gemini-3.8-flash prices; data: claude-sonnet-5-5 pointwise/shown@coding (measured in Part 1 plain shown scorer, coding (15 live calls)), claude-sonnet-5-5 and gemini-3.8-flash hidden (pilot 3, v3 sets, ratio basis)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-pws-argon-c",
+   "tier": 1,
+   "group": "E1 pointwise shown",
+   "name": "E1 pointwise shown, gemini-4-argon, coding",
+   "provider": "google",
+   "judge": "gemini-4-argon",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "pw_shown_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "ratio": [
+      "gemini-4-argon",
+      "pointwise/shown@coding"
+     ]
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.07809115910174441,
+    "basis": "derived",
+    "text": "(a) claude-sonnet-5-5 pointwise/shown@coding token profile x tokenizer ratio 0.73 (hidden input tokens, gemini-4-argon), gemini-4-argon output tokens, gemini-4-argon prices; data: claude-sonnet-5-5 pointwise/shown@coding (measured in Part 1 plain shown scorer, coding (15 live calls)), claude-sonnet-5-5 and gemini-4-argon hidden (pilot 3, v3 sets, ratio basis)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-policy-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 policy samples, Qwen3-Coder, coding",
+   "provider": "openrouter",
+   "model": "qwen/qwen3-coder",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "measured": [
+      "e2_policy",
+      "packet@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.0010296136111111111,
+    "basis": "measured",
+    "text": "measured in results/prep5/cost.jsonl by purpose e2_policy_packet (144 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-sel-s46-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 selector scores, Sonnet 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-4-6",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-4-6",
+      "e2_score/hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.004738395833333333,
+    "basis": "measured",
+    "text": "measured in results/prep5/cost.jsonl by purpose e2_score_pointwise (144 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-sel-s55-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 selector scores, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-5-5",
+      "e2_score/hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.004541722222222222,
+    "basis": "measured",
+    "text": "measured in results/prep5/cost.jsonl by purpose e2_score_pointwise (144 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-sel-deepseek-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 selector scores, deepseek-v4-pro, coding",
+   "provider": "openrouter",
+   "judge": "deepseek-v4-pro",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "profile_of": [
+      "claude-sonnet-5-5",
+      "e2_score/hidden@coding"
+     ],
+     "no_cache": true
+    }
+   ],
+   "note": "no measured call of this judge; profile of claude-sonnet-5-5",
+   "unit": {
+    "usd": 0.0012314714027777778,
+    "basis": "derived",
+    "text": "(b) claude-sonnet-5-5 e2_score/hidden@coding token profile (measured in results/prep5/cost.jsonl by purpose e2_score_pointwise (144 live calls)), no cache tokens to move (no prompt cache): 1,708 input and 113 output tokens per call at deepseek/deepseek-v4-pro list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-sel-sky-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 selector scores, Skywork 3B, coding",
+   "provider": "local",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-sel-sky06-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 selector scores, Skywork 0.6B (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-sel-sky17-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 selector scores, Skywork 1.7B (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-sel-sky4-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 selector scores, Skywork 4B (E5 scan, 4-bit), coding",
+   "provider": "local",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-sel-sky8q-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 selector scores, Skywork 8B 4-bit (E5 scan), coding",
+   "provider": "local",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "zero": "local GPU, no API call: 0 USD"
+    }
+   ],
+   "unit": {
+    "usd": 0.0,
+    "basis": "derived",
+    "text": "local GPU, no API call: 0 USD",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-label-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 labels, Haiku 5.5, test-record labeller, coding",
+   "provider": "anthropic",
+   "model": "claude-haiku-5-5",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "measured": [
+      "e2_label",
+      "label@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.0001708,
+    "basis": "measured",
+    "text": "measured in results/prep5/cost.jsonl by purpose e2_label (144 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e2-labelfull-c",
+   "tier": 1,
+   "group": "E2",
+   "name": "E2 labels, Haiku 5.5, full-evidence labeller, coding",
+   "provider": "anthropic",
+   "model": "claude-haiku-5-5",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "e2_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "measured": [
+      "e2_label_full",
+      "label@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.00051154375,
+    "basis": "measured",
+    "text": "measured in results/prep5/cost.jsonl by purpose e2_label_full (144 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e3-s55-c",
+   "tier": 1,
+   "group": "E3 pointwise",
+   "name": "E3 verification-first scorer, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "e3_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-5-5",
+      "vfp/shown@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.055756026666666667,
+    "basis": "measured",
+    "text": "measured in Part 1 verification-first scorer check, coding (15 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e3-o55-c",
+   "tier": 1,
+   "group": "E3 pointwise",
+   "name": "E3 verification-first scorer, Opus 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "o55_e3_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "times": {
+      "measured": [
+       "claude-sonnet-5-5",
+       "vfp/shown@coding"
+      ]
+     },
+     "factor": "opus_over_sonnet_shown"
+    }
+   ],
+   "unit": {
+    "usd": 0.11176284723537638,
+    "basis": "derived",
+    "text": "measured in Part 1 verification-first scorer check, coding (15 live calls); x Opus 5.5 / Sonnet 5.5 cost per neutral shown pairwise call = 2.004 (results/pilot3_coding/judge_calls.jsonl; 8 tasks, 48 and 48 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "ab-iii-bo16-c",
+   "tier": 1,
+   "group": "E3 mitigated best-of-16",
+   "name": "E3 mitigated best-of-16, Sonnet 5.5, coding (add-back (iii))",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "requires_e2": true,
+   "tasks": "bo16_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "reamortize": [
+      "claude-sonnet-5-5",
+      "vfp/shown@coding"
+     ],
+     "calls_per_prefix": 16
+    }
+   ],
+   "unit": {
+    "usd": 0.021595666666666673,
+    "basis": "derived",
+    "text": "(b) claude-sonnet-5-5 vfp/shown@coding token profile (measured in Part 1 verification-first scorer check, coding (15 live calls)) with one cache write per 16 calls, claude-sonnet-5-5 list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-bo16-deepseek-c",
+   "tier": 1,
+   "group": "E3 mitigated best-of-16",
+   "name": "E3 mitigated best-of-16, deepseek-v4-pro, coding",
+   "provider": "openrouter",
+   "judge": "deepseek-v4-pro",
+   "domain": "coding",
+   "requires_e2": true,
+   "optional_openrouter": true,
+   "tasks": "bo16_coding",
+   "per_task": 16,
+   "price": [
+    {
+     "profile_of": [
+      "deepseek-v4-pro",
+      "vfp/shown@coding"
+     ],
+     "no_cache": true,
+     "ratio_label": "pointwise/hidden@coding"
+    },
+    {
+     "profile_of": [
+      "claude-sonnet-5-5",
+      "vfp/shown@coding"
+     ],
+     "no_cache": true
+    }
+   ],
+   "note": "re-priced on 2026-11-08 from the judge's own measured hidden pointwise calls (amendment 3, item 9): Sonnet 5.5's verification-first profile x the tokenizer ratio of deepseek-v4-pro's to Sonnet 5.5's mean input tokens per hidden pointwise call, deepseek-v4-pro's own output tokens per such call, the cache buckets as plain input; before the hidden stage the row was priced on Sonnet 5.5's profile at DeepSeek's list prices (the second method, 14.54 USD), which did not fit under the 17.00 stop line",
+   "unit": {
+    "usd": 0.01943279601323561,
+    "basis": "derived",
+    "text": "(b) deepseek-v4-pro vfp/shown@coding token profile as projection.unit_cost estimates it: claude-sonnet-5-5 vfp/shown@coding (measured in Part 1 verification-first scorer check, coding (15 live calls)) x tokenizer ratio 0.57 (pointwise/hidden@coding input tokens, claude-sonnet-5-5 pointwise/hidden@coding (pilot 4 pointwise, v4 sets) and deepseek-v4-pro pointwise/hidden@coding (Part 2 pointwise, frozen sets, 300 live calls)), deepseek-v4-pro output tokens per pointwise/hidden@coding call, its 29,836 cache-write and cache-read tokens per call counted as uncached input (no prompt cache): 30,424 input and 41 output tokens per call at deepseek/deepseek-v4-pro list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e7-instr-s55-c",
+   "tier": 1,
+   "group": "E7 mitigation ablation",
+   "name": "E7 instruction-only scorer, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "e7_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "extra_input": [
+      "claude-sonnet-5-5",
+      "pointwise/shown@coding"
+     ],
+     "factor": "e7_extra_input"
+    }
+   ],
+   "note": "the plain shown scorer and the verification-first scorer on these tasks are the E1 pointwise shown and E3 rows of Sonnet 5.5, already in the plan",
+   "unit": {
+    "usd": 0.050417393333333324,
+    "basis": "derived",
+    "text": "(b) claude-sonnet-5-5 pointwise/shown@coding (measured in Part 1 plain shown scorer, coding (15 live calls), 0.050353 USD per call) x 1.001, the claude-sonnet-5-5 list-price cost of its token profile plus +32 uncached input tokens per call over that of the profile as measured (one added instruction of 32 o200k tokens, counted by the lead: 32 (a constant))",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e7-instr-flash-c",
+   "tier": 1,
+   "group": "E7 mitigation ablation",
+   "name": "E7 instruction-only scorer, gemini-3.8-flash, coding",
+   "provider": "google",
+   "judge": "gemini-3.8-flash",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "e7_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "ratio": [
+      "gemini-3.8-flash",
+      "pointwise/shown@coding"
+     ]
+    }
+   ],
+   "note": "vertex; the plain shown scorer's estimate: the added instruction's 32 tokens (under 0.0001 USD per call at Flash list prices) are not in it. The plain Flash scorer on these tasks is the E1 pointwise shown Flash row, already in the plan",
+   "unit": {
+    "usd": 0.02721599301819402,
+    "basis": "derived",
+    "text": "(a) claude-sonnet-5-5 pointwise/shown@coding token profile x tokenizer ratio 0.68 (hidden input tokens, gemini-3.8-flash), gemini-3.8-flash output tokens, gemini-3.8-flash prices; data: claude-sonnet-5-5 pointwise/shown@coding (measured in Part 1 plain shown scorer, coding (15 live calls)), claude-sonnet-5-5 and gemini-3.8-flash hidden (pilot 3, v3 sets, ratio basis)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t1-e7-vfp-flash-c",
+   "tier": 1,
+   "group": "E7 mitigation ablation",
+   "name": "E7 verification-first scorer, gemini-3.8-flash, coding",
+   "provider": "google",
+   "judge": "gemini-3.8-flash",
+   "domain": "coding",
+   "tie_rule": true,
+   "tasks": "e7_coding",
+   "per_task": 3,
+   "price": [
+    {
+     "ratio": [
+      "gemini-3.8-flash",
+      "vfp/shown@coding"
+     ]
+    }
+   ],
+   "note": "vertex; Flash's own output tokens from its hidden calls, so the claim list's extra output is not in this estimate",
+   "unit": {
+    "usd": 0.02741752010794065,
+    "basis": "derived",
+    "text": "(a) claude-sonnet-5-5 vfp/shown@coding token profile x tokenizer ratio 0.68 (hidden input tokens, gemini-3.8-flash), gemini-3.8-flash output tokens, gemini-3.8-flash prices; data: claude-sonnet-5-5 vfp/shown@coding (measured in Part 1 verification-first scorer check, coding (15 live calls)), claude-sonnet-5-5 and gemini-3.8-flash hidden (pilot 3, v3 sets, ratio basis)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-s55-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-5-5",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.005439716666666667,
+    "basis": "measured",
+    "text": "measured in pilot 4, v4 sets (360 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-o55-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, Opus 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-5-5",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-5-5",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.013207555555555556,
+    "basis": "measured",
+    "text": "measured in pilot 3, v3 sets (180 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-s46-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, Sonnet 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-4-6",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-4-6",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.006863466666666667,
+    "basis": "measured",
+    "text": "measured in pilot 3, v3 sets (180 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-o46-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, Opus 4.6, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-4-6",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-4-6",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.011408277777777778,
+    "basis": "measured",
+    "text": "measured in pilot 3, v3 sets (180 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-qwen-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, qwen3-32b, coding",
+   "provider": "openrouter",
+   "judge": "qwen3-32b",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "qwen3-32b",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.0001514037777777778,
+    "basis": "measured",
+    "text": "measured in pilot 3, v3 sets (180 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-oss-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, gpt-oss-120b, coding",
+   "provider": "openrouter",
+   "judge": "gpt-oss-120b",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "gpt-oss-120b",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 9.928016666666666e-05,
+    "basis": "measured",
+    "text": "measured in pilot 3, v3 sets (180 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-deepseek-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, deepseek-v4-pro, coding",
+   "provider": "openrouter",
+   "judge": "deepseek-v4-pro",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "profile_of": [
+      "qwen3-32b",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "note": "no measured call of this judge; profile of qwen3-32b",
+   "unit": {
+    "usd": 0.0011605432222222224,
+    "basis": "derived",
+    "text": "(b) qwen3-32b hidden@coding token profile (measured in pilot 3, v3 sets (180 live calls)): 1,728 input and 47 output tokens per call at deepseek/deepseek-v4-pro list prices",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-flash-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, gemini-3.8-flash, coding",
+   "provider": "google",
+   "judge": "gemini-3.8-flash",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "gemini-3.8-flash",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.0016432374999999998,
+    "basis": "measured",
+    "text": "measured in pilot 3, v3 sets (180 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ph-argon-c",
+   "tier": 2,
+   "group": "E1 pairwise hidden",
+   "name": "E1 pairwise hidden, gemini-4-argon, coding",
+   "provider": "google",
+   "judge": "gemini-4-argon",
+   "domain": "coding",
+   "tasks": "coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "gemini-4-argon",
+      "hidden@coding"
+     ]
+    }
+   ],
+   "note": "vertex",
+   "unit": {
+    "usd": 0.004690022222222222,
+    "basis": "measured",
+    "text": "measured in pilot 3, v3 sets (180 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ps-s55-c",
+   "tier": 2,
+   "group": "E1 pairwise shown",
+   "name": "E1 pairwise shown, Sonnet 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-sonnet-5-5",
+   "domain": "coding",
+   "tasks": "shown_coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "claude-sonnet-5-5",
+      "shown@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.02461408333333333,
+    "basis": "measured",
+    "text": "measured in pilot 4, v4 sets (12 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-ps-o55-c",
+   "tier": 2,
+   "group": "E1 pairwise shown",
+   "name": "E1 pairwise shown, Opus 5.5, coding",
+   "provider": "anthropic",
+   "judge": "claude-opus-5-5",
+   "domain": "coding",
+   "tasks": "o55_pair_coding",
+   "per_task": 6,
+   "price": [
+    {
+     "measured": [
+      "claude-opus-5-5",
+      "shown@coding"
+     ]
+    }
+   ],
+   "unit": {
+    "usd": 0.059975208333333335,
+    "basis": "measured",
+    "text": "measured in pilot 3, v3 sets (48 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  },
+  {
+   "id": "t2-reasons-c",
+   "tier": 2,
+   "group": "Reason classification",
+   "name": "Reason classification, Haiku 5.5, coding",
+   "provider": "anthropic",
+   "model": "claude-haiku-5-5",
+   "domain": "coding",
+   "tasks": "tier2_calls",
+   "per_task": 1,
+   "price": [
+    {
+     "measured": [
+      "reason_classifier",
+      "reason@coding"
+     ],
+     "derived": "session 4's four-field classifier call; Part 2's classifier adds the cites_disclosure field to the same prompt"
+    }
+   ],
+   "note": "one call per pairwise verdict of the counted Tier 2 rows",
+   "unit": {
+    "usd": 0.00010190645161290321,
+    "basis": "derived",
+    "text": "(c) session 4's four-field classifier call; Part 2's classifier adds the cites_disclosure field to the same prompt: reason_classifier reason@coding measured in results/pilot4_coding/cost.jsonl by purpose reason_classification_v4 (372 live calls)",
+    "missing": [],
+    "pending": []
+   }
+  }
+ ],
+ "branches": [
+  {
+   "name": "research gate failed, Experiment 2 gate passed",
+   "research": false,
+   "e2": true,
+   "vanished": {},
+   "rows": [
+    "t1-pwh-s55-c",
+    "t1-pwh-o55-c",
+    "t1-pwh-s46-c",
+    "t1-pwh-o46-c",
+    "t1-pwh-full-smoke-s55-c",
+    "t1-pwh-full-s55-c",
+    "t1-pwh-qwen-c",
+    "t1-pwh-oss-c",
+    "t1-pwh-deepseek-c",
+    "t1-pwh-flash-c",
+    "t1-pwh-argon-c",
+    "t1-rm-sky-c",
+    "t1-rm-sky06-c",
+    "t1-rm-sky17-c",
+    "t1-rm-sky4-c",
+    "t1-rm-sky8q-c",
+    "t1-e6-s55-plus-c",
+    "t1-e6-s55-minus-c",
+    "t1-e6-o55-plus-c",
+    "t1-e6-o55-minus-c",
+    "t1-e6-s46-plus-c",
+    "t1-e6-s46-minus-c",
+    "t1-e6-o46-plus-c",
+    "t1-e6-o46-minus-c",
+    "t1-e6-qwen-plus-c",
+    "t1-e6-qwen-minus-c",
+    "t1-e6-oss-plus-c",
+    "t1-e6-oss-minus-c",
+    "t1-e6-deepseek-plus-c",
+    "t1-e6-deepseek-minus-c",
+    "t1-e6-flash-plus-c",
+    "t1-e6-flash-minus-c",
+    "t1-e6-argon-plus-c",
+    "t1-e6-argon-minus-c",
+    "t1-e6-sky-plus-c",
+    "t1-e6-sky-minus-c",
+    "t1-e6-sky06-plus-c",
+    "t1-e6-sky06-minus-c",
+    "t1-e6-sky17-plus-c",
+    "t1-e6-sky17-minus-c",
+    "t1-e6-sky4-plus-c",
+    "t1-e6-sky4-minus-c",
+    "t1-e6-sky8q-plus-c",
+    "t1-e6-sky8q-minus-c",
+    "t1-pws-s55-c",
+    "ab-i-s55-c",
+    "t1-pws-o55-c",
+    "t1-pws-qwen-c",
+    "t1-pws-oss-c",
+    "t1-pws-deepseek-c",
+    "t1-pws-flash-c",
+    "t1-pws-argon-c",
+    "t1-e2-policy-c",
+    "t1-e2-sel-s46-c",
+    "t1-e2-sel-s55-c",
+    "t1-e2-sel-deepseek-c",
+    "t1-e2-sel-sky-c",
+    "t1-e2-sel-sky06-c",
+    "t1-e2-sel-sky17-c",
+    "t1-e2-sel-sky4-c",
+    "t1-e2-sel-sky8q-c",
+    "t1-e2-label-c",
+    "t1-e2-labelfull-c",
+    "t1-e3-s55-c",
+    "t1-e3-o55-c",
+    "ab-iii-bo16-c",
+    "t1-bo16-deepseek-c",
+    "t1-e7-instr-s55-c",
+    "t1-e7-instr-flash-c",
+    "t1-e7-vfp-flash-c",
+    "t2-ph-s55-c",
+    "t2-ph-o55-c",
+    "t2-ph-s46-c",
+    "t2-ph-o46-c",
+    "t2-ph-qwen-c",
+    "t2-ph-oss-c",
+    "t2-ph-deepseek-c",
+    "t2-ph-flash-c",
+    "t2-ph-argon-c",
+    "t2-ps-s55-c",
+    "t2-ps-o55-c",
+    "t2-reasons-c"
+   ],
+   "budget": {
+    "threshold_usd": 87.17955637500009,
+    "margin_required_usd": 15.0,
+    "full": {
+     "counts": {
+      "coding": 60,
+      "research": 0,
+      "shown_coding": 34,
+      "shown_research": 0,
+      "pw_shown_coding": 34,
+      "pw_shown_research": 0,
+      "e2_coding": 40,
+      "e2_research": 0,
+      "bo16_coding": 26,
+      "bo16_research": 0,
+      "band_coding": 26,
+      "research_sets_owed": 0,
+      "e3_coding": 34,
+      "e3_research": 0,
+      "e3pair_coding": 34,
+      "e3pair_research": 0,
+      "o55_shown_coding": 30,
+      "o55_shown_research": 0,
+      "o55_pair_coding": 30,
+      "o55_pair_research": 0,
+      "o55_e3_coding": 30,
+      "o55_e3_research": 0,
+      "e7_coding": 30
+     },
+     "rows": {
+      "t1-pwh-s55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.8210970000000001
+      },
+      "t1-pwh-o55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 1.5206
+      },
+      "t1-pwh-s46-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.761226
+      },
+      "t1-pwh-o46-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 1.21771
+      },
+      "t1-pwh-full-smoke-s55-c": {
+       "counted": true,
+       "tasks": 3,
+       "calls": 9,
+       "usd": 0.04137885000000001
+      },
+      "t1-pwh-full-s55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.8275770000000001
+      },
+      "t1-pwh-qwen-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.01503656
+      },
+      "t1-pwh-oss-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.011850522
+      },
+      "t1-pwh-deepseek-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.111731074
+      },
+      "t1-pwh-flash-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.161004
+      },
+      "t1-pwh-argon-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.52378
+      },
+      "t1-rm-sky-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-rm-sky06-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-rm-sky17-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-rm-sky4-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-rm-sky8q-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-e6-s55-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.273699
+      },
+      "t1-e6-s55-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.273699
+      },
+      "t1-e6-o55-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.5068666666666667
+      },
+      "t1-e6-o55-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.5068666666666667
+      },
+      "t1-e6-s46-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.253742
+      },
+      "t1-e6-s46-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.253742
+      },
+      "t1-e6-o46-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.4059033333333334
+      },
+      "t1-e6-o46-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.4059033333333334
+      },
+      "t1-e6-qwen-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.005012186666666666
+      },
+      "t1-e6-qwen-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.005012186666666666
+      },
+      "t1-e6-oss-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.003950174000000001
+      },
+      "t1-e6-oss-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.003950174000000001
+      },
+      "t1-e6-deepseek-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.037243691333333336
+      },
+      "t1-e6-deepseek-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.037243691333333336
+      },
+      "t1-e6-flash-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.05366800000000001
+      },
+      "t1-e6-flash-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.05366800000000001
+      },
+      "t1-e6-argon-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.17459333333333332
+      },
+      "t1-e6-argon-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.17459333333333332
+      },
+      "t1-e6-sky-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky06-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky06-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky17-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky17-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky4-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky4-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky8q-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky8q-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-pws-s55-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 5.1360461200000005
+      },
+      "ab-i-s55-c": {
+       "counted": true,
+       "tasks": 26,
+       "calls": 78,
+       "usd": 5.81115614418762
+      },
+      "t1-pws-o55-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 9.083995128430729
+      },
+      "t1-pws-qwen-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 0.267708582845118
+      },
+      "t1-pws-oss-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 0.1337762218865893
+      },
+      "t1-pws-deepseek-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 2.127038636354252
+      },
+      "t1-pws-flash-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 2.77603128785579
+      },
+      "t1-pws-argon-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 7.96529822837793
+      },
+      "t1-e2-policy-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.6589527111111111
+      },
+      "t1-e2-sel-s46-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 3.032573333333333
+      },
+      "t1-e2-sel-s55-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 2.906702222222222
+      },
+      "t1-e2-sel-deepseek-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.7881416977777778
+      },
+      "t1-e2-sel-sky-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-sel-sky06-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-sel-sky17-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-sel-sky4-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-sel-sky8q-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-label-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.109312
+      },
+      "t1-e2-labelfull-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.327388
+      },
+      "t1-e3-s55-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 5.68711472
+      },
+      "t1-e3-o55-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 10.058656251183875
+      },
+      "ab-iii-bo16-c": {
+       "counted": true,
+       "tasks": 26,
+       "calls": 416,
+       "usd": 8.983797333333335
+      },
+      "t1-bo16-deepseek-c": {
+       "counted": false,
+       "tasks": 26,
+       "calls": 416,
+       "usd": 8.084043141506013
+      },
+      "t1-e7-instr-s55-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 4.537565399999999
+      },
+      "t1-e7-instr-flash-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 2.4494393716374616
+      },
+      "t1-e7-vfp-flash-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 2.4675768097146586
+      },
+      "t2-ph-s55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 1.958298
+      },
+      "t2-ph-o55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 4.75472
+      },
+      "t2-ph-s46-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 2.470848
+      },
+      "t2-ph-o46-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 4.10698
+      },
+      "t2-ph-qwen-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 0.05450536000000001
+      },
+      "t2-ph-oss-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 0.03574086
+      },
+      "t2-ph-deepseek-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 0.41779556000000007
+      },
+      "t2-ph-flash-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 0.5915655
+      },
+      "t2-ph-argon-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 1.688408
+      },
+      "t2-ps-s55-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 204,
+       "usd": 5.021273
+      },
+      "t2-ps-o55-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 180,
+       "usd": 10.7955375
+      },
+      "t2-reasons-c": {
+       "counted": true,
+       "tasks": 3624,
+       "calls": 3624,
+       "usd": 0.36930898064516127
+      }
+     },
+     "anthropic_by_tier": {
+      "1": 63.74431750269112,
+      "2": 29.47696548064516
+     },
+     "anthropic_usd": 93.22128298333628,
+     "by_provider": {
+      "anthropic": 93.22128298333627,
+      "openrouter": 4.714689889974848,
+      "google": 19.079625864252506,
+      "local": 0.0
+     },
+     "left_out": []
+    },
+    "steps": [
+     {
+      "id": "A2",
+      "name": "pairwise shown, Opus 5.5 out",
+      "anthropic_usd": 82.40740232204595,
+      "margin_usd": 19.772154052954136
+     }
+    ],
+    "fits": true,
+    "anthropic_after_cuts_usd": 82.40740232204595,
+    "cuts_decided": true,
+    "left_out_after_cuts": [],
+    "shortfall_usd": 0.0,
+    "addbacks": [],
+    "final": {
+     "counts": {
+      "coding": 60,
+      "research": 0,
+      "shown_coding": 34,
+      "shown_research": 0,
+      "pw_shown_coding": 34,
+      "pw_shown_research": 0,
+      "e2_coding": 40,
+      "e2_research": 0,
+      "bo16_coding": 26,
+      "bo16_research": 0,
+      "band_coding": 26,
+      "research_sets_owed": 0,
+      "e3_coding": 34,
+      "e3_research": 0,
+      "e3pair_coding": 34,
+      "e3pair_research": 0,
+      "o55_shown_coding": 30,
+      "o55_shown_research": 0,
+      "o55_pair_coding": 30,
+      "o55_pair_research": 0,
+      "o55_e3_coding": 30,
+      "o55_e3_research": 0,
+      "e7_coding": 30
+     },
+     "rows": {
+      "t1-pwh-s55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.8210970000000001
+      },
+      "t1-pwh-o55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 1.5206
+      },
+      "t1-pwh-s46-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.761226
+      },
+      "t1-pwh-o46-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 1.21771
+      },
+      "t1-pwh-full-smoke-s55-c": {
+       "counted": true,
+       "tasks": 3,
+       "calls": 9,
+       "usd": 0.04137885000000001
+      },
+      "t1-pwh-full-s55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.8275770000000001
+      },
+      "t1-pwh-qwen-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.01503656
+      },
+      "t1-pwh-oss-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.011850522
+      },
+      "t1-pwh-deepseek-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.111731074
+      },
+      "t1-pwh-flash-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.161004
+      },
+      "t1-pwh-argon-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.52378
+      },
+      "t1-rm-sky-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-rm-sky06-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-rm-sky17-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-rm-sky4-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-rm-sky8q-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 180,
+       "usd": 0.0
+      },
+      "t1-e6-s55-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.273699
+      },
+      "t1-e6-s55-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.273699
+      },
+      "t1-e6-o55-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.5068666666666667
+      },
+      "t1-e6-o55-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.5068666666666667
+      },
+      "t1-e6-s46-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.253742
+      },
+      "t1-e6-s46-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.253742
+      },
+      "t1-e6-o46-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.4059033333333334
+      },
+      "t1-e6-o46-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.4059033333333334
+      },
+      "t1-e6-qwen-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.005012186666666666
+      },
+      "t1-e6-qwen-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.005012186666666666
+      },
+      "t1-e6-oss-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.003950174000000001
+      },
+      "t1-e6-oss-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.003950174000000001
+      },
+      "t1-e6-deepseek-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.037243691333333336
+      },
+      "t1-e6-deepseek-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.037243691333333336
+      },
+      "t1-e6-flash-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.05366800000000001
+      },
+      "t1-e6-flash-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.05366800000000001
+      },
+      "t1-e6-argon-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.17459333333333332
+      },
+      "t1-e6-argon-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.17459333333333332
+      },
+      "t1-e6-sky-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky06-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky06-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky17-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky17-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky4-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky4-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky8q-plus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-e6-sky8q-minus-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 60,
+       "usd": 0.0
+      },
+      "t1-pws-s55-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 5.1360461200000005
+      },
+      "ab-i-s55-c": {
+       "counted": true,
+       "tasks": 26,
+       "calls": 78,
+       "usd": 5.81115614418762
+      },
+      "t1-pws-o55-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 9.083995128430729
+      },
+      "t1-pws-qwen-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 0.267708582845118
+      },
+      "t1-pws-oss-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 0.1337762218865893
+      },
+      "t1-pws-deepseek-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 2.127038636354252
+      },
+      "t1-pws-flash-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 2.77603128785579
+      },
+      "t1-pws-argon-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 7.96529822837793
+      },
+      "t1-e2-policy-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.6589527111111111
+      },
+      "t1-e2-sel-s46-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 3.032573333333333
+      },
+      "t1-e2-sel-s55-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 2.906702222222222
+      },
+      "t1-e2-sel-deepseek-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.7881416977777778
+      },
+      "t1-e2-sel-sky-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-sel-sky06-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-sel-sky17-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-sel-sky4-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-sel-sky8q-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.0
+      },
+      "t1-e2-label-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.109312
+      },
+      "t1-e2-labelfull-c": {
+       "counted": true,
+       "tasks": 40,
+       "calls": 640,
+       "usd": 0.327388
+      },
+      "t1-e3-s55-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 102,
+       "usd": 5.68711472
+      },
+      "t1-e3-o55-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 10.058656251183875
+      },
+      "ab-iii-bo16-c": {
+       "counted": true,
+       "tasks": 26,
+       "calls": 416,
+       "usd": 8.983797333333335
+      },
+      "t1-bo16-deepseek-c": {
+       "counted": false,
+       "tasks": 26,
+       "calls": 416,
+       "usd": 8.084043141506013
+      },
+      "t1-e7-instr-s55-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 4.537565399999999
+      },
+      "t1-e7-instr-flash-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 2.4494393716374616
+      },
+      "t1-e7-vfp-flash-c": {
+       "counted": true,
+       "tasks": 30,
+       "calls": 90,
+       "usd": 2.4675768097146586
+      },
+      "t2-ph-s55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 1.958298
+      },
+      "t2-ph-o55-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 4.75472
+      },
+      "t2-ph-s46-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 2.470848
+      },
+      "t2-ph-o46-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 4.10698
+      },
+      "t2-ph-qwen-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 0.05450536000000001
+      },
+      "t2-ph-oss-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 0.03574086
+      },
+      "t2-ph-deepseek-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 0.41779556000000007
+      },
+      "t2-ph-flash-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 0.5915655
+      },
+      "t2-ph-argon-c": {
+       "counted": true,
+       "tasks": 60,
+       "calls": 360,
+       "usd": 1.688408
+      },
+      "t2-ps-s55-c": {
+       "counted": true,
+       "tasks": 34,
+       "calls": 204,
+       "usd": 5.021273
+      },
+      "t2-ps-o55-c": {
+       "counted": false,
+       "tasks": 30,
+       "calls": 180,
+       "usd": 10.7955375
+      },
+      "t2-reasons-c": {
+       "counted": true,
+       "tasks": 3444,
+       "calls": 3444,
+       "usd": 0.35096581935483867
+      }
+     },
+     "anthropic_by_tier": {
+      "1": 63.74431750269112,
+      "2": 18.66308481935484
+     },
+     "anthropic_usd": 82.40740232204595,
+     "by_provider": {
+      "anthropic": 82.40740232204595,
+      "openrouter": 4.714689889974848,
+      "google": 19.079625864252506,
+      "local": 0.0
+     },
+     "left_out": []
+    },
+    "removed": [
+     "t2-ps-o55-c"
+    ],
+    "cut_of": {
+     "t2-ps-o55-c": "A2"
+    },
+    "params": {
+     "opus_shown_tasks": 30,
+     "shown_cap_per_domain": null,
+     "e7_tasks": null
+    },
+    "added": [],
+    "optional_openrouter_fits": true
+   },
+   "pending": {},
+   "unpriced": {},
+   "contingency": [
+    {
+     "id": "t1-pwh-s55-c",
+     "name": "E1 pointwise hidden, Sonnet 5.5, coding",
+     "provider": "anthropic",
+     "calls": 180,
+     "usd": 0.8210970000000001
+    },
+    {
+     "id": "t1-pwh-o55-c",
+     "name": "E1 pointwise hidden, Opus 5.5, coding",
+     "provider": "anthropic",
+     "calls": 180,
+     "usd": 1.5206
+    },
+    {
+     "id": "t1-pwh-s46-c",
+     "name": "E1 pointwise hidden, Sonnet 4.6, coding",
+     "provider": "anthropic",
+     "calls": 180,
+     "usd": 0.761226
+    },
+    {
+     "id": "t1-pwh-o46-c",
+     "name": "E1 pointwise hidden, Opus 4.6, coding",
+     "provider": "anthropic",
+     "calls": 180,
+     "usd": 1.21771
+    },
+    {
+     "id": "t1-pwh-full-s55-c",
+     "name": "E1 pointwise hidden, full rubric, Sonnet 5.5, coding",
+     "provider": "anthropic",
+     "calls": 180,
+     "usd": 0.8275770000000001
+    },
+    {
+     "id": "t1-pwh-qwen-c",
+     "name": "E1 pointwise hidden, qwen3-32b, coding",
+     "provider": "openrouter",
+     "calls": 180,
+     "usd": 0.01503656
+    },
+    {
+     "id": "t1-pwh-oss-c",
+     "name": "E1 pointwise hidden, gpt-oss-120b, coding",
+     "provider": "openrouter",
+     "calls": 180,
+     "usd": 0.011850522
+    },
+    {
+     "id": "t1-pwh-deepseek-c",
+     "name": "E1 pointwise hidden, deepseek-v4-pro, coding",
+     "provider": "openrouter",
+     "calls": 180,
+     "usd": 0.111731074
+    },
+    {
+     "id": "t1-pwh-flash-c",
+     "name": "E1 pointwise hidden, gemini-3.8-flash, coding",
+     "provider": "google",
+     "calls": 180,
+     "usd": 0.161004
+    },
+    {
+     "id": "t1-pwh-argon-c",
+     "name": "E1 pointwise hidden, gemini-4-argon, coding",
+     "provider": "google",
+     "calls": 180,
+     "usd": 0.52378
+    },
+    {
+     "id": "t1-e6-s55-plus-c",
+     "name": "E6 O+, Sonnet 5.5, coding",
+     "provider": "anthropic",
+     "calls": 60,
+     "usd": 0.273699
+    },
+    {
+     "id": "t1-e6-s55-minus-c",
+     "name": "E6 O-, Sonnet 5.5, coding",
+     "provider": "anthropic",
+     "calls": 60,
+     "usd": 0.273699
+    },
+    {
+     "id": "t1-e6-o55-plus-c",
+     "name": "E6 O+, Opus 5.5, coding",
+     "provider": "anthropic",
+     "calls": 60,
+     "usd": 0.5068666666666667
+    },
+    {
+     "id": "t1-e6-o55-minus-c",
+     "name": "E6 O-, Opus 5.5, coding",
+     "provider": "anthropic",
+     "calls": 60,
+     "usd": 0.5068666666666667
+    },
+    {
+     "id": "t1-e6-s46-plus-c",
+     "name": "E6 O+, Sonnet 4.6, coding",
+     "provider": "anthropic",
+     "calls": 60,
+     "usd": 0.253742
+    },
+    {
+     "id": "t1-e6-s46-minus-c",
+     "name": "E6 O-, Sonnet 4.6, coding",
+     "provider": "anthropic",
+     "calls": 60,
+     "usd": 0.253742
+    },
+    {
+     "id": "t1-e6-o46-plus-c",
+     "name": "E6 O+, Opus 4.6, coding",
+     "provider": "anthropic",
+     "calls": 60,
+     "usd": 0.4059033333333334
+    },
+    {
+     "id": "t1-e6-o46-minus-c",
+     "name": "E6 O-, Opus 4.6, coding",
+     "provider": "anthropic",
+     "calls": 60,
+     "usd": 0.4059033333333334
+    },
+    {
+     "id": "t1-e6-qwen-plus-c",
+     "name": "E6 O+, qwen3-32b, coding",
+     "provider": "openrouter",
+     "calls": 60,
+     "usd": 0.005012186666666666
+    },
+    {
+     "id": "t1-e6-qwen-minus-c",
+     "name": "E6 O-, qwen3-32b, coding",
+     "provider": "openrouter",
+     "calls": 60,
+     "usd": 0.005012186666666666
+    },
+    {
+     "id": "t1-e6-oss-plus-c",
+     "name": "E6 O+, gpt-oss-120b, coding",
+     "provider": "openrouter",
+     "calls": 60,
+     "usd": 0.003950174000000001
+    },
+    {
+     "id": "t1-e6-oss-minus-c",
+     "name": "E6 O-, gpt-oss-120b, coding",
+     "provider": "openrouter",
+     "calls": 60,
+     "usd": 0.003950174000000001
+    },
+    {
+     "id": "t1-e6-deepseek-plus-c",
+     "name": "E6 O+, deepseek-v4-pro, coding",
+     "provider": "openrouter",
+     "calls": 60,
+     "usd": 0.037243691333333336
+    },
+    {
+     "id": "t1-e6-deepseek-minus-c",
+     "name": "E6 O-, deepseek-v4-pro, coding",
+     "provider": "openrouter",
+     "calls": 60,
+     "usd": 0.037243691333333336
+    },
+    {
+     "id": "t1-e6-flash-plus-c",
+     "name": "E6 O+, gemini-3.8-flash, coding",
+     "provider": "google",
+     "calls": 60,
+     "usd": 0.05366800000000001
+    },
+    {
+     "id": "t1-e6-flash-minus-c",
+     "name": "E6 O-, gemini-3.8-flash, coding",
+     "provider": "google",
+     "calls": 60,
+     "usd": 0.05366800000000001
+    },
+    {
+     "id": "t1-e6-argon-plus-c",
+     "name": "E6 O+, gemini-4-argon, coding",
+     "provider": "google",
+     "calls": 60,
+     "usd": 0.17459333333333332
+    },
+    {
+     "id": "t1-e6-argon-minus-c",
+     "name": "E6 O-, gemini-4-argon, coding",
+     "provider": "google",
+     "calls": 60,
+     "usd": 0.17459333333333332
+    },
+    {
+     "id": "t1-pws-s55-c",
+     "name": "E1 pointwise shown, Sonnet 5.5, coding",
+     "provider": "anthropic",
+     "calls": 102,
+     "usd": 5.1360461200000005
+    },
+    {
+     "id": "ab-i-s55-c",
+     "name": "E1 pointwise shown, Sonnet 5.5, coding tasks above 40,000 and up to 60,000 rendered tokens (add-back (i))",
+     "provider": "anthropic",
+     "calls": 78,
+     "usd": 5.81115614418762
+    },
+    {
+     "id": "t1-pws-o55-c",
+     "name": "E1 pointwise shown, Opus 5.5, coding",
+     "provider": "anthropic",
+     "calls": 90,
+     "usd": 9.083995128430729
+    },
+    {
+     "id": "t1-pws-qwen-c",
+     "name": "E1 pointwise shown, qwen3-32b, coding",
+     "provider": "openrouter",
+     "calls": 102,
+     "usd": 0.267708582845118
+    },
+    {
+     "id": "t1-pws-oss-c",
+     "name": "E1 pointwise shown, gpt-oss-120b, coding",
+     "provider": "openrouter",
+     "calls": 102,
+     "usd": 0.1337762218865893
+    },
+    {
+     "id": "t1-pws-deepseek-c",
+     "name": "E1 pointwise shown, deepseek-v4-pro, coding",
+     "provider": "openrouter",
+     "calls": 102,
+     "usd": 2.127038636354252
+    },
+    {
+     "id": "t1-pws-flash-c",
+     "name": "E1 pointwise shown, gemini-3.8-flash, coding",
+     "provider": "google",
+     "calls": 102,
+     "usd": 2.77603128785579
+    },
+    {
+     "id": "t1-pws-argon-c",
+     "name": "E1 pointwise shown, gemini-4-argon, coding",
+     "provider": "google",
+     "calls": 102,
+     "usd": 7.96529822837793
+    },
+    {
+     "id": "t1-e3-s55-c",
+     "name": "E3 verification-first scorer, Sonnet 5.5, coding",
+     "provider": "anthropic",
+     "calls": 102,
+     "usd": 5.68711472
+    },
+    {
+     "id": "t1-e3-o55-c",
+     "name": "E3 verification-first scorer, Opus 5.5, coding",
+     "provider": "anthropic",
+     "calls": 90,
+     "usd": 10.058656251183875
+    },
+    {
+     "id": "t1-e7-instr-s55-c",
+     "name": "E7 instruction-only scorer, Sonnet 5.5, coding",
+     "provider": "anthropic",
+     "calls": 90,
+     "usd": 4.537565399999999
+    },
+    {
+     "id": "t1-e7-instr-flash-c",
+     "name": "E7 instruction-only scorer, gemini-3.8-flash, coding",
+     "provider": "google",
+     "calls": 90,
+     "usd": 2.4494393716374616
+    },
+    {
+     "id": "t1-e7-vfp-flash-c",
+     "name": "E7 verification-first scorer, gemini-3.8-flash, coding",
+     "provider": "google",
+     "calls": 90,
+     "usd": 2.4675768097146586
+    }
+   ],
+   "google": {
+    "usd": 19.079625864252506,
+    "usd_after_changes": 29.606298759297104,
+    "optional_usd": 0.0,
+    "optional_missing": []
+   },
+   "openrouter": {
+    "plan_usd": 4.714689889974848,
+    "optional_rows": [
+     "t1-bo16-deepseek-c"
+    ],
+    "optional_usd": 8.084043141506013,
+    "with_optional_usd": 12.798733031480861,
+    "optional_fits": true,
+    "total_usd": 12.798733031480861,
+    "rows_without_figure": []
+   }
+  }
+ ],
+ "final_run": true,
+ "exit_code": 0,
+ "stats": [
+  {
+   "name": "claude-opus-4-6",
+   "condition": "hidden",
+   "n": 180,
+   "usd": 0.011408277777777778,
+   "tokens": {
+    "input_tokens": 2112.5444444444443,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 33.82222222222222
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "claude-opus-4-6",
+   "condition": "hidden@coding",
+   "n": 180,
+   "usd": 0.011408277777777778,
+   "tokens": {
+    "input_tokens": 2112.5444444444443,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 33.82222222222222
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "claude-opus-4-6",
+   "condition": "pointwise/hidden@coding",
+   "n": 90,
+   "usd": 0.006765055555555556,
+   "tokens": {
+    "input_tokens": 1139.6222222222223,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 42.67777777777778
+   },
+   "source": "pilot 4 pointwise, v4 sets"
+  },
+  {
+   "name": "claude-opus-5-5",
+   "condition": "hidden",
+   "n": 180,
+   "usd": 0.013207555555555556,
+   "tokens": {
+    "input_tokens": 2815.3333333333335,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 97.31111111111112
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "claude-opus-5-5",
+   "condition": "hidden@coding",
+   "n": 180,
+   "usd": 0.013207555555555556,
+   "tokens": {
+    "input_tokens": 2815.3333333333335,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 97.31111111111112
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "claude-opus-5-5",
+   "condition": "pointwise/hidden@coding",
+   "n": 90,
+   "usd": 0.008447777777777778,
+   "tokens": {
+    "input_tokens": 1527.7777777777778,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 116.83333333333333
+   },
+   "source": "pilot 4 pointwise, v4 sets"
+  },
+  {
+   "name": "claude-opus-5-5",
+   "condition": "shown",
+   "n": 48,
+   "usd": 0.059975208333333335,
+   "tokens": {
+    "input_tokens": 1661.1666666666667,
+    "cache_creation_input_tokens": 8515.4375,
+    "cache_read_input_tokens": 42577.1875,
+    "output_tokens": 111.89583333333333
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "claude-opus-5-5",
+   "condition": "shown@coding",
+   "n": 48,
+   "usd": 0.059975208333333335,
+   "tokens": {
+    "input_tokens": 1661.1666666666667,
+    "cache_creation_input_tokens": 8515.4375,
+    "cache_read_input_tokens": 42577.1875,
+    "output_tokens": 111.89583333333333
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "claude-sonnet-4-6",
+   "condition": "e2_score/hidden@coding",
+   "n": 144,
+   "usd": 0.004738395833333333,
+   "tokens": {
+    "input_tokens": 1320.888888888889,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 51.71527777777778
+   },
+   "source": "results/prep5/cost.jsonl by purpose e2_score_pointwise"
+  },
+  {
+   "name": "claude-sonnet-4-6",
+   "condition": "hidden",
+   "n": 180,
+   "usd": 0.006863466666666667,
+   "tokens": {
+    "input_tokens": 2112.5444444444443,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 35.05555555555556
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "claude-sonnet-4-6",
+   "condition": "hidden@coding",
+   "n": 180,
+   "usd": 0.006863466666666667,
+   "tokens": {
+    "input_tokens": 2112.5444444444443,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 35.05555555555556
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "claude-sonnet-4-6",
+   "condition": "pointwise/hidden@coding",
+   "n": 90,
+   "usd": 0.004229033333333333,
+   "tokens": {
+    "input_tokens": 1139.6222222222223,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 54.01111111111111
+   },
+   "source": "pilot 4 pointwise, v4 sets"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "e2_score/hidden@coding",
+   "n": 144,
+   "usd": 0.004541722222222222,
+   "tokens": {
+    "input_tokens": 1708.1527777777778,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 112.54166666666667
+   },
+   "source": "results/prep5/cost.jsonl by purpose e2_score_pointwise"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "full-pointwise/hidden@coding",
+   "n": 180,
+   "usd": 0.004528944444444445,
+   "tokens": {
+    "input_tokens": 1605.0277777777778,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 131.88888888888889
+   },
+   "source": "Part 2 pointwise, frozen sets"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "full/hidden@coding",
+   "n": 180,
+   "usd": 0.006638,
+   "tokens": {
+    "input_tokens": 2833.3333333333335,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 97.13333333333334
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "hidden",
+   "n": 180,
+   "usd": 0.006567111111111111,
+   "tokens": {
+    "input_tokens": 2815.3333333333335,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 93.64444444444445
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "hidden@coding",
+   "n": 360,
+   "usd": 0.005439716666666667,
+   "tokens": {
+    "input_tokens": 2238.8722222222223,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 96.19722222222222
+   },
+   "source": "pilot 4, v4 sets"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "pointwise/hidden@coding",
+   "n": 120,
+   "usd": 0.00456165,
+   "tokens": {
+    "input_tokens": 1653.1166666666666,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 125.54166666666667
+   },
+   "source": "pilot 4 pointwise, v4 sets"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "pointwise/shown@coding",
+   "n": 15,
+   "usd": 0.050353393333333336,
+   "tokens": {
+    "input_tokens": 815.2,
+    "cache_creation_input_tokens": 17459.133333333335,
+    "cache_read_input_tokens": 34918.26666666667,
+    "output_tokens": 158.33333333333334
+   },
+   "source": "Part 1 plain shown scorer, coding"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "shown",
+   "n": 96,
+   "usd": 0.028979760416666667,
+   "tokens": {
+    "input_tokens": 1554.0,
+    "cache_creation_input_tokens": 8272.635416666666,
+    "cache_read_input_tokens": 41363.177083333336,
+    "output_tokens": 105.38541666666667
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "shown@coding",
+   "n": 12,
+   "usd": 0.02461408333333333,
+   "tokens": {
+    "input_tokens": 1423.0,
+    "cache_creation_input_tokens": 6902.416666666667,
+    "cache_read_input_tokens": 34512.083333333336,
+    "output_tokens": 106.08333333333333
+   },
+   "source": "pilot 4, v4 sets"
+  },
+  {
+   "name": "claude-sonnet-5-5",
+   "condition": "vfp/shown@coding",
+   "n": 15,
+   "usd": 0.055756026666666667,
+   "tokens": {
+    "input_tokens": 1035.2,
+    "cache_creation_input_tokens": 17518.133333333335,
+    "cache_read_input_tokens": 35036.26666666667,
+    "output_tokens": 638.6666666666666
+   },
+   "source": "Part 1 verification-first scorer check, coding"
+  },
+  {
+   "name": "deepseek-v4-pro",
+   "condition": "pointwise/hidden@coding",
+   "n": 300,
+   "usd": 0.0006211931945333333,
+   "tokens": {
+    "input_tokens": 938.5066666666667,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 41.44
+   },
+   "source": "Part 2 pointwise, frozen sets"
+  },
+  {
+   "name": "e2_label",
+   "condition": "label@coding",
+   "n": 144,
+   "usd": 0.0001708,
+   "tokens": {
+    "input_tokens": 1358.486111111111,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 69.90277777777777
+   },
+   "source": "results/prep5/cost.jsonl by purpose e2_label"
+  },
+  {
+   "name": "e2_label_full",
+   "condition": "label@coding",
+   "n": 144,
+   "usd": 0.00051154375,
+   "tokens": {
+    "input_tokens": 4784.986111111111,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 66.09027777777777
+   },
+   "source": "results/prep5/cost.jsonl by purpose e2_label_full"
+  },
+  {
+   "name": "e2_policy",
+   "condition": "packet@coding",
+   "n": 144,
+   "usd": 0.0010296136111111111,
+   "tokens": {
+    "input_tokens": 5270.555555555556,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 140.54166666666666
+   },
+   "source": "results/prep5/cost.jsonl by purpose e2_policy_packet"
+  },
+  {
+   "name": "gemini-3.8-flash",
+   "condition": "hidden",
+   "n": 180,
+   "usd": 0.0016432374999999998,
+   "tokens": {
+    "input_tokens": 1905.5111111111112,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 57.09444444444445
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "gemini-3.8-flash",
+   "condition": "hidden@coding",
+   "n": 180,
+   "usd": 0.0016432374999999998,
+   "tokens": {
+    "input_tokens": 1905.5111111111112,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 57.09444444444445
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "gemini-3.8-flash",
+   "condition": "pointwise/hidden@coding",
+   "n": 90,
+   "usd": 0.0008944666666666668,
+   "tokens": {
+    "input_tokens": 954.7888888888889,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 47.56666666666667
+   },
+   "source": "pilot 4 pointwise, v4 sets"
+  },
+  {
+   "name": "gemini-4-argon",
+   "condition": "hidden",
+   "n": 180,
+   "usd": 0.004690022222222222,
+   "tokens": {
+    "input_tokens": 2051.011111111111,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 58.8
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "gemini-4-argon",
+   "condition": "hidden@coding",
+   "n": 180,
+   "usd": 0.004690022222222222,
+   "tokens": {
+    "input_tokens": 2051.011111111111,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 58.8
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "gemini-4-argon",
+   "condition": "pointwise/hidden@coding",
+   "n": 90,
+   "usd": 0.002909888888888889,
+   "tokens": {
+    "input_tokens": 1119.2777777777778,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 67.13333333333334
+   },
+   "source": "pilot 4 pointwise, v4 sets"
+  },
+  {
+   "name": "gpt-oss-120b",
+   "condition": "full/hidden@coding",
+   "n": 180,
+   "usd": 0.0001028645,
+   "tokens": {
+    "input_tokens": 1725.5333333333333,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 85.9888888888889
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "gpt-oss-120b",
+   "condition": "hidden",
+   "n": 180,
+   "usd": 9.928016666666666e-05,
+   "tokens": {
+    "input_tokens": 1717.5333333333333,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 79.38888888888889
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "gpt-oss-120b",
+   "condition": "hidden@coding",
+   "n": 180,
+   "usd": 9.928016666666666e-05,
+   "tokens": {
+    "input_tokens": 1717.5333333333333,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 79.38888888888889
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "gpt-oss-120b",
+   "condition": "pointwise/hidden@coding",
+   "n": 90,
+   "usd": 6.583623333333334e-05,
+   "tokens": {
+    "input_tokens": 974.4222222222222,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 84.56666666666666
+   },
+   "source": "pilot 4 pointwise, v4 sets"
+  },
+  {
+   "name": "qwen3-32b",
+   "condition": "full/hidden@coding",
+   "n": 180,
+   "usd": 0.00015273133333333335,
+   "tokens": {
+    "input_tokens": 1735.6777777777777,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 49.56111111111111
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "qwen3-32b",
+   "condition": "hidden",
+   "n": 180,
+   "usd": 0.0001514037777777778,
+   "tokens": {
+    "input_tokens": 1727.6777777777777,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 47.105555555555554
+   },
+   "source": "pilot 3, v3 sets, ratio basis"
+  },
+  {
+   "name": "qwen3-32b",
+   "condition": "hidden@coding",
+   "n": 180,
+   "usd": 0.0001514037777777778,
+   "tokens": {
+    "input_tokens": 1727.6777777777777,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 47.105555555555554
+   },
+   "source": "pilot 3, v3 sets"
+  },
+  {
+   "name": "qwen3-32b",
+   "condition": "pointwise/hidden@coding",
+   "n": 90,
+   "usd": 8.353644444444444e-05,
+   "tokens": {
+    "input_tokens": 881.4555555555555,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 46.5
+   },
+   "source": "pilot 4 pointwise, v4 sets"
+  },
+  {
+   "name": "reason_classifier",
+   "condition": "reason@coding",
+   "n": 372,
+   "usd": 0.00010190645161290321,
+   "tokens": {
+    "input_tokens": 760.4758064516129,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 51.71774193548387
+   },
+   "source": "results/pilot4_coding/cost.jsonl by purpose reason_classification_v4"
+  },
+  {
+   "name": "research_set_v2",
+   "condition": "build@research",
+   "n": 20,
+   "usd": 0.054276000000000005,
+   "tokens": {
+    "input_tokens": 0.0,
+    "cache_creation_input_tokens": 0.0,
+    "cache_read_input_tokens": 0.0,
+    "output_tokens": 0.0
+   },
+   "source": "results/prep5/cost.jsonl",
+   "basis": "measured: 1.0855 USD of purposes research_span_detection, research_precheck, research_rewrite_v2, research_verification_v2 in results/prep5/cost.jsonl / 20 sets in data/processed/research/matched_sets_research_v2.jsonl"
+  }
+ ]
+}

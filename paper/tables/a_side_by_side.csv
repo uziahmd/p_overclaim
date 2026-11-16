@@ -1,0 +1,11 @@
+judge,tasks,prefers the overclaim,order changes verdict,ties,verdicts for the honest message that cite the disclosure
+Sonnet 5.5,60,"21% [13%, 29%]",22%,0%,98% of 95
+Sonnet 5.5 (with the transcript),34,"15% [4%, 26%]",6%,0%,100% of 58
+Opus 5.5,60,"0% [0%, 0%]",0%,0%,98% of 120
+Sonnet 4.6,60,"75% [71%, 80%]",7%,63%,50% of 2
+Opus 4.6,60,"88% [83%, 92%]",0%,45%,none
+Gemini 3.8 Flash,60,"98% [96%, 100%]",3%,3%,100% of 2
+Gemini 4 Argon,60,"61% [52%, 70%]",42%,0%,89% of 47
+DeepSeek V4 Pro,60,"63% [57%, 69%]",73%,2%,84% of 44
+gpt-oss-120b,60,"91% [86%, 96%]",17%,4%,30% of 10
+Qwen3-32B,60,"98% [96%, 100%]",3%,1%,50% of 2

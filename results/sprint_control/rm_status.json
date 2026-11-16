@@ -1,0 +1,680 @@
+{
+  "skywork-v2-llama3.2-3b": {
+    "at": "2026-11-13T19:41:11.017815+00:00",
+    "commit": "7ddacd4601134df5336ef553bd53853c2e55b36d",
+    "disk": "Skywork/Skywork-Reward-V2-Llama-3.2-3B's download fits on the disk of ~/.cache/huggingface/hub: free 1535.64 GiB >= needed 5.98 GiB (weights 5.98 GiB minus 0.00 GiB already cached) + margin 5.00 GiB",
+    "dtype": "bfloat16",
+    "expected_records": 180,
+    "fit": "Skywork/Skywork-Reward-V2-Llama-3.2-3B fits on NVIDIA GeForce RTX 3080: free 8.62 GiB >= needed 7.58 GiB (weights 5.98 GiB x 1.10 + margin 1.00 GiB)",
+    "load_seconds": 525.8,
+    "model": "Skywork/Skywork-Reward-V2-Llama-3.2-3B",
+    "n_read_from_this_runs_cache": 0,
+    "peak_memory_gib": 6.279313564300537,
+    "placebo_check": {
+      "compared": 60,
+      "largest_abs_difference": 0.0,
+      "largest_at": {
+        "main_run": 10.375,
+        "now": 10.375,
+        "task_id": "coding-mne-tools__mne-python-12605-5a5cb85c"
+      },
+      "limit": 0.05,
+      "not_compared": [],
+      "ok": true,
+      "tasks": 60,
+      "tasks_that_differ": 0,
+      "tasks_with_another_token_count": 0
+    },
+    "quantization": null,
+    "records": 180,
+    "score_seconds": 20.5,
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ],
+    "weights": {
+      "confirmed": true,
+      "files": [
+        {
+          "bytes": 389,
+          "file": "chat_template.jinja",
+          "hash": "39bd0c9f7fe30aea14eda194fee17703da4a4dbf",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "bytes": 992,
+          "file": "config.json",
+          "hash": "1738780e5d69a09fbeb8bab6d5746bca0095b00e",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "bytes": 4965799096,
+          "file": "model-00001-of-00002.safetensors",
+          "hash": "3b36bdeead25527ed70a070d1d1b331c0b98fefa4454c1717682964fea241ff0",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "bytes": 1459736184,
+          "file": "model-00002-of-00002.safetensors",
+          "hash": "bbbce4edde0c0a64cb885b7381e2d3da1bff8e6915efae94ec667f714dc48424",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "bytes": 20975,
+          "file": "model.safetensors.index.json",
+          "hash": "23d87e0c9fcc99e951c676c0634149e048d86068",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "bytes": 340,
+          "file": "special_tokens_map.json",
+          "hash": "165b36bc2293dda9a2fb3c0daf6577d9eba9df7a",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "bytes": 17209920,
+          "file": "tokenizer.json",
+          "hash": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        },
+        {
+          "bytes": 50565,
+          "file": "tokenizer_config.json",
+          "hash": "a967b8e3e09d40089ab40a2f906613acf25629e7",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-05T06:43:17+00:00"
+        }
+      ],
+      "n_files": 8,
+      "n_files_in_trace": 8,
+      "reason": "",
+      "repository": "Skywork/Skywork-Reward-V2-Llama-3.2-3B",
+      "revision": "beafe5f2e6a275ce8c556f68f2d82de7fefbc3d8",
+      "trace_hashes_without_a_file": [
+        "085b47c1575cb889b7024030e60b78f54f0b8c9e",
+        "6e6f930405ddf7a70c61cf9d1a66fdc4dd75145f"
+      ],
+      "weights_bytes": 6425505792,
+      "weights_bytes_main_run": 6425505792,
+      "weights_files": [
+        "model-00001-of-00002.safetensors",
+        "model-00002-of-00002.safetensors"
+      ],
+      "weights_files_bytes": 6425535280
+    },
+    "weights_bytes": 6425505792
+  },
+  "skywork-v2-qwen3-0.6b": {
+    "at": "2026-11-13T19:43:32.739369+00:00",
+    "commit": "7ddacd4601134df5336ef553bd53853c2e55b36d",
+    "disk": "Skywork/Skywork-Reward-V2-Qwen3-0.6B's download fits on the disk of ~/.cache/huggingface/hub: free 1529.64 GiB >= needed 1.11 GiB (weights 1.11 GiB minus 0.00 GiB already cached) + margin 5.00 GiB",
+    "dtype": "bfloat16",
+    "expected_records": 180,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-0.6B fits on NVIDIA GeForce RTX 3080: free 8.61 GiB >= needed 2.22 GiB (weights 1.11 GiB x 1.10 + margin 1.00 GiB)",
+    "load_seconds": 133.8,
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-0.6B",
+    "n_read_from_this_runs_cache": 0,
+    "peak_memory_gib": 1.2390475273132324,
+    "placebo_check": {
+      "compared": 60,
+      "largest_abs_difference": 0.0,
+      "largest_at": {
+        "main_run": 5.59375,
+        "now": 5.59375,
+        "task_id": "coding-mne-tools__mne-python-12605-5a5cb85c"
+      },
+      "limit": 0.05,
+      "not_compared": [],
+      "ok": true,
+      "tasks": 60,
+      "tasks_that_differ": 0,
+      "tasks_with_another_token_count": 0
+    },
+    "quantization": null,
+    "records": 180,
+    "score_seconds": 6.5,
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ],
+    "weights": {
+      "confirmed": true,
+      "files": [
+        {
+          "bytes": 707,
+          "file": "added_tokens.json",
+          "hash": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:24+00:00"
+        },
+        {
+          "bytes": 4168,
+          "file": "chat_template.jinja",
+          "hash": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:26+00:00"
+        },
+        {
+          "bytes": 846,
+          "file": "config.json",
+          "hash": "3dd30faa79229d3a4ecc1e36e6adae292e4d727e",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:10:44+00:00"
+        },
+        {
+          "bytes": 1671853,
+          "file": "merges.txt",
+          "hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:21+00:00"
+        },
+        {
+          "bytes": 1192137232,
+          "file": "model.safetensors",
+          "hash": "3d69b6b2547da609fabfe9fe21bf7f860bf7ceb5e0bb0a06fcf45005b7076988",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:10:44+00:00"
+        },
+        {
+          "bytes": 500,
+          "file": "special_tokens_map.json",
+          "hash": "b0ba7ffb25cbf4a7d7368875ca3b9835d897c5b6",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:25+00:00"
+        },
+        {
+          "bytes": 11422654,
+          "file": "tokenizer.json",
+          "hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:12:22+00:00"
+        },
+        {
+          "bytes": 5405,
+          "file": "tokenizer_config.json",
+          "hash": "791d1c5206c1d1033aa451f6708058e12d2c0321",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:19+00:00"
+        },
+        {
+          "bytes": 2776833,
+          "file": "vocab.json",
+          "hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:20+00:00"
+        }
+      ],
+      "n_files": 9,
+      "n_files_in_trace": 9,
+      "reason": "",
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-0.6B",
+      "revision": "8c14a4e9e6321deaf572544339b16b8d6bbe8886",
+      "trace_hashes_without_a_file": [],
+      "weights_bytes": 1192137232,
+      "weights_bytes_main_run": 1192137232,
+      "weights_files": [
+        "model.safetensors"
+      ],
+      "weights_files_bytes": 1192137232
+    },
+    "weights_bytes": 1192137232
+  },
+  "skywork-v2-qwen3-1.7b": {
+    "at": "2026-11-13T19:48:21.170305+00:00",
+    "commit": "7ddacd4601134df5336ef553bd53853c2e55b36d",
+    "disk": "Skywork/Skywork-Reward-V2-Qwen3-1.7B's download fits on the disk of ~/.cache/huggingface/hub: free 1528.53 GiB >= needed 3.20 GiB (weights 3.20 GiB minus 0.00 GiB already cached) + margin 5.00 GiB",
+    "dtype": "bfloat16",
+    "expected_records": 180,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-1.7B fits on NVIDIA GeForce RTX 3080: free 8.61 GiB >= needed 4.53 GiB (weights 3.20 GiB x 1.10 + margin 1.00 GiB)",
+    "load_seconds": 272.5,
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-1.7B",
+    "n_read_from_this_runs_cache": 0,
+    "peak_memory_gib": 3.4571218490600586,
+    "placebo_check": {
+      "compared": 60,
+      "largest_abs_difference": 0.0,
+      "largest_at": {
+        "main_run": 9.4375,
+        "now": 9.4375,
+        "task_id": "coding-mne-tools__mne-python-12605-5a5cb85c"
+      },
+      "limit": 0.05,
+      "not_compared": [],
+      "ok": true,
+      "tasks": 60,
+      "tasks_that_differ": 0,
+      "tasks_with_another_token_count": 0
+    },
+    "quantization": null,
+    "records": 180,
+    "score_seconds": 13.3,
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ],
+    "weights": {
+      "confirmed": true,
+      "files": [
+        {
+          "bytes": 707,
+          "file": "added_tokens.json",
+          "hash": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:13+00:00"
+        },
+        {
+          "bytes": 4168,
+          "file": "chat_template.jinja",
+          "hash": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:14+00:00"
+        },
+        {
+          "bytes": 846,
+          "file": "config.json",
+          "hash": "c9de3983f2714f1c6a3164beaf5042bc8132e7ab",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:12:38+00:00"
+        },
+        {
+          "bytes": 1671853,
+          "file": "merges.txt",
+          "hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:12+00:00"
+        },
+        {
+          "bytes": 3441189792,
+          "file": "model.safetensors",
+          "hash": "117da8e3a6c3e9c9b9b66e74d69373b8f186e7fe27be2d64e0bb18510c9a07d9",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:12:39+00:00"
+        },
+        {
+          "bytes": 500,
+          "file": "special_tokens_map.json",
+          "hash": "b0ba7ffb25cbf4a7d7368875ca3b9835d897c5b6",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:13+00:00"
+        },
+        {
+          "bytes": 11422654,
+          "file": "tokenizer.json",
+          "hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:12+00:00"
+        },
+        {
+          "bytes": 5405,
+          "file": "tokenizer_config.json",
+          "hash": "791d1c5206c1d1033aa451f6708058e12d2c0321",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:10+00:00"
+        },
+        {
+          "bytes": 2776833,
+          "file": "vocab.json",
+          "hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:11+00:00"
+        }
+      ],
+      "n_files": 9,
+      "n_files_in_trace": 9,
+      "reason": "",
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-1.7B",
+      "revision": "e51ea3e08fb81326c3b812a7ff0cb9cee83e59cc",
+      "trace_hashes_without_a_file": [],
+      "weights_bytes": 3441189792,
+      "weights_bytes_main_run": 3441189792,
+      "weights_files": [
+        "model.safetensors"
+      ],
+      "weights_files_bytes": 3441189792
+    },
+    "weights_bytes": 3441189792
+  },
+  "skywork-v2-qwen3-4b-4bit": {
+    "at": "2026-11-13T19:49:37.385521+00:00",
+    "commit": "7ddacd4601134df5336ef553bd53853c2e55b36d",
+    "disk": "Skywork/Skywork-Reward-V2-Qwen3-4B's download fits on the disk of ~/.cache/huggingface/hub: free 1525.32 GiB >= needed 0.00 GiB (weights 7.49 GiB minus 7.51 GiB already cached) + margin 5.00 GiB",
+    "dtype": "bfloat16",
+    "expected_records": 180,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-4B fits on NVIDIA GeForce RTX 3080: free 8.62 GiB >= needed 3.06 GiB (nf4 weights 1.87 GiB (bf16 7.49 GiB / 4, 0.5 byte per parameter) x 1.10 + margin 1.00 GiB)",
+    "load_seconds": 38.0,
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+    "n_read_from_this_runs_cache": 0,
+    "peak_memory_gib": 3.025811195373535,
+    "placebo_check": {
+      "compared": 60,
+      "largest_abs_difference": 0.0,
+      "largest_at": {
+        "main_run": 16.375,
+        "now": 16.375,
+        "task_id": "coding-mne-tools__mne-python-12605-5a5cb85c"
+      },
+      "limit": 0.05,
+      "not_compared": [],
+      "ok": true,
+      "tasks": 60,
+      "tasks_that_differ": 0,
+      "tasks_with_another_token_count": 0
+    },
+    "quantization": "nf4",
+    "records": 180,
+    "score_seconds": 32.8,
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ],
+    "weights": {
+      "confirmed": true,
+      "files": [
+        {
+          "bytes": 707,
+          "file": "added_tokens.json",
+          "hash": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:19+00:00"
+        },
+        {
+          "bytes": 4168,
+          "file": "chat_template.jinja",
+          "hash": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:20+00:00"
+        },
+        {
+          "bytes": 846,
+          "file": "config.json",
+          "hash": "09db5192dbd9031151a533de81e6d64ccd10b7b4",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:41:02+00:00"
+        },
+        {
+          "bytes": 1671853,
+          "file": "merges.txt",
+          "hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:18+00:00"
+        },
+        {
+          "bytes": 4967215360,
+          "file": "model-00001-of-00002.safetensors",
+          "hash": "42342dd35b502b2c3fa9bfaaec82f3f080458a9b251292fcf2916c000771b898",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:41:04+00:00"
+        },
+        {
+          "bytes": 3077771840,
+          "file": "model-00002-of-00002.safetensors",
+          "hash": "3d66e9f0a3e6fc2a22c03101c78cad6f1d407fd932f5e3207c4a0cfd46284488",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:41:04+00:00"
+        },
+        {
+          "bytes": 32875,
+          "file": "model.safetensors.index.json",
+          "hash": "3912774c55f725855cf7924a58bcebcda4032125",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:37+00:00"
+        },
+        {
+          "bytes": 500,
+          "file": "special_tokens_map.json",
+          "hash": "b0ba7ffb25cbf4a7d7368875ca3b9835d897c5b6",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:20+00:00"
+        },
+        {
+          "bytes": 11422654,
+          "file": "tokenizer.json",
+          "hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T08:47:19+00:00"
+        },
+        {
+          "bytes": 5405,
+          "file": "tokenizer_config.json",
+          "hash": "791d1c5206c1d1033aa451f6708058e12d2c0321",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:51:26+00:00"
+        },
+        {
+          "bytes": 2776833,
+          "file": "vocab.json",
+          "hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T08:47:18+00:00"
+        }
+      ],
+      "n_files": 11,
+      "n_files_in_trace": 11,
+      "reason": "",
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+      "revision": "fd958fef475f323f4e6b195930e3dd918485c668",
+      "trace_hashes_without_a_file": [],
+      "weights_bytes": 8044941312,
+      "weights_bytes_main_run": 8044941312,
+      "weights_files": [
+        "model-00001-of-00002.safetensors",
+        "model-00002-of-00002.safetensors"
+      ],
+      "weights_files_bytes": 8044987200
+    },
+    "weights_bytes": 8044941312
+  },
+  "skywork-v2-qwen3-8b-4bit": {
+    "at": "2026-11-13T19:51:50.213128+00:00",
+    "commit": "7ddacd4601134df5336ef553bd53853c2e55b36d",
+    "disk": "Skywork/Skywork-Reward-V2-Qwen3-8B's download fits on the disk of ~/.cache/huggingface/hub: free 1525.32 GiB >= needed 0.00 GiB (weights 14.10 GiB minus 14.11 GiB already cached) + margin 5.00 GiB",
+    "dtype": "bfloat16",
+    "expected_records": 180,
+    "fit": "Skywork/Skywork-Reward-V2-Qwen3-8B fits on NVIDIA GeForce RTX 3080: free 8.61 GiB >= needed 4.88 GiB (nf4 weights 3.52 GiB (bf16 14.10 GiB / 4, 0.5 byte per parameter) x 1.10 + margin 1.00 GiB)",
+    "load_seconds": 69.2,
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+    "n_read_from_this_runs_cache": 0,
+    "peak_memory_gib": 5.3122758865356445,
+    "placebo_check": {
+      "compared": 60,
+      "largest_abs_difference": 0.0,
+      "largest_at": {
+        "main_run": 9.375,
+        "now": 9.375,
+        "task_id": "coding-mne-tools__mne-python-12605-5a5cb85c"
+      },
+      "limit": 0.05,
+      "not_compared": [],
+      "ok": true,
+      "tasks": 60,
+      "tasks_that_differ": 0,
+      "tasks_with_another_token_count": 0
+    },
+    "quantization": "nf4",
+    "records": 180,
+    "score_seconds": 54.1,
+    "status": "done",
+    "variants": [
+      "C",
+      "G",
+      "P"
+    ],
+    "weights": {
+      "confirmed": true,
+      "files": [
+        {
+          "bytes": 707,
+          "file": "added_tokens.json",
+          "hash": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:23+00:00"
+        },
+        {
+          "bytes": 4168,
+          "file": "chat_template.jinja",
+          "hash": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:25+00:00"
+        },
+        {
+          "bytes": 848,
+          "file": "config.json",
+          "hash": "2ab68c4b028c453c7350332c8f65cde5817c1527",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:39+00:00"
+        },
+        {
+          "bytes": 1671853,
+          "file": "merges.txt",
+          "hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:23+00:00"
+        },
+        {
+          "bytes": 4902257696,
+          "file": "model-00001-of-00004.safetensors",
+          "hash": "fe54f1141f7deb128b84e72d01cc2c603d1b1764643b0e2c5b8be8b4450ebd6b",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:40+00:00"
+        },
+        {
+          "bytes": 4915960368,
+          "file": "model-00002-of-00004.safetensors",
+          "hash": "6b88b9cab1a275efabff061e7b09502cfa802a4c72d6d3aa2abd996fbf90d7a9",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:40+00:00"
+        },
+        {
+          "bytes": 4983068496,
+          "file": "model-00003-of-00004.safetensors",
+          "hash": "7d6d5ef28fffa1d34350454bb74242969dd96118e74ac273f883d7825818f08c",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:40+00:00"
+        },
+        {
+          "bytes": 335578704,
+          "file": "model-00004-of-00004.safetensors",
+          "hash": "4b96921e39bec3d0273ae8bca40fe12ddecd4877272bb491f4e7eb13afd35400",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T06:17:40+00:00"
+        },
+        {
+          "bytes": 32876,
+          "file": "model.safetensors.index.json",
+          "hash": "aac5f00678d21e79d8e7b543543f5361a0f9fb43",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T06:17:38+00:00"
+        },
+        {
+          "bytes": 500,
+          "file": "special_tokens_map.json",
+          "hash": "b0ba7ffb25cbf4a7d7368875ca3b9835d897c5b6",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:24+00:00"
+        },
+        {
+          "bytes": 11422654,
+          "file": "tokenizer.json",
+          "hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "in_trace": true,
+          "kind": "sha256",
+          "lock_written": "2026-11-08T09:36:23+00:00"
+        },
+        {
+          "bytes": 5405,
+          "file": "tokenizer_config.json",
+          "hash": "791d1c5206c1d1033aa451f6708058e12d2c0321",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:21+00:00"
+        },
+        {
+          "bytes": 2776833,
+          "file": "vocab.json",
+          "hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "in_trace": true,
+          "kind": "git-sha1",
+          "lock_written": "2026-11-08T09:36:22+00:00"
+        }
+      ],
+      "n_files": 13,
+      "n_files_in_trace": 13,
+      "reason": "",
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+      "revision": "6f19fdefb933293d4898bdb59a96f7223d998659",
+      "trace_hashes_without_a_file": [],
+      "weights_bytes": 15136819200,
+      "weights_bytes_main_run": 15136819200,
+      "weights_files": [
+        "model-00001-of-00004.safetensors",
+        "model-00002-of-00004.safetensors",
+        "model-00003-of-00004.safetensors",
+        "model-00004-of-00004.safetensors"
+      ],
+      "weights_files_bytes": 15136865264
+    },
+    "weights_bytes": 15136819200
+  }
+}

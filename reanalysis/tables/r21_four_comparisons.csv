@@ -1,0 +1,15 @@
+grader,kind,unit,"tasks (premium, disclosure)",premium,premium lo,premium hi,premium detectable,tasks (claim against a hedge),claim against a hedge,hedge lo,hedge hi,hedge detectable,hedge as a share of the premium (same tasks),disclosure against a neutral sentence,disclosure lo,disclosure hi,disclosure detectable,fresh messages (honesty half),fresh lo,fresh hi,fresh detectable,fresh tasks used,SD of the model's set scores (reward models),"premium, raw units","hedge, raw units","disclosure, raw units","fresh, raw units",SD of the model's pool scores (reward models),premium on the tasks of the hedge comparison
+Sonnet 5.5,judge,points,60,1.5667,1.3167,1.8167,yes,60,1.2167,0.9667,1.4667,yes,0.7766,0.25,0.0167,0.4837,yes,0.096,-0.1351,0.338,no,29,1.1629,1.5667,1.2167,0.25,0.096,,1.5667
+Opus 5.5,judge,points,60,1.4167,1.1167,1.7,yes,60,1.3833,1.0833,1.6667,yes,0.9765,-0.1,-0.3,0.1,no,,,,,,1.2192,1.4167,1.3833,-0.1,,,1.4167
+Sonnet 4.6,judge,points,60,0.7333,0.3667,1.1,yes,60,0.3833,0.1,0.65,yes,0.5227,0.2833,-0.0167,0.6,no,0.2748,0.0205,0.5344,yes,29,1.4594,0.7333,0.3833,0.2833,0.2748,,0.7333
+Opus 4.6,judge,points,60,1.0667,0.7833,1.35,yes,60,0.2667,0.0833,0.45,yes,0.25,0.55,0.25,0.8667,yes,,,,,,1.0956,1.0667,0.2667,0.55,,,1.0667
+Gemini 3.8 Flash,judge,points,60,3.3333,2.7833,3.8504,yes,60,2.5167,2.1333,2.8833,yes,0.755,1.1167,0.5833,1.6504,yes,,,,,,2.6253,3.3333,2.5167,1.1167,,,3.3333
+Gemini 4 Argon,judge,points,60,3.1167,2.5167,3.7337,yes,60,1.5667,1.1,2.0,yes,0.5027,0.9167,0.4167,1.4167,yes,,,,,,2.3811,3.1167,1.5667,0.9167,,,3.1167
+DeepSeek V4 Pro,judge,points,60,1.7167,1.2833,2.2,yes,60,0.7167,0.45,1.05,yes,0.4175,1.0333,0.7167,1.3833,yes,0.4103,0.2274,0.5871,yes,29,1.604,1.7167,0.7167,1.0333,0.4103,,1.7167
+gpt-oss-120b,judge,points,57,1.0877,0.4211,1.8246,yes,55,0.5273,-0.2182,1.3095,no,0.4677,1.2105,0.5439,1.8947,yes,,,,,,2.7572,1.0877,0.5273,1.2105,,,1.1273
+Qwen3-32B,judge,points,60,0.65,0.5167,0.7833,yes,60,0.6667,0.5333,0.7833,yes,1.0256,0.3,0.2,0.4167,yes,,,,,,0.5168,0.65,0.6667,0.3,,,0.65
+Skywork 0.6B,reward model,SD,60,1.3897,1.2358,1.5568,yes,60,0.4614,0.3734,0.5525,yes,0.332,0.1099,0.0482,0.1752,yes,0.4792,0.3118,0.6516,yes,29,1.8695,2.598,0.8625,0.2055,0.7873,1.6429,1.3897
+Skywork 1.7B,reward model,SD,60,1.292,1.1643,1.4349,yes,60,0.5974,0.5185,0.6766,yes,0.4624,0.1092,0.0504,0.1639,yes,0.4697,0.2927,0.6439,yes,29,2.3663,3.0573,1.4135,0.2583,0.9165,1.9512,1.292
+Skywork 3B,reward model,SD,60,1.4539,1.3225,1.5969,yes,60,0.797,0.7193,0.8827,yes,0.5482,0.2158,0.1594,0.274,yes,0.5759,0.4399,0.7058,yes,29,3.0454,4.4276,2.4271,0.6573,1.7832,3.0966,1.4539
+Skywork 4B,reward model,SD,60,1.5271,1.4108,1.6567,yes,60,0.4785,0.417,0.5413,yes,0.3133,0.3318,0.2617,0.4051,yes,0.7341,0.5903,0.8887,yes,29,2.9653,4.5281,1.4187,0.9839,1.6891,2.3009,1.5271
+Skywork 8B,reward model,SD,60,1.5772,1.4549,1.714,yes,60,0.594,0.532,0.6598,yes,0.3767,0.2585,0.2027,0.3198,yes,0.7104,0.5508,0.8814,yes,29,3.3523,5.2871,1.9914,0.8665,1.8369,2.5857,1.5772

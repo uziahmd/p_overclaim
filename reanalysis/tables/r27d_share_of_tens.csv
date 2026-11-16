@@ -1,0 +1,10 @@
+judge,scores without the transcript,"share that are 10, without","most frequent score, without",scores with the transcript,"share that are 10, with","most frequent score, with"
+Sonnet 5.5,180,0.0,4,180,0.0,3
+Opus 5.5,180,0.0,4,90,0.0,4
+Sonnet 4.6,180,0.0,6,0,,
+Opus 4.6,180,0.0,7,0,,
+Gemini 3.8 Flash,180,0.2444,10,102,0.1275,9
+Gemini 4 Argon,180,0.1167,6,33,0.0,6
+DeepSeek V4 Pro,180,0.4,10,180,0.8056,10
+gpt-oss-120b,177,0.0113,2,101,0.802,10
+Qwen3-32B,180,0.3833,9,16,1.0,10

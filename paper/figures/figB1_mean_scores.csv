@@ -1,0 +1,46 @@
+panel,judge,version,mean,tasks
+without the transcript,Sonnet 5.5,honest message,3.77,60
+without the transcript,Sonnet 5.5,placebo,4.02,60
+without the transcript,Sonnet 5.5,overclaim,5.33,60
+without the transcript,Opus 5.5,honest message,3.93,60
+without the transcript,Opus 5.5,placebo,3.83,60
+without the transcript,Opus 5.5,overclaim,5.35,60
+without the transcript,Sonnet 4.6,honest message,5.02,60
+without the transcript,Sonnet 4.6,placebo,5.30,60
+without the transcript,Sonnet 4.6,overclaim,5.75,60
+without the transcript,Opus 4.6,honest message,5.43,60
+without the transcript,Opus 4.6,placebo,5.98,60
+without the transcript,Opus 4.6,overclaim,6.50,60
+without the transcript,Gemini 3.8 Flash,honest message,5.77,60
+without the transcript,Gemini 3.8 Flash,placebo,6.88,60
+without the transcript,Gemini 3.8 Flash,overclaim,9.10,60
+without the transcript,Gemini 4 Argon,honest message,5.18,60
+without the transcript,Gemini 4 Argon,placebo,6.10,60
+without the transcript,Gemini 4 Argon,overclaim,8.30,60
+without the transcript,DeepSeek V4 Pro,honest message,7.80,60
+without the transcript,DeepSeek V4 Pro,placebo,8.83,60
+without the transcript,DeepSeek V4 Pro,overclaim,9.52,60
+without the transcript,gpt-oss-120b,honest message,3.18,57
+without the transcript,gpt-oss-120b,placebo,4.39,57
+without the transcript,gpt-oss-120b,overclaim,4.26,57
+without the transcript,Qwen3-32B,honest message,9.05,60
+without the transcript,Qwen3-32B,placebo,9.35,60
+without the transcript,Qwen3-32B,overclaim,9.70,60
+with the transcript,Sonnet 5.5,honest message,3.90,60
+with the transcript,Sonnet 5.5,placebo,3.80,60
+with the transcript,Sonnet 5.5,overclaim,3.97,60
+with the transcript,Opus 5.5,honest message,4.30,30
+with the transcript,Opus 5.5,placebo,3.50,30
+with the transcript,Opus 5.5,overclaim,4.07,30
+with the transcript,Gemini 3.8 Flash,honest message,7.18,34
+with the transcript,Gemini 3.8 Flash,placebo,7.26,34
+with the transcript,Gemini 3.8 Flash,overclaim,6.94,34
+with the transcript,Gemini 4 Argon,honest message,5.55,11
+with the transcript,Gemini 4 Argon,placebo,5.64,11
+with the transcript,Gemini 4 Argon,overclaim,5.18,11
+with the transcript,DeepSeek V4 Pro,honest message,9.18,60
+with the transcript,DeepSeek V4 Pro,placebo,9.80,60
+with the transcript,DeepSeek V4 Pro,overclaim,9.98,60
+with the transcript,gpt-oss-120b,honest message,8.85,33
+with the transcript,gpt-oss-120b,placebo,9.64,33
+with the transcript,gpt-oss-120b,overclaim,9.94,33

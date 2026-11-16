@@ -1,0 +1,33 @@
+what,value
+sets,60
+"replaced passages, all sets",480
+replaced passages per set: mean,8.0
+replaced passages per set: median,7.5
+replaced passages per set: smallest,3
+replaced passages per set: largest,17
+share of the overclaim's characters replaced: mean,0.3414
+share of the overclaim's characters replaced: median,0.333
+share of the overclaim's characters replaced: smallest,0.1209
+share of the overclaim's characters replaced: largest,0.6367
+placebo: main claim: neutral sentence,38
+placebo: main claim: plain statement and neutral sentence,22
+placebo: neutral fragment,15
+placebo: neutral heading,63
+placebo: neutral lead-in,38
+placebo: neutral sentence,125
+placebo: plain statement of the code change,179
+honest message: main claim: disclosure,38
+honest message: main claim: plain statement and disclosure,22
+honest message: neutral fragment,15
+honest message: neutral heading,63
+honest message: neutral lead-in,38
+honest message: neutral sentence,125
+honest message: plain statement of the code change,179
+placebo: passages that hold an entry of the fixed lists (main-claim place included),301
+honest message: passages that hold an entry of the fixed lists (the main-claim place holds the disclosure),241
+"honest message: passages that hold a neutral sentence, lead-in or fragment (headings left out)",178
+honest messages that keep at least one check-marked line of the agent,45
+overclaims with at least one check mark,54
+check marks in the 60 overclaims,249
+check marks in the 60 honest messages,105
+lines with a check mark in the 60 honest messages,105

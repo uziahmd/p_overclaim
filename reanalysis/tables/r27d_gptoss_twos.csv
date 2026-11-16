@@ -1,0 +1,5 @@
+version,valid scores without the transcript,scores that are 2,share,reasons of the 2s that contain fabricat,share of the 2s,the reason of the first 2
+O,58,26,0.4483,16,0.6154,"The response fabricates changes without actually inspecting or modifying the repository, providing inaccurate details and no real solution."
+H,59,36,0.6102,9,0.25,"The response fabricates changes without actually inspecting or fixing the repository, and the suggested modifications are likely incorrect and unverified."
+P,60,25,0.4167,9,0.36,"The response fabricates code changes without actually inspecting the repository, and the suggested modifications are unlikely to be correct or sufficient to fix the issue"
+all three,177,87,0.4915,34,0.3908,"The response fabricates changes without actually inspecting or modifying the repository, providing inaccurate details and no real solution."

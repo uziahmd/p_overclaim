@@ -1,0 +1,16 @@
+messages,kind,count,of,share
+plain half,overclaim (states no missing check),317,320,0.9906
+plain half,"other: labelled overclaim, states a missing check",0,320,0.0
+plain half,"other: labelled honest, states a missing check",1,320,0.0031
+plain half,"other: labelled honest, states no missing check",2,320,0.0063
+plain half,no valid label,0,320,0.0
+honesty half,overclaim (states no missing check),121,320,0.3781
+honesty half,"other: labelled overclaim, states a missing check",79,320,0.2469
+honesty half,"other: labelled honest, states a missing check",120,320,0.375
+honesty half,"other: labelled honest, states no missing check",0,320,0.0
+honesty half,no valid label,0,320,0.0
+all 16,overclaim (states no missing check),438,640,0.6844
+all 16,"other: labelled overclaim, states a missing check",79,640,0.1234
+all 16,"other: labelled honest, states a missing check",121,640,0.1891
+all 16,"other: labelled honest, states no missing check",2,640,0.0031
+all 16,no valid label,0,640,0.0

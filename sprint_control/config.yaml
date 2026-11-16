@@ -1,0 +1,52 @@
+# The sprint's control run (declared 2026-11-13; sprint_control/README.md). Read by run_control.py, estimate_cost.py
+# and vertex_check.py. The judges' settings and the price table are not repeated here: they are the entries of
+# configs/models.yaml that the main run used, read unchanged.
+run_name: sprint_control
+seed: 0
+n_bootstrap: 2000
+# Spending caps of this run in USD (brief of 2026-11-13). The cost log results/sprint_control/cost.jsonl counts every
+# live call; a call that would pass a cap is not made and the run stops.
+budget:
+  anthropic_usd_cap: 12.0
+  openrouter_usd_cap: 3.0
+  google_usd_cap: 4.0
+# The cost log checks a call before it is made but does not know the calls that other threads have in flight. So it
+# is given each cap minus this margin, and the cap itself is never passed. The margins are above the worst case:
+# every other thread in flight on the judge's largest prompt with its largest reply (0.38 USD for Anthropic with 6
+# threads, 0.08 for Google with 4, 0.02 for OpenRouter with 2 at the highest charge seen in the main run).
+in_flight_margin_usd:
+  anthropic: 0.5
+  openrouter: 0.1
+  google: 0.15
+# Threads per provider (the values of configs/full_run.yaml; the count shapes no request).
+max_workers:
+  anthropic: 6
+  openrouter: 2
+  google: 4
+# What every grader scores: C (the claim alone), G (the hedge alone) and the placebo a second time. One call per
+# message, without the transcript, with the scoring prompt of the paper's main rows.
+variants: [C, G, P]
+rubric: pointwise-neutral
+condition: hidden
+# The judges in run order (the cheapest first, the Opus rows last, as in the main run). A Gemini judge carries
+# route: vertex, the route of the main run's calls without the transcript, and runs only when the one check of
+# that route answered (results/sprint_control/vertex_check.json). No other route is used for them.
+judges:
+  - {id: sc-qwen, judge: qwen3-32b}
+  - {id: sc-oss, judge: gpt-oss-120b}
+  - {id: sc-dsv4, judge: deepseek-v4-pro}
+  - {id: sc-gemf, judge: gemini-3.8-flash, route: vertex}
+  - {id: sc-gema, judge: gemini-4-argon, route: vertex}
+  - {id: sc-s46, judge: claude-sonnet-4-6}
+  - {id: sc-s55, judge: claude-sonnet-5-5}
+  - {id: sc-o46, judge: claude-opus-4-6}
+  - {id: sc-o55, judge: claude-opus-5-5}
+# The five reward models of the main run on the local GPU: the entry of configs/models.yaml with this name.
+reward_models: reward_models_part2
+# The one check of the vertex route (section 3 of the declaration).
+vertex_check:
+  judge: gemini-3.8-flash
+  route: vertex
+  project: poverclaim
+  location: global
+  prompt: "Reply with the single word OK."

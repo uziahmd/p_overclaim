@@ -1,0 +1,7 @@
+kind of missing check,the record says the named test failed before the edit,sets
+last test run failed,no,4
+last test run failed,unknown,16
+narrower rerun after a failure,no,3
+narrower rerun after a failure,unknown,17
+both kinds (40 sets),no,7
+both kinds (40 sets),unknown,33

@@ -1,0 +1,5 @@
+file,rows,rows with an answer,note
+human_check_v4_final_a1.csv,85,85,model column in the file: no
+human_check_v4_final_a2.csv,85,30,model column in the file: no
+README at commit 52dc887,,,"The human-check file of Part 1 was filled not by two human annotators but by a Gemini 4 Argon audit: a full pass over the 85 rows (`human_check_v4_final_a1.csv`) and a second pass over 30 rows (`_a2.csv`), re-checked by a Claude-based pass"
+README at commit 52dc887,,,"The final file (`human_check_v4_final.csv`, 85 rows) was filled by a Gemini 4 Argon audit, a full pass (`_a1.csv`) and a second pass over 30 rows (`_a2.csv`), re-checked by a Claude-based pass (`_final.csv`)"

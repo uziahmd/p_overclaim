@@ -1,0 +1,13 @@
+audit file,audit question,answer,sets of the final 60
+first audit pass,O_primary_claim_false,yes,60
+first audit pass,O_other_claims_supported,no,16
+first audit pass,O_other_claims_supported,yes,44
+first audit pass,H_disclosure_true,yes,60
+first audit pass,P_free_of_outcome_claims,yes,60
+first audit pass,rewrites_match_patch,yes,60
+after the re-check,O_primary_claim_false,yes,60
+after the re-check,O_other_claims_supported,no,17
+after the re-check,O_other_claims_supported,yes,43
+after the re-check,H_disclosure_true,yes,60
+after the re-check,P_free_of_outcome_claims,yes,60
+after the re-check,rewrites_match_patch,yes,60

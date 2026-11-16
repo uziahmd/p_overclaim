@@ -1,0 +1,55 @@
+# Experiment 1 (preference), Domain 1 (coding) pilot: 20 tasks, hidden condition only.
+# Run: uv run python -m overclaim.experiments.e1_preference --config configs/e1_pilot_coding.yaml [--dry-run]
+# Relative paths are relative to the repo root; the runner writes an absolute copy to results/<run_name>/config.yaml.
+run_name: pilot_coding
+seed: 0
+domain: coding
+data:
+  source: chilomax/SWE-rebench-openhands-trajectories
+  raw_dir: data/raw/coding                 # one parquet per source row group: trajectories_rg{i}.parquet (4,096 rows each) + manifest.json
+  row_groups: [0, 1, 2, 3, 4, 5, 6, 7]                 # strict no_tests_run is ~0.26% of finished rows, so the pilot needs several row groups
+  raw_parquet: data/raw/coding/trajectories_first3000.parquet
+  n_raw_rows: 3000
+  processed_dir: data/processed/coding
+  final_message_words: [30, 400]
+  max_transcript_tokens: 60000          # applied to the RENDERED transcript (with tool-output truncation)
+  tool_output_truncate_tokens: 2000      # per single tool output; keep first 1000 + last 1000 tokens
+  tokenizer: o200k_base
+pilot:
+  n_per_gap_type: 10                     # 10 no_tests_run + 10 tests_failed = 20 tasks
+  gap_types: [no_tests_run, tests_failed]
+  oversample_factor: 5                   # keep 3x candidates per stratum (seed order) so lint drops can be backfilled
+  prefer_resolved: 0                     # sample resolved==0 first, then resolved==1 if a stratum is short
+variants_config: configs/variants_coding.yaml
+# LLM pass that strips completion/verification sentences from the agent's final message.
+claim_removal: {provider: anthropic, model: claude-opus-5-5, effort: low, max_tokens: 6000}
+# Claim removal uses Opus 5.5 (thinking cannot be disabled on Opus 5.5; effort low), not the Sonnet judge: on 14 candidates that
+# Sonnet's pass left with lint hits, Opus produced a lint-clean base for 7 and Sonnet for 0 (2026-11-05). The judge's own
+# thinking: between_tools = thinking OFF for a single-turn request with no tools (Sonnet 5.5 rejects thinking.disabled and temperature).
+# Providers: anthropic (ANTHROPIC_API_KEY), openrouter (OPENROUTER_API_KEY), vllm (VLLM_BASE_URL).
+# There is no OpenAI key in this project; no judge uses the openai provider.
+judges:                                   # the runner uses the FIRST judge whose provider has credentials
+  - {name: claude-sonnet-5-5, provider: anthropic, model: claude-sonnet-5-5, effort: low, max_tokens: 2000, thinking: between_tools}
+  - {name: openrouter-qwen3-32b, provider: openrouter, model: qwen/qwen3-32b, temperature: 0.0, max_tokens: 400,
+     prompt_suffix: " /no_think"}            # VERIFIED 2026-11-05: on OpenRouter only the Qwen soft switch "/no_think" disables thinking
+                                            # (reasoning.enabled=false, reasoning.exclude, chat_template_kwargs all still produced ~150 reasoning tokens)
+  - {name: local-vllm-qwen3-32b, provider: vllm, model: Qwen/Qwen3-32B, temperature: 0.0, max_tokens: 400,
+     extra_body: {chat_template_kwargs: {enable_thinking: false}}}   # base_url from VLLM_BASE_URL; api_key "EMPTY"
+reward_models:
+  # Local pilot reward model: ~6.4 GB of bf16 weights, fits the 10 GB RTX 3080.
+  - {name: skywork-v2-llama3.2-3b, model: Skywork/Skywork-Reward-V2-Llama-3.2-3B, dtype: bfloat16, batch_size: 1}
+  # The 8B model from the plan needs ~17 GB of VRAM in bf16 (~16 GB of weights) and does not fit the
+  # 10 GB RTX 3080; it is never quantized silently. Uncomment on a larger GPU (check_fits decides at run time).
+  # - {name: skywork-v2-llama3.1-8b, model: Skywork/Skywork-Reward-V2-Llama-3.1-8B, dtype: bfloat16, batch_size: 1}
+conditions: [hidden]                      # pilot: grader sees the task and the final message only
+pairs: [[O, H], [O, P], [H, P]]           # each pair is judged in both orders
+analysis: {n_bootstrap: 2000, seed: 0}
+budget:
+  openrouter_usd_cap: 20.0                # HARD cap from the brief: stop and report before exceeding
+  anthropic_usd_cap: 20.0                 # pilot safety cap; the main experiments will raise it
+prices_usd_per_mtok:                      # dated 2026-11-05; used for the cost log only
+  claude-sonnet-5-5: {input: 2.0, output: 10.0}
+  claude-opus-5-5: {input: 4.0, output: 20.0}
+  claude-sonnet-4-6: {input: 3.0, output: 15.0}
+  claude-opus-4-6: {input: 5.0, output: 25.0}
+  qwen/qwen3-32b: {input: 0.08, output: 0.28}   # OpenRouter listing 2026-11-05

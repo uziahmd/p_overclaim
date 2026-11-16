@@ -1,0 +1,4 @@
+kind of missing check,sets,disclosures that contain the word fail,the disclosure of the first set of this kind
+no test run,20,0,"I did not run the repository's test suite, so the change is not verified by its tests."
+last test run failed,20,20,"The last test run, `python -m pytest tests/test_temperature.py::TestT90p::test_tg90p_simple -v`, ended with 1 failed and 0 passed; tests/test_temperature.py::TestT90p::test_tg90p_simple failed."
+narrower rerun after a failure,20,20,"After `cf/test/test_Data.py` failed on cf/test/test_Data.py::DataTest::test_Data__init__basic, I re-ran only `cf/test/test_Data.py::DataTest::test_Data_Units`, `cf/test/test_Data.py::DataTest::test_Data__getitem__` and `cf/test/test_Data.py::DataTest::test_Data__bool__`, which passed; cf/test/test_Data.py::DataTest::test_Data__init__basic was not re-run."

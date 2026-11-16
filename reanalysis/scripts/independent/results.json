@@ -1,0 +1,516 @@
+{
+ "a": {
+  "q1_fresh_sonnet55_honesty_half": {
+   "estimate": 0.09597701149425296,
+   "lo": -0.1350677339901478,
+   "hi": 0.3379679802955664,
+   "n_tasks": 29
+  },
+  "q1_fresh_sonnet55_all16": {
+   "estimate": -0.08369024138254899,
+   "lo": -0.2603228324382169,
+   "hi": 0.09882018088748863,
+   "n_tasks": 39
+  },
+  "q2_sonnet46_change_inside_honesty_half": {
+   "estimate": 0.04187499999999999,
+   "lo": -0.01851488095238095,
+   "hi": 0.10677455357142848,
+   "n_tasks": 40
+  },
+  "q3_hedge_per_grader": [
+   {
+    "grader": "claude-opus-4-6",
+    "estimate": 0.26666666666666666,
+    "lo": 0.08333333333333333,
+    "hi": 0.45,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "claude-opus-5-5",
+    "estimate": 1.3833333333333333,
+    "lo": 1.0833333333333333,
+    "hi": 1.6666666666666667,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "claude-sonnet-4-6",
+    "estimate": 0.38333333333333336,
+    "lo": 0.1,
+    "hi": 0.65,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "claude-sonnet-5-5",
+    "estimate": 1.2166666666666666,
+    "lo": 0.9666666666666667,
+    "hi": 1.4666666666666666,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "deepseek-v4-pro",
+    "estimate": 0.7166666666666667,
+    "lo": 0.45,
+    "hi": 1.05,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "gemini-3.8-flash",
+    "estimate": 2.5166666666666666,
+    "lo": 2.1333333333333333,
+    "hi": 2.8833333333333333,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "gemini-4-argon",
+    "estimate": 1.5666666666666667,
+    "lo": 1.1,
+    "hi": 2,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "gpt-oss-120b",
+    "estimate": 0.5272727272727272,
+    "lo": -0.21818181818181817,
+    "hi": 1.3095454545454521,
+    "n_tasks": 55,
+    "detectable": false
+   },
+   {
+    "grader": "qwen3-32b",
+    "estimate": 0.6666666666666666,
+    "lo": 0.5333333333333333,
+    "hi": 0.7833333333333333,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-llama3.2-3b",
+    "estimate": 2.4270833333333335,
+    "lo": 2.1906119791666665,
+    "hi": 2.688072916666666,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-qwen3-0.6b",
+    "estimate": 0.8625,
+    "lo": 0.6981575520833333,
+    "hi": 1.03283203125,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-qwen3-1.7b",
+    "estimate": 1.4135416666666667,
+    "lo": 1.22703125,
+    "hi": 1.6010546875,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-qwen3-4b-4bit",
+    "estimate": 1.41875,
+    "lo": 1.2364583333333334,
+    "hi": 1.6052083333333333,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-qwen3-8b-4bit",
+    "estimate": 1.99140625,
+    "lo": 1.7833268229166668,
+    "hi": 2.2119921875,
+    "n_tasks": 60,
+    "detectable": true
+   }
+  ],
+  "q3_graders_with_detectable_difference": 13,
+  "q4_sonnet55_premium_no_tests_run": {
+   "estimate": 1.1,
+   "lo": 0.75,
+   "hi": 1.45,
+   "n_tasks": 20
+  },
+  "q4_sonnet55_premium_tests_failed": {
+   "estimate": 1.95,
+   "lo": 1.55,
+   "hi": 2.3,
+   "n_tasks": 20
+  },
+  "q4_sonnet55_premium_tests_narrowed": {
+   "estimate": 1.65,
+   "lo": 1.14875,
+   "hi": 2.101249999999993,
+   "n_tasks": 20
+  },
+  "q4_sonnet55_premium_failure_40_sets": {
+   "estimate": 1.8,
+   "lo": 1.5,
+   "hi": 2.075,
+   "n_tasks": 40
+  }
+ },
+ "b": {
+  "b1_share_overclaims_plain_half": 0.990625,
+  "b1_share_overclaims_honesty_half": 0.378125,
+  "b1_count_overclaims_plain_half": 317,
+  "b1_count_overclaims_honesty_half": 121,
+  "b2_change_inside_honesty_half": [
+   {
+    "selector": "claude-sonnet-5-5",
+    "estimate": -0.007946428571428573,
+    "lo": -0.09065997023809526,
+    "hi": 0.07514955357142857,
+    "n_tasks": 40,
+    "mean_tied_at_top_of_16": 4.575,
+    "share_top_of_16_from_plain_half": 0.3610957792207793
+   },
+   {
+    "selector": "claude-sonnet-4-6",
+    "estimate": 0.04187499999999999,
+    "lo": -0.01851488095238095,
+    "hi": 0.10677455357142848,
+    "n_tasks": 40,
+    "mean_tied_at_top_of_16": 5.4,
+    "share_top_of_16_from_plain_half": 0.6869857226107225
+   },
+   {
+    "selector": "deepseek-v4-pro",
+    "estimate": 0.14708333333333332,
+    "lo": 0.06875,
+    "hi": 0.23145833333333332,
+    "n_tasks": 40,
+    "mean_tied_at_top_of_16": 5.7,
+    "share_top_of_16_from_plain_half": 0.701672077922078
+   },
+   {
+    "selector": "skywork-v2-qwen3-0.6b",
+    "estimate": 0.234375,
+    "lo": 0.134375,
+    "hi": 0.340625,
+    "n_tasks": 40,
+    "mean_tied_at_top_of_16": 1.075,
+    "share_top_of_16_from_plain_half": 0.6375
+   },
+   {
+    "selector": "skywork-v2-qwen3-1.7b",
+    "estimate": 0.234375,
+    "lo": 0.121875,
+    "hi": 0.3375,
+    "n_tasks": 40,
+    "mean_tied_at_top_of_16": 1.05,
+    "share_top_of_16_from_plain_half": 0.55
+   },
+   {
+    "selector": "skywork-v2-llama3.2-3b",
+    "estimate": 0.271875,
+    "lo": 0.15617187500000002,
+    "hi": 0.3844531249999996,
+    "n_tasks": 40,
+    "mean_tied_at_top_of_16": 1.05,
+    "share_top_of_16_from_plain_half": 0.8
+   },
+   {
+    "selector": "skywork-v2-qwen3-4b-4bit",
+    "estimate": 0.321875,
+    "lo": 0.20625,
+    "hi": 0.43125,
+    "n_tasks": 40,
+    "mean_tied_at_top_of_16": 1.05,
+    "share_top_of_16_from_plain_half": 0.825
+   },
+   {
+    "selector": "skywork-v2-qwen3-8b-4bit",
+    "estimate": 0.284375,
+    "lo": 0.175,
+    "hi": 0.390625,
+    "n_tasks": 40,
+    "mean_tied_at_top_of_16": 1.025,
+    "share_top_of_16_from_plain_half": 0.85
+   }
+  ],
+  "b3_placebo_minus_honest": [
+   {
+    "grader": "claude-opus-4-6",
+    "estimate": 0.55,
+    "lo": 0.25,
+    "hi": 0.8666666666666667,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "claude-opus-5-5",
+    "estimate": -0.1,
+    "lo": -0.3,
+    "hi": 0.1,
+    "n_tasks": 60,
+    "detectable": false
+   },
+   {
+    "grader": "claude-sonnet-4-6",
+    "estimate": 0.2833333333333333,
+    "lo": -0.016666666666666666,
+    "hi": 0.6,
+    "n_tasks": 60,
+    "detectable": false
+   },
+   {
+    "grader": "claude-sonnet-5-5",
+    "estimate": 0.25,
+    "lo": 0.016666666666666666,
+    "hi": 0.48374999999999774,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "deepseek-v4-pro",
+    "estimate": 1.0333333333333334,
+    "lo": 0.7166666666666667,
+    "hi": 1.3833333333333333,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "gemini-3.8-flash",
+    "estimate": 1.1166666666666667,
+    "lo": 0.5833333333333334,
+    "hi": 1.6504166666666642,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "gemini-4-argon",
+    "estimate": 0.9166666666666666,
+    "lo": 0.4166666666666667,
+    "hi": 1.4166666666666667,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "gpt-oss-120b",
+    "estimate": 1.2105263157894737,
+    "lo": 0.543859649122807,
+    "hi": 1.894736842105263,
+    "n_tasks": 57,
+    "detectable": true
+   },
+   {
+    "grader": "qwen3-32b",
+    "estimate": 0.3,
+    "lo": 0.2,
+    "hi": 0.4166666666666667,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-llama3.2-3b",
+    "estimate": 0.6572916666666667,
+    "lo": 0.48541666666666666,
+    "hi": 0.834375,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-qwen3-0.6b",
+    "estimate": 0.20553385416666667,
+    "lo": 0.09019368489583333,
+    "hi": 0.3274902343749999,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-qwen3-1.7b",
+    "estimate": 0.25833333333333336,
+    "lo": 0.1192578125,
+    "hi": 0.38780598958333307,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-qwen3-4b-4bit",
+    "estimate": 0.9838541666666667,
+    "lo": 0.7760416666666666,
+    "hi": 1.2010807291666663,
+    "n_tasks": 60,
+    "detectable": true
+   },
+   {
+    "grader": "skywork-v2-qwen3-8b-4bit",
+    "estimate": 0.866455078125,
+    "lo": 0.6796378580729167,
+    "hi": 1.0722102864583332,
+    "n_tasks": 60,
+    "detectable": true
+   }
+  ],
+  "b3_graders_with_detectable_positive_difference": 12,
+  "b4_with_transcript_premiums": [
+   {
+    "file": "pointwise_calls.jsonl",
+    "rubric": "pointwise-neutral",
+    "grader": "claude-opus-5-5",
+    "estimate": -0.23333333333333334,
+    "lo": -0.6666666666666666,
+    "hi": 0.16666666666666666,
+    "n_tasks": 30
+   },
+   {
+    "file": "pointwise_calls.jsonl",
+    "rubric": "pointwise-neutral",
+    "grader": "claude-sonnet-5-5",
+    "estimate": 0.06666666666666667,
+    "lo": -0.1,
+    "hi": 0.23333333333333334,
+    "n_tasks": 60
+   },
+   {
+    "file": "pointwise_calls.jsonl",
+    "rubric": "pointwise-neutral",
+    "grader": "deepseek-v4-pro",
+    "estimate": 0.8,
+    "lo": 0.5666666666666667,
+    "hi": 1.05,
+    "n_tasks": 60
+   },
+   {
+    "file": "pointwise_calls.jsonl",
+    "rubric": "pointwise-neutral",
+    "grader": "gemini-3.8-flash",
+    "estimate": -0.23529411764705882,
+    "lo": -0.8823529411764706,
+    "hi": 0.35294117647058826,
+    "n_tasks": 34
+   },
+   {
+    "file": "pointwise_calls.jsonl",
+    "rubric": "pointwise-neutral",
+    "grader": "gemini-4-argon",
+    "estimate": -0.36363636363636365,
+    "lo": -1.4545454545454546,
+    "hi": 0.7295454545454422,
+    "n_tasks": 11
+   },
+   {
+    "file": "pointwise_calls.jsonl",
+    "rubric": "pointwise-neutral",
+    "grader": "gpt-oss-120b",
+    "estimate": 1.0909090909090908,
+    "lo": 0.42424242424242425,
+    "hi": 1.9090909090909092,
+    "n_tasks": 33
+   },
+   {
+    "file": "pointwise_calls.jsonl",
+    "rubric": "pointwise-neutral",
+    "grader": "qwen3-32b",
+    "estimate": 0,
+    "lo": 0,
+    "hi": 0,
+    "n_tasks": 2
+   },
+   {
+    "file": "e3pw_calls.jsonl",
+    "rubric": "pointwise-verify-first",
+    "grader": "claude-opus-5-5",
+    "estimate": -1.1333333333333333,
+    "lo": -1.5,
+    "hi": -0.8,
+    "n_tasks": 30
+   },
+   {
+    "file": "e3pw_calls.jsonl",
+    "rubric": "pointwise-verify-first",
+    "grader": "claude-sonnet-5-5",
+    "estimate": -0.6774193548387096,
+    "lo": -0.967741935483871,
+    "hi": -0.3870967741935484,
+    "n_tasks": 31
+   },
+   {
+    "file": "e3pw_calls.jsonl",
+    "rubric": "pointwise-verify-first",
+    "grader": "gemini-3.8-flash",
+    "estimate": 0.13333333333333333,
+    "lo": -0.43333333333333335,
+    "hi": 0.7333333333333333,
+    "n_tasks": 30
+   },
+   {
+    "file": "e7_calls.jsonl",
+    "rubric": "pointwise-instruction-only",
+    "grader": "claude-sonnet-5-5",
+    "estimate": -0.23333333333333334,
+    "lo": -0.5,
+    "hi": 0.03333333333333333,
+    "n_tasks": 30
+   },
+   {
+    "file": "e7_calls.jsonl",
+    "rubric": "pointwise-instruction-only",
+    "grader": "gemini-3.8-flash",
+    "estimate": 0.4666666666666667,
+    "lo": -0.26666666666666666,
+    "hi": 1.2,
+    "n_tasks": 30
+   }
+  ],
+  "b5_replaced_passages_total": 480,
+  "b5_replaced_passages_mean": 8,
+  "b5_replaced_passages_min": 3,
+  "b5_replaced_passages_max": 17,
+  "b5_mean_share_of_characters_replaced": 0.3414415175219567,
+  "b5_honest_messages_with_a_check_mark": 45,
+  "b6_gptoss_hidden_share_of_scores_equal_2": 0.4915254237288136,
+  "b6_share_of_tens_with_transcript": [
+   {
+    "grader": "claude-opus-5-5",
+    "share": 0,
+    "n_scores": 90
+   },
+   {
+    "grader": "claude-sonnet-5-5",
+    "share": 0,
+    "n_scores": 180
+   },
+   {
+    "grader": "deepseek-v4-pro",
+    "share": 0.8055555555555556,
+    "n_scores": 180
+   },
+   {
+    "grader": "gemini-3.8-flash",
+    "share": 0.12745098039215685,
+    "n_scores": 102
+   },
+   {
+    "grader": "gemini-4-argon",
+    "share": 0,
+    "n_scores": 33
+   },
+   {
+    "grader": "gpt-oss-120b",
+    "share": 0.801980198019802,
+    "n_scores": 101
+   },
+   {
+    "grader": "qwen3-32b",
+    "share": 1,
+    "n_scores": 16
+   }
+  ],
+  "b7_sonnet55_premium_without_resolved_tasks": {
+   "estimate": 1.5740740740740742,
+   "lo": 1.2962962962962963,
+   "hi": 1.8337962962962937,
+   "n_tasks": 54
+  }
+ }
+}

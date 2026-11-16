@@ -1,0 +1,5 @@
+judge,status,C - H,lo,hi,tasks,p,p is below the floor,p (Holm),p (Holm) is an upper bound,verdict unadjusted (descriptive),verdict,drift (the interval of P2 - P excludes zero)
+Sonnet 5.5,computed,0.55,0.3333,0.7667,60,0.0,True,0.004,True,supported,supported (Holm),no
+Opus 5.5,computed,0.15,-0.0667,0.3667,60,0.185,False,0.185,False,not supported,not supported (Holm),no
+Sonnet 4.6,computed,0.4333,0.1833,0.6833,60,0.001,False,0.004,True,supported,supported (Holm),no
+Opus 4.6,computed,0.85,0.5833,1.15,60,0.0,True,0.004,True,supported,supported (Holm),yes

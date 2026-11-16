@@ -1,0 +1,150 @@
+{
+  "freeze": {
+    "status": "done",
+    "unchanged": false,
+    "frozen_at": "2026-11-08T04:59:42+00:00",
+    "sets": 60,
+    "repaired_sets": 17,
+    "repaired_spans_total": 36,
+    "replacements": 4,
+    "sets_file_sha256": "fb4f87be8afecc1cba49c8fae3610511f4dd3c5fd64c0a09c3b5e24e5e1311d9",
+    "superseded": [
+      "data/processed/coding/matched_sets_v4_full_run.superseded-20261107T172655Z.jsonl",
+      "data/processed/full_run_tasks.superseded-20261107T172655Z.json",
+      "results/full_run/freeze.superseded-20261107T172655Z.md"
+    ]
+  },
+  "pointwise_hidden": {
+    "status": "done",
+    "runs": {
+      "pwh-qwen": "done",
+      "pwh-oss": "done",
+      "pwh-dsv4": "done",
+      "pwh-gemf": "done",
+      "pwh-gema": "done",
+      "pwh-s46": "done",
+      "pwh-s55": "done",
+      "pwh-s55-full": "done",
+      "pwh-o46": "done",
+      "pwh-o55": "done"
+    }
+  },
+  "tie_rule": {
+    "status": "done",
+    "qualifying": [],
+    "decided": 9,
+    "not_decided": [],
+    "runs": {}
+  },
+  "rm": {
+    "status": "done",
+    "models": {
+      "skywork-v2-llama3.2-3b": "done",
+      "skywork-v2-qwen3-0.6b": "done",
+      "skywork-v2-qwen3-1.7b": "done",
+      "skywork-v2-qwen3-4b-4bit": "done",
+      "skywork-v2-qwen3-8b-4bit": "done"
+    }
+  },
+  "pointwise_shown": {
+    "status": "failed",
+    "runs": {
+      "pws-qwen": "failed",
+      "pws-oss": "done",
+      "pws-dsv4": "done",
+      "pws-dsv4-band": "done",
+      "pws-gemf": "done",
+      "pws-gema": "partial",
+      "pws-s55": "done",
+      "pws-o55": "done"
+    },
+    "records": {
+      "pointwise_calls.jsonl": 703,
+      "e7_calls.jsonl": 180,
+      "e3pw_calls.jsonl": 282
+    },
+    "tie_rule": {
+      "qualifying": [],
+      "not_decided": [],
+      "second_sample_hidden_only": [],
+      "shown_second_sample": {}
+    },
+    "reason": "failed runs ['pws-qwen'] (this invocation: ['pws-qwen']; the other runs went on; a new invocation resumes the failed ones from their records)"
+  },
+  "e2": {
+    "status": "done",
+    "n_tasks": 40,
+    "n_shown_eligible": 26,
+    "selectors_run": [
+      "claude-sonnet-4-6",
+      "claude-sonnet-5-5",
+      "deepseek-v4-pro",
+      "claude-sonnet-5-5+verify_first",
+      "deepseek-v4-pro+verify_first",
+      "skywork-v2-llama3.2-3b",
+      "skywork-v2-qwen3-0.6b",
+      "skywork-v2-qwen3-1.7b",
+      "skywork-v2-qwen3-4b-4bit",
+      "skywork-v2-qwen3-8b-4bit"
+    ],
+    "selectors_skipped": {},
+    "selectors_failed": [],
+    "reward_models_missing": null,
+    "h4_second_condition": {
+      "treated": "claude-sonnet-5-5+verify_first",
+      "control": "claude-sonnet-5-5",
+      "holds": true,
+      "labellers_agree": true
+    },
+    "table": "<repo>/results/full_run/e2_table.json"
+  },
+  "pairwise": {
+    "status": "done",
+    "runs": {
+      "ph-qwen": "done",
+      "ph-oss": "done",
+      "ph-dsv4": "done",
+      "ph-gemf": "done",
+      "ph-gema": "done",
+      "ph-s46": "done",
+      "ph-s55": "done",
+      "ps-s55": "done",
+      "ph-o46": "done",
+      "ph-o55": "done"
+    }
+  },
+  "reasons": {
+    "status": "done",
+    "smoke_only": 0,
+    "verdicts": 3444,
+    "eligible": 3444,
+    "no_reason": 0,
+    "invalid_winner": 0,
+    "duplicate_keys": 0,
+    "already_labelled": 2724,
+    "to_classify": 720,
+    "labels": 3444,
+    "invalid_labels": 0
+  },
+  "analysis": {
+    "status": "done",
+    "summary": "summary.md",
+    "generated_at": "2026-11-08T14:16:03+00:00",
+    "missing_inputs": [],
+    "figures_written": [
+      "judge_premium.png",
+      "judge_premium.svg",
+      "e2_selection.png",
+      "e2_selection.svg",
+      "pairwise_vs_pointwise.png",
+      "pairwise_vs_pointwise.svg",
+      "rm_size.png",
+      "rm_size.svg",
+      "dose_response.png",
+      "dose_response.svg",
+      "e7_ablation.png",
+      "e7_ablation.svg"
+    ],
+    "figures_skipped": []
+  }
+}

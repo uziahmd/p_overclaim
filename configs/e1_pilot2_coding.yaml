@@ -1,0 +1,137 @@
+# Experiment 1 (preference), Domain 1 (coding), pilot 2: 30 tasks (session 1's 20 + 10 tests_narrowed),
+# two matched-set designs (v1 appended sentence, v2 in-place edits), three judge rubrics, hidden + shown.
+# Run: uv run python -m overclaim.experiments.e1_preference --config configs/e1_pilot2_coding.yaml [--stage ...] [--dry-run]
+# Writes results/pilot2_coding/. Nothing under results/pilot_coding/ (session 1) is read for writing or modified.
+run_name: pilot2_coding
+schema_version: 2                      # selects the pilot-2 stages of e1_preference
+seed: 0
+domain: coding
+models_config: configs/models.yaml     # judges, editor, classifier, reward models, price table
+rubrics_config: configs/rubrics.yaml
+variants_config: configs/variants_coding_pilot2.yaml
+data:
+  source: chilomax/SWE-rebench-openhands-trajectories
+  raw_dir: data/raw/coding
+  row_groups: [0, 1, 2, 3, 4, 5, 6, 7]            # task pool: the same eight row groups as session 1
+  stats_row_groups: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]   # label counts only, every downloaded row
+  processed_dir: data/processed/coding
+  tasks_file: tasks_pilot2.jsonl                  # all three gap types (gitignored)
+  gap_types: [no_tests_run, tests_failed, tests_narrowed]
+  final_message_words: [30, 400]
+  max_transcript_tokens: 60000                    # pool cap, as in session 1
+  tool_output_truncate_tokens: 2000
+  tokenizer: o200k_base
+pilot:
+  base_tasks_file: pilot_tasks.jsonl              # session 1's 20 tasks, used exactly as committed
+  added_gap_type: tests_narrowed
+  n_added: 10
+  oversample_factor: 5
+  prefer_resolved: 0
+  candidates_file: pilot2_candidates_narrowed.jsonl   # gitignored
+  added_tasks_file: pilot_tasks_narrowed.jsonl        # committed: the 10 tests_narrowed pilot tasks
+sets:
+  v1: {file: matched_sets_v1.jsonl, human_check: human_check.csv}      # appended sentence (session 1 design, revised)
+  v2: {file: matched_sets_v2.jsonl, human_check: human_check_v2.csv}   # in-place edits of the agent's own message
+  v1s1: {file: matched_sets.jsonl}     # session 1's 20 sets, byte for byte (old placebo); read only, never rewritten
+# Claim removal: the same request as session 1 (so the 20 session-1 removals are cache hits), then a residue-repair pass.
+claim_removal: {provider: anthropic, model: claude-opus-5-5, effort: low, max_tokens: 6000}
+shown: {max_transcript_tokens: 40000}             # the shown condition runs only on pilot tasks at or below this
+pairs: [[O, H], [O, P], [H, P]]                   # each pair is judged in both orders: 6 calls per task
+max_workers: {anthropic: 6, openrouter: 8, google: 4}
+# Judge runs in priority order. A run is skipped (and recorded in runs_skipped.json) when its provider has no credential,
+# when the Anthropic total has reached budget.anthropic_stop_launching_usd, or when only_if_anthropic_below_usd fails.
+runs:
+  # priority 2: Sonnet 5.5, hidden
+  - {id: s55-v1-full,     judge: claude-sonnet-5-5, set: v1, rubric: full,    condition: hidden}
+  - {id: s55-v1-neutral,  judge: claude-sonnet-5-5, set: v1, rubric: neutral, condition: hidden}
+  - {id: s55-v2-full,     judge: claude-sonnet-5-5, set: v2, rubric: full,    condition: hidden}
+  - {id: s55-v2-neutral,  judge: claude-sonnet-5-5, set: v2, rubric: neutral, condition: hidden}
+  - {id: s55-v2-helpful,  judge: claude-sonnet-5-5, set: v2, rubric: helpful, condition: hidden}
+  # Decision 2: session 1's judge ran with thinking off (between_tools). Its baseline (session 1's own 20 sets, full
+  # rubric, hidden; 120 calls) is re-run here under the final judge settings; session 1's records stay in results/pilot_coding/.
+  - {id: s55-v1s1-full,   judge: claude-sonnet-5-5, set: v1s1, rubric: full,  condition: hidden}
+  # priority 3: open judges on OpenRouter, the same list
+  - {id: qwen-v1-full,    judge: qwen3-32b, set: v1, rubric: full,    condition: hidden}
+  - {id: qwen-v1-neutral, judge: qwen3-32b, set: v1, rubric: neutral, condition: hidden}
+  - {id: qwen-v2-full,    judge: qwen3-32b, set: v2, rubric: full,    condition: hidden}
+  - {id: qwen-v2-neutral, judge: qwen3-32b, set: v2, rubric: neutral, condition: hidden}
+  - {id: qwen-v2-helpful, judge: qwen3-32b, set: v2, rubric: helpful, condition: hidden}
+  - {id: oss-v1-full,     judge: gpt-oss-120b, set: v1, rubric: full,    condition: hidden}
+  - {id: oss-v1-neutral,  judge: gpt-oss-120b, set: v1, rubric: neutral, condition: hidden}
+  - {id: oss-v2-full,     judge: gpt-oss-120b, set: v2, rubric: full,    condition: hidden}
+  - {id: oss-v2-neutral,  judge: gpt-oss-120b, set: v2, rubric: neutral, condition: hidden}
+  - {id: oss-v2-helpful,  judge: gpt-oss-120b, set: v2, rubric: helpful, condition: hidden}
+  # priority 4: Gemini. Smoke test first (2 tasks x 6 calls on each route that has a credential); the vertex smoke test is
+  # the only vertex traffic of this session and is kept out of the summary table.
+  - {id: gem-smoke-aistudio, judge: gemini-3.8-flash, route: aistudio, set: v2, rubric: neutral, condition: hidden, max_tasks: 2}
+  - {id: gem-smoke-vertex,   judge: gemini-3.8-flash, route: vertex,   set: v2, rubric: neutral, condition: hidden, max_tasks: 2,
+     grader_label: gemini-3.8-flash@vertex, smoke_only: true}
+  - {id: gemf-v1-neutral, judge: gemini-3.8-flash, set: v1, rubric: neutral, condition: hidden}
+  - {id: gemf-v2-neutral, judge: gemini-3.8-flash, set: v2, rubric: neutral, condition: hidden}
+  - {id: gema-v2-neutral, judge: gemini-4-argon,   set: v2, rubric: neutral, condition: hidden}
+  # priority 5: shown condition, Sonnet 5.5 only, prompt caching on the shared prefix (task context + transcript)
+  - {id: s55-v2-neutral-shown, judge: claude-sonnet-5-5, set: v2, rubric: neutral, condition: shown}
+  # priority 6, 7
+  - {id: o55-v2-neutral,  judge: claude-opus-5-5,   set: v2, rubric: neutral, condition: hidden}
+  - {id: s46-v2-neutral,  judge: claude-sonnet-4-6, set: v2, rubric: neutral, condition: hidden}
+  # priority 8 is the reward model (stage rm, local GPU): sets v1 and v2, hidden.
+  # priority 9, 10: only while the Anthropic total is under the stated amount
+  - {id: o46-v2-neutral,  judge: claude-opus-4-6,   set: v2, rubric: neutral, condition: hidden, only_if_anthropic_below_usd: 14.0}
+  - {id: s46-v1-neutral,  judge: claude-sonnet-4-6, set: v1, rubric: neutral, condition: hidden, only_if_anthropic_below_usd: 16.0}
+rm: {sets: [v1, v2], conditions: [hidden]}
+reasons: {enabled: true}                           # Step 6: classify every verdict's reason string with the classifier model
+analysis:
+  n_bootstrap: 2000
+  seed: 0
+  gap_breakdown: {grader: claude-sonnet-5-5, set: v2, rubric: neutral, condition: hidden}
+budget:
+  anthropic_usd_cap: 20.0                 # hard cap: the client refuses a call that would exceed it
+  anthropic_stop_launching_usd: 18.0      # no new run is launched once the Anthropic total has reached this
+  openrouter_usd_cap: 3.0
+  google_usd_cap: 3.0
+# Full-run cost projection (overclaim/projection.py): arithmetic on this pilot's measured cost per call. Nothing is run.
+# Unit costs come from the v2 runs. A judge not run in a condition gets an estimate (basis column says so).
+# Experiment 1 call counts are the session-2 brief's. The brief refers to a kickoff prompt for Experiments 2 and 3 and for
+# a cut order; the kickoff prompt this project received lists neither, so the Experiment 2 and 3 rows are ASSUMPTIONS
+# derived from Plan.md and are labelled as such: 40 tasks x 3 domains x 2 generating models x 16 samples = 3,840 messages,
+# each scored once per judge (pointwise; the pairwise hidden cost per call is used as an upper bound, the pointwise
+# prompt holds one message instead of two) and labelled once by a transcript-aware judge; Experiment 3 re-runs
+# Experiment 1's shown pairs and Experiment 2's scoring with the claim-listing judge (shown; assumed +300 output tokens
+# per call for the claim list). calls_per_prefix: 32 = one cached transcript serves the 32 messages of a task.
+projection:
+  reference: claude-sonnet-5-5
+  sets: [v2]
+  thought_separate: [gemini-3.8-flash, gemini-4-argon]
+  targets_usd: {anthropic: 180, openrouter: 20}
+  items:
+    - {name: "E1 hidden (180 tasks x 6)", group: "E1 (as specified in the brief)", provider: anthropic, condition: hidden, calls_per_judge: 1080,
+       judges: [claude-sonnet-5-5, claude-opus-5-5, claude-sonnet-4-6, claude-opus-4-6],
+       like: {claude-opus-4-6: claude-sonnet-4-6}}
+    - {name: "E1 shown, 5.5 pair (180 tasks x 6)", group: "E1 (as specified in the brief)", provider: anthropic, condition: shown, calls_per_judge: 1080,
+       judges: [claude-sonnet-5-5, claude-opus-5-5]}
+    - {name: "E1 shown, 4.6 pair (60 tasks x 6)", group: "E1 (as specified in the brief)", provider: anthropic, condition: shown, calls_per_judge: 360,
+       judges: [claude-sonnet-4-6, claude-opus-4-6], like: {claude-opus-4-6: claude-sonnet-4-6}}
+    - {name: "E2 scoring, hidden (ASSUMED 3,840 messages)", group: "E2 (ASSUMED)", provider: anthropic, condition: hidden, calls_per_judge: 3840,
+       judges: [claude-sonnet-5-5, claude-opus-5-5, claude-sonnet-4-6, claude-opus-4-6],
+       like: {claude-opus-4-6: claude-sonnet-4-6}}
+    - {name: "E2 overclaim labels, shown (ASSUMED 3,840 messages)", group: "E2 (ASSUMED)", provider: anthropic, condition: shown,
+       calls_per_judge: 3840, calls_per_prefix: 32, judges: [claude-sonnet-5-5]}
+    - {name: "E3 mitigated E1 shown, 5.5 pair (ASSUMED +300 output tokens)", group: "E3 (ASSUMED)", provider: anthropic, condition: shown,
+       calls_per_judge: 1080, extra_output_tokens: 300, judges: [claude-sonnet-5-5, claude-opus-5-5]}
+    - {name: "E3 mitigated E1 shown, 4.6 pair (ASSUMED +300 output tokens)", group: "E3 (ASSUMED)", provider: anthropic, condition: shown,
+       calls_per_judge: 360, extra_output_tokens: 300, judges: [claude-sonnet-4-6, claude-opus-4-6],
+       like: {claude-opus-4-6: claude-sonnet-4-6}}
+    - {name: "E3 mitigated E2 scoring, shown, 5.5 pair (ASSUMED)", group: "E3 (ASSUMED)", provider: anthropic, condition: shown,
+       calls_per_judge: 3840, calls_per_prefix: 32, extra_output_tokens: 300, judges: [claude-sonnet-5-5, claude-opus-5-5]}
+    - {name: "E1 hidden (180 tasks x 6)", group: "E1 (ASSUMED: same 180 tasks, hidden and shown)", provider: openrouter, condition: hidden, calls_per_judge: 1080,
+       judges: [qwen3-32b, gpt-oss-120b]}
+    - {name: "E1 shown, no prompt cache (180 tasks x 6)", group: "E1 (ASSUMED: same 180 tasks, hidden and shown)", provider: openrouter, condition: shown, calls_per_judge: 1080,
+       judges: [qwen3-32b, gpt-oss-120b]}
+    - {name: "E2 scoring, hidden (ASSUMED 3,840 messages)", group: "E2 (ASSUMED)", provider: openrouter, condition: hidden, calls_per_judge: 3840,
+       judges: [qwen3-32b, gpt-oss-120b]}
+    - {name: "E1 hidden (180 tasks x 6)", group: "E1 (ASSUMED: same 180 tasks, hidden and shown)", provider: google, condition: hidden, calls_per_judge: 1080,
+       judges: [gemini-3.8-flash, gemini-4-argon]}
+    - {name: "E1 shown, priced as uncached input (180 tasks x 6)", group: "E1 (ASSUMED: same 180 tasks, hidden and shown)", provider: google, condition: shown, calls_per_judge: 1080,
+       judges: [gemini-3.8-flash, gemini-4-argon]}
+    - {name: "E2 scoring, hidden (ASSUMED 3,840 messages)", group: "E2 (ASSUMED)", provider: google, condition: hidden, calls_per_judge: 3840,
+       judges: [gemini-3.8-flash, gemini-4-argon]}

@@ -1,0 +1,22 @@
+{\scriptsize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{4.55cm}>{\raggedright\arraybackslash}p{2.65cm}>{\raggedright\arraybackslash}p{5.95cm}@{}}
+\toprule
+grader & model id & served by & settings (the token count is the output limit) \\
+\midrule
+Sonnet 5.5 & \texttt{claude-sonnet-5-5} & Anthropic API & thinking adaptive, effort low, 2000 tokens \\
+Opus 5.5 & \texttt{claude-opus-5-5} & Anthropic API & thinking adaptive, effort low, 2000 tokens \\
+Sonnet 4.6 & \texttt{claude-sonnet-4-6} & Anthropic API & thinking adaptive, effort low, 2000 tokens \\
+Opus 4.6 & \texttt{claude-opus-4-6} & Anthropic API & thinking adaptive, effort low, 2000 tokens \\
+Gemini 3.8 Flash & \texttt{gemini-3.8-flash} & Vertex AI, AI Studio & thinking level low, 1500 tokens \\
+Gemini 4 Argon & \texttt{gemini-4-argon} & Vertex AI, AI Studio & thinking level low, 1500 tokens \\
+DeepSeek V4 Pro & \texttt{deepseek/\allowbreak deepseek-v4-pro} & OpenRouter & temperature 0, reasoning off, 300 tokens \\
+gpt-oss-120b & \texttt{openai/\allowbreak gpt-oss-120b} & OpenRouter & temperature 0, reasoning effort low, 300 tokens \\
+Qwen3-32B & \texttt{qwen/\allowbreak qwen3-32b} & OpenRouter & temperature 0, reasoning off, 300 tokens \\
+\midrule
+Skywork 0.6B & \texttt{Skywork/\allowbreak Skywork-Reward-V2-Qwen3-0.6B} & local GPU & bfloat16 \\
+Skywork 1.7B & \texttt{Skywork/\allowbreak Skywork-Reward-V2-Qwen3-1.7B} & local GPU & bfloat16 \\
+Skywork 3B & \texttt{Skywork/\allowbreak Skywork-Reward-V2-Llama-3.2-3B} & local GPU & bfloat16 \\
+Skywork 4B & \texttt{Skywork/\allowbreak Skywork-Reward-V2-Qwen3-4B} & local GPU & bfloat16, 4-bit weights (nf4) \\
+Skywork 8B & \texttt{Skywork/\allowbreak Skywork-Reward-V2-Qwen3-8B} & local GPU & bfloat16, 4-bit weights (nf4) \\
+\bottomrule
+\end{tabular}}

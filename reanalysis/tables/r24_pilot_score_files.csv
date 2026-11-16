@@ -1,0 +1,18 @@
+run,file,score records on the final 60 tasks,final tasks in the file
+pilot_coding,judge_calls.jsonl,18,3
+pilot_coding,rm_scores.jsonl,9,3
+pilot2_coding,judge_calls.jsonl,750,6
+pilot2_coding,rm_scores.jsonl,33,6
+pilot3_coding,e2_scores.jsonl,96,3
+pilot3_coding,e3_judge_calls.jsonl,18,3
+pilot3_coding,judge_calls.jsonl,984,14
+pilot3_coding,rm_scores.jsonl,42,14
+pilot4_coding,e2_scores.jsonl,192,6
+pilot4_coding,e3_judge3_calls.jsonl,18,3
+pilot4_coding,judge_calls.jsonl,264,42
+pilot4_coding,pointwise_calls.jsonl,531,21
+pilot4_coding,rm_scores.jsonl,126,42
+prep5,e2_mixed_scores.jsonl,320,10
+prep5,e3pw_calls.jsonl,15,5
+prep5,pointwise_calls.jsonl,15,5
+all,any of the files above,,53

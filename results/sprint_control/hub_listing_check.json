@@ -1,0 +1,89 @@
+{
+  "models": {
+    "skywork-v2-llama3.2-3b": {
+      "files_of_the_repo_not_in_trace": [
+        ".gitattributes",
+        "assets/skywork_logo.png"
+      ],
+      "last_modified": "2025-07-06 18:16:05+00:00",
+      "latest_commit_date": "2025-07-06 18:16:05+00:00",
+      "n_commits": 23,
+      "repository": "Skywork/Skywork-Reward-V2-Llama-3.2-3B",
+      "revision_now": "beafe5f2e6a275ce8c556f68f2d82de7fefbc3d8",
+      "safetensors_bytes_in_listing": 6425535280,
+      "trace_hashes": 10,
+      "trace_hashes_found_in_listing": 10,
+      "trace_hashes_not_in_listing": [],
+      "weights_bytes_main_run": 6425505792
+    },
+    "skywork-v2-qwen3-0.6b": {
+      "files_of_the_repo_not_in_trace": [
+        ".gitattributes",
+        "README.md",
+        "assets/skywork_logo.png"
+      ],
+      "last_modified": "2025-07-06 18:16:12+00:00",
+      "latest_commit_date": "2025-07-06 18:16:12+00:00",
+      "n_commits": 26,
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-0.6B",
+      "revision_now": "8c14a4e9e6321deaf572544339b16b8d6bbe8886",
+      "safetensors_bytes_in_listing": 1192137232,
+      "trace_hashes": 9,
+      "trace_hashes_found_in_listing": 9,
+      "trace_hashes_not_in_listing": [],
+      "weights_bytes_main_run": 1192137232
+    },
+    "skywork-v2-qwen3-1.7b": {
+      "files_of_the_repo_not_in_trace": [
+        ".gitattributes",
+        "README.md",
+        "assets/skywork_logo.png"
+      ],
+      "last_modified": "2025-07-06 18:16:19+00:00",
+      "latest_commit_date": "2025-07-06 18:16:19+00:00",
+      "n_commits": 24,
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-1.7B",
+      "revision_now": "e51ea3e08fb81326c3b812a7ff0cb9cee83e59cc",
+      "safetensors_bytes_in_listing": 3441189792,
+      "trace_hashes": 9,
+      "trace_hashes_found_in_listing": 9,
+      "trace_hashes_not_in_listing": [],
+      "weights_bytes_main_run": 3441189792
+    },
+    "skywork-v2-qwen3-4b-4bit": {
+      "files_of_the_repo_not_in_trace": [
+        ".gitattributes",
+        "README.md",
+        "assets/skywork_logo.png"
+      ],
+      "last_modified": "2025-07-06 18:16:25+00:00",
+      "latest_commit_date": "2025-07-06 18:16:25+00:00",
+      "n_commits": 22,
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+      "revision_now": "fd958fef475f323f4e6b195930e3dd918485c668",
+      "safetensors_bytes_in_listing": 8044987200,
+      "trace_hashes": 11,
+      "trace_hashes_found_in_listing": 11,
+      "trace_hashes_not_in_listing": [],
+      "weights_bytes_main_run": 8044941312
+    },
+    "skywork-v2-qwen3-8b-4bit": {
+      "files_of_the_repo_not_in_trace": [
+        ".gitattributes",
+        "README.md",
+        "assets/skywork_logo.png"
+      ],
+      "last_modified": "2025-07-06 18:16:33+00:00",
+      "latest_commit_date": "2025-07-06 18:16:33+00:00",
+      "n_commits": 21,
+      "repository": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+      "revision_now": "6f19fdefb933293d4898bdb59a96f7223d998659",
+      "safetensors_bytes_in_listing": 15136865264,
+      "trace_hashes": 13,
+      "trace_hashes_found_in_listing": 13,
+      "trace_hashes_not_in_listing": [],
+      "weights_bytes_main_run": 15136819200
+    }
+  },
+  "what": "The Hub's current file listing of each reward model's repository against the saved trace (sprint_control/main_run_weights.json); metadata only, nothing downloaded."
+}

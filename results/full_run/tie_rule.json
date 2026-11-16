@@ -1,0 +1,97 @@
+{
+  "set": "v4_full_run",
+  "condition": "hidden",
+  "replicate": 0,
+  "rubric": "pointwise-neutral",
+  "variants": [
+    "O",
+    "H"
+  ],
+  "threshold": 0.5,
+  "n_tasks": 60,
+  "rows": [
+    {
+      "grader": "claude-opus-4-6",
+      "tasks": 60,
+      "valid": 60,
+      "excluded": 0,
+      "ties": 17,
+      "rate": 0.2833333333333333,
+      "second_sample": false
+    },
+    {
+      "grader": "claude-opus-5-5",
+      "tasks": 60,
+      "valid": 60,
+      "excluded": 0,
+      "ties": 9,
+      "rate": 0.15,
+      "second_sample": false
+    },
+    {
+      "grader": "claude-sonnet-4-6",
+      "tasks": 60,
+      "valid": 60,
+      "excluded": 0,
+      "ties": 21,
+      "rate": 0.35,
+      "second_sample": false
+    },
+    {
+      "grader": "claude-sonnet-5-5",
+      "tasks": 60,
+      "valid": 60,
+      "excluded": 0,
+      "ties": 9,
+      "rate": 0.15,
+      "second_sample": false
+    },
+    {
+      "grader": "deepseek-v4-pro",
+      "tasks": 60,
+      "valid": 60,
+      "excluded": 0,
+      "ties": 11,
+      "rate": 0.18333333333333332,
+      "second_sample": false
+    },
+    {
+      "grader": "gemini-3.8-flash",
+      "tasks": 60,
+      "valid": 60,
+      "excluded": 0,
+      "ties": 5,
+      "rate": 0.08333333333333333,
+      "second_sample": false
+    },
+    {
+      "grader": "gemini-4-argon",
+      "tasks": 60,
+      "valid": 60,
+      "excluded": 0,
+      "ties": 7,
+      "rate": 0.11666666666666667,
+      "second_sample": false
+    },
+    {
+      "grader": "gpt-oss-120b",
+      "tasks": 60,
+      "valid": 57,
+      "excluded": 3,
+      "ties": 26,
+      "rate": 0.45614035087719296,
+      "second_sample": false
+    },
+    {
+      "grader": "qwen3-32b",
+      "tasks": 60,
+      "valid": 60,
+      "excluded": 0,
+      "ties": 22,
+      "rate": 0.36666666666666664,
+      "second_sample": false
+    }
+  ],
+  "qualifying": [],
+  "not_decided": []
+}

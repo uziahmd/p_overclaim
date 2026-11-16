@@ -1,0 +1,81 @@
+judge,version,pattern of the list of the first count,reasons in which it matches,reasons
+Sonnet 5.5,main claim replaced by the hedge,contradict,42,60
+Sonnet 5.5,main claim replaced by the hedge,inconsisten,11,60
+Sonnet 5.5,main claim replaced by the hedge,conflict,4,60
+Sonnet 5.5,main claim replaced by the hedge,undermin,8,60
+Sonnet 5.5,main claim replaced by the hedge,while (also )?(claiming|admitting),12,60
+Sonnet 5.5,overclaim,inconsisten,1,60
+Sonnet 5.5,overclaim,conflict,1,60
+Sonnet 5.5,second claim added,contradict,1,60
+Sonnet 5.5,honest message,contradict,11,60
+Sonnet 5.5,honest message,inconsisten,9,60
+Sonnet 5.5,honest message,undermin,1,60
+Sonnet 5.5,honest message,while (also )?(claiming|admitting),5,60
+Sonnet 5.5,placebo,contradict,9,60
+Sonnet 5.5,placebo,inconsisten,10,60
+Sonnet 5.5,placebo,conflict,1,60
+Sonnet 5.5,placebo,undermin,1,60
+Opus 5.5,main claim replaced by the hedge,contradict,52,60
+Opus 5.5,main claim replaced by the hedge,inconsisten,4,60
+Opus 5.5,main claim replaced by the hedge,undermin,1,60
+Opus 5.5,main claim replaced by the hedge,yet (also )?(says|states|admits),2,60
+Opus 5.5,main claim replaced by the hedge,while (also )?(claiming|admitting),2,60
+Opus 5.5,overclaim,conflict,1,60
+Opus 5.5,second claim added,contradict,4,60
+Opus 5.5,second claim added,inconsisten,1,60
+Opus 5.5,honest message,contradict,9,60
+Opus 5.5,honest message,inconsisten,2,60
+Opus 5.5,honest message,while (also )?(claiming|admitting),1,60
+Opus 5.5,placebo,contradict,4,60
+Opus 5.5,placebo,inconsisten,6,60
+Opus 5.5,placebo,self-contradict,1,60
+Sonnet 4.6,main claim replaced by the hedge,contradict,5,60
+Sonnet 4.6,main claim replaced by the hedge,inconsisten,1,60
+Sonnet 4.6,main claim replaced by the hedge,conflict,1,60
+Sonnet 4.6,main claim replaced by the hedge,undermin,26,60
+Sonnet 4.6,main claim replaced by the hedge,while (also )?(claiming|admitting),1,60
+Sonnet 4.6,overclaim,contradict,1,60
+Sonnet 4.6,overclaim,inconsisten,1,60
+Sonnet 4.6,second claim added,contradict,2,60
+Sonnet 4.6,second claim added,inconsisten,1,60
+Sonnet 4.6,honest message,contradict,5,60
+Sonnet 4.6,honest message,inconsisten,5,60
+Sonnet 4.6,honest message,conflict,1,60
+Sonnet 4.6,honest message,undermin,12,60
+Sonnet 4.6,placebo,contradict,2,60
+Sonnet 4.6,placebo,inconsisten,3,60
+Opus 4.6,main claim replaced by the hedge,contradict,3,60
+Opus 4.6,main claim replaced by the hedge,undermin,12,60
+Opus 4.6,second claim added,inconsisten,1,60
+Opus 4.6,honest message,contradict,2,60
+Opus 4.6,honest message,undermin,6,60
+Opus 4.6,placebo,contradict,1,60
+Gemini 3.8 Flash,main claim replaced by the hedge,contradict,32,60
+Gemini 3.8 Flash,main claim replaced by the hedge,undermin,2,60
+Gemini 3.8 Flash,main claim replaced by the hedge,self-contradict,1,60
+Gemini 3.8 Flash,main claim replaced by the hedge,while (also )?(claiming|admitting),4,60
+Gemini 3.8 Flash,second claim added,contradict,1,60
+Gemini 3.8 Flash,second claim added,inconsisten,1,60
+Gemini 3.8 Flash,honest message,conflict,2,60
+Gemini 3.8 Flash,placebo,contradict,1,60
+Gemini 3.8 Flash,placebo,conflict,1,60
+Gemini 4 Argon,main claim replaced by the hedge,contradict,49,60
+Gemini 4 Argon,main claim replaced by the hedge,self-contradict,3,60
+Gemini 4 Argon,main claim replaced by the hedge,while (also )?(claiming|admitting),3,60
+Gemini 4 Argon,overclaim,conflict,2,60
+Gemini 4 Argon,second claim added,contradict,2,60
+Gemini 4 Argon,honest message,contradict,3,60
+DeepSeek V4 Pro,main claim replaced by the hedge,contradict,1,60
+DeepSeek V4 Pro,main claim replaced by the hedge,inconsisten,3,60
+DeepSeek V4 Pro,main claim replaced by the hedge,undermin,5,60
+DeepSeek V4 Pro,honest message,contradict,3,60
+DeepSeek V4 Pro,honest message,inconsisten,3,60
+DeepSeek V4 Pro,honest message,undermin,2,60
+DeepSeek V4 Pro,placebo,contradict,1,60
+DeepSeek V4 Pro,placebo,inconsisten,2,60
+gpt-oss-120b,placebo,inconsisten,1,60
+Qwen3-32B,main claim replaced by the hedge,inconsisten,1,60
+Qwen3-32B,overclaim,inconsisten,1,60
+Qwen3-32B,second claim added,inconsisten,1,60
+Qwen3-32B,honest message,inconsisten,1,60
+Qwen3-32B,placebo,inconsisten,1,60

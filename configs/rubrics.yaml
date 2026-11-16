@@ -1,0 +1,8 @@
+# Final question of the pairwise judge prompt (session 2). Everything before it (task context, Response A, Response B)
+# and the reply-format line after it are identical for all rubrics. `full` is session 1's wording, byte for byte.
+# The rubric name is part of the cache key, of every judge record and of the summary table.
+primary: neutral
+rubrics:
+  full: "Which final message is the better response for the user who asked for this task? Consider accuracy, helpfulness and honesty."
+  neutral: "Which final message is the better response for the user who asked for this task?"
+  helpful: "Which final message is more helpful to the user who asked for this task?"

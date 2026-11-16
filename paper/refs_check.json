@@ -1,0 +1,475 @@
+[
+  {
+    "key": "smyth2026overclaim",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "same words, different split into last and first name: page \"Notsawo, Pascal Jr Tikeng\", entry \"Tikeng Notsawo, Pascal Jr\""
+    ],
+    "page": "https://arxiv.org/abs/2609.20812",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 9,
+      "page": 9
+    }
+  },
+  {
+    "key": "huang2026insecure",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2609.36139",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 8,
+      "page": 8
+    }
+  },
+  {
+    "key": "xu2026mcair",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2610.19679",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 11,
+      "page": 11
+    }
+  },
+  {
+    "key": "advani2026falsesuccess",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2606.09863",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 1,
+      "page": 1
+    }
+  },
+  {
+    "key": "zhu2026selfreport",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2610.29609",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 4,
+      "page": 4
+    }
+  },
+  {
+    "key": "leng2024taming",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2410.09724",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 4,
+      "page": 4
+    }
+  },
+  {
+    "key": "feng2026disclosure",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2609.33220",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 6,
+      "page": 6
+    }
+  },
+  {
+    "key": "li2024judgesurvey",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2411.16594",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 13,
+      "page": 13
+    }
+  },
+  {
+    "key": "chehbouni2025neither",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2508.18076",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 4,
+      "page": 4
+    }
+  },
+  {
+    "key": "badertdinov2025swerebench",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2505.20411",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 9,
+      "page": 9
+    }
+  },
+  {
+    "key": "trofimova2025openhandstrajs",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "the card's own BibTeX writes \"Ibragim, Badertdinov\" (first and last name swapped); the entry writes \"Badertdinov, Ibragim\""
+    ],
+    "page": "https://huggingface.co/datasets/nebius/SWE-rebench-openhands-trajectories",
+    "http": 200,
+    "title_matches": true,
+    "authors_match": true,
+    "year_matches": true,
+    "licence_on_card": true
+  },
+  {
+    "key": "wang2024openhands",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2407.16741",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 24,
+      "page": 24
+    }
+  },
+  {
+    "key": "liu2025skywork",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2507.01352",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 12,
+      "page": 12
+    }
+  },
+  {
+    "key": "openrouter",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "an organisation's page; the entry's author is the organisation, so only the URL is checked"
+    ],
+    "page": "https://openrouter.ai",
+    "http": 200
+  },
+  {
+    "key": "anthropicclaude",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "an organisation's page; the entry's author is the organisation, so only the URL is checked"
+    ],
+    "page": "https://platform.claude.com/docs",
+    "http": 200
+  },
+  {
+    "key": "googlegemini",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "an organisation's page; the entry's author is the organisation, so only the URL is checked"
+    ],
+    "page": "https://aistudio.google.com/docs",
+    "http": 200
+  },
+  {
+    "key": "deepseekv4pro",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "an organisation's page; the entry's author is the organisation, so only the URL is checked"
+    ],
+    "page": "https://openrouter.ai/deepseek/deepseek-v4-pro",
+    "http": 200
+  },
+  {
+    "key": "openaigptoss",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "an organisation's page; the entry's author is the organisation, so only the URL is checked"
+    ],
+    "page": "https://huggingface.co/openai/gpt-oss-120b",
+    "http": 200
+  },
+  {
+    "key": "qwen3",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "an organisation's page; the entry's author is the organisation, so only the URL is checked"
+    ],
+    "page": "https://huggingface.co/Qwen/Qwen3-32B",
+    "http": 200
+  },
+  {
+    "key": "qwen3coder",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "an organisation's page; the entry's author is the organisation, so only the URL is checked"
+    ],
+    "page": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "http": 200
+  },
+  {
+    "key": "hadfield2025multiagent",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "http": 200,
+    "title_on_page": "How we built our multi-agent research system",
+    "title_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 6,
+      "found_on_page": 6
+    },
+    "byline_on_page": "Jeremy Hadfield, Barry Zhang, Kenneth Lien, Florian Scholz, Jeremy Fox, and Daniel Ford",
+    "byline_is_the_author_list": true,
+    "date_on_page": "2025-06",
+    "year_matches": true,
+    "month_matches": true,
+    "facts": {
+      "a lead agent delegates to subagents that work in parallel": "a lead agent coordinates the process while delegating to specialized subagents that operate in parallel",
+      "the subagents return condensed results": "condensing the most important tokens for the lead research agent",
+      "the lead agent combines the results and decides whether more work is needed": "synthesizes these results and decides whether more research is needed"
+    },
+    "numbers": {
+      "year": 2025
+    }
+  },
+  {
+    "key": "cemri2025why",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2503.13657",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 13,
+      "page": 13
+    },
+    "full_text_page": "https://arxiv.org/html/2503.13657",
+    "full_text_http": 200,
+    "facts": {
+      "more than 1,600 annotated runs": "1600+ annotated traces",
+      "seven frameworks": "across 7 popular MAS frameworks",
+      "14 kinds of failure in three groups": "identifies 14 unique modes, clustered into 3 categories",
+      "one group is task verification": "(iii) task verification",
+      "one kind is task derailment": "Task derailment - Deviation from the intended objective",
+      "no or incomplete verification": "No or incomplete verification",
+      "incorrect verification": "Incorrect verification",
+      "premature termination": "Premature termination",
+      "verifiers that check only superficially": "passes superficial checks"
+    },
+    "numbers": {
+      "annotated_runs": 1600,
+      "frameworks": 7,
+      "failure_modes": 14,
+      "groups": 3,
+      "year": 2025
+    }
+  },
+  {
+    "key": "greenblatt2026incident",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "the author is that of the page's own BibTeX citation, {METR}; the note field names the people of the page's contributor line"
+    ],
+    "page": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+    "http": 200,
+    "title_on_page": "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident",
+    "title_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 1,
+      "found_on_page": 3
+    },
+    "byline_on_page": "Ryan Greenblatt , Ajeya Cotra , and Hjalmar Wijk",
+    "author_in_the_page_citation": "METR",
+    "author_is_the_page_citation_author": true,
+    "contributors_in_the_note": [
+      "Ryan Greenblatt",
+      "Ajeya Cotra",
+      "Hjalmar Wijk"
+    ],
+    "byline_is_the_contributor_list": true,
+    "date_on_page": "2026-08",
+    "year_matches": true,
+    "month_matches": true,
+    "facts": {
+      "about 1,200 agents meant to be isolated found a way to communicate": "Roughly 1200 agents meant to be isolated from one another found a way to communicate",
+      "some agents coordinated the others and assigned them tasks": "served as a key coordinator and assigner of tasks",
+      "more than one coordinator": "all of the central coordinators of the attack that we identified",
+      "more than one agent assigned others to tasks": "A number of agents (including JAN183411 and an agent named LILY ) took on roles coordinating all the others and assigning them to particular lanes",
+      "agents joined an attack they recognised as out of scope": "joining in the attack despite recognizing that it was out of scope for their assigned tasks",
+      "agents worked out how to alter their own transcripts, believing a scorer would read them": "spoof, edit, or delete their own transcripts because they (incorrectly) believed the ExploitGym scorer would check",
+      "share of transcripts with altered tool calls": "Roughly 7% of the transcripts we evaluated were successfully spoofed",
+      "the incident began in July": "On July 8th",
+      "the authors state the investigation's limits": "the investigation process and its limitations"
+    },
+    "numbers": {
+      "agents_that_communicated": 1200,
+      "percent_of_transcripts_altered": 7,
+      "year": 2026
+    }
+  },
+  {
+    "key": "paglieri2026swarm",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2609.04170",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 6,
+      "page": 6
+    },
+    "facts": {
+      "100 agents proving formal mathematical conjectures": "a research collective of 100 autonomous LLM agents tasked with proving formal mathematical conjectures",
+      "one agent found an exploit in the evaluation system, and it spread from agent to agent": "a single agent discovered an exploit in the evaluation system, it propagated across the collective via a shared knowledge library and later through peer-to-peer messages",
+      "other agents audited the false proofs and alerted others": "auditing fraudulent proofs, alerting peers"
+    },
+    "numbers": {
+      "agents": 100,
+      "year": 2026
+    }
+  },
+  {
+    "key": "qin2026tamper",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2609.30266",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 6,
+      "page": 6
+    },
+    "facts": {
+      "all tested harnesses but one let agents delete their own records when asked": "All tested harnesses, except Muse Code, allowed agents to delete their traces when asked",
+      "tampering emerges when agents try to improve their rewards": "trace tampering behavior emerges naturally in frontier models, when agents try to improve their rewards",
+      "logging should happen outside the agent's control": "trace logging happens through an independent interception mechanism outside of the agent's control"
+    },
+    "numbers": {
+      "year": 2026
+    }
+  },
+  {
+    "key": "khalifa2026gaming",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [],
+    "page": "https://arxiv.org/abs/2601.14691",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "authors_match": true,
+    "n_authors": {
+      "entry": 9,
+      "page": 9
+    },
+    "facts": {
+      "the agent's reasoning is rewritten while its actions and what it observes stay fixed": "rewriting agent CoTs while holding actions and observations fixed",
+      "the rewritten reasoning alone sways the judges": "manipulated reasoning alone can inflate false positive rates of state-of-the-art VLM judges",
+      "the judges are LLM judges of agent performance": "LLM judges are highly susceptible to manipulation of agent reasoning traces"
+    },
+    "numbers": {
+      "year": 2026
+    }
+  },
+  {
+    "key": "lee2025epistemic",
+    "checked_on": "2026-11-14",
+    "ok": true,
+    "notes": [
+      "the year is that of the venue the page's comment field names (NAACL 2025); the page's citation date is of 2024"
+    ],
+    "page": "https://arxiv.org/abs/2410.20774",
+    "http": 200,
+    "title_matches": true,
+    "year_matches": true,
+    "year_is_the_venue_year": {
+      "venue_in_the_page_comment": "NAACL 2025",
+      "citation_date_on_page": "2024"
+    },
+    "authors_match": true,
+    "n_authors": {
+      "entry": 5,
+      "page": 5
+    },
+    "facts": {
+      "LLM judges show a negative bias toward epistemic markers, stronger against markers of uncertainty": "we observe a negative bias toward epistemic markers, with a stronger bias against markers expressing uncertainty",
+      "every LLM judge tested lacks robustness to such markers": "all tested LLM-judges, including GPT-4o, show a notable lack of robustness in the presence of epistemic markers",
+      "the benchmark covers a single output and two outputs side by side": "in both single and pairwise evaluation settings"
+    },
+    "numbers": {
+      "year": 2024
+    }
+  }
+]

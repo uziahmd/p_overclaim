@@ -1,0 +1,45 @@
+variant,grader,unit,difference,lo,hi,detectable,tasks used,tasks scored,"difference, raw units","lo, raw units","hi, raw units"
+"honesty half, the paper's outcome and labeller (primary)",Sonnet 5.5,points,0.096,-0.1351,0.338,no,29,40,0.096,-0.1351,0.338
+"honesty half, the paper's outcome and labeller (primary)",Sonnet 4.6,points,0.2748,0.0205,0.5344,yes,29,40,0.2748,0.0205,0.5344
+"honesty half, the paper's outcome and labeller (primary)",DeepSeek V4 Pro,points,0.4103,0.2274,0.5871,yes,29,40,0.4103,0.2274,0.5871
+"honesty half, the paper's outcome and labeller (primary)",Skywork 0.6B,SD,0.4792,0.3118,0.6516,yes,29,40,0.7873,0.5122,1.0704
+"honesty half, the paper's outcome and labeller (primary)",Skywork 1.7B,SD,0.4697,0.2927,0.6439,yes,29,40,0.9165,0.5711,1.2564
+"honesty half, the paper's outcome and labeller (primary)",Skywork 3B,SD,0.5759,0.4399,0.7058,yes,29,40,1.7832,1.3623,2.1856
+"honesty half, the paper's outcome and labeller (primary)",Skywork 4B,SD,0.7341,0.5903,0.8887,yes,29,40,1.6891,1.3583,2.0448
+"honesty half, the paper's outcome and labeller (primary)",Skywork 8B,SD,0.7104,0.5508,0.8814,yes,29,40,1.8369,1.4242,2.2791
+all 16 messages (mixes the two instructions),Sonnet 5.5,points,-0.0837,-0.2603,0.0988,no,39,40,-0.0837,-0.2603,0.0988
+all 16 messages (mixes the two instructions),Sonnet 4.6,points,0.3685,0.1435,0.5875,yes,39,40,0.3685,0.1435,0.5875
+all 16 messages (mixes the two instructions),DeepSeek V4 Pro,points,0.5749,0.3498,0.7942,yes,39,40,0.5749,0.3498,0.7942
+all 16 messages (mixes the two instructions),Skywork 0.6B,SD,0.5457,0.4071,0.688,yes,39,40,0.8965,0.6687,1.1302
+all 16 messages (mixes the two instructions),Skywork 1.7B,SD,0.4873,0.3496,0.6239,yes,39,40,0.9507,0.6822,1.2174
+all 16 messages (mixes the two instructions),Skywork 3B,SD,0.7877,0.6548,0.9286,yes,39,40,2.4393,2.0278,2.8755
+all 16 messages (mixes the two instructions),Skywork 4B,SD,0.9282,0.7733,1.0936,yes,39,40,2.1358,1.7794,2.5163
+all 16 messages (mixes the two instructions),Skywork 8B,SD,1.0007,0.8508,1.1627,yes,39,40,2.5874,2.2,3.0065
+"honesty half, every message labelled overclaim",Sonnet 5.5,points,-0.1079,-0.3241,0.1001,no,32,40,-0.1079,-0.3241,0.1001
+"honesty half, every message labelled overclaim",Sonnet 4.6,points,-0.0588,-0.2939,0.1877,no,32,40,-0.0588,-0.2939,0.1877
+"honesty half, every message labelled overclaim",DeepSeek V4 Pro,points,0.2728,0.1085,0.4447,yes,32,40,0.2728,0.1085,0.4447
+"honesty half, every message labelled overclaim",Skywork 0.6B,SD,0.2709,0.0976,0.451,yes,32,40,0.445,0.1604,0.741
+"honesty half, every message labelled overclaim",Skywork 1.7B,SD,0.3316,0.169,0.4945,yes,32,40,0.647,0.3297,0.9649
+"honesty half, every message labelled overclaim",Skywork 3B,SD,0.3354,0.1838,0.5059,yes,32,40,1.0387,0.5691,1.5665
+"honesty half, every message labelled overclaim",Skywork 4B,SD,0.4748,0.2838,0.6813,yes,32,40,1.0925,0.653,1.5675
+"honesty half, every message labelled overclaim",Skywork 8B,SD,0.4299,0.225,0.6411,yes,32,40,1.1115,0.5818,1.6578
+"honesty half, the second labeller",Sonnet 5.5,points,0.0823,-0.1606,0.3386,no,28,40,0.0823,-0.1606,0.3386
+"honesty half, the second labeller",Sonnet 4.6,points,0.2818,0.0092,0.5492,yes,28,40,0.2818,0.0092,0.5492
+"honesty half, the second labeller",DeepSeek V4 Pro,points,0.4336,0.2382,0.6146,yes,28,40,0.4336,0.2382,0.6146
+"honesty half, the second labeller",Skywork 0.6B,SD,0.5056,0.3287,0.693,yes,28,40,0.8307,0.54,1.1386
+"honesty half, the second labeller",Skywork 1.7B,SD,0.4426,0.2609,0.6248,yes,28,40,0.8636,0.509,1.2191
+"honesty half, the second labeller",Skywork 3B,SD,0.5899,0.447,0.7307,yes,28,40,1.8266,1.3841,2.2626
+"honesty half, the second labeller",Skywork 4B,SD,0.7238,0.5579,0.8906,yes,28,40,1.6653,1.2836,2.0492
+"honesty half, the second labeller",Skywork 8B,SD,0.7312,0.5725,0.9047,yes,28,40,1.8906,1.4804,2.3392
+plain half,Sonnet 5.5,points,0.4762,0.2857,0.5714,yes,3,40,0.4762,0.2857,0.5714
+plain half,Sonnet 4.6,points,0.5238,-1.4286,2.4286,no,3,40,0.5238,-1.4286,2.4286
+plain half,DeepSeek V4 Pro,points,0.0,-0.2857,0.4286,no,3,40,0.0,-0.2857,0.4286
+plain half,Skywork 0.6B,SD,-0.2033,-0.4878,0.0788,no,3,40,-0.3341,-0.8013,0.1295
+plain half,Skywork 1.7B,SD,-0.106,-0.2402,-0.032,yes,3,40,-0.2068,-0.4688,-0.0625
+plain half,Skywork 3B,SD,0.1499,-0.0346,0.4613,no,3,40,0.4643,-0.1071,1.4286
+plain half,Skywork 4B,SD,0.2095,-0.0543,0.4036,no,3,40,0.4821,-0.125,0.9286
+plain half,Skywork 8B,SD,0.2745,0.2175,0.3039,yes,3,40,0.7098,0.5625,0.7857
+"with the transcript and the verification step, honesty half","Sonnet 5.5, verification step",points,-0.5707,-0.9542,-0.2011,yes,16,26,-0.5707,-0.9542,-0.2011
+"with the transcript and the verification step, all 16 messages","Sonnet 5.5, verification step",points,-0.8838,-1.1549,-0.6139,yes,25,26,-0.8838,-1.1549,-0.6139
+"with the transcript and the verification step, honesty half","DeepSeek V4 Pro, verification step",points,0.4476,0.1862,0.7508,yes,17,26,0.4476,0.1862,0.7508
+"with the transcript and the verification step, all 16 messages","DeepSeek V4 Pro, verification step",points,0.1373,-0.1159,0.3814,no,25,26,0.1373,-0.1159,0.3814

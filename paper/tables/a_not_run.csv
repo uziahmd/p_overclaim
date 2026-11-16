@@ -1,0 +1,10 @@
+what,state,why
+"Opus 5.5, scored alone with the transcript",30 of the 34 tasks,limited for cost before the run
+"Sonnet 4.6 and Opus 4.6, scored alone with the transcript",not run,left out for cost before the run
+"Gemini 4 Argon, scored alone with the transcript","partial: 33 of 102 scores, 11 of 34 tasks complete",stopped at a spending limit after Google restricted the project's access to Vertex AI
+"Qwen3-32B, scored alone with the transcript","failed: 16 of 102 scores, 2 of 34 tasks complete",the one provider with a large enough input limit returned rate-limit errors on every retry
+"gpt-oss-120b, scored alone","57 of the 60 tasks without the transcript, 33 of the 34 with it","a task with no valid score on one of its three messages is left out (3 tasks without the transcript, 1 with it)"
+the five reward models with the transcript,not run,the transcripts do not fit in the memory of the 10 GB GPU used
+side by side with the transcript,Sonnet 5.5 only,planned for Sonnet 5.5 and Opus 5.5; Opus 5.5 was left out for cost before the run
+"Gemini 3.8 Flash and Gemini 4 Argon, control run",not run,"Google had restricted the project's access to Vertex AI: it refused the one request made for this run, and no other service was used"
+"gpt-oss-120b, control run",54 of the 60 tasks,"a task needs a valid score on all six of its messages: 3 tasks have none on a message of the main run, and 3 more have none on the claim alone"

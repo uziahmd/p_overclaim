@@ -1,0 +1,282 @@
+quantity,independent,this report,difference,agrees to 0.01
+"fresh messages, Sonnet 5.5, honesty half: estimate",0.096,0.096,0.0,yes
+"fresh messages, Sonnet 5.5, honesty half: lo",-0.1351,-0.1351,0.0,yes
+"fresh messages, Sonnet 5.5, honesty half: hi",0.338,0.338,0.0,yes
+"fresh messages, Sonnet 5.5, honesty half: tasks",29.0,29.0,0.0,yes
+"fresh messages, Sonnet 5.5, all 16: estimate",-0.0837,-0.0837,0.0,yes
+"fresh messages, Sonnet 5.5, all 16: lo",-0.2603,-0.2603,0.0,yes
+"fresh messages, Sonnet 5.5, all 16: hi",0.0988,0.0988,0.0,yes
+"fresh messages, Sonnet 5.5, all 16: tasks",39.0,39.0,0.0,yes
+"Sonnet 4.6, change inside the honesty half: estimate",0.0419,0.0419,0.0,yes
+"Sonnet 4.6, change inside the honesty half: lo",-0.0185,-0.0185,0.0,yes
+"Sonnet 4.6, change inside the honesty half: hi",0.1068,0.1068,0.0,yes
+"Sonnet 4.6, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"claim against a hedge, Opus 4.6: estimate",0.2667,0.2667,0.0,yes
+"claim against a hedge, Opus 4.6: lo",0.0833,0.0833,0.0,yes
+"claim against a hedge, Opus 4.6: hi",0.45,0.45,0.0,yes
+"claim against a hedge, Opus 4.6: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Opus 4.6: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Opus 5.5: estimate",1.3833,1.3833,0.0,yes
+"claim against a hedge, Opus 5.5: lo",1.0833,1.0833,0.0,yes
+"claim against a hedge, Opus 5.5: hi",1.6667,1.6667,0.0,yes
+"claim against a hedge, Opus 5.5: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Opus 5.5: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Sonnet 4.6: estimate",0.3833,0.3833,0.0,yes
+"claim against a hedge, Sonnet 4.6: lo",0.1,0.1,0.0,yes
+"claim against a hedge, Sonnet 4.6: hi",0.65,0.65,0.0,yes
+"claim against a hedge, Sonnet 4.6: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Sonnet 4.6: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Sonnet 5.5: estimate",1.2167,1.2167,0.0,yes
+"claim against a hedge, Sonnet 5.5: lo",0.9667,0.9667,0.0,yes
+"claim against a hedge, Sonnet 5.5: hi",1.4667,1.4667,0.0,yes
+"claim against a hedge, Sonnet 5.5: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Sonnet 5.5: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, DeepSeek V4 Pro: estimate",0.7167,0.7167,0.0,yes
+"claim against a hedge, DeepSeek V4 Pro: lo",0.45,0.45,0.0,yes
+"claim against a hedge, DeepSeek V4 Pro: hi",1.05,1.05,0.0,yes
+"claim against a hedge, DeepSeek V4 Pro: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, DeepSeek V4 Pro: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Gemini 3.8 Flash: estimate",2.5167,2.5167,0.0,yes
+"claim against a hedge, Gemini 3.8 Flash: lo",2.1333,2.1333,0.0,yes
+"claim against a hedge, Gemini 3.8 Flash: hi",2.8833,2.8833,0.0,yes
+"claim against a hedge, Gemini 3.8 Flash: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Gemini 3.8 Flash: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Gemini 4 Argon: estimate",1.5667,1.5667,0.0,yes
+"claim against a hedge, Gemini 4 Argon: lo",1.1,1.1,0.0,yes
+"claim against a hedge, Gemini 4 Argon: hi",2.0,2.0,0.0,yes
+"claim against a hedge, Gemini 4 Argon: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Gemini 4 Argon: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, gpt-oss-120b: estimate",0.5273,0.5273,0.0,yes
+"claim against a hedge, gpt-oss-120b: lo",-0.2182,-0.2182,0.0,yes
+"claim against a hedge, gpt-oss-120b: hi",1.3095,1.3095,0.0,yes
+"claim against a hedge, gpt-oss-120b: tasks",55.0,55.0,0.0,yes
+"claim against a hedge, gpt-oss-120b: detectable",0.0,0.0,0.0,yes
+"claim against a hedge, Qwen3-32B: estimate",0.6667,0.6667,0.0,yes
+"claim against a hedge, Qwen3-32B: lo",0.5333,0.5333,0.0,yes
+"claim against a hedge, Qwen3-32B: hi",0.7833,0.7833,0.0,yes
+"claim against a hedge, Qwen3-32B: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Qwen3-32B: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Skywork 3B: estimate",2.4271,2.4271,0.0,yes
+"claim against a hedge, Skywork 3B: lo",2.1906,2.1906,0.0001,yes
+"claim against a hedge, Skywork 3B: hi",2.6881,2.6882,0.0001,yes
+"claim against a hedge, Skywork 3B: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Skywork 3B: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Skywork 0.6B: estimate",0.8625,0.8625,0.0,yes
+"claim against a hedge, Skywork 0.6B: lo",0.6982,0.6981,0.0001,yes
+"claim against a hedge, Skywork 0.6B: hi",1.0328,1.0329,0.0001,yes
+"claim against a hedge, Skywork 0.6B: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Skywork 0.6B: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Skywork 1.7B: estimate",1.4135,1.4135,0.0,yes
+"claim against a hedge, Skywork 1.7B: lo",1.227,1.2269,0.0001,yes
+"claim against a hedge, Skywork 1.7B: hi",1.6011,1.601,0.0,yes
+"claim against a hedge, Skywork 1.7B: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Skywork 1.7B: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Skywork 4B: estimate",1.4187,1.4187,0.0001,yes
+"claim against a hedge, Skywork 4B: lo",1.2365,1.2365,0.0001,yes
+"claim against a hedge, Skywork 4B: hi",1.6052,1.6051,0.0001,yes
+"claim against a hedge, Skywork 4B: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Skywork 4B: detectable",1.0,1.0,0.0,yes
+"claim against a hedge, Skywork 8B: estimate",1.9914,1.9914,0.0,yes
+"claim against a hedge, Skywork 8B: lo",1.7833,1.7834,0.0001,yes
+"claim against a hedge, Skywork 8B: hi",2.212,2.2118,0.0001,yes
+"claim against a hedge, Skywork 8B: tasks",60.0,60.0,0.0,yes
+"claim against a hedge, Skywork 8B: detectable",1.0,1.0,0.0,yes
+graders with a detectable difference against a hedge,13.0,13.0,0.0,yes
+"Sonnet 5.5 premium, no test run: estimate",1.1,1.1,0.0,yes
+"Sonnet 5.5 premium, no test run: lo",0.75,0.75,0.0,yes
+"Sonnet 5.5 premium, no test run: hi",1.45,1.45,0.0,yes
+"Sonnet 5.5 premium, no test run: tasks",20.0,20.0,0.0,yes
+"Sonnet 5.5 premium, last test run failed: estimate",1.95,1.95,0.0,yes
+"Sonnet 5.5 premium, last test run failed: lo",1.55,1.55,0.0,yes
+"Sonnet 5.5 premium, last test run failed: hi",2.3,2.3,0.0,yes
+"Sonnet 5.5 premium, last test run failed: tasks",20.0,20.0,0.0,yes
+"Sonnet 5.5 premium, narrower rerun after a failure: estimate",1.65,1.65,0.0,yes
+"Sonnet 5.5 premium, narrower rerun after a failure: lo",1.1487,1.1487,0.0001,yes
+"Sonnet 5.5 premium, narrower rerun after a failure: hi",2.1012,2.1012,0.0001,yes
+"Sonnet 5.5 premium, narrower rerun after a failure: tasks",20.0,20.0,0.0,yes
+"Sonnet 5.5 premium, failure reported (40 sets): estimate",1.8,1.8,0.0,yes
+"Sonnet 5.5 premium, failure reported (40 sets): lo",1.5,1.5,0.0,yes
+"Sonnet 5.5 premium, failure reported (40 sets): hi",2.075,2.075,0.0,yes
+"Sonnet 5.5 premium, failure reported (40 sets): tasks",40.0,40.0,0.0,yes
+overclaims in the plain half: count,317.0,317.0,0.0,yes
+overclaims in the plain half: share,0.9906,0.9906,0.0,yes
+overclaims in the honesty half: count,121.0,121.0,0.0,yes
+overclaims in the honesty half: share,0.3781,0.3781,0.0,yes
+"Sonnet 5.5, change inside the honesty half: estimate",-0.0079,-0.0079,0.0,yes
+"Sonnet 5.5, change inside the honesty half: lo",-0.0907,-0.0907,0.0,yes
+"Sonnet 5.5, change inside the honesty half: hi",0.0751,0.0751,0.0001,yes
+"Sonnet 5.5, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"Sonnet 5.5: messages tied at the top score, of 16",4.575,4.575,0.0,yes
+Sonnet 5.5: top message of 16 from the plain half,0.3611,0.3611,0.0,yes
+"Sonnet 4.6, change inside the honesty half: estimate",0.0419,0.0419,0.0,yes
+"Sonnet 4.6, change inside the honesty half: lo",-0.0185,-0.0185,0.0,yes
+"Sonnet 4.6, change inside the honesty half: hi",0.1068,0.1068,0.0,yes
+"Sonnet 4.6, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"Sonnet 4.6: messages tied at the top score, of 16",5.4,5.4,0.0,yes
+Sonnet 4.6: top message of 16 from the plain half,0.687,0.687,0.0,yes
+"DeepSeek V4 Pro, change inside the honesty half: estimate",0.1471,0.1471,0.0,yes
+"DeepSeek V4 Pro, change inside the honesty half: lo",0.0688,0.0688,0.0001,yes
+"DeepSeek V4 Pro, change inside the honesty half: hi",0.2315,0.2315,0.0,yes
+"DeepSeek V4 Pro, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"DeepSeek V4 Pro: messages tied at the top score, of 16",5.7,5.7,0.0,yes
+DeepSeek V4 Pro: top message of 16 from the plain half,0.7017,0.7017,0.0,yes
+"Skywork 0.6B, change inside the honesty half: estimate",0.2344,0.2344,0.0,yes
+"Skywork 0.6B, change inside the honesty half: lo",0.1344,0.1344,0.0,yes
+"Skywork 0.6B, change inside the honesty half: hi",0.3406,0.3406,0.0,yes
+"Skywork 0.6B, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"Skywork 0.6B: messages tied at the top score, of 16",1.075,1.075,0.0,yes
+Skywork 0.6B: top message of 16 from the plain half,0.6375,0.6375,0.0,yes
+"Skywork 1.7B, change inside the honesty half: estimate",0.2344,0.2344,0.0,yes
+"Skywork 1.7B, change inside the honesty half: lo",0.1219,0.1219,0.0,yes
+"Skywork 1.7B, change inside the honesty half: hi",0.3375,0.3375,0.0,yes
+"Skywork 1.7B, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"Skywork 1.7B: messages tied at the top score, of 16",1.05,1.05,0.0,yes
+Skywork 1.7B: top message of 16 from the plain half,0.55,0.55,0.0,yes
+"Skywork 3B, change inside the honesty half: estimate",0.2719,0.2719,0.0,yes
+"Skywork 3B, change inside the honesty half: lo",0.1562,0.1562,0.0,yes
+"Skywork 3B, change inside the honesty half: hi",0.3845,0.3845,0.0,yes
+"Skywork 3B, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"Skywork 3B: messages tied at the top score, of 16",1.05,1.05,0.0,yes
+Skywork 3B: top message of 16 from the plain half,0.8,0.8,0.0,yes
+"Skywork 4B, change inside the honesty half: estimate",0.3219,0.3219,0.0,yes
+"Skywork 4B, change inside the honesty half: lo",0.2062,0.2062,0.0001,yes
+"Skywork 4B, change inside the honesty half: hi",0.4313,0.4313,0.0001,yes
+"Skywork 4B, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"Skywork 4B: messages tied at the top score, of 16",1.05,1.05,0.0,yes
+Skywork 4B: top message of 16 from the plain half,0.825,0.825,0.0,yes
+"Skywork 8B, change inside the honesty half: estimate",0.2844,0.2844,0.0,yes
+"Skywork 8B, change inside the honesty half: lo",0.175,0.175,0.0,yes
+"Skywork 8B, change inside the honesty half: hi",0.3906,0.3906,0.0,yes
+"Skywork 8B, change inside the honesty half: tasks",40.0,40.0,0.0,yes
+"Skywork 8B: messages tied at the top score, of 16",1.025,1.025,0.0,yes
+Skywork 8B: top message of 16 from the plain half,0.85,0.85,0.0,yes
+"placebo minus honest, Opus 4.6: estimate",0.55,0.55,0.0,yes
+"placebo minus honest, Opus 4.6: lo",0.25,0.25,0.0,yes
+"placebo minus honest, Opus 4.6: hi",0.8667,0.8667,0.0,yes
+"placebo minus honest, Opus 4.6: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Opus 5.5: estimate",-0.1,-0.1,0.0,yes
+"placebo minus honest, Opus 5.5: lo",-0.3,-0.3,0.0,yes
+"placebo minus honest, Opus 5.5: hi",0.1,0.1,0.0,yes
+"placebo minus honest, Opus 5.5: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Sonnet 4.6: estimate",0.2833,0.2833,0.0,yes
+"placebo minus honest, Sonnet 4.6: lo",-0.0167,-0.0167,0.0,yes
+"placebo minus honest, Sonnet 4.6: hi",0.6,0.6,0.0,yes
+"placebo minus honest, Sonnet 4.6: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Sonnet 5.5: estimate",0.25,0.25,0.0,yes
+"placebo minus honest, Sonnet 5.5: lo",0.0167,0.0167,0.0,yes
+"placebo minus honest, Sonnet 5.5: hi",0.4838,0.4837,0.0001,yes
+"placebo minus honest, Sonnet 5.5: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, DeepSeek V4 Pro: estimate",1.0333,1.0333,0.0,yes
+"placebo minus honest, DeepSeek V4 Pro: lo",0.7167,0.7167,0.0,yes
+"placebo minus honest, DeepSeek V4 Pro: hi",1.3833,1.3833,0.0,yes
+"placebo minus honest, DeepSeek V4 Pro: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Gemini 3.8 Flash: estimate",1.1167,1.1167,0.0,yes
+"placebo minus honest, Gemini 3.8 Flash: lo",0.5833,0.5833,0.0,yes
+"placebo minus honest, Gemini 3.8 Flash: hi",1.6504,1.6504,0.0,yes
+"placebo minus honest, Gemini 3.8 Flash: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Gemini 4 Argon: estimate",0.9167,0.9167,0.0,yes
+"placebo minus honest, Gemini 4 Argon: lo",0.4167,0.4167,0.0,yes
+"placebo minus honest, Gemini 4 Argon: hi",1.4167,1.4167,0.0,yes
+"placebo minus honest, Gemini 4 Argon: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, gpt-oss-120b: estimate",1.2105,1.2105,0.0,yes
+"placebo minus honest, gpt-oss-120b: lo",0.5439,0.5439,0.0,yes
+"placebo minus honest, gpt-oss-120b: hi",1.8947,1.8947,0.0,yes
+"placebo minus honest, gpt-oss-120b: tasks",57.0,57.0,0.0,yes
+"placebo minus honest, Qwen3-32B: estimate",0.3,0.3,0.0,yes
+"placebo minus honest, Qwen3-32B: lo",0.2,0.2,0.0,yes
+"placebo minus honest, Qwen3-32B: hi",0.4167,0.4167,0.0,yes
+"placebo minus honest, Qwen3-32B: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Skywork 3B: estimate",0.6573,0.6573,0.0,yes
+"placebo minus honest, Skywork 3B: lo",0.4854,0.4854,0.0,yes
+"placebo minus honest, Skywork 3B: hi",0.8344,0.8344,0.0001,yes
+"placebo minus honest, Skywork 3B: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Skywork 0.6B: estimate",0.2055,0.2055,0.0,yes
+"placebo minus honest, Skywork 0.6B: lo",0.0902,0.0901,0.0001,yes
+"placebo minus honest, Skywork 0.6B: hi",0.3275,0.3275,0.0,yes
+"placebo minus honest, Skywork 0.6B: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Skywork 1.7B: estimate",0.2583,0.2583,0.0,yes
+"placebo minus honest, Skywork 1.7B: lo",0.1193,0.1193,0.0,yes
+"placebo minus honest, Skywork 1.7B: hi",0.3878,0.3878,0.0,yes
+"placebo minus honest, Skywork 1.7B: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Skywork 4B: estimate",0.9839,0.9839,0.0,yes
+"placebo minus honest, Skywork 4B: lo",0.776,0.776,0.0,yes
+"placebo minus honest, Skywork 4B: hi",1.2011,1.2012,0.0002,yes
+"placebo minus honest, Skywork 4B: tasks",60.0,60.0,0.0,yes
+"placebo minus honest, Skywork 8B: estimate",0.8665,0.8665,0.0,yes
+"placebo minus honest, Skywork 8B: lo",0.6796,0.6795,0.0001,yes
+"placebo minus honest, Skywork 8B: hi",1.0722,1.0721,0.0001,yes
+"placebo minus honest, Skywork 8B: tasks",60.0,60.0,0.0,yes
+graders that score the disclosure detectably below a neutral sentence,12.0,12.0,0.0,yes
+"with the transcript, plain scoring prompt, Opus 5.5: estimate",-0.2333,-0.2333,0.0,yes
+"with the transcript, plain scoring prompt, Opus 5.5: lo",-0.6667,-0.6667,0.0,yes
+"with the transcript, plain scoring prompt, Opus 5.5: hi",0.1667,0.1667,0.0,yes
+"with the transcript, plain scoring prompt, Opus 5.5: tasks",30.0,30.0,0.0,yes
+"with the transcript, plain scoring prompt, Sonnet 5.5: estimate",0.0667,0.0667,0.0,yes
+"with the transcript, plain scoring prompt, Sonnet 5.5: lo",-0.1,-0.1,0.0,yes
+"with the transcript, plain scoring prompt, Sonnet 5.5: hi",0.2333,0.2333,0.0,yes
+"with the transcript, plain scoring prompt, Sonnet 5.5: tasks",60.0,60.0,0.0,yes
+"with the transcript, plain scoring prompt, DeepSeek V4 Pro: estimate",0.8,0.8,0.0,yes
+"with the transcript, plain scoring prompt, DeepSeek V4 Pro: lo",0.5667,0.5667,0.0,yes
+"with the transcript, plain scoring prompt, DeepSeek V4 Pro: hi",1.05,1.05,0.0,yes
+"with the transcript, plain scoring prompt, DeepSeek V4 Pro: tasks",60.0,60.0,0.0,yes
+"with the transcript, plain scoring prompt, Gemini 3.8 Flash: estimate",-0.2353,-0.2353,0.0,yes
+"with the transcript, plain scoring prompt, Gemini 3.8 Flash: lo",-0.8824,-0.8824,0.0,yes
+"with the transcript, plain scoring prompt, Gemini 3.8 Flash: hi",0.3529,0.3529,0.0,yes
+"with the transcript, plain scoring prompt, Gemini 3.8 Flash: tasks",34.0,34.0,0.0,yes
+"with the transcript, plain scoring prompt, Gemini 4 Argon: estimate",-0.3636,-0.3636,0.0,yes
+"with the transcript, plain scoring prompt, Gemini 4 Argon: lo",-1.4545,-1.4545,0.0,yes
+"with the transcript, plain scoring prompt, Gemini 4 Argon: hi",0.7295,0.7295,0.0,yes
+"with the transcript, plain scoring prompt, Gemini 4 Argon: tasks",11.0,11.0,0.0,yes
+"with the transcript, plain scoring prompt, gpt-oss-120b: estimate",1.0909,1.0909,0.0,yes
+"with the transcript, plain scoring prompt, gpt-oss-120b: lo",0.4242,0.4242,0.0,yes
+"with the transcript, plain scoring prompt, gpt-oss-120b: hi",1.9091,1.9091,0.0,yes
+"with the transcript, plain scoring prompt, gpt-oss-120b: tasks",33.0,33.0,0.0,yes
+"with the transcript, plain scoring prompt, Qwen3-32B: estimate",0.0,0.0,0.0,yes
+"with the transcript, plain scoring prompt, Qwen3-32B: lo",0.0,0.0,0.0,yes
+"with the transcript, plain scoring prompt, Qwen3-32B: hi",0.0,0.0,0.0,yes
+"with the transcript, plain scoring prompt, Qwen3-32B: tasks",2.0,2.0,0.0,yes
+"with the transcript, verification step, Opus 5.5: estimate",-1.1333,-1.1333,0.0,yes
+"with the transcript, verification step, Opus 5.5: lo",-1.5,-1.5,0.0,yes
+"with the transcript, verification step, Opus 5.5: hi",-0.8,-0.8,0.0,yes
+"with the transcript, verification step, Opus 5.5: tasks",30.0,30.0,0.0,yes
+"with the transcript, verification step, Sonnet 5.5: estimate",-0.6774,-0.6774,0.0,yes
+"with the transcript, verification step, Sonnet 5.5: lo",-0.9677,-0.9677,0.0,yes
+"with the transcript, verification step, Sonnet 5.5: hi",-0.3871,-0.3871,0.0,yes
+"with the transcript, verification step, Sonnet 5.5: tasks",31.0,31.0,0.0,yes
+"with the transcript, verification step, Gemini 3.8 Flash: estimate",0.1333,0.1333,0.0,yes
+"with the transcript, verification step, Gemini 3.8 Flash: lo",-0.4333,-0.4333,0.0,yes
+"with the transcript, verification step, Gemini 3.8 Flash: hi",0.7333,0.7333,0.0,yes
+"with the transcript, verification step, Gemini 3.8 Flash: tasks",30.0,30.0,0.0,yes
+"with the transcript, instruction only, Sonnet 5.5: estimate",-0.2333,-0.2333,0.0,yes
+"with the transcript, instruction only, Sonnet 5.5: lo",-0.5,-0.5,0.0,yes
+"with the transcript, instruction only, Sonnet 5.5: hi",0.0333,0.0333,0.0,yes
+"with the transcript, instruction only, Sonnet 5.5: tasks",30.0,30.0,0.0,yes
+"with the transcript, instruction only, Gemini 3.8 Flash: estimate",0.4667,0.4667,0.0,yes
+"with the transcript, instruction only, Gemini 3.8 Flash: lo",-0.2667,-0.2667,0.0,yes
+"with the transcript, instruction only, Gemini 3.8 Flash: hi",1.2,1.2,0.0,yes
+"with the transcript, instruction only, Gemini 3.8 Flash: tasks",30.0,30.0,0.0,yes
+"replaced passages, all sets",480.0,480.0,0.0,yes
+replaced passages per set: mean,8.0,8.0,0.0,yes
+replaced passages per set: smallest,3.0,3.0,0.0,yes
+replaced passages per set: largest,17.0,17.0,0.0,yes
+share of the overclaim's characters replaced: mean,0.3414,0.3414,0.0,yes
+honest messages with a check mark,45.0,45.0,0.0,yes
+gpt-oss-120b without the transcript: share of scores that are 2,0.4915,0.4915,0.0,yes
+"share of 10s with the transcript, Opus 5.5",0.0,0.0,0.0,yes
+"scores with the transcript, Opus 5.5",90.0,90.0,0.0,yes
+"share of 10s with the transcript, Sonnet 5.5",0.0,0.0,0.0,yes
+"scores with the transcript, Sonnet 5.5",180.0,180.0,0.0,yes
+"share of 10s with the transcript, DeepSeek V4 Pro",0.8056,0.8056,0.0,yes
+"scores with the transcript, DeepSeek V4 Pro",180.0,180.0,0.0,yes
+"share of 10s with the transcript, Gemini 3.8 Flash",0.1275,0.1275,0.0,yes
+"scores with the transcript, Gemini 3.8 Flash",102.0,102.0,0.0,yes
+"share of 10s with the transcript, Gemini 4 Argon",0.0,0.0,0.0,yes
+"scores with the transcript, Gemini 4 Argon",33.0,33.0,0.0,yes
+"share of 10s with the transcript, gpt-oss-120b",0.802,0.802,0.0,yes
+"scores with the transcript, gpt-oss-120b",101.0,101.0,0.0,yes
+"share of 10s with the transcript, Qwen3-32B",1.0,1.0,0.0,yes
+"scores with the transcript, Qwen3-32B",16.0,16.0,0.0,yes
+Sonnet 5.5 premium without the 6 resolved tasks: estimate,1.5741,1.5741,0.0,yes
+Sonnet 5.5 premium without the 6 resolved tasks: lo,1.2963,1.2963,0.0,yes
+Sonnet 5.5 premium without the 6 resolved tasks: hi,1.8338,1.8338,0.0,yes
+Sonnet 5.5 premium without the 6 resolved tasks: tasks,54.0,54.0,0.0,yes

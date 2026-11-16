@@ -1,0 +1,16 @@
+the main claim says,kind of missing check,code change resolved the issue,sets
+tests passed,last test run failed,not resolved,3
+tests passed,narrower rerun after a failure,not resolved,10
+tests passed,no test run,not resolved,2
+tests passed,no test run,resolved,1
+the change was verified,last test run failed,not resolved,7
+the change was verified,narrower rerun after a failure,not resolved,3
+the change was verified,no test run,not resolved,4
+the change was verified,no test run,resolved,1
+the work is complete,last test run failed,not resolved,10
+the work is complete,narrower rerun after a failure,not resolved,7
+the work is complete,no test run,not resolved,8
+the work is complete,no test run,resolved,4
+tests passed,all kinds,both,16
+the change was verified,all kinds,both,15
+the work is complete,all kinds,both,29

@@ -1,0 +1,119 @@
+{
+  "judges": {
+    "claude-opus-4-6": {
+      "cached reply equals the main run's record": 60,
+      "date of the main run's reply (UTC)": {
+        "2026-11-06": 18,
+        "2026-11-08": 42
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    },
+    "claude-opus-5-5": {
+      "cached reply equals the main run's record": 60,
+      "date of the main run's reply (UTC)": {
+        "2026-11-06": 18,
+        "2026-11-08": 42
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    },
+    "claude-sonnet-4-6": {
+      "cached reply equals the main run's record": 60,
+      "date of the main run's reply (UTC)": {
+        "2026-11-06": 18,
+        "2026-11-08": 42
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    },
+    "claude-sonnet-5-5": {
+      "cached reply equals the main run's record": 60,
+      "date of the main run's reply (UTC)": {
+        "2026-11-06": 18,
+        "2026-11-08": 42
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    },
+    "deepseek-v4-pro": {
+      "cached reply equals the main run's record": 60,
+      "date of the main run's reply (UTC)": {
+        "2026-11-08": 60
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    },
+    "gemini-3.8-flash": {
+      "cached reply equals the main run's record": 60,
+      "date of the main run's reply (UTC)": {
+        "2026-11-08": 60
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    },
+    "gemini-4-argon": {
+      "cached reply equals the main run's record": 60,
+      "date of the main run's reply (UTC)": {
+        "2026-11-08": 60
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    },
+    "gpt-oss-120b": {
+      "cached reply equals the main run's record": 58,
+      "date of the main run's reply (UTC)": {
+        "2026-11-06": 18,
+        "2026-11-08": 42
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    },
+    "qwen3-32b": {
+      "cached reply equals the main run's record": 60,
+      "date of the main run's reply (UTC)": {
+        "2026-11-06": 18,
+        "2026-11-08": 42
+      },
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo requests": 60
+    }
+  },
+  "main cache": "cache",
+  "reward models": {
+    "skywork-v2-llama3.2-3b": {
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo inputs": 60
+    },
+    "skywork-v2-qwen3-0.6b": {
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo inputs": 60
+    },
+    "skywork-v2-qwen3-1.7b": {
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo inputs": 60
+    },
+    "skywork-v2-qwen3-4b-4bit": {
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo inputs": 60
+    },
+    "skywork-v2-qwen3-8b-4bit": {
+      "key found in the main run's cache": 60,
+      "not found": [],
+      "placebo inputs": 60
+    }
+  }
+}
