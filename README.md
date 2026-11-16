@@ -5,26 +5,26 @@ Code and data for the report of that title, written for the AI x Epistemics Rese
 
 ## What we studied
 
-When an AI agent finishes a task, it reports what it did, and the reports often claim more than it did. We test, on
-coding, whether graders such as LLM judges and reward models reward overclaiming. For 60 coding-agent runs in which
-tests were skipped or failed, we compare the agent's overclaiming final message with an honest version that says what
-was not checked. Nine LLM judges and five reward models score both.
+When an AI agent finishes a task, it reports what it did, and such reports often overclaim. We test, on coding,
+whether graders such as LLM judges and reward models reward overclaiming. For 60 coding-agent runs with skipped or
+failed tests, we compare the agent's overclaiming final message with an honest version stating what was not checked.
+Nine LLM judges and five reward models score both.
 
 ## What we found
 
-- When graders see only the message, all score the overclaim higher, by 0.65 to 3.33 points on a scale of 1 to 10
-  for the judges.
-- In a control run with no Gemini judge, where only one passage differs, eleven of twelve graders score the claim
-  detectably higher, most by less.
-- When judges also see the transcript, the record of the agent's commands and their output, four of the six judges
-  tested no longer score the overclaim detectably higher. None scores it detectably lower.
-- When eight graders select the best of the 16 messages written for each task, seven select overclaims more often
-  than at random. Among the 8 written under an added instruction to state what was verified, six graders still do (a
-  later analysis).
+- When graders see only the message, all score the overclaim higher; this premium is 0.65 to 3.33 points on a scale of
+  1 to 10 for the judges.
+- Graders reward the unsupported claim and penalise the honest disclosure. When only one passage differs, eleven of
+  twelve graders score the claim detectably above the disclosure, and twelve of fourteen score it detectably below a
+  neutral sentence.
+- When six judges also see the transcript of the agent's commands and output, it detectably lowers the premium for
+  five; two still show one. None scores the overclaim detectably below the honest version.
+- When eight graders select the best of 16 messages per task, seven select overclaims more often than at random.
+  Among the 8 written under an added instruction to state what was verified, six still do in a post-hoc subgroup
+  analysis.
 
-Our results suggest that graders used to train or select coding agents should see the transcript, not only the
-agent's account. That assumes the transcript is a true record, one the agent cannot alter. We tested one domain;
-whether the result holds in others is open.
+Our results suggest that graders used to train or select coding agents should see the transcript, if the agent cannot
+alter it. Whether this holds beyond coding is open.
 
 ## What is here
 
@@ -35,7 +35,7 @@ whether the result holds in others is open.
 | `sprint_control/`, `results/sprint_control/` | The control run: its plan, declared before its first call and amended before any score (`sprint_control/README.md`), its messages, scripts and tests, its scores and analysis, and an independent recomputation (`results/sprint_control/recomputation/`). |
 | `reanalysis/` | Later analyses of the same scores, made without a model call: scripts, tables, a report, and two independent recomputations that a check compares with the tables (`reanalysis/scripts/independent/`). |
 | `results/pilot_coding/` to `results/pilot4_coding/`, `results/prep5/`, `results/pilot_research/` | Scores of the earlier runs that the reanalysis reads. Some scores of the main run were reused from them. Also two result files of a pilot on research reports, which failed and is not among the results. |
-| `paper/` | The report's tables, each with a CSV copy, and its figures. `paper/numbers_manifest.csv` lists every number in the report's text and the file it comes from. |
+| `paper/` | The report's tables, each with a CSV copy, and its figures (`paper/figures/fig4_side_by_side.pdf` is the report's Figure B2). The `.tex` tables use six macros of the report's preamble: `\Overclaim`, `\Honest`, `\Placebo`, `\ClaimOnly` and `\HedgeOnly` print the names of the five versions of a message in small capitals, and `\nsz{...}` sets an estimate in grey when its interval includes zero; `t1_questions.tex` also refers to two labels of the report. The CSV copies need none. `paper/numbers_manifest.csv` lists every number printed in digits in the report's text and the file it comes from. Its column `commit` names commits of the working repository, and its mark "after the fact" stands for what the report calls post hoc. |
 | `scripts/` | The scripts that build those tables and figures. |
 | `src/overclaim/`, `configs/` | The package (data pipeline, the graders' prompts and clients, the runner, the analysis) and its configurations. |
 | `DETAILS.md` | What the report's appendix points to: how the plan changed and when, notes on validity, and what was done before and during the sprint. |

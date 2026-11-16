@@ -1,4 +1,4 @@
-grader,claim alone - honest message: 38 sets,claim alone - honest message: 22 sets,claim alone - hedge alone: 36 marked sets,claim alone - hedge alone: 24 other sets
+grader,Claim-Only - Honest: 38 sets,Claim-Only - Honest: 22 sets,Claim-Only - Hedge-Only: 36 marked sets,Claim-Only - Hedge-Only: 24 other sets
 Sonnet 5.5,0.50,0.64,0.67,0.12 [interval includes zero]
 Opus 5.5,0.26,-0.05 [interval includes zero],0.69,-0.12 [interval includes zero]
 Sonnet 4.6,0.63,0.09 [interval includes zero],0.33,-0.04 [interval includes zero]

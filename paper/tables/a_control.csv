@@ -1,4 +1,4 @@
-grader,tasks,claim alone - honest message,claim alone - placebo,claim alone - hedge alone,overclaim - claim alone,placebo scored again - placebo
+grader,tasks,Claim-Only - Honest,Claim-Only - Placebo,Claim-Only - Hedge-Only,Overclaim - Claim-Only,Placebo scored again - Placebo
 Sonnet 5.5,60,"0.55 [0.33, 0.77]","0.30 [0.13, 0.47]","0.45 [0.28, 0.63]","1.02 [0.82, 1.22]",0.12 [interval includes zero]
 Opus 5.5,60,"0.15 [-0.07, 0.37] [interval includes zero]","0.25 [0.08, 0.40]","0.37 [0.12, 0.62]","1.27 [1.05, 1.48]",-0.08 [interval includes zero]
 Sonnet 4.6,60,"0.43 [0.18, 0.68]","0.15 [-0.05, 0.35] [interval includes zero]","0.18 [-0.03, 0.40] [interval includes zero]","0.30 [0.00, 0.60] [interval includes zero]",0.03 [interval includes zero]

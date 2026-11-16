@@ -119,14 +119,14 @@ DESIGN: list[Row] = [
     ("60", ALL, S, "header.counts.sets", "", "tasks"),
     ("20", (MET, RES, APP), S, "header.counts.per_gap.no_tests_run", "",
      "tasks per kind of missing check; also the sets whose honest message says that no test ran"),
-    ("34", (MET, APP), S, "header.counts.shown_eligible", "", "transcripts within 40,000 tokens"),
+    ("34", (MET, DIS, APP), S, "header.counts.shown_eligible", "", "transcripts within 40,000 tokens"),
     ("26", (APP,), S, "header.counts.band", "", "longer transcripts"),
     ("26", (RES, APP), S, "header.stages.e2.n_shown_eligible", "", "selection tasks whose transcript fits in 40,000 tokens"),
-    ("57", (RES,), S, core(OSS) + ".n_tasks", "", "gpt-oss-120b complete tasks without the transcript (Figure 4 caption)"),
+    ("57", (RES, APP), S, core(OSS) + ".n_tasks", "",
+     "gpt-oss-120b complete tasks without the transcript (caption of the table of comparisons; caption of Figure B2)"),
     ("4", (APP,), CFG, "e2.ns[#1]", "", "best of 4"),
     ("40", (MET, RES, APP), S, "header.stages.e2.n_tasks", "", "selection tasks"),
     ("17", (MET, DIS, APP), S, "header.counts.repaired_sets", "", "sets corrected after the audit"),
-    ("4", (APP,), DOC, "replacements", "len", "sets replaced after the audit"),
     ("19", (MET,), DER, "set_history.corrected_on_the_audit", "",
      "sets corrected on the audit's findings (the first freeze, data/processed/full_run_tasks.superseded-20261107T172655Z.json)"),
     ("2", (MET,), DER, "set_history.replaced_on_the_audit", "", "sets replaced on the audit's findings (the first freeze)"),
@@ -148,10 +148,10 @@ DESIGN: list[Row] = [
     ("100", (APP,), S, "n_tie_seeds", "", "random draws over which a tie for the highest score is averaged"),
     ("3", (MET,), DER, "invalid_replies.gptoss_tasks_lost_without_transcript", "",
      "tasks that gpt-oss-120b loses without the transcript to a reply with no valid score (60 - 3 = 57)"),
-    ("30", (MET, RES), S, core(O55, "shown") + ".n_tasks", "", "Opus 5.5 tasks with the transcript"),
-    ("34", (MET, RES), S, core(FLASH, "shown") + ".n_tasks", "", "Gemini 3.8 Flash tasks with the transcript"),
-    ("33", (MET,), S, core(OSS, "shown") + ".n_tasks", "", "gpt-oss-120b tasks with the transcript"),
-    ("2", (MET, RES), S, core(QWEN, "shown") + ".n_tasks", "", "Qwen3-32B complete tasks with the transcript when its run failed"),
+    ("30", (RES, APP), S, core(O55, "shown") + ".n_tasks", "", "Opus 5.5 tasks with the transcript"),
+    ("34", (RES, APP), S, core(FLASH, "shown") + ".n_tasks", "", "Gemini 3.8 Flash tasks with the transcript"),
+    ("33", (APP,), S, core(OSS, "shown") + ".n_tasks", "", "gpt-oss-120b tasks with the transcript"),
+    ("2", (RES, APP), S, core(QWEN, "shown") + ".n_tasks", "", "Qwen3-32B complete tasks with the transcript when its run failed"),
 ]
 
 # Numbers quoted from cited sources in the introduction's paragraph on systems of several agents (not our data).
@@ -164,11 +164,7 @@ CITED: list[Row] = [
 WITHOUT: list[Row] = [
     ("0.65", (ABS,), S, core(QWEN) + ".premium", "", "smallest judge premium without the transcript: Qwen3-32B"),
     ("3.33", (ABS,), S, core(FLASH) + ".premium", "", "largest judge premium without the transcript: Gemini 3.8 Flash"),
-    ("1.29", (RES,), S, "e5[grader=skywork-v2-qwen3-1.7b].standardised_gap", "", "smallest reward-model premium, standard deviations"),
-    ("1.58", (RES,), S, "e5[grader=skywork-v2-qwen3-8b-4bit].standardised_gap", "", "largest reward-model premium, standard deviations"),
     ("1.57", (INT, RES), S, holm(f"H1 / {S55}") + ".value", "", "Sonnet 5.5 premium without the transcript (planned test; Figure 1 caption)"),
-    ("1.32", (RES,), S, holm(f"H1 / {S55}") + ".ci[#0]", "", ""),
-    ("1.82", (RES,), S, holm(f"H1 / {S55}") + ".ci[#1]", "", ""),
 ]
 
 WITH: list[Row] = [
@@ -176,11 +172,7 @@ WITH: list[Row] = [
     ("-1.50", (RES,), S, holm(f"H2 / {S55}") + ".value", "", "planned change, Sonnet 5.5, 60 tasks"),
     ("-1.80", (RES,), S, holm(f"H2 / {S55}") + ".ci[#0]", "", ""),
     ("-1.20", (RES,), S, holm(f"H2 / {S55}") + ".ci[#1]", "", ""),
-    ("11", (MET, RES, APP), S, core(ARGON, "shown") + ".n_tasks", "", "Gemini 4 Argon tasks with the transcript"),
-    ("1.80", (RES,), S, hyp("H2", O55) + ".value", "abs", "smallest fall of the premium on the tasks scored both ways, among the three judges on fewer tasks (Opus 5.5)"),
-    ("3.32", (RES,), S, hyp("H2", FLASH) + ".value", "abs", "largest such fall (Gemini 3.8 Flash)"),
-    ("0.80", (RES,), DER, f"with_transcript_all_tasks.{DS}.premium", "", "DeepSeek V4 Pro premium with the transcript, all 60 tasks"),
-    ("1.09", (RES,), S, core(OSS, "shown") + ".premium", "", "gpt-oss-120b premium with the transcript"),
+    ("11", (RES, APP), S, core(ARGON, "shown") + ".n_tasks", "", "Gemini 4 Argon tasks with the transcript"),
     ("34", (APP,), RS, "pws-gema.n_tasks.'pointwise_calls.jsonl'", "", "tasks planned for Gemini 4 Argon with the transcript"),
 ]
 
@@ -288,26 +280,18 @@ REANALYSIS: list[Row] = [
     # the sets
     ("6", (MET, DIS, APP), S, "header.counts.resolved", "", "runs whose code change did resolve the issue"),
     ("8", (ABS, RES, APP), CFG, "e2.n_per_instruction", "", "fresh messages per task written under the added instruction"),
-    ("8", (DIS,), R25, "[what=replaced passages per set: mean].value", "",
+    ("8", (RES, DIS), R25, "[what=replaced passages per set: mean].value", "",
      "passages in which the honest message differs from the overclaim, mean over the 60 sets"),
     ("40", (RES, APP), R22, r22("Sonnet 5.5", "failure reported (40 sets): tasks"), "",
      "sets whose honest message reports a failed test run (the two kinds of missing check with a failure)"),
     # the plan and the pilots
-    ("53", (MET, APP), R24F, "[run=all].final tasks in the file", "",
-     "final tasks that appear in the scores of the four pilots or of the preparation run (the four pilots alone: 50)"),
-    ("21", (APP,), R27C, "[judge=any judge].final tasks scored alone in pilot 4", "",
-     "final tasks that pilot 4 scored alone, with eight of the nine judges"),
-    ("32", (APP,), R27E, "[labeller=second labeller].labelled overclaim", "",
-     "honest messages that the second labeller of pilot 4 called overclaims (of 60)"),
-    ("16", (APP,), R27E, "[labeller=second labeller].labelled overclaim and word for word the final one", "",
-     "of those 32 honest messages, the ones that stand word for word in the final sets"),
     ("18", (APP,), R22, r22("gpt-oss-120b", "last test run failed: tasks"), "",
      "gpt-oss-120b tasks in the sets whose last test run failed (caption of Table B10)"),
     ("19", (APP,), R22, r22("gpt-oss-120b", "narrower rerun after a failure: tasks"), "",
      "gpt-oss-120b tasks in the sets with a narrower rerun after a failure (caption of Table B10)"),
     ("33", (APP,), R27A, "[kind of missing check=both kinds (40 sets);the record says the named test failed before the edit=unknown].sets", "",
      "sets with a reported failure for which the transcript does not show whether the test failed before the edit"),
-    # the comparisons of Table 2 (the hedge and the disclosure were run with the main run: not after the fact)
+    # the table of comparisons (the hedge and the disclosure were run with the main run: not after the fact)
     # draft 10: the comparison against a hedge left Table 2 and Section 4.1 (its numbers are in Table B9)
     ("12", (RES,), R21C, f"[comparison=disclosure against a neutral sentence].{_DETECT}", "",
      "graders whose score falls detectably when the disclosure stands in place of the placebo's neutral sentence"),
@@ -322,10 +306,23 @@ REANALYSIS: list[Row] = [
     ("0.19", (APP,), R21F, _SECOND.format("Sonnet 4.6") + ".hi", "", "", AF),
     ("32", (APP,), R21F, _SECOND.format("Sonnet 4.6") + ".tasks used", "",
      "tasks whose 8 messages hold both kinds under the second count (caption of Table B12)", AF),
+    # the revision of 2026-11-16: the largest fall for the disclosure among the judges (Section 4.1; Table 3)
+    ("1.21", (RES,), R21, "[grader=gpt-oss-120b].disclosure against a neutral sentence", "",
+     "the placebo minus the honest message for gpt-oss-120b (57 tasks), the largest among the nine judges"),
+    # the author's second list of 2026-11-16: what the last column of Table 3 found, stated in Section 4.1
+    ("0.27", (RES,), R21, "[grader=Sonnet 4.6].fresh messages (honesty half)", "",
+     "Sonnet 4.6: overclaims minus the other messages among the 8 written under the added instruction", AF),
+    ("0.41", (RES,), R21, "[grader=DeepSeek V4 Pro].fresh messages (honesty half)", "", "the same for DeepSeek V4 Pro", AF),
+    ("0.47", (RES,), R21, "[grader=Skywork 1.7B].fresh messages (honesty half)", "",
+     "the same for Skywork 1.7B, the smallest value among the five reward models (standard deviations of its scores)", AF),
+    ("0.73", (RES,), R21, "[grader=Skywork 4B].fresh messages (honesty half)", "",
+     "the same for Skywork 4B, the largest value among the five reward models", AF),
+    # the revision of 2026-11-16: why Sonnet 5.5 selects fewer overclaims (Section 4.3; Table B12)
+    ("64%", (RES,), R23S, r23s("Sonnet 5.5", "top pick among all 16 comes from the plain half"), "pct1m",
+     "Sonnet 5.5: share of its selections from all 16 that were written under the added instruction (100% - 36%)", AF),
+    ("37%", (RES,), R23S, r23s("Sonnet 5.5", "honesty half: top pick"), PCT,
+     "Sonnet 5.5: share of overclaims among its selections from the 8 written under the added instruction", AF),
     # the premium by kind of missing check
-    ("1.80", (RES,), R22, r22("Sonnet 5.5", "failure reported (40 sets)"), "",
-     "Sonnet 5.5 premium in the 40 sets whose honest message reports a failed test run", AF),
-    ("1.10", (RES,), R22, r22("Sonnet 5.5", "no test run"), "", "Sonnet 5.5 premium in the 20 sets where no test ran", AF),
     # draft 10: these two moved from Section 4.1 to the caption of Table B10 (the brief's sixth cut for room)
     ("0.47", (APP,), R22P, _PARTS + ".failure reported (40 sets)", "",
      "Sonnet 5.5: the placebo minus the honest message in the 40 sets with a reported failure (0.475)", AF),
@@ -339,10 +336,6 @@ REANALYSIS: list[Row] = [
      "overclaims among the messages written without the added instruction", AF),
     ("38%", (RES,), R23O, "[messages=honesty instruction;outcome=the paper's outcome].share of the messages", PCT,
      "overclaims among the messages written under the added instruction", AF),
-    ("4", (RES,), R23S, r23s("Sonnet 4.6", "honesty half: change"), PCT,
-     "Sonnet 4.6: rise among the 8 messages written under the added instruction, percentage points", AF),
-    ("-2", (RES,), R23S, r23s("Sonnet 4.6", "honesty change: lo"), PCT, "", AF),
-    ("11", (RES,), R23S, r23s("Sonnet 4.6", "honesty change: hi"), PCT, "", AF),
     ("16", (APP,), R21F, _VS_HALF.format("Sonnet 5.5"), "",
      "Sonnet 5.5 under the verification step: tasks with both kinds of message among the 8 (caption of Table B12)", AF),
     ("17", (APP,), R21F, _VS_HALF.format("DeepSeek V4 Pro"), "", "the same for DeepSeek V4 Pro", AF),
@@ -378,28 +371,14 @@ _MARKED, _OTHER = "marked by the keyword rule", "not marked"
 
 # Draft 10: the control run of the sprint (declared before its first call; no mark).
 CONTROL: list[Row] = [
-    # Section 4.1 and the caption of Table 2
-    ("0.15", (RES,), CC, _cmp("Opus 5.5", "C - H mean"), "",
-     "control run: the claim alone minus the honest message for Opus 5.5 (its test is not supported)"),
-    ("-0.07", (RES,), CC, _cmp("Opus 5.5", "C - H lo"), "", ""),
-    ("0.37", (RES,), CC, _cmp("Opus 5.5", "C - H hi"), "", ""),
-    ("0.55", (RES,), CC, _cmp("Sonnet 5.5", "C - H mean"), "",
-     "control run: the claim alone minus the honest message for Sonnet 5.5 (beside its premium of 1.57)"),
+    # Section 4.1 and the caption of the table of comparisons (Table 3 since draft 13)
     ("0.02", (RES,), DER, _CTRL + "claim_minus_placebo_of_those_judges.min", "",
      "control run: the smallest gain of the claim against the placebo's neutral sentence among the six judges with "
      "all 60 tasks (DeepSeek V4 Pro)"),
     ("0.30", (RES,), DER, _CTRL + "claim_minus_placebo_of_those_judges.max", "",
      "the largest such gain (Sonnet 5.5 and Opus 4.6)"),
-    ("1.03", (RES,), DER, _CTRL + "placebo_minus_honest_of_those_judges.max", "",
-     "the largest fall for the disclosure among those six judges (DeepSeek V4 Pro; the smallest is -0.10, Opus 5.5)"),
-    ("42", (RES,), CR, _reasons("Sonnet 5.5", _G), "",
-     "control run: reasons of Sonnet 5.5 for the hedge alone that name a contradiction (of 60)"),
-    ("41", (RES,), CR, _reasons("Opus 5.5", _G), "", "the same for Opus 5.5"),
-    ("19", (RES,), CR, _reasons("Sonnet 5.5", _P2), "",
-     "control run: reasons of Sonnet 5.5 for the placebo scored again that name a contradiction (of 60)"),
-    ("9", (RES,), CR, _reasons("Opus 5.5", _P2), "", "the same for Opus 5.5"),
     ("54", (RES, APP), CC, _cmp("gpt-oss-120b", "tasks"), "",
-     "control run: gpt-oss-120b tasks with a valid score on all six messages (caption of Table 2; Appendix A)"),
+     "control run: gpt-oss-120b tasks with a valid score on all six messages (caption of the table of comparisons; Appendix A)"),
     # Appendix A, the paragraph on the control run, and the captions of Tables B13 and B14
     ("54", (APP,), CTRL_RULE, r"regex:MIN_TASKS = (54)\b", "", "a test of the control run needs at least 54 of the 60 tasks"),
     ("22", (APP,), CS, _split("Sonnet 5.5", "plain statement", "tasks"), "",

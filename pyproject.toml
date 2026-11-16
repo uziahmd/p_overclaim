@@ -1,7 +1,7 @@
 [project]
 name = "overclaim"
 version = "0.1.0"
-description = "Do LLM judges and reward models reward false claims of completion over honest admissions? Matched-set preference experiments."
+description = "Do LLM graders reward overclaiming? Matched-set experiments on coding agents."
 authors = [
     { name = "Uzair Ahmed" }
 ]

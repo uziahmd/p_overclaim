@@ -11,11 +11,13 @@ printed,file,source,key,transform,commit,note,mark
 20,results.tex,results/full_run/summary.json,header.counts.per_gap.no_tests_run,,4965785,tasks per kind of missing check; also the sets whose honest message says that no test ran,
 20,appendix.tex,results/full_run/summary.json,header.counts.per_gap.no_tests_run,,4965785,tasks per kind of missing check; also the sets whose honest message says that no test ran,
 34,methods.tex,results/full_run/summary.json,header.counts.shown_eligible,,4965785,"transcripts within 40,000 tokens",
+34,discussion.tex,results/full_run/summary.json,header.counts.shown_eligible,,4965785,"transcripts within 40,000 tokens",
 34,appendix.tex,results/full_run/summary.json,header.counts.shown_eligible,,4965785,"transcripts within 40,000 tokens",
 26,appendix.tex,results/full_run/summary.json,header.counts.band,,4965785,longer transcripts,
 26,results.tex,results/full_run/summary.json,header.stages.e2.n_shown_eligible,,4965785,"selection tasks whose transcript fits in 40,000 tokens",
 26,appendix.tex,results/full_run/summary.json,header.stages.e2.n_shown_eligible,,4965785,"selection tasks whose transcript fits in 40,000 tokens",
-57,results.tex,results/full_run/summary.json,core[grader=gpt-oss-120b;condition=hidden;rubric=pointwise-neutral].n_tasks,,4965785,gpt-oss-120b complete tasks without the transcript (Figure 4 caption),
+57,results.tex,results/full_run/summary.json,core[grader=gpt-oss-120b;condition=hidden;rubric=pointwise-neutral].n_tasks,,4965785,gpt-oss-120b complete tasks without the transcript (caption of the table of comparisons; caption of Figure B2),
+57,appendix.tex,results/full_run/summary.json,core[grader=gpt-oss-120b;condition=hidden;rubric=pointwise-neutral].n_tasks,,4965785,gpt-oss-120b complete tasks without the transcript (caption of the table of comparisons; caption of Figure B2),
 4,appendix.tex,configs/full_run.yaml,e2.ns[#1],,4965785,best of 4,
 40,methods.tex,results/full_run/summary.json,header.stages.e2.n_tasks,,4965785,selection tasks,
 40,results.tex,results/full_run/summary.json,header.stages.e2.n_tasks,,4965785,selection tasks,
@@ -23,7 +25,6 @@ printed,file,source,key,transform,commit,note,mark
 17,methods.tex,results/full_run/summary.json,header.counts.repaired_sets,,4965785,sets corrected after the audit,
 17,discussion.tex,results/full_run/summary.json,header.counts.repaired_sets,,4965785,sets corrected after the audit,
 17,appendix.tex,results/full_run/summary.json,header.counts.repaired_sets,,4965785,sets corrected after the audit,
-4,appendix.tex,data/processed/full_run_tasks.json,replacements,len,4965785,sets replaced after the audit,
 19,methods.tex,paper/derived.json,set_history.corrected_on_the_audit,,generated from 4965785 (scripts/make_paper_derived.py),"sets corrected on the audit's findings (the first freeze, data/processed/full_run_tasks.superseded-20261107T172655Z.json)",
 2,methods.tex,paper/derived.json,set_history.replaced_on_the_audit,,generated from 4965785 (scripts/make_paper_derived.py),sets replaced on the audit's findings (the first freeze),
 2,methods.tex,paper/derived.json,set_history.replaced_after_the_author_read,,generated from 4965785 (scripts/make_paper_derived.py),corrected sets replaced after the author read three of them (19 - 2 = 17 corrected sets remain),
@@ -56,35 +57,26 @@ printed,file,source,key,transform,commit,note,mark
 59,appendix.tex,paper/derived.json,set_counts.sets_with_a_rewrite,,generated from 4965785 (scripts/make_paper_derived.py),sets that carry a rewrite by Claude Opus 5.5,
 100,appendix.tex,results/full_run/summary.json,n_tie_seeds,,4965785,random draws over which a tie for the highest score is averaged,
 3,methods.tex,paper/derived.json,invalid_replies.gptoss_tasks_lost_without_transcript,,generated from 4965785 (scripts/make_paper_derived.py),tasks that gpt-oss-120b loses without the transcript to a reply with no valid score (60 - 3 = 57),
-30,methods.tex,results/full_run/summary.json,core[grader=claude-opus-5-5;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Opus 5.5 tasks with the transcript,
 30,results.tex,results/full_run/summary.json,core[grader=claude-opus-5-5;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Opus 5.5 tasks with the transcript,
-34,methods.tex,results/full_run/summary.json,core[grader=gemini-3.8-flash;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Gemini 3.8 Flash tasks with the transcript,
+30,appendix.tex,results/full_run/summary.json,core[grader=claude-opus-5-5;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Opus 5.5 tasks with the transcript,
 34,results.tex,results/full_run/summary.json,core[grader=gemini-3.8-flash;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Gemini 3.8 Flash tasks with the transcript,
-33,methods.tex,results/full_run/summary.json,core[grader=gpt-oss-120b;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,gpt-oss-120b tasks with the transcript,
-2,methods.tex,results/full_run/summary.json,core[grader=qwen3-32b;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Qwen3-32B complete tasks with the transcript when its run failed,
+34,appendix.tex,results/full_run/summary.json,core[grader=gemini-3.8-flash;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Gemini 3.8 Flash tasks with the transcript,
+33,appendix.tex,results/full_run/summary.json,core[grader=gpt-oss-120b;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,gpt-oss-120b tasks with the transcript,
 2,results.tex,results/full_run/summary.json,core[grader=qwen3-32b;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Qwen3-32B complete tasks with the transcript when its run failed,
+2,appendix.tex,results/full_run/summary.json,core[grader=qwen3-32b;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Qwen3-32B complete tasks with the transcript when its run failed,
 "1,200",introduction.tex,paper/refs_check.json,[key=greenblatt2026incident].numbers.agents_that_communicated,,pages fetched on 2026-11-13 (scripts/check_paper_refs.py),quoted from the cited investigation: agents that found a way to communicate (the page says roughly 1200),
 2026,introduction.tex,paper/refs_check.json,[key=greenblatt2026incident].numbers.year,,pages fetched on 2026-11-13 (scripts/check_paper_refs.py),year of the cited investigation and of the incident,
 0.65,abstract.tex,results/full_run/summary.json,core[grader=qwen3-32b;condition=hidden;rubric=pointwise-neutral].premium,,4965785,smallest judge premium without the transcript: Qwen3-32B,
 3.33,abstract.tex,results/full_run/summary.json,core[grader=gemini-3.8-flash;condition=hidden;rubric=pointwise-neutral].premium,,4965785,largest judge premium without the transcript: Gemini 3.8 Flash,
-1.29,results.tex,results/full_run/summary.json,e5[grader=skywork-v2-qwen3-1.7b].standardised_gap,,4965785,"smallest reward-model premium, standard deviations",
-1.58,results.tex,results/full_run/summary.json,e5[grader=skywork-v2-qwen3-8b-4bit].standardised_gap,,4965785,"largest reward-model premium, standard deviations",
 1.57,introduction.tex,results/full_run/summary.json,holm_family[member=H1 / claude-sonnet-5-5].value,,4965785,Sonnet 5.5 premium without the transcript (planned test; Figure 1 caption),
 1.57,results.tex,results/full_run/summary.json,holm_family[member=H1 / claude-sonnet-5-5].value,,4965785,Sonnet 5.5 premium without the transcript (planned test; Figure 1 caption),
-1.32,results.tex,results/full_run/summary.json,holm_family[member=H1 / claude-sonnet-5-5].ci[#0],,4965785,,
-1.82,results.tex,results/full_run/summary.json,holm_family[member=H1 / claude-sonnet-5-5].ci[#1],,4965785,,
 0.07,introduction.tex,paper/derived.json,with_transcript_all_tasks.claude-sonnet-5-5.premium,,generated from 4965785 (scripts/make_paper_derived.py),"Sonnet 5.5 premium with the transcript, all 60 tasks (also the Figure 1 caption)",
 0.07,results.tex,paper/derived.json,with_transcript_all_tasks.claude-sonnet-5-5.premium,,generated from 4965785 (scripts/make_paper_derived.py),"Sonnet 5.5 premium with the transcript, all 60 tasks (also the Figure 1 caption)",
 -1.50,results.tex,results/full_run/summary.json,holm_family[member=H2 / claude-sonnet-5-5].value,,4965785,"planned change, Sonnet 5.5, 60 tasks",
 -1.80,results.tex,results/full_run/summary.json,holm_family[member=H2 / claude-sonnet-5-5].ci[#0],,4965785,,
 -1.20,results.tex,results/full_run/summary.json,holm_family[member=H2 / claude-sonnet-5-5].ci[#1],,4965785,,
-11,methods.tex,results/full_run/summary.json,core[grader=gemini-4-argon;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Gemini 4 Argon tasks with the transcript,
 11,results.tex,results/full_run/summary.json,core[grader=gemini-4-argon;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Gemini 4 Argon tasks with the transcript,
 11,appendix.tex,results/full_run/summary.json,core[grader=gemini-4-argon;condition=shown;rubric=pointwise-neutral].n_tasks,,4965785,Gemini 4 Argon tasks with the transcript,
-1.80,results.tex,results/full_run/summary.json,hypotheses[hypothesis=H2;grader=claude-opus-5-5].value,abs,4965785,"smallest fall of the premium on the tasks scored both ways, among the three judges on fewer tasks (Opus 5.5)",
-3.32,results.tex,results/full_run/summary.json,hypotheses[hypothesis=H2;grader=gemini-3.8-flash].value,abs,4965785,largest such fall (Gemini 3.8 Flash),
-0.80,results.tex,paper/derived.json,with_transcript_all_tasks.deepseek-v4-pro.premium,,generated from 4965785 (scripts/make_paper_derived.py),"DeepSeek V4 Pro premium with the transcript, all 60 tasks",
-1.09,results.tex,results/full_run/summary.json,core[grader=gpt-oss-120b;condition=shown;rubric=pointwise-neutral].premium,,4965785,gpt-oss-120b premium with the transcript,
 34,appendix.tex,results/full_run/runs_status.json,pws-gema.n_tasks.'pointwise_calls.jsonl',,4965785,tasks planned for Gemini 4 Argon with the transcript,
 68%,results.tex,results/full_run/summary.json,e2[selector=claude-sonnet-4-6;labeller=session3;outcome=clean_overclaim;source=records].tie_averaged.rates.1.mean,pct,4965785,share of overclaims when one message is taken at random,
 68%,appendix.tex,results/full_run/summary.json,e2[selector=claude-sonnet-4-6;labeller=session3;outcome=clean_overclaim;source=records].tie_averaged.rates.1.mean,pct,4965785,share of overclaims when one message is taken at random,
@@ -153,14 +145,10 @@ printed,file,source,key,transform,commit,note,mark
 8,abstract.tex,configs/full_run.yaml,e2.n_per_instruction,,4965785,fresh messages per task written under the added instruction,
 8,results.tex,configs/full_run.yaml,e2.n_per_instruction,,4965785,fresh messages per task written under the added instruction,
 8,appendix.tex,configs/full_run.yaml,e2.n_per_instruction,,4965785,fresh messages per task written under the added instruction,
+8,results.tex,reanalysis/tables/r25_summary.csv,[what=replaced passages per set: mean].value,,639cc30,"passages in which the honest message differs from the overclaim, mean over the 60 sets",
 8,discussion.tex,reanalysis/tables/r25_summary.csv,[what=replaced passages per set: mean].value,,639cc30,"passages in which the honest message differs from the overclaim, mean over the 60 sets",
 40,results.tex,reanalysis/tables/r22_premium_by_missing_check.csv,[grader=Sonnet 5.5;condition=without the transcript].failure reported (40 sets): tasks,,639cc30,sets whose honest message reports a failed test run (the two kinds of missing check with a failure),
 40,appendix.tex,reanalysis/tables/r22_premium_by_missing_check.csv,[grader=Sonnet 5.5;condition=without the transcript].failure reported (40 sets): tasks,,639cc30,sets whose honest message reports a failed test run (the two kinds of missing check with a failure),
-53,methods.tex,reanalysis/tables/r24_pilot_score_files.csv,[run=all].final tasks in the file,,639cc30,final tasks that appear in the scores of the four pilots or of the preparation run (the four pilots alone: 50),
-53,appendix.tex,reanalysis/tables/r24_pilot_score_files.csv,[run=all].final tasks in the file,,639cc30,final tasks that appear in the scores of the four pilots or of the preparation run (the four pilots alone: 50),
-21,appendix.tex,reanalysis/tables/r27c_pilot4_scored_alone.csv,[judge=any judge].final tasks scored alone in pilot 4,,639cc30,"final tasks that pilot 4 scored alone, with eight of the nine judges",
-32,appendix.tex,reanalysis/tables/r27e_labeller_check_of_honest_messages.csv,[labeller=second labeller].labelled overclaim,,639cc30,honest messages that the second labeller of pilot 4 called overclaims (of 60),
-16,appendix.tex,reanalysis/tables/r27e_labeller_check_of_honest_messages.csv,[labeller=second labeller].labelled overclaim and word for word the final one,,639cc30,"of those 32 honest messages, the ones that stand word for word in the final sets",
 18,appendix.tex,reanalysis/tables/r22_premium_by_missing_check.csv,[grader=gpt-oss-120b;condition=without the transcript].last test run failed: tasks,,639cc30,gpt-oss-120b tasks in the sets whose last test run failed (caption of Table B10),
 19,appendix.tex,reanalysis/tables/r22_premium_by_missing_check.csv,[grader=gpt-oss-120b;condition=without the transcript].narrower rerun after a failure: tasks,,639cc30,gpt-oss-120b tasks in the sets with a narrower rerun after a failure (caption of Table B10),
 33,appendix.tex,reanalysis/tables/r27a_failure_before_the_edit.csv,[kind of missing check=both kinds (40 sets);the record says the named test failed before the edit=unknown].sets,,639cc30,sets with a reported failure for which the transcript does not show whether the test failed before the edit,
@@ -172,17 +160,19 @@ printed,file,source,key,transform,commit,note,mark
 -0.29,appendix.tex,reanalysis/tables/r21_fresh_variants.csv,"[variant=honesty half, every message labelled overclaim;grader=Sonnet 4.6].lo",,639cc30,,after the fact
 0.19,appendix.tex,reanalysis/tables/r21_fresh_variants.csv,"[variant=honesty half, every message labelled overclaim;grader=Sonnet 4.6].hi",,639cc30,,after the fact
 32,appendix.tex,reanalysis/tables/r21_fresh_variants.csv,"[variant=honesty half, every message labelled overclaim;grader=Sonnet 4.6].tasks used",,639cc30,tasks whose 8 messages hold both kinds under the second count (caption of Table B12),after the fact
-1.80,results.tex,reanalysis/tables/r22_premium_by_missing_check.csv,[grader=Sonnet 5.5;condition=without the transcript].failure reported (40 sets),,639cc30,Sonnet 5.5 premium in the 40 sets whose honest message reports a failed test run,after the fact
-1.10,results.tex,reanalysis/tables/r22_premium_by_missing_check.csv,[grader=Sonnet 5.5;condition=without the transcript].no test run,,639cc30,Sonnet 5.5 premium in the 20 sets where no test ran,after the fact
+1.21,results.tex,reanalysis/tables/r21_four_comparisons.csv,[grader=gpt-oss-120b].disclosure against a neutral sentence,,639cc30,"the placebo minus the honest message for gpt-oss-120b (57 tasks), the largest among the nine judges",
+0.27,results.tex,reanalysis/tables/r21_four_comparisons.csv,[grader=Sonnet 4.6].fresh messages (honesty half),,639cc30,Sonnet 4.6: overclaims minus the other messages among the 8 written under the added instruction,after the fact
+0.41,results.tex,reanalysis/tables/r21_four_comparisons.csv,[grader=DeepSeek V4 Pro].fresh messages (honesty half),,639cc30,the same for DeepSeek V4 Pro,after the fact
+0.47,results.tex,reanalysis/tables/r21_four_comparisons.csv,[grader=Skywork 1.7B].fresh messages (honesty half),,639cc30,"the same for Skywork 1.7B, the smallest value among the five reward models (standard deviations of its scores)",after the fact
+0.73,results.tex,reanalysis/tables/r21_four_comparisons.csv,[grader=Skywork 4B].fresh messages (honesty half),,639cc30,"the same for Skywork 4B, the largest value among the five reward models",after the fact
+64%,results.tex,reanalysis/tables/r23_selection_by_instruction.csv,[selector=Sonnet 5.5].top pick among all 16 comes from the plain half,pct1m,639cc30,Sonnet 5.5: share of its selections from all 16 that were written under the added instruction (100% - 36%),after the fact
+37%,results.tex,reanalysis/tables/r23_selection_by_instruction.csv,[selector=Sonnet 5.5].honesty half: top pick,pct,639cc30,Sonnet 5.5: share of overclaims among its selections from the 8 written under the added instruction,after the fact
 0.47,appendix.tex,reanalysis/tables/r22_parts_by_missing_check.csv,[comparison=placebo minus honest message;grader=Sonnet 5.5;condition=without the transcript].failure reported (40 sets),,639cc30,Sonnet 5.5: the placebo minus the honest message in the 40 sets with a reported failure (0.475),after the fact
 -0.20,appendix.tex,reanalysis/tables/r22_parts_by_missing_check.csv,[comparison=placebo minus honest message;grader=Sonnet 5.5;condition=without the transcript].no test run,,639cc30,Sonnet 5.5: the placebo minus the honest message in the 20 sets where no test ran (40 x 0.475 - 20 x 0.20 = 60 x 0.25),after the fact
 13,results.tex,reanalysis/tables/r22_premium_by_missing_check.csv,count[condition=without the transcript;no test run: lo>0],,639cc30,graders with a detectable premium in the 20 sets where no test ran,after the fact
 14,results.tex,reanalysis/tables/r22_premium_by_missing_check.csv,count[condition=without the transcript],,639cc30,graders in that count,after the fact
 99%,results.tex,reanalysis/tables/r23_overclaims_by_instruction.csv,[messages=plain instruction;outcome=the paper's outcome].share of the messages,pct,639cc30,overclaims among the messages written without the added instruction,after the fact
 38%,results.tex,reanalysis/tables/r23_overclaims_by_instruction.csv,[messages=honesty instruction;outcome=the paper's outcome].share of the messages,pct,639cc30,overclaims among the messages written under the added instruction,after the fact
-4,results.tex,reanalysis/tables/r23_selection_by_instruction.csv,[selector=Sonnet 4.6].honesty half: change,pct,639cc30,"Sonnet 4.6: rise among the 8 messages written under the added instruction, percentage points",after the fact
--2,results.tex,reanalysis/tables/r23_selection_by_instruction.csv,[selector=Sonnet 4.6].honesty change: lo,pct,639cc30,,after the fact
-11,results.tex,reanalysis/tables/r23_selection_by_instruction.csv,[selector=Sonnet 4.6].honesty change: hi,pct,639cc30,,after the fact
 16,appendix.tex,reanalysis/tables/r21_fresh_variants.csv,"[variant=with the transcript and the verification step, honesty half;grader=Sonnet 5.5, verification step].tasks used",,639cc30,Sonnet 5.5 under the verification step: tasks with both kinds of message among the 8 (caption of Table B12),after the fact
 17,appendix.tex,reanalysis/tables/r21_fresh_variants.csv,"[variant=with the transcript and the verification step, honesty half;grader=DeepSeek V4 Pro, verification step].tasks used",,639cc30,the same for DeepSeek V4 Pro,after the fact
 -0.68,results.tex,reanalysis/tables/r27f_with_the_transcript.csv,[scoring prompt=verification step;judge=Sonnet 5.5].premium (overclaim minus honest),,639cc30,"Sonnet 5.5 premium under the verification step, 31 tasks",
@@ -193,19 +183,10 @@ printed,file,source,key,transform,commit,note,mark
 -0.80,results.tex,reanalysis/tables/r27f_with_the_transcript.csv,[scoring prompt=verification step;judge=Opus 5.5].hi,,639cc30,,
 31,results.tex,reanalysis/tables/r27f_with_the_transcript.csv,[scoring prompt=verification step;judge=Sonnet 5.5].tasks,,639cc30,tasks of Sonnet 5.5 under the verification step,
 30,results.tex,reanalysis/tables/r27f_with_the_transcript.csv,[scoring prompt=verification step;judge=Opus 5.5].tasks,,639cc30,tasks of Opus 5.5 under the verification step,
-0.15,results.tex,results/sprint_control/comparisons.csv,[grader=Opus 5.5].C - H mean,,0d1ed8b,control run: the claim alone minus the honest message for Opus 5.5 (its test is not supported),
--0.07,results.tex,results/sprint_control/comparisons.csv,[grader=Opus 5.5].C - H lo,,0d1ed8b,,
-0.37,results.tex,results/sprint_control/comparisons.csv,[grader=Opus 5.5].C - H hi,,0d1ed8b,,
-0.55,results.tex,results/sprint_control/comparisons.csv,[grader=Sonnet 5.5].C - H mean,,0d1ed8b,control run: the claim alone minus the honest message for Sonnet 5.5 (beside its premium of 1.57),
 0.02,results.tex,paper/derived.json,control_run.claim_minus_placebo_of_those_judges.min,,0d1ed8b,control run: the smallest gain of the claim against the placebo's neutral sentence among the six judges with all 60 tasks (DeepSeek V4 Pro),
 0.30,results.tex,paper/derived.json,control_run.claim_minus_placebo_of_those_judges.max,,0d1ed8b,the largest such gain (Sonnet 5.5 and Opus 4.6),
-1.03,results.tex,paper/derived.json,control_run.placebo_minus_honest_of_those_judges.max,,0d1ed8b,"the largest fall for the disclosure among those six judges (DeepSeek V4 Pro; the smallest is -0.10, Opus 5.5)",
-42,results.tex,results/sprint_control/reasons.csv,[judge=Sonnet 5.5;version=hedge alone (G)].list of the first count,,0d1ed8b,control run: reasons of Sonnet 5.5 for the hedge alone that name a contradiction (of 60),
-41,results.tex,results/sprint_control/reasons.csv,[judge=Opus 5.5;version=hedge alone (G)].list of the first count,,0d1ed8b,the same for Opus 5.5,
-19,results.tex,results/sprint_control/reasons.csv,"[judge=Sonnet 5.5;version=placebo, second score (P2)].list of the first count",,0d1ed8b,control run: reasons of Sonnet 5.5 for the placebo scored again that name a contradiction (of 60),
-9,results.tex,results/sprint_control/reasons.csv,"[judge=Opus 5.5;version=placebo, second score (P2)].list of the first count",,0d1ed8b,the same for Opus 5.5,
-54,results.tex,results/sprint_control/comparisons.csv,[grader=gpt-oss-120b].tasks,,0d1ed8b,control run: gpt-oss-120b tasks with a valid score on all six messages (caption of Table 2; Appendix A),
-54,appendix.tex,results/sprint_control/comparisons.csv,[grader=gpt-oss-120b].tasks,,0d1ed8b,control run: gpt-oss-120b tasks with a valid score on all six messages (caption of Table 2; Appendix A),
+54,results.tex,results/sprint_control/comparisons.csv,[grader=gpt-oss-120b].tasks,,0d1ed8b,control run: gpt-oss-120b tasks with a valid score on all six messages (caption of the table of comparisons; Appendix A),
+54,appendix.tex,results/sprint_control/comparisons.csv,[grader=gpt-oss-120b].tasks,,0d1ed8b,control run: gpt-oss-120b tasks with a valid score on all six messages (caption of the table of comparisons; Appendix A),
 54,appendix.tex,sprint_control/analyze.py,regex:MIN_TASKS = (54)\b,,2175c36,a test of the control run needs at least 54 of the 60 tasks,
 22,appendix.tex,results/sprint_control/split.csv,[grader=Sonnet 5.5;comparison=C - H;sets=plain statement].tasks,,0d1ed8b,sets whose changed passage also holds a plain statement of the code change,
 38,appendix.tex,results/sprint_control/split.csv,[grader=Sonnet 5.5;comparison=C - H;sets=no plain statement].tasks,,0d1ed8b,the other sets,

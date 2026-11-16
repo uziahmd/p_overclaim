@@ -68,7 +68,7 @@ def write(name: str, header: list[str], rows: list[list[str]], colspec: str, *, 
     head = head or [" & ".join(([""] * (depth - len(x)) + x)[i] for x in parts) + " \\\\" for i in range(depth)]
     lines = [f"{{{size}{setup}", f"\\begin{{tabular}}{{{colspec}}}", "\\toprule", *head, "\\midrule"]
     for r in rows:
-        lines.append("\\midrule" if r == MID else " & ".join(_minus(c) for c in r) + " \\\\")
+        lines.append("\\midrule" if r == MID else " & ".join(_grey(_minus(c)) for c in r) + " \\\\")
     lines += ["\\bottomrule", "\\end{tabular}}"]
     (OUT / f"{name}.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
     with (OUT / f"{name}.csv").open("w", newline="", encoding="utf-8") as fh:
@@ -79,16 +79,28 @@ def write(name: str, header: list[str], rows: list[list[str]], colspec: str, *, 
                 w.writerow([_plain(c) for c in r])
 
 
+def _grey(cell: str) -> str:
+    """The .tex form of a cell that ends with the mark ZERO: the estimate set in grey (the macro \\nsz of
+    paper/main.tex). The author's edit of 2026-11-16: a small circle after the interval read as a degree sign, and a
+    raised "ns" ran into the next column of Table 3. The CSV keeps the words "[interval includes zero]"."""
+    for mark in (ZERO_HANG, ZERO):
+        if cell.endswith(mark):
+            return "\\nsz{" + cell[:-len(mark)] + "}"
+    return cell
+
+
 def _plain(cell: str) -> str:
     """A LaTeX cell as plain text for the CSV."""
     cell = re.sub(r"\\(?:textbf|textit|emph|texttt|path)\{([^}]*)\}", r"\1", cell)
     cell = re.sub(r"\\multicolumn\{\d+\}\{(?:[^{}]|\{[^{}]*\})*\}\{((?:[^{}]|\{[^{}]*\})*)\}", r"\1", cell)   # also "@{}l"
     cell = re.sub(r"\s*\((?:Section|Table)~\\ref\{[^}]*\}\)", "", cell)   # a pointer has no number outside LaTeX
     for a, b in (("\\textsuperscript{a}", " [a]"), ("\\allowbreak ", ""), ("\\%", "%"), ("$-$", "-"), ("$<$", "<"), ("$\\dagger$", "+"), ("\\_", "_"), ("~", " "), ("--", "-"),
-                 ("\\quad ", ""), ("\\textsuperscript{\\S}", " [after the fact]"),
+                 ("\\quad ", ""), ("\\textsuperscript{\\S}", " [post hoc]"),
                  ("\\textsuperscript{\\P}", " [control run]"),
-                 ("\\rlap{\\textsuperscript{$\\circ$}}", " [interval includes zero]"),
-                 ("\\textsuperscript{$\\circ$}", " [interval includes zero]"), ("$", ""), ("\\&", "&")):
+                 ("\\rlap{\\ns}", " [interval includes zero]"), ("\\ns", " [interval includes zero]"),
+                 # the labels of the five versions of the message (macros of paper/main.tex)
+                 ("\\ClaimOnly", "Claim-Only"), ("\\HedgeOnly", "Hedge-Only"), ("\\Overclaim", "Overclaim"),
+                 ("\\Honest", "Honest"), ("\\Placebo", "Placebo"), ("$", ""), ("\\&", "&")):
         cell = cell.replace(a, b)
     return cell
 
@@ -117,8 +129,8 @@ def pct_est(x: float, c: list) -> str:
 
 REAN = D.REPO / "reanalysis" / "tables"
 AFTER = "\\textsuperscript{\\S}"                 # after the fact: an analysis added after the results were known
-ZERO = "\\textsuperscript{$\\circ$}"            # the interval includes zero
-ZERO_HANG = "\\rlap{" + ZERO + "}"               # the same mark set in the gap after its column (Table 2: six columns)
+ZERO = "\\ns"                                  # the interval includes zero: an inner mark; write() sets such a cell in grey
+ZERO_HANG = "\\rlap{" + ZERO + "}"               # the same mark in a box of no width; write() sets the cell in grey either way
 
 
 def rean(stem: str) -> list[dict]:
@@ -386,7 +398,7 @@ def a_placebo(s: dict) -> None:
         rows.append([name(g), D.est(r["bonus"], r["bonus_ci"]), D.est(r["tax"], r["tax_ci"]), D.fmt(sd), str(r["n_tasks"])])
         if g == D.LLM_JUDGES[-1]:
             rows.append(MID)
-    write("a_placebo", ["grader", "overclaim $-$ placebo", "placebo $-$ honest message", "premium in standard deviations",
+    write("a_placebo", ["grader", "\\Overclaim $-$ \\Placebo", "\\Placebo $-$ \\Honest", "premium in standard deviations",
                         "tasks"], rows, "@{}lllrr@{}")
 
 
@@ -464,8 +476,8 @@ def a_side_by_side(s: dict) -> None:
             cite = f"{D.pct(x['cites_disclosure'] / x['n'])} of {x['n']}" if x.get("n") else "none"
             rows.append([name(g) + (" (with the transcript)" if cond == "shown" else ""), str(r["n_tasks"]),
                          pct_est(oh["rate"], oh["ci"]), D.pct(fl["rate"]), D.pct(r["tie_rate"]), cite])
-    write("a_side_by_side", ["judge", "tasks", "prefers the overclaim", "order changes verdict", "ties",
-                             "verdicts for the honest message that cite the disclosure"], rows,
+    write("a_side_by_side", ["judge", "tasks", "prefers \\Overclaim", "order changes verdict", "ties",
+                             "verdicts for \\Honest that cite the disclosure"], rows,
           "@{}p{4.1cm}rlp{1.9cm}rp{4.4cm}@{}")
 
 
@@ -584,12 +596,19 @@ def t2_comparisons() -> None:
     rows.append(["5 reward models", span([float(r[kept[0][0]]) for r in rm]),
                  *[span([c["comparisons"][k]["mean"] for c in rmc]) for k in ("C - H", "C - P")],
                  *[span([float(r[c[0]]) for r in rm]) for c in kept[1:]]])
-    # six columns at the size of Table 1: the mark of an interval that includes zero is set in the gap after its
-    # column, and each header names the two messages of its difference in two short lines
+    # six columns (the table of comparisons, Table 3 since draft 13): each header names the two messages of its
+    # difference in two short lines; write() sets a cell whose interval includes zero in grey
     rows = [r if r == MID else [c.replace(ZERO, ZERO_HANG) for c in r] for r in rows]
-    write("t2_comparisons", ["grader", "premium", f"claim alone $-$|honest message{CONTROL}",
-                             f"claim alone $-$|placebo{CONTROL}", "placebo $-$|honest message",
-                             f"fresh|messages{AFTER}"], rows, "@{}llllll@{}", size="\\footnotesize", colsep=4)
+    write("t2_comparisons", ["grader", "all passages: \\Overclaim $-$ \\Honest (the premium)",
+                             f"main passage only: \\ClaimOnly $-$ \\Honest{CONTROL}",
+                             f"main passage only: \\ClaimOnly $-$ \\Placebo{CONTROL}",
+                             "main passage only: \\Placebo $-$ \\Honest",
+                             f"fresh messages: overclaims $-$ other messages{AFTER}"], rows, "@{}llllll@{}",
+          size="\\footnotesize", colsep=4,
+          head=[" & all passages & \\multicolumn{3}{l}{main passage only} & fresh messages" + AFTER + " \\\\",
+                "\\cmidrule(r){2-2}\\cmidrule(r){3-5}\\cmidrule{6-6}",
+                f" & \\Overclaim $-$ & \\ClaimOnly $-$ & \\ClaimOnly $-$ & \\Placebo $-$ & overclaims $-$ \\\\",
+                f"grader & \\Honest & \\Honest{CONTROL} & \\Placebo{CONTROL} & \\Honest & other messages \\\\"])
 
 
 KINDS = ("no test run", "last test run failed", "narrower rerun after a failure", "failure reported (40 sets)")
@@ -675,8 +694,8 @@ def a_reasons() -> None:
             if this_run[(name(g), v)]["list of the first count"] != main_run[(name(g), v)][R28_FIRST]:
                 raise SystemExit(f"a_reasons: the control run's copy of the count for {name(g)}, {v} differs from r28")
         rows.append([name(g), *[count(main_run[(name(g), v)], R28_FIRST) for v in R28_VERSIONS], *new])
-    write("a_reasons", ["judge", "overclaim", "message with|the hedge", "honest|message", "placebo",
-                        f"claim|alone{CONTROL}", f"hedge|alone{CONTROL}", f"placebo|scored again{CONTROL}"], rows,
+    write("a_reasons", ["judge", "\\Overclaim", "message with|the hedge", "\\Honest", "\\Placebo",
+                        f"\\ClaimOnly{CONTROL}", f"\\HedgeOnly{CONTROL}", f"\\Placebo|scored again{CONTROL}"], rows,
           "@{}lrrrr@{\\hspace{14pt}}rrr@{}", colsep=6)
 
 
@@ -702,8 +721,8 @@ def a_control() -> None:
             again = "identical"
         rows.append([name(g), str(ctl[name(g)]["n_tasks"]), *[c_est(v[k]) for k in ("C - H", "C - P", "C - G", "O - C")],
                      again])
-    write("a_control", ["grader", "tasks", "claim alone|$-$ honest message", "claim alone|$-$ placebo",
-                        "claim alone|$-$ hedge alone", "overclaim|$-$ claim alone", "placebo scored|again $-$ placebo"],
+    write("a_control", ["grader", "tasks", "\\ClaimOnly|$-$ \\Honest", "\\ClaimOnly|$-$ \\Placebo",
+                        "\\ClaimOnly|$-$ \\HedgeOnly", "\\Overclaim|$-$ \\ClaimOnly", "\\Placebo scored|again $-$ \\Placebo"],
           rows, "@{}lrlllll@{}", colsep=3.2)
 
 
@@ -730,10 +749,10 @@ def a_control_split() -> None:
         rows.append([name(g), *[c_val(x) for x in cells]])
     a, b, m, o = (*SPLIT_SETS.values(), *MARK_SETS.values())
     write("a_control_split",
-          ["grader", f"claim alone $-$ honest message: {a} sets", f"claim alone $-$ honest message: {b} sets",
-           f"claim alone $-$ hedge alone: {m} marked sets", f"claim alone $-$ hedge alone: {o} other sets"], rows,
+          ["grader", f"\\ClaimOnly $-$ \\Honest: {a} sets", f"\\ClaimOnly $-$ \\Honest: {b} sets",
+           f"\\ClaimOnly $-$ \\HedgeOnly: {m} marked sets", f"\\ClaimOnly $-$ \\HedgeOnly: {o} other sets"], rows,
           "@{}lllll@{}", colsep=8,
-          head=[" & \\multicolumn{2}{l}{claim alone $-$ honest message} & \\multicolumn{2}{l}{claim alone $-$ hedge alone} \\\\",
+          head=[" & \\multicolumn{2}{l}{\\ClaimOnly $-$ \\Honest} & \\multicolumn{2}{l}{\\ClaimOnly $-$ \\HedgeOnly} \\\\",
                 "\\cmidrule(r){2-3}\\cmidrule{4-5}",
                 f"grader & {a} sets & {b} sets & {m} marked sets & {o} other sets \\\\"])
 
@@ -773,7 +792,7 @@ def a_not_run(s: dict, status: dict, inv: dict) -> None:
         ["Opus 5.5, scored alone with the transcript", f"{o55} of the {eligible} tasks", "limited for cost before the run"],
         ["Sonnet 4.6 and Opus 4.6, scored alone with the transcript", "not run", "left out for cost before the run"],
         ["Gemini 4 Argon, scored alone with the transcript", cell("pws-gema", "gemini-4-argon"),
-         "stopped at a spending limit after Google restricted the project's access to Vertex AI"],
+         "stopped at a spending limit"],
         ["Qwen3-32B, scored alone with the transcript", cell("pws-qwen", "qwen3-32b"),
          "the one provider with a large enough input limit returned rate-limit errors on every retry"],
         ["gpt-oss-120b, scored alone", f"{oss_hid['n_tasks']} of the {sets} tasks without the transcript, "
@@ -785,11 +804,10 @@ def a_not_run(s: dict, status: dict, inv: dict) -> None:
         ["side by side with the transcript", "Sonnet 5.5 only",
          "planned for Sonnet 5.5 and Opus 5.5; Opus 5.5 was left out for cost before the run"],
         ["Gemini 3.8 Flash and Gemini 4 Argon, control run", "not run",
-         "Google had restricted the project's access to Vertex AI: it refused the one request made for this run, and "
-         "no other service was used"],
+         "an access limitation: the service that had run them was not available to the project for this run"],
         ["gpt-oss-120b, control run", f"{oss_ctl['n_tasks']} of the {sets} tasks",
          f"a task needs a valid score on all six of its messages: {a['tasks_lost']} tasks have none on a message of "
-         f"the main run, and {lost['gpt-oss-120b']['C']} more have none on the claim alone"],
+         f"the main run, and {lost['gpt-oss-120b']['C']} more have none on \\ClaimOnly"],
     ]
     write("a_not_run", ["what", "state", "why"], rows, "@{}p{5.3cm}p{4.3cm}p{6.1cm}@{}")
 

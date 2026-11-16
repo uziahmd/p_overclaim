@@ -1,8 +1,9 @@
 # Details that the report points to
 
-The report's Appendix A sends the reader to this file for the dated history of the plan, the implementation notes
-written an hour into the main run, the count of every reused score, and what moved out of the report's appendix. Its
-Section 3 says that the eight statistical tests were fixed in the repository; they are in "Pre-registration" below
+The report's Appendix A sends the reader to this file for the full history of the plan, and its title page says that
+every experiment but one control run predates the sprint. This file gives the dated history, the implementation notes
+written an hour into the main run, the count of every reused score, and what moved out of the report's appendix. The
+report's Section 3 says that the eight statistical tests were fixed in the repository; they are in "Pre-registration" below
 (amendment 3, item 11).
 
 The first part of this file is written for this copy. The second part quotes two sections and one subsection of the
@@ -11,8 +12,8 @@ working repository's README word for word.
 ## Before and during the sprint
 
 The sprint ran from 2026-11-13 to 2026-11-15. The dates and times below are those of the commits of the working
-repository, whose local time zone is UTC+9. This copy was built from its commit 8883284. The copy starts a new
-history, so the commit hashes here and in the report are not commits of this repository. The working repository, with
+repository, whose local time zone is UTC+9. This copy was built from its commit 6330ec7. The copy starts a new
+history, so the commit hashes here are not commits of this repository (the report prints none). The working repository, with
 its full history, is available to the sprint's organisers on request.
 
 Made before the sprint:
@@ -41,8 +42,9 @@ Made on the sprint's dates, by the local time of the commits:
 Made on 2026-11-16 in local time, before the sprint's deadline (2026-11-15 23:59 anywhere on Earth, which is
 2026-11-16 20:59 in local time):
 
-- This copy as it is, and draft 12 of the report, which changes the report's sentences about the repository:
-  the 2 commits after 3f704f9, from 470510c (2026-11-16 01:08 local time, 2026-11-15 16:08 UTC) to 8883284 (2026-11-16 10:38 local time, 2026-11-16 01:38 UTC).
+- This copy as it is, and drafts 12 and 13 of the report. Draft 12 changes the report's sentences about the
+  repository. Draft 13 is the author's own revision of the report's text and of the layout of its tables; it calls
+  no model and changes no result: the 18 commits after 3f704f9, from 470510c (2026-11-16 01:08 local time, 2026-11-15 16:08 UTC) to 6330ec7 (2026-11-16 15:50 local time, 2026-11-16 06:50 UTC).
 
 ## The scoring stages
 
@@ -879,7 +881,7 @@ Nov 7 to 9, before the full run.
 
 ## Paper (write-up, 2026-11-09)
 
-*Of this section of the working README, the copy keeps the one subsection that the paper points to. The line above is the section's heading; the text below is word for word.*
+*Of this section of the working README, the copy keeps the one subsection that records what left the report's appendix. The line above is the section's heading; the text below is word for word.*
 
 ### Moved out of the paper's appendix
 

@@ -1,4 +1,4 @@
-grader,premium,claim alone - honest message [control run],claim alone - placebo [control run],placebo - honest message,fresh messages [after the fact]
+grader,all passages: Overclaim - Honest (the premium),main passage only: Claim-Only - Honest [control run],main passage only: Claim-Only - Placebo [control run],main passage only: Placebo - Honest,fresh messages: overclaims - other messages [post hoc]
 Sonnet 5.5,"1.57 [1.32, 1.82]","0.55 [0.33, 0.77]","0.30 [0.13, 0.47]","0.25 [0.02, 0.48]","0.10 [-0.14, 0.34] [interval includes zero]"
 Opus 5.5,"1.42 [1.12, 1.70]","0.15 [-0.07, 0.37] [interval includes zero]","0.25 [0.08, 0.40]","-0.10 [-0.30, 0.10] [interval includes zero]",-
 Sonnet 4.6,"0.73 [0.37, 1.10]","0.43 [0.18, 0.68]","0.15 [-0.05, 0.35] [interval includes zero]","0.28 [-0.02, 0.60] [interval includes zero]","0.27 [0.02, 0.53]"
